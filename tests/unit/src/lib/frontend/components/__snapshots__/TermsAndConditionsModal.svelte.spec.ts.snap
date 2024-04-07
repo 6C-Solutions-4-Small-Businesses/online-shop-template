@@ -1,0 +1,190 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TermsAndConditionsModal component > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="bg-white w-screen h-screen overflow-scroll pb-5 flex flex-col gap-7 items-center rounded-md"
+    >
+      <header
+        class="w-full flex justify-between items-center text-md font-bold uppercase bg-green-50 h-14 text-center p-3 text-black rounded-t-md"
+      >
+        <p>
+          undefined
+        </p>
+         
+        <button
+          class="w-8 h-8 flex items-center justify-center rounded-full"
+          data-testid="close-button"
+        >
+          <svg
+            height="1.2em"
+            viewBox="0 0 24 24"
+            width="1.2em"
+          >
+            <path
+              d="M12 2c5.53 0 10 4.47 10 10s-4.47 10-10 10S2 17.53 2 12S6.47 2 12 2m3.59 5L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41z"
+              fill="currentColor"
+            />
+          </svg>
+          <!--&lt;Close-circle&gt;-->
+        </button>
+      </header>
+       
+      <div
+        class="flex flex-col gap-4 w-11/12"
+      >
+        <div
+          class="flex flex-col gap-2 md:gap-3"
+        >
+          <span
+            class="text-xl md:text-2xl font-bold"
+          >
+            Conditions Générales d'Utilisation
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Ces conditions générales régissent votre
+                utilisation de
+                l'application web 
+            <span
+              class="font-bold"
+            >
+              Static Web Site
+            </span>
+            , ci-après dénommée "l'Application". En
+                utilisant cette Application, vous acceptez ces
+                conditions dans leur intégralité. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser
+                l'Application.
+          </p>
+        </div>
+         
+        <div
+          class="flex flex-col gap-2 md:gap-3"
+        >
+          <span
+            class="text-xl md:text-2xl font-bold"
+          >
+            Acceptation des Conditions
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            En utilisant l'Application, vous acceptez d'être lié par ces conditions générales, ainsi que par notre
+                politique de confidentialité. Si vous n'êtes pas d'accord avec l'une de ces conditions, veuillez ne pas
+                utiliser
+                l'Application.
+          </p>
+        </div>
+         
+        <div
+          class="flex flex-col gap-2 md:gap-3"
+        >
+          <span
+            class="text-xl md:text-2xl font-bold"
+          >
+            Utilisation de l'Application
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Vous pouvez utiliser l'Application à des fins légales et autorisées uniquement. Vous acceptez de ne pas
+                utiliser l'Application à des fins illégales ou interdites par ces conditions. Vous ne devez pas
+                interférer avec
+                le bon fonctionnement de l'Application, ni tenter d'accéder à des zones sécurisées de l'Application sans
+                autorisation.
+          </p>
+        </div>
+         
+        <div
+          class="flex flex-col gap-2 md:gap-3"
+        >
+          <span
+            class="text-xl md:text-2xl font-bold"
+          >
+            Propriété Intellectuelle
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            L'Application et son contenu, y compris mais sans s'y limiter, le texte, les graphiques, les logos, les
+                images et les clips audio, sont la propriété de 
+            <span
+              class="font-bold"
+            >
+              6C Solutions
+            </span>
+             et sont
+                protégés par les lois sur la
+                propriété intellectuelle. Vous acceptez de ne pas copier, distribuer, ou modifier le contenu de
+                l'Application sans
+                autorisation écrite préalable.
+          </p>
+        </div>
+         
+        <div
+          class="flex flex-col gap-2 md:gap-3"
+        >
+          <span
+            class="text-xl md:text-2xl font-bold"
+          >
+            Limitation de Responsabilité
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            L'utilisation de l'Application se fait à vos propres risques. En aucun cas, 
+            <span
+              class="font-bold"
+            >
+              6C Solutions
+            </span>
+            
+                ne sera
+                responsable des dommages directs, indirects, accessoires, spéciaux ou consécutifs découlant de
+                l'utilisation ou
+                de l'incapacité à utiliser l'Application.
+          </p>
+        </div>
+         
+        <div
+          class="flex flex-col gap-2 md:gap-3"
+        >
+          <span
+            class="text-xl md:text-2xl font-bold"
+          >
+            Modifications des Conditions
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            <span
+              class="font-bold"
+            >
+              6C Solutions
+            </span>
+             se réserve le droit de modifier ces conditions à tout
+                moment.
+                Les modifications prendront effet immédiatement après leur publication sur l'Application. En continuant
+                à utiliser l'Application
+                après la publication des modifications, vous acceptez les conditions révisées.
+                
+            <br />
+            
+                Ces conditions générales d'utilisation sont sujettes à changement et peuvent être complétées par des
+                conditions supplémentaires spécifiques à certaines fonctionnalités de l'Application.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--&lt;TermsAndConditionsModal&gt;-->
+  </div>
+</body>
+`;

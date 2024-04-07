@@ -1,0 +1,80 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shopping card product card > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="h-32 xl:h-36 flex bg-white rounded-md shadow-md"
+    >
+      <img
+        alt="shopping cart product"
+        class="w-2/5 p-2 h-full product-image object-contain"
+        src="a-product-image"
+      />
+       
+      <div
+        class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2"
+      >
+        <div
+          class="w-full flex justify-between"
+        >
+          <div
+            class="w-10/12 font-thin flex justify-center items-center"
+          >
+            a-product-name
+          </div>
+           
+          <button
+            class="w-9 h-9 flex justify-center items-center text-xl shadow-md border border-orange-500 text-red-500 bg-orange-100"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6zM8 9h8v10H8zm7.5-5l-1-1h-5l-1 1H5v2h14V4z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Delete-outline&gt;-->
+          </button>
+        </div>
+         
+        <div
+          class="flex justify-between h-10"
+        >
+          <div
+            class="w-4/12 font-thin flex items-center"
+          >
+            $
+            2.50
+          </div>
+           
+          <div
+            class="w-7/12 flex"
+          >
+            <button
+              class="w-3/12 text-2xl text-red-500 bg-orange-100"
+            >
+              -
+            </button>
+             
+            <input
+              class="w-6/12 focus:outline-none text-black text-center rounded-none"
+              type="text"
+            />
+             
+            <button
+              class="w-3/12 text-2xl text-red-500 bg-orange-100"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--&lt;ShoppingCartProductCard&gt;-->
+  </div>
+</body>
+`;

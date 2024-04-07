@@ -1,0 +1,7 @@
+export const expiredSession = {
+    clientSecret: 'cs_test_b1O0JxGlBYluIZLjAq0tUqfb7F6Y0tROw5FbqL2xSSlZ7sbtz901yER1BR_secret_fidwbEhqYWAnPydgaGdgYWFgYScpJ2lkfGpwcVF8dWAnPydocGlxbFpscWBoJyknd2BhbHdgZnFKa0ZqaHVpYHFsamsnPydkaXJkfHYneCUl'
+}
+
+export const response = {
+    clientSecret: 'cs_test_b1Wdqqj1x0jKGjHoS2Qd8kapsUtg1zNQ37zElbXT42Oii5kAMhF2XfBKlF_secret_fidwbEhqYWAnPydgaGdgYWFgYScpJ2lkfGpwcVF8dWAnPydocGlxbFpscWBoJyknd2BhbHdgZnFKa0ZqaHVpYHFsamsnPydkaXJkfHYneCUl'
+}

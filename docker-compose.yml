@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  test-integration:
+    image: mcr.microsoft.com/playwright
+    working_dir: /work/
+    volumes:
+      - ./:/work
+    command: >
+      /bin/bash -c '
+      apt-get update &&
+      apt-get install -y build-essential &&
+      npm ci &&
+      npm run build &&
+      npx playwright install --with-deps &&
+      npx playwright test ${UPDATE} ${PLAYWRIGHT_TEST}'
+    network_mode: host

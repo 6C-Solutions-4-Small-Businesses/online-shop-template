@@ -1,0 +1,1324 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Product data table > when on the any other page > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="w-full h-full"
+    >
+      <div
+        class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
+      >
+        <div
+          class="product-box relative w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-white shadow-2xl s-0QAyY96I1Nkt"
+          role="none"
+        >
+          <div
+            class="absolute flex w-12 h-12 top-0 text-white items-center invisible s-0QAyY96I1Nkt"
+          >
+            <svg
+              class="s-0QAyY96I1Nkt"
+              height="100"
+              viewBox="0 0 490 490"
+              width="100"
+              x="0px"
+              xml:space="preserve"
+              y="0px"
+            >
+              <polygon
+                class="s-0QAyY96I1Nkt"
+                points="0,0 490,0 0,490"
+                style="fill: #ff0000;"
+              />
+            </svg>
+             
+            <div
+              class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold s-0QAyY96I1Nkt"
+            >
+              -
+              null
+              %
+            </div>
+          </div>
+           
+          <img
+            alt="product-1"
+            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            src="an-image-url"
+          />
+           
+          <div
+            class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+              role="region"
+            >
+               
+              <div
+                class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-plus&gt;-->
+              </div>
+            </div>
+            <!--&lt;ShoppingCartActions&gt;-->
+          </div>
+           
+          <div
+            class="absolute bottom-0 right-0 w-full flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg s-0QAyY96I1Nkt"
+              role="region"
+            >
+               
+              <div
+                class="w-full flex flex-col s-0QAyY96I1Nkt"
+              >
+                 
+                <div
+                  class="w-full items-center justify-center flex text-xl font-semibold s-0QAyY96I1Nkt"
+                >
+                  <span
+                    class="block s-0QAyY96I1Nkt"
+                  >
+                    $
+                    1
+                    <sup
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      00
+                    </sup>
+                  </span>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--&lt;ProductCard&gt;-->
+        <div
+          class="product-box relative w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-white shadow-2xl s-0QAyY96I1Nkt"
+          role="none"
+        >
+          <div
+            class="absolute flex w-12 h-12 top-0 text-white items-center invisible s-0QAyY96I1Nkt"
+          >
+            <svg
+              class="s-0QAyY96I1Nkt"
+              height="100"
+              viewBox="0 0 490 490"
+              width="100"
+              x="0px"
+              xml:space="preserve"
+              y="0px"
+            >
+              <polygon
+                class="s-0QAyY96I1Nkt"
+                points="0,0 490,0 0,490"
+                style="fill: #ff0000;"
+              />
+            </svg>
+             
+            <div
+              class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold s-0QAyY96I1Nkt"
+            >
+              -
+              null
+              %
+            </div>
+          </div>
+           
+          <img
+            alt="product-2"
+            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            src="an-image-url"
+          />
+           
+          <div
+            class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+              role="region"
+            >
+               
+              <div
+                class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-plus&gt;-->
+              </div>
+            </div>
+            <!--&lt;ShoppingCartActions&gt;-->
+          </div>
+           
+          <div
+            class="absolute bottom-0 right-0 w-full flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg s-0QAyY96I1Nkt"
+              role="region"
+            >
+               
+              <div
+                class="w-full flex flex-col s-0QAyY96I1Nkt"
+              >
+                 
+                <div
+                  class="w-full items-center justify-center flex text-xl font-semibold s-0QAyY96I1Nkt"
+                >
+                  <span
+                    class="block s-0QAyY96I1Nkt"
+                  >
+                    $
+                    8
+                    <sup
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      00
+                    </sup>
+                  </span>
+                   
+                  <span
+                    class="text-sm s-0QAyY96I1Nkt"
+                  >
+                    <sub
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      / 
+                      kg
+                    </sub>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--&lt;ProductCard&gt;-->
+        <div
+          class="product-box relative w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-white shadow-2xl s-0QAyY96I1Nkt"
+          role="none"
+        >
+          <div
+            class="absolute flex w-12 h-12 top-0 text-white items-center invisible s-0QAyY96I1Nkt"
+          >
+            <svg
+              class="s-0QAyY96I1Nkt"
+              height="100"
+              viewBox="0 0 490 490"
+              width="100"
+              x="0px"
+              xml:space="preserve"
+              y="0px"
+            >
+              <polygon
+                class="s-0QAyY96I1Nkt"
+                points="0,0 490,0 0,490"
+                style="fill: #ff0000;"
+              />
+            </svg>
+             
+            <div
+              class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold s-0QAyY96I1Nkt"
+            >
+              -
+              null
+              %
+            </div>
+          </div>
+           
+          <img
+            alt="product-3"
+            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            src="an-image-url"
+          />
+           
+          <div
+            class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+              role="region"
+            >
+               
+              <div
+                class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-plus&gt;-->
+              </div>
+            </div>
+            <!--&lt;ShoppingCartActions&gt;-->
+          </div>
+           
+          <div
+            class="absolute bottom-0 right-0 w-full flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg s-0QAyY96I1Nkt"
+              role="region"
+            >
+               
+              <div
+                class="w-full flex flex-col s-0QAyY96I1Nkt"
+              >
+                 
+                <div
+                  class="w-full items-center justify-center flex text-xl font-semibold s-0QAyY96I1Nkt"
+                >
+                  <span
+                    class="block s-0QAyY96I1Nkt"
+                  >
+                    $
+                    12
+                    <sup
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      00
+                    </sup>
+                  </span>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--&lt;ProductCard&gt;-->
+      </div>
+       
+      <div
+        class="h-[12%] md:h-[6%] bg-white flex justify-center xl:justify-end visible"
+      >
+        <div
+          class="flex w-full xl:w-1/4 space-x-2 xl:pr-5 justify-center xl:justify-end items-center"
+        >
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M18.41 7.41L17 6l-6 6l6 6l1.41-1.41L13.83 12zm-6 0L11 6l-6 6l6 6l1.41-1.41L7.83 12z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-double-left&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-left&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 border border-white text-white bg-orange-500 text-lg xl:text-sm font-thin rounded-sm"
+          >
+            5
+          </button>
+           
+          <div
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center font-thin text-lg text-gray-500"
+          >
+            of 
+            25
+          </div>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-right&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-double-right&gt;-->
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--&lt;ProductDataTable&gt;-->
+  </div>
+</body>
+`;
+
+exports[`Product data table > when on the first page > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="w-full h-full"
+    >
+      <div
+        class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
+      >
+        <div
+          class="product-box relative w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-white shadow-2xl s-0QAyY96I1Nkt"
+          role="none"
+        >
+          <div
+            class="absolute flex w-12 h-12 top-0 text-white items-center invisible s-0QAyY96I1Nkt"
+          >
+            <svg
+              class="s-0QAyY96I1Nkt"
+              height="100"
+              viewBox="0 0 490 490"
+              width="100"
+              x="0px"
+              xml:space="preserve"
+              y="0px"
+            >
+              <polygon
+                class="s-0QAyY96I1Nkt"
+                points="0,0 490,0 0,490"
+                style="fill: #ff0000;"
+              />
+            </svg>
+             
+            <div
+              class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold s-0QAyY96I1Nkt"
+            >
+              -
+              null
+              %
+            </div>
+          </div>
+           
+          <img
+            alt="product-1"
+            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            src="an-image-url"
+          />
+           
+          <div
+            class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+              role="region"
+            >
+               
+              <div
+                class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-plus&gt;-->
+              </div>
+            </div>
+            <!--&lt;ShoppingCartActions&gt;-->
+          </div>
+           
+          <div
+            class="absolute bottom-0 right-0 w-full flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg s-0QAyY96I1Nkt"
+              role="region"
+            >
+               
+              <div
+                class="w-full flex flex-col s-0QAyY96I1Nkt"
+              >
+                 
+                <div
+                  class="w-full items-center justify-center flex text-xl font-semibold s-0QAyY96I1Nkt"
+                >
+                  <span
+                    class="block s-0QAyY96I1Nkt"
+                  >
+                    $
+                    1
+                    <sup
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      00
+                    </sup>
+                  </span>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--&lt;ProductCard&gt;-->
+        <div
+          class="product-box relative w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-white shadow-2xl s-0QAyY96I1Nkt"
+          role="none"
+        >
+          <div
+            class="absolute flex w-12 h-12 top-0 text-white items-center invisible s-0QAyY96I1Nkt"
+          >
+            <svg
+              class="s-0QAyY96I1Nkt"
+              height="100"
+              viewBox="0 0 490 490"
+              width="100"
+              x="0px"
+              xml:space="preserve"
+              y="0px"
+            >
+              <polygon
+                class="s-0QAyY96I1Nkt"
+                points="0,0 490,0 0,490"
+                style="fill: #ff0000;"
+              />
+            </svg>
+             
+            <div
+              class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold s-0QAyY96I1Nkt"
+            >
+              -
+              null
+              %
+            </div>
+          </div>
+           
+          <img
+            alt="product-2"
+            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            src="an-image-url"
+          />
+           
+          <div
+            class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+              role="region"
+            >
+               
+              <div
+                class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-plus&gt;-->
+              </div>
+            </div>
+            <!--&lt;ShoppingCartActions&gt;-->
+          </div>
+           
+          <div
+            class="absolute bottom-0 right-0 w-full flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg s-0QAyY96I1Nkt"
+              role="region"
+            >
+               
+              <div
+                class="w-full flex flex-col s-0QAyY96I1Nkt"
+              >
+                 
+                <div
+                  class="w-full items-center justify-center flex text-xl font-semibold s-0QAyY96I1Nkt"
+                >
+                  <span
+                    class="block s-0QAyY96I1Nkt"
+                  >
+                    $
+                    8
+                    <sup
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      00
+                    </sup>
+                  </span>
+                   
+                  <span
+                    class="text-sm s-0QAyY96I1Nkt"
+                  >
+                    <sub
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      / 
+                      kg
+                    </sub>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--&lt;ProductCard&gt;-->
+        <div
+          class="product-box relative w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-white shadow-2xl s-0QAyY96I1Nkt"
+          role="none"
+        >
+          <div
+            class="absolute flex w-12 h-12 top-0 text-white items-center invisible s-0QAyY96I1Nkt"
+          >
+            <svg
+              class="s-0QAyY96I1Nkt"
+              height="100"
+              viewBox="0 0 490 490"
+              width="100"
+              x="0px"
+              xml:space="preserve"
+              y="0px"
+            >
+              <polygon
+                class="s-0QAyY96I1Nkt"
+                points="0,0 490,0 0,490"
+                style="fill: #ff0000;"
+              />
+            </svg>
+             
+            <div
+              class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold s-0QAyY96I1Nkt"
+            >
+              -
+              null
+              %
+            </div>
+          </div>
+           
+          <img
+            alt="product-3"
+            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            src="an-image-url"
+          />
+           
+          <div
+            class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+              role="region"
+            >
+               
+              <div
+                class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-plus&gt;-->
+              </div>
+            </div>
+            <!--&lt;ShoppingCartActions&gt;-->
+          </div>
+           
+          <div
+            class="absolute bottom-0 right-0 w-full flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg s-0QAyY96I1Nkt"
+              role="region"
+            >
+               
+              <div
+                class="w-full flex flex-col s-0QAyY96I1Nkt"
+              >
+                 
+                <div
+                  class="w-full items-center justify-center flex text-xl font-semibold s-0QAyY96I1Nkt"
+                >
+                  <span
+                    class="block s-0QAyY96I1Nkt"
+                  >
+                    $
+                    12
+                    <sup
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      00
+                    </sup>
+                  </span>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--&lt;ProductCard&gt;-->
+      </div>
+       
+      <div
+        class="h-[12%] md:h-[6%] bg-white flex justify-center xl:justify-end visible"
+      >
+        <div
+          class="flex w-full xl:w-1/4 space-x-2 xl:pr-5 justify-center xl:justify-end items-center"
+        >
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+            disabled=""
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M18.41 7.41L17 6l-6 6l6 6l1.41-1.41L13.83 12zm-6 0L11 6l-6 6l6 6l1.41-1.41L7.83 12z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-double-left&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+            disabled=""
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-left&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 border border-white text-white bg-orange-500 text-lg xl:text-sm font-thin rounded-sm"
+          >
+            1
+          </button>
+           
+          <div
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center font-thin text-lg text-gray-500"
+          >
+            of 
+            25
+          </div>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-right&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-double-right&gt;-->
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--&lt;ProductDataTable&gt;-->
+  </div>
+</body>
+`;
+
+exports[`Product data table > when on the last page > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="w-full h-full"
+    >
+      <div
+        class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
+      >
+        <div
+          class="product-box relative w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-white shadow-2xl s-0QAyY96I1Nkt"
+          role="none"
+        >
+          <div
+            class="absolute flex w-12 h-12 top-0 text-white items-center invisible s-0QAyY96I1Nkt"
+          >
+            <svg
+              class="s-0QAyY96I1Nkt"
+              height="100"
+              viewBox="0 0 490 490"
+              width="100"
+              x="0px"
+              xml:space="preserve"
+              y="0px"
+            >
+              <polygon
+                class="s-0QAyY96I1Nkt"
+                points="0,0 490,0 0,490"
+                style="fill: #ff0000;"
+              />
+            </svg>
+             
+            <div
+              class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold s-0QAyY96I1Nkt"
+            >
+              -
+              null
+              %
+            </div>
+          </div>
+           
+          <img
+            alt="product-1"
+            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            src="an-image-url"
+          />
+           
+          <div
+            class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+              role="region"
+            >
+               
+              <div
+                class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-plus&gt;-->
+              </div>
+            </div>
+            <!--&lt;ShoppingCartActions&gt;-->
+          </div>
+           
+          <div
+            class="absolute bottom-0 right-0 w-full flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg s-0QAyY96I1Nkt"
+              role="region"
+            >
+               
+              <div
+                class="w-full flex flex-col s-0QAyY96I1Nkt"
+              >
+                 
+                <div
+                  class="w-full items-center justify-center flex text-xl font-semibold s-0QAyY96I1Nkt"
+                >
+                  <span
+                    class="block s-0QAyY96I1Nkt"
+                  >
+                    $
+                    1
+                    <sup
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      00
+                    </sup>
+                  </span>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--&lt;ProductCard&gt;-->
+        <div
+          class="product-box relative w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-white shadow-2xl s-0QAyY96I1Nkt"
+          role="none"
+        >
+          <div
+            class="absolute flex w-12 h-12 top-0 text-white items-center invisible s-0QAyY96I1Nkt"
+          >
+            <svg
+              class="s-0QAyY96I1Nkt"
+              height="100"
+              viewBox="0 0 490 490"
+              width="100"
+              x="0px"
+              xml:space="preserve"
+              y="0px"
+            >
+              <polygon
+                class="s-0QAyY96I1Nkt"
+                points="0,0 490,0 0,490"
+                style="fill: #ff0000;"
+              />
+            </svg>
+             
+            <div
+              class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold s-0QAyY96I1Nkt"
+            >
+              -
+              null
+              %
+            </div>
+          </div>
+           
+          <img
+            alt="product-2"
+            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            src="an-image-url"
+          />
+           
+          <div
+            class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+              role="region"
+            >
+               
+              <div
+                class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-plus&gt;-->
+              </div>
+            </div>
+            <!--&lt;ShoppingCartActions&gt;-->
+          </div>
+           
+          <div
+            class="absolute bottom-0 right-0 w-full flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg s-0QAyY96I1Nkt"
+              role="region"
+            >
+               
+              <div
+                class="w-full flex flex-col s-0QAyY96I1Nkt"
+              >
+                 
+                <div
+                  class="w-full items-center justify-center flex text-xl font-semibold s-0QAyY96I1Nkt"
+                >
+                  <span
+                    class="block s-0QAyY96I1Nkt"
+                  >
+                    $
+                    8
+                    <sup
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      00
+                    </sup>
+                  </span>
+                   
+                  <span
+                    class="text-sm s-0QAyY96I1Nkt"
+                  >
+                    <sub
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      / 
+                      kg
+                    </sub>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--&lt;ProductCard&gt;-->
+        <div
+          class="product-box relative w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-white shadow-2xl s-0QAyY96I1Nkt"
+          role="none"
+        >
+          <div
+            class="absolute flex w-12 h-12 top-0 text-white items-center invisible s-0QAyY96I1Nkt"
+          >
+            <svg
+              class="s-0QAyY96I1Nkt"
+              height="100"
+              viewBox="0 0 490 490"
+              width="100"
+              x="0px"
+              xml:space="preserve"
+              y="0px"
+            >
+              <polygon
+                class="s-0QAyY96I1Nkt"
+                points="0,0 490,0 0,490"
+                style="fill: #ff0000;"
+              />
+            </svg>
+             
+            <div
+              class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold s-0QAyY96I1Nkt"
+            >
+              -
+              null
+              %
+            </div>
+          </div>
+           
+          <img
+            alt="product-3"
+            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            src="an-image-url"
+          />
+           
+          <div
+            class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+              role="region"
+            >
+               
+              <div
+                class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-plus&gt;-->
+              </div>
+            </div>
+            <!--&lt;ShoppingCartActions&gt;-->
+          </div>
+           
+          <div
+            class="absolute bottom-0 right-0 w-full flex justify-end s-0QAyY96I1Nkt"
+          >
+            <div
+              class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg s-0QAyY96I1Nkt"
+              role="region"
+            >
+               
+              <div
+                class="w-full flex flex-col s-0QAyY96I1Nkt"
+              >
+                 
+                <div
+                  class="w-full items-center justify-center flex text-xl font-semibold s-0QAyY96I1Nkt"
+                >
+                  <span
+                    class="block s-0QAyY96I1Nkt"
+                  >
+                    $
+                    12
+                    <sup
+                      class="s-0QAyY96I1Nkt"
+                    >
+                      00
+                    </sup>
+                  </span>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--&lt;ProductCard&gt;-->
+      </div>
+       
+      <div
+        class="h-[12%] md:h-[6%] bg-white flex justify-center xl:justify-end visible"
+      >
+        <div
+          class="flex w-full xl:w-1/4 space-x-2 xl:pr-5 justify-center xl:justify-end items-center"
+        >
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M18.41 7.41L17 6l-6 6l6 6l1.41-1.41L13.83 12zm-6 0L11 6l-6 6l6 6l1.41-1.41L7.83 12z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-double-left&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-left&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 border border-white text-white bg-orange-500 text-lg xl:text-sm font-thin rounded-sm"
+          >
+            25
+          </button>
+           
+          <div
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center font-thin text-lg text-gray-500"
+          >
+            of 
+            25
+          </div>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+            disabled=""
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-right&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+            disabled=""
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-double-right&gt;-->
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--&lt;ProductDataTable&gt;-->
+  </div>
+</body>
+`;
+
+exports[`Product data table > when there is no products > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="w-full h-full"
+    >
+      <div
+        class="w-full h-[87%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
+      />
+       
+      <div
+        class="h-[12%] md:h-[6%] bg-white flex justify-center xl:justify-end invisible sm:visible"
+      >
+        <div
+          class="flex w-full xl:w-1/4 space-x-2 xl:pr-5 justify-center xl:justify-end items-center"
+        >
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+            disabled=""
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M18.41 7.41L17 6l-6 6l6 6l1.41-1.41L13.83 12zm-6 0L11 6l-6 6l6 6l1.41-1.41L7.83 12z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-double-left&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+            disabled=""
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-left&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 border border-white text-white bg-orange-500 text-lg xl:text-sm font-thin rounded-sm"
+          >
+            1
+          </button>
+           
+          <div
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center font-thin text-lg text-gray-500"
+          >
+            of 
+            1
+          </div>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+            disabled=""
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-right&gt;-->
+          </button>
+           
+          <button
+            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
+            disabled=""
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Chevron-double-right&gt;-->
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--&lt;ProductDataTable&gt;-->
+  </div>
+</body>
+`;

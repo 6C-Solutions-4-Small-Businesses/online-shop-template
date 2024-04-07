@@ -1,0 +1,242 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`OrderedDetails > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="p-4 m-2"
+    >
+      <div
+        class="w-full"
+      >
+        <p>
+          Voici les articles que vous avez commandé:
+        </p>
+         
+        <div
+          class="w-full py-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4"
+        >
+          <div
+            class="h-32 xl:h-36 flex bg-white rounded-md shadow-md s-ReROHsK2djRp"
+            data-testid="product-id-1"
+          >
+            <img
+              alt="product-1"
+              class="w-2/5 p-2 h-full product-image object-contain s-ReROHsK2djRp"
+              src="an-image-url"
+            />
+             
+            <div
+              class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2 s-ReROHsK2djRp"
+            >
+              <div
+                class="flex justify-between s-ReROHsK2djRp"
+              >
+                <div
+                  class="font-thin flex justify-center items-center s-ReROHsK2djRp"
+                >
+                  function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  } x product-1
+                </div>
+              </div>
+               
+              <div
+                class="flex justify-between h-10 s-ReROHsK2djRp"
+              >
+                <div
+                  class="w-4/12 font-thin flex items-center s-ReROHsK2djRp"
+                >
+                  $
+                  1.00
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--&lt;OrderedItemSummaryCard&gt;-->
+          <div
+            class="h-32 xl:h-36 flex bg-white rounded-md shadow-md s-ReROHsK2djRp"
+            data-testid="product-id-2"
+          >
+            <img
+              alt="product-2"
+              class="w-2/5 p-2 h-full product-image object-contain s-ReROHsK2djRp"
+              src="an-image-url"
+            />
+             
+            <div
+              class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2 s-ReROHsK2djRp"
+            >
+              <div
+                class="flex justify-between s-ReROHsK2djRp"
+              >
+                <div
+                  class="font-thin flex justify-center items-center s-ReROHsK2djRp"
+                >
+                  function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  } x product-2
+                </div>
+              </div>
+               
+              <div
+                class="flex justify-between h-10 s-ReROHsK2djRp"
+              >
+                <div
+                  class="w-4/12 font-thin flex items-center s-ReROHsK2djRp"
+                >
+                  $
+                  8.00
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--&lt;OrderedItemSummaryCard&gt;-->
+          <div
+            class="h-32 xl:h-36 flex bg-white rounded-md shadow-md s-ReROHsK2djRp"
+            data-testid="product-id-3"
+          >
+            <img
+              alt="product-3"
+              class="w-2/5 p-2 h-full product-image object-contain s-ReROHsK2djRp"
+              src="an-image-url"
+            />
+             
+            <div
+              class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2 s-ReROHsK2djRp"
+            >
+              <div
+                class="flex justify-between s-ReROHsK2djRp"
+              >
+                <div
+                  class="font-thin flex justify-center items-center s-ReROHsK2djRp"
+                >
+                  function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  } x product-3
+                </div>
+              </div>
+               
+              <div
+                class="flex justify-between h-10 s-ReROHsK2djRp"
+              >
+                <div
+                  class="w-4/12 font-thin flex items-center s-ReROHsK2djRp"
+                >
+                  $
+                  12.00
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--&lt;OrderedItemSummaryCard&gt;-->
+        </div>
+      </div>
+       
+      <p
+        class="text-center"
+      >
+        Cliquez 
+        <a
+          class="text-amber-500"
+          data-testid="track-delivery-link"
+          target="_blank"
+        >
+          ici
+        </a>
+         
+        <sup>
+          <svg
+            class="inline-block text-amber-500 text"
+            height="1em"
+            order="undefined"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5a5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1c0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5a5 5 0 0 0-5-5"
+              fill="currentColor"
+            />
+          </svg>
+        </sup>
+        
+        pour suivre la livraison de votre commande.
+      </p>
+    </div>
+    <!--&lt;OrderDetail&gt;-->
+  </div>
+</body>
+`;

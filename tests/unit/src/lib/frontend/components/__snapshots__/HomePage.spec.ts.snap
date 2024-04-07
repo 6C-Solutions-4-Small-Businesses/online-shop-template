@@ -1,0 +1,98 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home page > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="s-y_bCXRrkrYfP"
+    >
+      <img
+        alt="Demo Merchant, Business Slogan"
+        class="object-cover w-full max-w-full h-screen brightness-75 blur-sm relative -z-1 s-y_bCXRrkrYfP"
+        src="/src/lib/frontend/assets/images/convenience-store-interior.webp"
+      />
+
+      <div
+        class="absolute top-44 w-full flex justify-center s-y_bCXRrkrYfP"
+      />
+
+      <div
+        class="w-full s-y_bCXRrkrYfP"
+      >
+
+        <div
+          class="news-letter-box w-full flex flex-col items-center xl:flex-row xl:justify-center bg-green-100 s-y_bCXRrkrYfP"
+        >
+          <div
+            class="flex flex-col w-10/12 xl:w-7/12 py-12 xl:py-20 s-y_bCXRrkrYfP"
+          >
+            <div
+              class="flex flex-col s-y_bCXRrkrYfP"
+            >
+              <div
+                class="text-3xl text-green-900 my-2 s-y_bCXRrkrYfP"
+              >
+                Rabais Exclusifs
+              </div>
+
+              <p
+                class="font-thin text-justify s-y_bCXRrkrYfP"
+              >
+                En tant qu'abonné privilégié, vous bénéficierez d'un accès exclusif à des offres spéciales et à des
+            promotions, vous assurant de réaliser plus d'économies à chaque fois que vous faites vos achats
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col s-y_bCXRrkrYfP"
+            >
+              <div
+                class="text-3xl text-green-900 my-2 s-y_bCXRrkrYfP"
+              >
+                Premier Arrivé, Premier Servi
+              </div>
+
+              <p
+                class="font-thin text-justify s-y_bCXRrkrYfP"
+              >
+                Abonnez-vous dès maintenant et soyez le premier à savoir quand nous réapprovisionnons en produits frais,
+            produits laitiers et autres denrées périssables, vous garantissant ainsi de toujours obtenir les choix les
+            plus frais de nos rayons.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-10/12 xl:w-3/12 flex flex-col justify-center items-center s-y_bCXRrkrYfP"
+          >
+            <div
+              class="w-80 h-80 flex flex-col items-center bg-green-300 rounded-full justify-center s-y_bCXRrkrYfP"
+            >
+              <div
+                class="w-4/5 mt-5 mb-8 text-2xl text-center text-green-900 font-thin s-y_bCXRrkrYfP"
+              >
+                Abonnez-vous à notre Infolettre
+              </div>
+
+              <input
+                class="w-4/5 h-10 border border-gray-500  rounded-sm pl-2 focus:outline-none  focus:border-2 s-y_bCXRrkrYfP"
+                placeholder="Entrer votre courriel"
+                type="email"
+              />
+
+              <button
+                class="flex justify-around items-center uppercase border border-orange-500 rounded-sm text-orange-500 bg-orange-50 hover:bg-orange-100 w-36 h-12 mt-10"
+              >
+                S'abonner
+              </button>
+              <!--&lt;Button&gt;-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--&lt;+page&gt;-->
+  </div>
+</body>
+`;

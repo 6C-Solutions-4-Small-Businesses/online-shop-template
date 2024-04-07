@@ -1,0 +1,133 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`/order/[id] > statically > should have the expected HTML structure 1`] = `
+<body>
+  <div>
+    <div
+      class="w-full max-w-full h-screen bg-slate-100 overflow-y-scroll md:overflow-hidden"
+    >
+      <div
+        class="p-4 m-2"
+      >
+        <div
+          class="w-full"
+        >
+          <p>
+            Voici les articles que vous avez commandé:
+          </p>
+           
+          <div
+            class="w-full py-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4"
+          >
+            <div
+              class="h-32 xl:h-36 flex bg-white rounded-md shadow-md s-ReROHsK2djRp"
+              data-testid="a very good id"
+            >
+              <img
+                alt="Hair Softener"
+                class="w-2/5 p-2 h-full product-image object-contain s-ReROHsK2djRp"
+                src="https://5jc9cdsla9yvcq5o.public.blob.vercel-storage.com/010181140082.webp"
+              />
+               
+              <div
+                class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2 s-ReROHsK2djRp"
+              >
+                <div
+                  class="flex justify-between s-ReROHsK2djRp"
+                >
+                  <div
+                    class="font-thin flex justify-center items-center s-ReROHsK2djRp"
+                  >
+                    4 x Hair Softener
+                  </div>
+                </div>
+                 
+                <div
+                  class="flex justify-between h-10 s-ReROHsK2djRp"
+                >
+                  <div
+                    class="w-4/12 font-thin flex items-center s-ReROHsK2djRp"
+                  >
+                    $
+                    12.34
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--&lt;OrderedItemSummaryCard&gt;-->
+            <div
+              class="h-32 xl:h-36 flex bg-white rounded-md shadow-md s-ReROHsK2djRp"
+              data-testid="another very good id"
+            >
+              <img
+                alt="Beard Tinter"
+                class="w-2/5 p-2 h-full product-image object-contain s-ReROHsK2djRp"
+                src="https://5jc9cdsla9yvcq5o.public.blob.vercel-storage.com/011509049063.webp"
+              />
+               
+              <div
+                class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2 s-ReROHsK2djRp"
+              >
+                <div
+                  class="flex justify-between s-ReROHsK2djRp"
+                >
+                  <div
+                    class="font-thin flex justify-center items-center s-ReROHsK2djRp"
+                  >
+                    2 x Beard Tinter
+                  </div>
+                </div>
+                 
+                <div
+                  class="flex justify-between h-10 s-ReROHsK2djRp"
+                >
+                  <div
+                    class="w-4/12 font-thin flex items-center s-ReROHsK2djRp"
+                  >
+                    $
+                    4.59
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--&lt;OrderedItemSummaryCard&gt;-->
+          </div>
+        </div>
+         
+        <p
+          class="text-center"
+        >
+          Cliquez 
+          <a
+            class="text-amber-500"
+            data-testid="track-delivery-link"
+            target="_blank"
+          >
+            ici
+          </a>
+           
+          <sup>
+            <svg
+              class="inline-block text-amber-500 text"
+              height="1em"
+              order="undefined"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5a5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1c0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5a5 5 0 0 0-5-5"
+                fill="currentColor"
+              />
+            </svg>
+          </sup>
+          
+        pour suivre la livraison de votre commande.
+        </p>
+      </div>
+      <!--&lt;OrderDetail&gt;-->
+    </div>
+    <!--&lt;+page&gt;-->
+  </div>
+</body>
+`;

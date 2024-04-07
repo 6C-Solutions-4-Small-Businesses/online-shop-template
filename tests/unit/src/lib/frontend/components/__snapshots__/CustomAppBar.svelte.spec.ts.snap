@@ -1,0 +1,426 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Custom App Bar Component > by default > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      aria-label=""
+      aria-labelledby=""
+      class="app-bar flex flex-col bg-green-50  space-y-4 p-0  fixed w-full z-10 h-14"
+      data-testid="app-bar"
+      role="toolbar"
+    >
+      <div
+        class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 "
+      >
+        <div
+          class="app-bar-slot-lead flex-none flex justify-between items-center "
+        >
+          <button
+            class="w-14 h-14 s-0DRWOA9box-P"
+          >
+            <img
+              alt="Demo MERCHANT Logo"
+              class="w-full h-full s-0DRWOA9box-P"
+              src="/src/lib/frontend/assets/images/logo.png"
+            />
+          </button>
+        </div>
+         
+        <div
+          class="app-bar-slot-default flex-auto "
+        >
+          <div
+            class="flex justify-between s-0DRWOA9box-P"
+          >
+            <div
+              class="text-xl sm:text-2xl s-0DRWOA9box-P"
+            >
+              <span
+                class="title s-0DRWOA9box-P"
+              >
+                Demo
+              </span>
+               
+              <span
+                class="business-name font-thin s-0DRWOA9box-P"
+              >
+                MERCHANT
+              </span>
+            </div>
+             
+            <div
+              class="hidden xl:flex w-1/2 s-0DRWOA9box-P"
+            >
+              <div
+                class="w-full h-10 flex justify-center"
+              >
+                <div
+                  class="relative w-8/12"
+                >
+                  <input
+                    class="w-full h-full focus:outline-none text-black text-left pl-2 rounded-none border border-l-gray-500 border-t-gray-500 border-b-gray-500"
+                    data-testid="app-bar-search-input"
+                    placeholder="Chercher un produit"
+                    type="text"
+                  />
+                   
+                </div>
+                 
+                <button
+                  class="w-3/12 h-full text-sm xl:text-lg text-white bg-slate-500 p-1"
+                  data-testid="app-bar-search-input-button"
+                  disabled=""
+                >
+                  Rechercher
+                </button>
+              </div>
+              <!--&lt;SearchInput&gt;-->
+            </div>
+          </div>
+        </div>
+         
+        <div
+          class="app-bar-slot-trail flex-none flex items-center space-x-4 w-36 md:w-64"
+        >
+          <div
+            class="flex w-full justify-around items-center s-0DRWOA9box-P"
+          >
+            <button
+              class="hover:text-orange-500 text-2xl flex justify-center items-center xl:hidden s-0DRWOA9box-P"
+              data-testid="overlay-search-bar-toggle-button"
+            >
+              <svg
+                height="1.2em"
+                viewBox="0 0 24 24"
+                width="1.2em"
+              >
+                <path
+                  d="M18 16h-.58l-.81-.81A7.07 7.07 0 0 0 18 11c0-3.87-3.13-7-7-7c-1.5 0-3 .5-4.21 1.4c-3.09 2.32-3.72 6.71-1.4 9.8c2.32 3.09 6.71 3.72 9.8 1.4l.81.81V18l5 5l2-2zm-7 0c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5M3 6L1 8V1h7L6 3H3zm18-5v7l-2-2V3h-3l-2-2zM6 19l2 2H1v-7l2 2v3z"
+                  fill="currentColor"
+                />
+              </svg>
+              <!--&lt;Magnify-expand&gt;-->
+            </button>
+             
+             
+            <button
+              class="text-lg hidden sm:hidden md:block font-thin s-0DRWOA9box-P"
+            >
+              Contactez-nous
+            </button>
+             
+             
+            <div
+              class="text-3xl flex relative s-0DRWOA9box-P"
+            >
+              <button
+                class="hover:text-orange-500 s-0DRWOA9box-P"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M17 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2c0-1.11.89-2 2-2M1 2h3.27l.94 2H20a1 1 0 0 1 1 1c0 .17-.05.34-.12.5l-3.58 6.47c-.34.61-1 1.03-1.75 1.03H8.1l-.9 1.63l-.03.12a.25.25 0 0 0 .25.25H19v2H7a2 2 0 0 1-2-2c0-.35.09-.68.24-.96l1.36-2.45L3 4H1zm6 16a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2c0-1.11.89-2 2-2m9-7l2.78-5H6.14l2.36 5z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-outline&gt;-->
+              </button>
+               
+              <span
+                class="absolute left-5 bottom-5 bg-orange-500 text-xs text-white w-4 h-4 flex justify-center items-center rounded-full border border-orange-500 s-0DRWOA9box-P"
+              >
+                0
+              </span>
+            </div>
+             
+            <div
+              class="text-3xl relative hidden sm:hidden md:block s-0DRWOA9box-P"
+            >
+              <button
+                class="hover:text-orange-500 text-2xl flex justify-center items-center s-0DRWOA9box-P"
+                data-testid="user-profile-button"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.5.88 4.93 1.78A7.893 7.893 0 0 1 12 20c-1.86 0-3.57-.64-4.93-1.72m11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33A7.928 7.928 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.5-1.64 4.83M12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6m0 5a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 12 8a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 11"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Account-circle-outline&gt;-->
+              </button>
+            </div>
+             
+            <button
+              class="text-3xl hover:text-orange-500 block sm:block md:hidden s-0DRWOA9box-P"
+              data-testid="menu-toggle-button"
+            >
+              <svg
+                height="1.2em"
+                viewBox="0 0 24 24"
+                width="1.2em"
+              >
+                <path
+                  d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"
+                  fill="currentColor"
+                />
+              </svg>
+              <!--&lt;Menu&gt;-->
+            </button>
+          </div>
+        </div>
+      </div>
+       
+    </div>
+    <!--&lt;AppBar&gt;-->
+     
+    <div
+      class="fixed hidden items-center w-full h-20 z-30 top-14 bg-white shadow-2xl xl:hidden s-0DRWOA9box-P"
+      data-testid="overlay-search-input-container"
+    >
+      <div
+        class="w-full md:w-2/3 h-10 flex justify-center"
+      >
+        <div
+          class="relative w-8/12"
+        >
+          <input
+            class="w-full h-full focus:outline-none text-black text-left pl-2 rounded-none border border-l-gray-500 border-t-gray-500 border-b-gray-500"
+            data-testid="overlay-search-input"
+            placeholder="Chercher un produit"
+            type="text"
+          />
+           
+        </div>
+         
+        <button
+          class="w-3/12 h-full text-sm xl:text-lg text-white bg-slate-500 p-1"
+          data-testid="overlay-search-input-button"
+          disabled=""
+        >
+          Rechercher
+        </button>
+      </div>
+      <!--&lt;SearchInput&gt;-->
+    </div>
+    <!--&lt;CustomAppBar&gt;-->
+  </div>
+  <div>
+    <div
+      aria-label=""
+      aria-labelledby=""
+      class="app-bar flex flex-col bg-green-50  space-y-4 p-0  fixed w-full z-10 h-14"
+      data-testid="app-bar"
+      role="toolbar"
+    >
+      <div
+        class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 "
+      >
+        <div
+          class="app-bar-slot-lead flex-none flex justify-between items-center "
+        >
+          <button
+            class="w-14 h-14 s-0DRWOA9box-P"
+          >
+            <img
+              alt="Demo MERCHANT Logo"
+              class="w-full h-full s-0DRWOA9box-P"
+              src="/src/lib/frontend/assets/images/logo.png"
+            />
+          </button>
+        </div>
+         
+        <div
+          class="app-bar-slot-default flex-auto "
+        >
+          <div
+            class="flex justify-between s-0DRWOA9box-P"
+          >
+            <div
+              class="text-xl sm:text-2xl s-0DRWOA9box-P"
+            >
+              <span
+                class="title s-0DRWOA9box-P"
+              >
+                Demo
+              </span>
+               
+              <span
+                class="business-name font-thin s-0DRWOA9box-P"
+              >
+                MERCHANT
+              </span>
+            </div>
+             
+            <div
+              class="hidden xl:flex w-1/2 s-0DRWOA9box-P"
+            >
+              <div
+                class="w-full h-10 flex justify-center"
+              >
+                <div
+                  class="relative w-8/12"
+                >
+                  <input
+                    class="w-full h-full focus:outline-none text-black text-left pl-2 rounded-none border border-l-gray-500 border-t-gray-500 border-b-gray-500"
+                    data-testid="app-bar-search-input"
+                    placeholder="Chercher un produit"
+                    type="text"
+                  />
+                   
+                </div>
+                 
+                <button
+                  class="w-3/12 h-full text-sm xl:text-lg text-white bg-slate-500 p-1"
+                  data-testid="app-bar-search-input-button"
+                  disabled=""
+                >
+                  Rechercher
+                </button>
+              </div>
+              <!--&lt;SearchInput&gt;-->
+            </div>
+          </div>
+        </div>
+         
+        <div
+          class="app-bar-slot-trail flex-none flex items-center space-x-4 w-36 md:w-64"
+        >
+          <div
+            class="flex w-full justify-around items-center s-0DRWOA9box-P"
+          >
+            <button
+              class="hover:text-orange-500 text-2xl flex justify-center items-center xl:hidden s-0DRWOA9box-P"
+              data-testid="overlay-search-bar-toggle-button"
+            >
+              <svg
+                height="1.2em"
+                viewBox="0 0 24 24"
+                width="1.2em"
+              >
+                <path
+                  d="M18 16h-.58l-.81-.81A7.07 7.07 0 0 0 18 11c0-3.87-3.13-7-7-7c-1.5 0-3 .5-4.21 1.4c-3.09 2.32-3.72 6.71-1.4 9.8c2.32 3.09 6.71 3.72 9.8 1.4l.81.81V18l5 5l2-2zm-7 0c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5M3 6L1 8V1h7L6 3H3zm18-5v7l-2-2V3h-3l-2-2zM6 19l2 2H1v-7l2 2v3z"
+                  fill="currentColor"
+                />
+              </svg>
+              <!--&lt;Magnify-expand&gt;-->
+            </button>
+             
+             
+            <button
+              class="text-lg hidden sm:hidden md:block font-thin s-0DRWOA9box-P"
+            >
+              Contactez-nous
+            </button>
+             
+             
+            <div
+              class="text-3xl flex relative s-0DRWOA9box-P"
+            >
+              <button
+                class="hover:text-orange-500 s-0DRWOA9box-P"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M17 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2c0-1.11.89-2 2-2M1 2h3.27l.94 2H20a1 1 0 0 1 1 1c0 .17-.05.34-.12.5l-3.58 6.47c-.34.61-1 1.03-1.75 1.03H8.1l-.9 1.63l-.03.12a.25.25 0 0 0 .25.25H19v2H7a2 2 0 0 1-2-2c0-.35.09-.68.24-.96l1.36-2.45L3 4H1zm6 16a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2c0-1.11.89-2 2-2m9-7l2.78-5H6.14l2.36 5z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Cart-outline&gt;-->
+              </button>
+               
+              <span
+                class="absolute left-5 bottom-5 bg-orange-500 text-xs text-white w-4 h-4 flex justify-center items-center rounded-full border border-orange-500 s-0DRWOA9box-P"
+              >
+                0
+              </span>
+            </div>
+             
+            <div
+              class="text-3xl relative hidden sm:hidden md:block s-0DRWOA9box-P"
+            >
+              <button
+                class="hover:text-orange-500 text-2xl flex justify-center items-center s-0DRWOA9box-P"
+                data-testid="user-profile-button"
+              >
+                <svg
+                  height="1.2em"
+                  viewBox="0 0 24 24"
+                  width="1.2em"
+                >
+                  <path
+                    d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2M7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.5.88 4.93 1.78A7.893 7.893 0 0 1 12 20c-1.86 0-3.57-.64-4.93-1.72m11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33A7.928 7.928 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.5-1.64 4.83M12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6m0 5a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 12 8a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 11"
+                    fill="currentColor"
+                  />
+                </svg>
+                <!--&lt;Account-circle-outline&gt;-->
+              </button>
+            </div>
+             
+            <button
+              class="text-3xl hover:text-orange-500 block sm:block md:hidden s-0DRWOA9box-P"
+              data-testid="menu-toggle-button"
+            >
+              <svg
+                height="1.2em"
+                viewBox="0 0 24 24"
+                width="1.2em"
+              >
+                <path
+                  d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"
+                  fill="currentColor"
+                />
+              </svg>
+              <!--&lt;Menu&gt;-->
+            </button>
+          </div>
+        </div>
+      </div>
+       
+    </div>
+    <!--&lt;AppBar&gt;-->
+     
+    <div
+      class="fixed hidden items-center w-full h-20 z-30 top-14 bg-white shadow-2xl xl:hidden s-0DRWOA9box-P"
+      data-testid="overlay-search-input-container"
+    >
+      <div
+        class="w-full md:w-2/3 h-10 flex justify-center"
+      >
+        <div
+          class="relative w-8/12"
+        >
+          <input
+            class="w-full h-full focus:outline-none text-black text-left pl-2 rounded-none border border-l-gray-500 border-t-gray-500 border-b-gray-500"
+            data-testid="overlay-search-input"
+            placeholder="Chercher un produit"
+            type="text"
+          />
+           
+        </div>
+         
+        <button
+          class="w-3/12 h-full text-sm xl:text-lg text-white bg-slate-500 p-1"
+          data-testid="overlay-search-input-button"
+          disabled=""
+        >
+          Rechercher
+        </button>
+      </div>
+      <!--&lt;SearchInput&gt;-->
+    </div>
+    <!--&lt;CustomAppBar&gt;-->
+  </div>
+</body>
+`;
