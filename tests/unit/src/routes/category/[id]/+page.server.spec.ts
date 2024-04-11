@@ -4,7 +4,7 @@ import {anyObject, anyString, mock, type MockProxy} from 'vitest-mock-extended'
 import {type CategoryPageData, load, prerender} from '$routes/category/[id]/+page.server'
 import type {CollectionPresentation} from '$lib/frontend/presentations/CollectionPresentation'
 import {mockedFetch} from '$mocks/packages/fetch'
-import type {RouteParams} from 'types/src/routes/category/[id]/$types'
+import type {RouteParams} from '$svelteKitTypes/src/routes/category/[id]/$types'
 import type {OfferSummaryPresentation} from '$lib/frontend/presentations/OfferSummaryPresentation'
 import {PRODUCT_DISPLAY_LIMIT} from '$lib/frontend/core/Helper'
 

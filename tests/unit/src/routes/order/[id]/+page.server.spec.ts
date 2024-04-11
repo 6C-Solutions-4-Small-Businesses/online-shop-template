@@ -3,7 +3,7 @@ import {anyObject, anyString, mock, type MockProxy} from 'vitest-mock-extended'
 import {afterEach, describe, vi} from 'vitest'
 import type {ServerLoadEvent} from '@sveltejs/kit'
 import {mockedFetch} from '$mocks/packages/fetch'
-import type {RouteParams} from 'types/src/routes/contact/$types'
+import type {RouteParams} from '$svelteKitTypes/src/routes/contact/$types'
 import type {OrderDetailsPresentation} from '$lib/frontend/presentations/OrderDetailsPresentation'
 
 describe('Order page at "/order/[id]" server script', () => {

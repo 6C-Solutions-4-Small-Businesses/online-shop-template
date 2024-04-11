@@ -1,7 +1,0 @@
-//Fixed the error of "Cannot find $lib" when running Playwright tests
-{
-  "extends": "../tsconfig.json",
-  "compilerOptions": {
-    "baseUrl": "../.svelte-kit"
-  }
-}

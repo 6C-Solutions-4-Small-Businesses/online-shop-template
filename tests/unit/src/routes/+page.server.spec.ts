@@ -4,7 +4,7 @@ import {mockedFetch} from '$mocks/packages/fetch'
 import {anyObject, anyString, mock, type MockProxy} from 'vitest-mock-extended'
 import type {ServerLoadEvent} from '@sveltejs/kit'
 import type {CollectionPresentation} from '$lib/frontend/presentations/CollectionPresentation'
-import type {RouteParams} from 'types/src/routes/$types'
+import type {RouteParams} from '$svelteKitTypes/src/routes/$types'
 import type {CategorySummaryPresentation} from '$lib/frontend/presentations/CategorySummaryPresentation'
 
 describe('Home page at "/" server script', () => {
