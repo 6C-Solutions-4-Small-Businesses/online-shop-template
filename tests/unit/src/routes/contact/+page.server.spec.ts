@@ -4,7 +4,7 @@ import {afterEach, describe, vi} from 'vitest'
 import type {ServerLoadEvent} from '@sveltejs/kit'
 import {mockedFetch} from '$mocks/packages/fetch'
 import type {BusinessContactPresentation} from '$lib/frontend/presentations/BusinessContactPresentation'
-import type {RouteParams} from 'types/src/routes/contact/$types'
+import type {RouteParams} from '$svelteKitTypes/src/routes/contact/$types'
 
 describe('Contact page at "/contact" server script', () => {
 

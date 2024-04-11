@@ -4,7 +4,7 @@ import {anyObject, anyString, mock, type MockProxy} from 'vitest-mock-extended'
 import type {ServerLoadEvent} from '@sveltejs/kit'
 import type {CollectionPresentation} from '$lib/frontend/presentations/CollectionPresentation'
 import {mockedFetch} from '$mocks/packages/fetch'
-import type {RouteParams} from 'types/src/routes/$types'
+import type {RouteParams} from '$svelteKitTypes/src/routes/$types'
 
 describe('Layout Data Server', () => {
 

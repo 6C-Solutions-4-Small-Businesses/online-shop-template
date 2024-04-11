@@ -11,7 +11,6 @@ echo "Copying files into the integration-test directory"
 cp -fRp ./src \
  ./static \
  ./config \
- ./prisma \
  ./tests \
  ./package.json \
  ./package-lock.json \

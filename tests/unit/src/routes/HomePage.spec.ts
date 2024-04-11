@@ -37,7 +37,6 @@ describe('Home page', () => {
                                 price: 100,
                                 image: 'an-image-url',
                                 description: 'a-product',
-                                quantity: 10,
                                 isSoldByQuantities: false,
                                 unit: 'Centiliter',
                             },
@@ -47,7 +46,6 @@ describe('Home page', () => {
                                 price: 800,
                                 image: 'an-image-url',
                                 description: 'a-product',
-                                quantity: 10,
                                 isSoldByQuantities: false,
                                 unit: 'Milliliter',
                             },
@@ -57,7 +55,6 @@ describe('Home page', () => {
                                 price: 1200,
                                 image: 'an-image-url',
                                 description: 'a-product',
-                                quantity: 10,
                                 isSoldByQuantities: false,
                                 unit: 'Gramme',
                             }
@@ -75,7 +72,6 @@ describe('Home page', () => {
                                 price: 100,
                                 image: 'an-image-url',
                                 description: 'a-product',
-                                quantity: 10,
                                 isSoldByQuantities: false,
                                 unit: 'Unit',
                             },
@@ -85,7 +81,6 @@ describe('Home page', () => {
                                 price: 800,
                                 image: 'an-image-url',
                                 description: 'a-product',
-                                quantity: 10,
                                 isSoldByQuantities: false,
                                 unit: 'Pound',
                             },
@@ -95,7 +90,6 @@ describe('Home page', () => {
                                 price: 1200,
                                 image: 'an-image-url',
                                 description: 'a-product',
-                                quantity: 10,
                                 isSoldByQuantities: false,
                                 unit: 'Portion',
                             }
@@ -113,7 +107,6 @@ describe('Home page', () => {
                                 price: 100,
                                 image: 'an-image-url',
                                 description: 'a-product',
-                                quantity: 10,
                                 isSoldByQuantities: false,
                                 unit: 'Kilogram',
                             },
@@ -123,13 +116,13 @@ describe('Home page', () => {
                                 price: 800,
                                 image: 'an-image-url',
                                 description: 'a-product',
-                                quantity: 10,
                                 isSoldByQuantities: false,
                                 unit: 'Kilogram',
                             }
                         ]
                     }
-                ]
+                ],
+                categories: []
             }
         })
 
