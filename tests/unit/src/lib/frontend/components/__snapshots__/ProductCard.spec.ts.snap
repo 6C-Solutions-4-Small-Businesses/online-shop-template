@@ -37,9 +37,11 @@ exports[`Product card > should have match snapshot 1`] = `
        
       <img
         alt="a-product-name"
-        class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+        class="product-image object-contain absolute h-full w-full top-0 p-4"
         src="a-product-image"
+        width="160"
       />
+      <!--&lt;Image&gt;-->
        
       <div
         class="w-full absolute flex justify-end s-0QAyY96I1Nkt"

@@ -7,8 +7,10 @@ exports[`OrderedItemSummaryCard > should have match snapshot 1`] = `
       class="h-32 xl:h-36 flex bg-white rounded-md shadow-md s-ReROHsK2djRp"
     >
       <img
-        class="w-2/5 p-2 h-full product-image object-contain s-ReROHsK2djRp"
+        class="w-2/5 p-2 h-full product-image object-contain"
+        width="160"
       />
+      <!--&lt;Image&gt;-->
        
       <div
         class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2 s-ReROHsK2djRp"

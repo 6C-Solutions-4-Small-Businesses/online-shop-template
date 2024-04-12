@@ -5,6 +5,7 @@
         upsertProductToShoppingCartStore
     } from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
     import DeleteIcon from '~icons/mdi/delete-outline'
+    import Image from '$lib/frontend/components/Image.svelte'
 
     export let id: string
     export let name: string
@@ -38,11 +39,7 @@
 </script>
 
 <div class="h-32 xl:h-36 flex bg-white rounded-md shadow-md">
-    <img
-            alt="shopping cart product"
-            class="w-2/5 p-2 h-full product-image object-contain"
-            src={image}
-    >
+    <Image imageRemoteUrl="{image}" name={name} classes="w-2/5 p-2 h-full product-image object-contain"/>
     <div class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2">
         <div class="w-full flex justify-between">
             <div class="w-10/12 font-thin flex justify-center items-center">{name}</div>

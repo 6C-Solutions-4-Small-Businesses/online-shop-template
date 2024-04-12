@@ -43,9 +43,11 @@ exports[`Product data table > when on the any other page > should have match sna
            
           <img
             alt="product-1"
-            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            class="product-image object-contain absolute h-full w-full top-0 p-4"
             src="an-image-url"
+            width="160"
           />
+          <!--&lt;Image&gt;-->
            
           <div
             class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -141,9 +143,11 @@ exports[`Product data table > when on the any other page > should have match sna
            
           <img
             alt="product-2"
-            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            class="product-image object-contain absolute h-full w-full top-0 p-4"
             src="an-image-url"
+            width="160"
           />
+          <!--&lt;Image&gt;-->
            
           <div
             class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -249,9 +253,11 @@ exports[`Product data table > when on the any other page > should have match sna
            
           <img
             alt="product-3"
-            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            class="product-image object-contain absolute h-full w-full top-0 p-4"
             src="an-image-url"
+            width="160"
           />
+          <!--&lt;Image&gt;-->
            
           <div
             class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -448,9 +454,11 @@ exports[`Product data table > when on the first page > should have match snapsho
            
           <img
             alt="product-1"
-            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            class="product-image object-contain absolute h-full w-full top-0 p-4"
             src="an-image-url"
+            width="160"
           />
+          <!--&lt;Image&gt;-->
            
           <div
             class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -546,9 +554,11 @@ exports[`Product data table > when on the first page > should have match snapsho
            
           <img
             alt="product-2"
-            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            class="product-image object-contain absolute h-full w-full top-0 p-4"
             src="an-image-url"
+            width="160"
           />
+          <!--&lt;Image&gt;-->
            
           <div
             class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -654,9 +664,11 @@ exports[`Product data table > when on the first page > should have match snapsho
            
           <img
             alt="product-3"
-            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            class="product-image object-contain absolute h-full w-full top-0 p-4"
             src="an-image-url"
+            width="160"
           />
+          <!--&lt;Image&gt;-->
            
           <div
             class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -855,9 +867,11 @@ exports[`Product data table > when on the last page > should have match snapshot
            
           <img
             alt="product-1"
-            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            class="product-image object-contain absolute h-full w-full top-0 p-4"
             src="an-image-url"
+            width="160"
           />
+          <!--&lt;Image&gt;-->
            
           <div
             class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -953,9 +967,11 @@ exports[`Product data table > when on the last page > should have match snapshot
            
           <img
             alt="product-2"
-            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            class="product-image object-contain absolute h-full w-full top-0 p-4"
             src="an-image-url"
+            width="160"
           />
+          <!--&lt;Image&gt;-->
            
           <div
             class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -1061,9 +1077,11 @@ exports[`Product data table > when on the last page > should have match snapshot
            
           <img
             alt="product-3"
-            class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+            class="product-image object-contain absolute h-full w-full top-0 p-4"
             src="an-image-url"
+            width="160"
           />
+          <!--&lt;Image&gt;-->
            
           <div
             class="w-full absolute flex justify-end s-0QAyY96I1Nkt"

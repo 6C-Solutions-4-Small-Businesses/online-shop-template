@@ -1,5 +1,4 @@
-import type {CartItem} from '$lib/backend/cart/CartItem'
-import type {ManifestItem} from '$lib/backend/uberDirect/Types'
+import type {CartItemPresentation} from '$lib/frontend/presentations/CartItemPresentation'
 
 export type OrderDetailsPresentation = {
     id: string,
@@ -12,7 +11,7 @@ export type OrderDetailsPresentation = {
     createdAt: string,
     canceledAt?: string | null | undefined,
     canceledBy?: string | null | undefined,
-    items: (CartItem & ManifestItem)[],
+    items: CartItemPresentation[],
     delivery: {
         trackingUrl: string,
     },

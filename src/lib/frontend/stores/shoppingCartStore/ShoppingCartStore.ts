@@ -1,14 +1,14 @@
-import type {IShoppingCartProductState} from '$lib/frontend/stores/shoppingCartStore/IShoppingCartProductState'
+import type {ShoppingCartProductState} from '$lib/frontend/stores/shoppingCartStore/ShoppingCartProductState'
 import {writable, type Writable} from 'svelte/store'
 import {browser} from '$app/environment'
 
 export const LOCAL_STORAGE_SHOPPING_CART_STORE_KEY = 'shopping-cart-store'
 
-export const cart: Writable<Map<string, IShoppingCartProductState>> = writable(
+export const cart: Writable<Map<string, ShoppingCartProductState>> = writable(
     getInitialCartStoreValue()
 )
 
-cart.subscribe((newShoppingCartStoreMapValue: Map<string, IShoppingCartProductState>) => {
+cart.subscribe((newShoppingCartStoreMapValue: Map<string, ShoppingCartProductState>) => {
     if (browser && localStorage) {
         localStorage.setItem(
             LOCAL_STORAGE_SHOPPING_CART_STORE_KEY,
@@ -17,15 +17,17 @@ cart.subscribe((newShoppingCartStoreMapValue: Map<string, IShoppingCartProductSt
     }
 })
 
-function getInitialCartStoreValue(): Map<string, IShoppingCartProductState> {
+function getInitialCartStoreValue(): Map<string, ShoppingCartProductState> {
     if (browser && localStorage) {
-        const localStorageCartStore: any = localStorage.getItem(LOCAL_STORAGE_SHOPPING_CART_STORE_KEY)
-        const parsedLocalStorageCartStore = JSON.parse(localStorageCartStore)
-        if (parsedLocalStorageCartStore && Object.keys(parsedLocalStorageCartStore).length > 0) {
-            return new Map<string, IShoppingCartProductState>(parsedLocalStorageCartStore)
+        const localStorageCartStore = localStorage.getItem(LOCAL_STORAGE_SHOPPING_CART_STORE_KEY)
+        if (localStorageCartStore) {
+            const parsedLocalStorageCartStore = JSON.parse(localStorageCartStore)
+            if (parsedLocalStorageCartStore && Object.keys(parsedLocalStorageCartStore).length > 0) {
+                return new Map(parsedLocalStorageCartStore)
+            }
         }
     }
-    return new Map<string, IShoppingCartProductState>()
+    return new Map<string, ShoppingCartProductState>()
 }
 
 export function upsertProductToShoppingCartStore(
@@ -33,12 +35,15 @@ export function upsertProductToShoppingCartStore(
     name: string,
     image: string,
     selectedQuantity: number,
-    price: number
+    price: number,
+    description: string | undefined = '',
+    isSoldByQuantities: boolean | undefined = false,
+    unit: string | undefined = 'Unit',
 ): void {
     if (cart) {
-        cart.update((previousCartValue: Map<string, IShoppingCartProductState>) => {
+        cart.update((previousCartValue: Map<string, ShoppingCartProductState>) => {
             if (previousCartValue.has(id)) {
-                let state = previousCartValue.get(id)
+                const state = previousCartValue.get(id)
                 // @ts-ignore
                 state.selectedQuantity = selectedQuantity
                 // @ts-ignore
@@ -48,8 +53,11 @@ export function upsertProductToShoppingCartStore(
                     id,
                     name,
                     image,
-                    selectedQuantity: selectedQuantity,
-                    price
+                    selectedQuantity,
+                    price,
+                    description,
+                    isSoldByQuantities,
+                    unit,
                 })
             }
 
@@ -63,9 +71,9 @@ export function decreaseProductSelectedQuantityFromShoppingCartStore(
     selectedQuantity: number
 ): void {
     if (cart) {
-        cart.update((previousCartValue: Map<string, IShoppingCartProductState>) => {
+        cart.update((previousCartValue: Map<string, ShoppingCartProductState>) => {
             if (previousCartValue.has(id)) {
-                let state = previousCartValue.get(id)
+                const state = previousCartValue.get(id)
                 // @ts-ignore
                 state.selectedQuantity = selectedQuantity
                 // @ts-ignore
@@ -79,7 +87,7 @@ export function decreaseProductSelectedQuantityFromShoppingCartStore(
 
 export function removeProductFromShoppingCartStore(id: string): void {
     if (cart) {
-        cart.update((previousCartValue: Map<string, IShoppingCartProductState>) => {
+        cart.update((previousCartValue: Map<string, ShoppingCartProductState>) => {
             if (previousCartValue.has(id)) {
                 previousCartValue.delete(id)
             }

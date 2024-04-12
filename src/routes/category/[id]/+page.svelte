@@ -1,18 +1,18 @@
 <script lang="ts">
-    import type {PaginatedResponse} from '$lib/backend/core/PaginatedResponse'
     import type {OfferSummaryPresentation} from '$lib/frontend/presentations/OfferSummaryPresentation'
     import ProductDataTable from '$lib/frontend/components/ProductDataTable.svelte'
     import {executeAction} from '$lib/frontend/core/Helper'
     import {writable, type Writable} from 'svelte/store'
     import type {PageData} from './$types'
     import {API_BASE_ENDPOINT, BASE_HEADERS} from '$lib/frontend/Constants'
+    import type {PaginationPresentation} from '$lib/frontend/core/PaginationPresentation'
 
     export let data: PageData
 
     let pageLimit = 18
     let loadedCategoryId: string
     let currentPage: number
-    let currentCategoryOffers: PaginatedResponse<OfferSummaryPresentation>
+    let currentCategoryOffers: PaginationPresentation<OfferSummaryPresentation>
     let currentCategoryButtonElement: HTMLElement
     const isLoading: Writable<boolean> = writable(false)
 

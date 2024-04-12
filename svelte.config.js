@@ -11,7 +11,19 @@ const config = {
         inspector: true
     },
     kit: {
-        adapter: adapter(),
+        adapter: adapter({
+            images: {
+                sizes: [160,640,],
+                domains: [
+                    //TODO(https://github.com/6C-Solutions-4-Small-Businesses/online-shop-template/issues/2)
+                    '5jc9cdsla9yvcq5o.public.blob.vercel-storage.com',
+                    //TODO(https://github.com/6C-Solutions-4-Small-Businesses/online-shop-template/issues/2)
+                    'qqxrnh4alr9dw5wn.public.blob.vercel-storage.com',
+                ],
+                minimumCacheTTL: 60,
+                formats: ["image/avif", "image/webp"],
+            }
+        }),
         alias: {
             $routes: 'src/routes',
             $tests: 'tests',

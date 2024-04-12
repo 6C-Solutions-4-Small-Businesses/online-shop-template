@@ -3,6 +3,7 @@
     import {quintOut} from 'svelte/easing'
     import {scale} from 'svelte/transition'
     import ShoppingCartActions from '$lib/frontend/components/ShoppingCartActions.svelte'
+    import Image from '$lib/frontend/components/Image.svelte'
 
     export let id: string
     export let name: string
@@ -46,9 +47,7 @@
             -{percentage}%
         </div>
     </div>
-    <img alt={name}
-         class="product-image object-contain absolute h-full w-full top-0 p-4"
-         src={image}>
+    <Image imageRemoteUrl="{image}" name={name} classes="product-image object-contain absolute h-full w-full top-0 p-4"/>
     <div class="w-full absolute flex justify-end">
         <ShoppingCartActions
                 image={image}

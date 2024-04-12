@@ -1,5 +1,3 @@
-import {expect} from 'vitest'
-
 expect.extend({
     thatFetchRequestOptionsContainsFormData(parameters: RequestInit, key: string, value: string) {
         // ----------------------------194514675662123639591691

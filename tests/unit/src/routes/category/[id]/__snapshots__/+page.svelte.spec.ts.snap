@@ -61,9 +61,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-0"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-0"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -169,9 +171,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-1"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-1"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -267,9 +271,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-2"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-2"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -375,9 +381,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-3"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-3"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -473,9 +481,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-4"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-4"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -581,9 +591,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-5"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-5"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -679,9 +691,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-6"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-6"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -787,9 +801,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-7"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-7"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -885,9 +901,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-8"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-8"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -993,9 +1011,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-9"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-9"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -1091,9 +1111,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-10"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-10"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -1199,9 +1221,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-11"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-11"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -1297,9 +1321,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-12"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-12"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -1405,9 +1431,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-13"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-13"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -1503,9 +1531,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-14"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-14"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -1611,9 +1641,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-15"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-15"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -1709,9 +1741,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-16"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-16"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -1817,9 +1851,11 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
              
             <img
               alt="an-offer-17"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-17"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2036,9 +2072,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-0"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-0"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2144,9 +2182,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-1"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-1"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2242,9 +2282,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-2"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-2"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2350,9 +2392,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-3"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-3"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2448,9 +2492,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-4"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-4"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2556,9 +2602,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-5"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-5"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2654,9 +2702,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-6"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-6"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2762,9 +2812,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-7"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-7"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2860,9 +2912,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-8"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-8"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -2968,9 +3022,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-9"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-9"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -3066,9 +3122,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-10"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-10"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -3174,9 +3232,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-11"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-11"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -3272,9 +3332,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-12"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-12"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -3380,9 +3442,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-13"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-13"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -3478,9 +3542,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-14"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-14"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -3586,9 +3652,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-15"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-15"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -3684,9 +3752,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-16"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-16"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -3792,9 +3862,11 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
              
             <img
               alt="an-offer-17"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-17"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4033,9 +4105,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-0"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-0"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4141,9 +4215,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-1"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-1"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4239,9 +4315,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-2"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-2"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4347,9 +4425,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-3"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-3"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4445,9 +4525,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-4"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-4"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4553,9 +4635,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-5"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-5"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4651,9 +4735,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-6"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-6"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4759,9 +4845,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-7"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-7"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4857,9 +4945,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-8"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-8"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -4965,9 +5055,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-9"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-9"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -5063,9 +5155,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-10"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-10"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -5171,9 +5265,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-11"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-11"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -5269,9 +5365,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-12"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-12"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -5377,9 +5475,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-13"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-13"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -5475,9 +5575,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-14"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-14"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -5583,9 +5685,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-15"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-15"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -5681,9 +5785,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-16"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-16"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -5789,9 +5895,11 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
              
             <img
               alt="an-offer-17"
-              class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+              class="product-image object-contain absolute h-full w-full top-0 p-4"
               src="an-offer-image-17"
+              width="160"
             />
+            <!--&lt;Image&gt;-->
              
             <div
               class="w-full absolute flex justify-end s-0QAyY96I1Nkt"

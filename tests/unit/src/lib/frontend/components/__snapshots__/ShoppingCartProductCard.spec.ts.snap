@@ -7,10 +7,12 @@ exports[`Shopping card product card > should have match snapshot 1`] = `
       class="h-32 xl:h-36 flex bg-white rounded-md shadow-md"
     >
       <img
-        alt="shopping cart product"
+        alt="a-product-name"
         class="w-2/5 p-2 h-full product-image object-contain"
         src="a-product-image"
+        width="160"
       />
+      <!--&lt;Image&gt;-->
        
       <div
         class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2"

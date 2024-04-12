@@ -33,7 +33,9 @@ exports[`Home page > should have match snapshot 1`] = `
                   alt="product-1"
                   class="object-contain h-[15rem] sm:h-[30rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] py-5"
                   src="an-image-url"
+                  width="640"
                 />
+                <!--&lt;Image&gt;-->
                  
                 <div
                   class="h-16 flex items-center justify-center gap-2 text-3xl rounded-none bg-white"
@@ -91,7 +93,9 @@ exports[`Home page > should have match snapshot 1`] = `
                   alt="product-2"
                   class="object-contain h-[15rem] sm:h-[30rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] py-5"
                   src="an-image-url"
+                  width="640"
                 />
+                <!--&lt;Image&gt;-->
                  
                 <div
                   class="h-16 flex items-center justify-center gap-2 text-3xl rounded-none bg-white"
@@ -149,7 +153,9 @@ exports[`Home page > should have match snapshot 1`] = `
                   alt="product-3"
                   class="object-contain h-[15rem] sm:h-[30rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] py-5"
                   src="an-image-url"
+                  width="640"
                 />
+                <!--&lt;Image&gt;-->
                  
                 <div
                   class="h-16 flex items-center justify-center gap-2 text-3xl rounded-none bg-white"
@@ -249,9 +255,11 @@ exports[`Home page > should have match snapshot 1`] = `
                
               <img
                 alt="product-4"
-                class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+                class="product-image object-contain absolute h-full w-full top-0 p-4"
                 src="an-image-url"
+                width="160"
               />
+              <!--&lt;Image&gt;-->
                
               <div
                 class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -347,9 +355,11 @@ exports[`Home page > should have match snapshot 1`] = `
                
               <img
                 alt="product-5"
-                class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+                class="product-image object-contain absolute h-full w-full top-0 p-4"
                 src="an-image-url"
+                width="160"
               />
+              <!--&lt;Image&gt;-->
                
               <div
                 class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -445,9 +455,11 @@ exports[`Home page > should have match snapshot 1`] = `
                
               <img
                 alt="product-6"
-                class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+                class="product-image object-contain absolute h-full w-full top-0 p-4"
                 src="an-image-url"
+                width="160"
               />
+              <!--&lt;Image&gt;-->
                
               <div
                 class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -646,9 +658,11 @@ exports[`Home page > should have match snapshot 1`] = `
                
               <img
                 alt="product-7"
-                class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+                class="product-image object-contain absolute h-full w-full top-0 p-4"
                 src="an-image-url"
+                width="160"
               />
+              <!--&lt;Image&gt;-->
                
               <div
                 class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
@@ -744,9 +758,11 @@ exports[`Home page > should have match snapshot 1`] = `
                
               <img
                 alt="product-8"
-                class="product-image object-contain absolute h-full w-full top-0 p-4 s-0QAyY96I1Nkt"
+                class="product-image object-contain absolute h-full w-full top-0 p-4"
                 src="an-image-url"
+                width="160"
               />
+              <!--&lt;Image&gt;-->
                
               <div
                 class="w-full absolute flex justify-end s-0QAyY96I1Nkt"
