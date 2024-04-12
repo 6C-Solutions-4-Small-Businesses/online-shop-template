@@ -1,11 +1,10 @@
 import {cleanup, render} from '@testing-library/svelte'
 import CategoryProductsPage from '$routes/category/[id]/+page.svelte'
 import type {OfferSummaryPresentation} from '$lib/frontend/presentations/OfferSummaryPresentation'
-import type {PaginatedResponse} from '$lib/backend/core/PaginatedResponse'
 import {mock} from 'vitest-mock-extended'
 import '@testing-library/jest-dom'
-import {afterEach} from 'vitest'
 import type {CategorySummaryPresentation} from '$lib/frontend/presentations/CategorySummaryPresentation'
+import type {PaginationPresentation} from '$lib/frontend/core/PaginationPresentation'
 
 describe('/category/[id]', () => {
 
@@ -21,7 +20,7 @@ describe('/category/[id]', () => {
                 data: {
                     id: categoryId,
                     categories: [],
-                    currentCategoryOffers: mock<PaginatedResponse<OfferSummaryPresentation>>()
+                    currentCategoryOffers: mock<PaginationPresentation<OfferSummaryPresentation>>()
                 }
             }))
         })
@@ -125,7 +124,7 @@ function getItems(count = 10) {
 }
 
 function getCategoryProducts({limit = 18, totalPages = 3, currentPage = 2,} = {}) {
-    return mock<PaginatedResponse<OfferSummaryPresentation>>({
+    return mock<PaginationPresentation<OfferSummaryPresentation>>({
         items: getItems(limit),
         currentPage,
         totalPages,

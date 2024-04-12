@@ -2,8 +2,8 @@ import {devices, type PlaywrightTestConfig} from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
     webServer: {
-        command: 'npm run preview',
-        port: 4173,
+        command: 'npm run dev',
+        port: 5173,
         timeout: 600000,
         stdout: 'pipe',
         stderr: 'pipe',

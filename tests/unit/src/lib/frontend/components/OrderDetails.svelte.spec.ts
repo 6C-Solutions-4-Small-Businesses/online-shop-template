@@ -3,9 +3,8 @@ import {cleanup, render, screen} from '@testing-library/svelte'
 import {mock} from 'vitest-mock-extended'
 import type {OrderDetailsPresentation} from '$lib/frontend/presentations/OrderDetailsPresentation'
 import '@testing-library/jest-dom'
-import {afterEach, vi} from 'vitest'
 import {getOfferCartItems} from '$tests/unit/src/lib/TestHelpers'
-import type {DeliveryPresentation} from "$lib/frontend/presentations/DeliveryPresentation";
+import type {DeliveryPresentation} from '$lib/frontend/presentations/DeliveryPresentation'
 
 describe('Order Details Component', () => {
 

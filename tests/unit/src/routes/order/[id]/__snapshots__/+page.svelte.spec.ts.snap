@@ -25,9 +25,11 @@ exports[`/order/[id] > statically > should have the expected HTML structure 1`] 
             >
               <img
                 alt="Hair Softener"
-                class="w-2/5 p-2 h-full product-image object-contain s-ReROHsK2djRp"
+                class="w-2/5 p-2 h-full product-image object-contain"
                 src="https://5jc9cdsla9yvcq5o.public.blob.vercel-storage.com/010181140082.webp"
+                width="160"
               />
+              <!--&lt;Image&gt;-->
                
               <div
                 class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2 s-ReROHsK2djRp"
@@ -61,9 +63,11 @@ exports[`/order/[id] > statically > should have the expected HTML structure 1`] 
             >
               <img
                 alt="Beard Tinter"
-                class="w-2/5 p-2 h-full product-image object-contain s-ReROHsK2djRp"
+                class="w-2/5 p-2 h-full product-image object-contain"
                 src="https://5jc9cdsla9yvcq5o.public.blob.vercel-storage.com/011509049063.webp"
+                width="160"
               />
+              <!--&lt;Image&gt;-->
                
               <div
                 class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2 s-ReROHsK2djRp"

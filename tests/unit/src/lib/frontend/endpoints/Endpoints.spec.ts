@@ -8,7 +8,7 @@ import {
 } from '$lib/frontend/endpoints/Endpoints'
 import type {UserAccountSummaryPresentation} from '$lib/frontend/presentations/UserAccountSummaryPresentation'
 import type {CheckoutRequest} from '$lib/frontend/requests/CheckoutRequest'
-import type {IShoppingCartProductState} from '$lib/frontend/stores/shoppingCartStore/IShoppingCartProductState'
+import type {ShoppingCartProductState} from '$lib/frontend/stores/shoppingCartStore/ShoppingCartProductState'
 import type {
     CustomerProfileEditionRequest,
     CustomerProfilePresentation
@@ -144,7 +144,7 @@ describe('createCheckoutSession', () => {
             customerId: 'cu_XyZ',
         },
         products: [
-            mock<IShoppingCartProductState>(),
+            mock<ShoppingCartProductState>(),
         ],
     }
 

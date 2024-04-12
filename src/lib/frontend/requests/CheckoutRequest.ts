@@ -1,10 +1,10 @@
-import type {CartItem} from '$lib/backend/cart/CartItem'
+import type {CartItemPresentation} from '$lib/frontend/presentations/CartItemPresentation'
 
 export type CheckoutRequest = {
     user: {
         customerId: string,
     },
-    products: CartItem[],
+    products: CartItemPresentation[],
 }
 
 export type CheckoutResponse = { clientSecret: string }

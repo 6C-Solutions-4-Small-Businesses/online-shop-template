@@ -1,5 +1,6 @@
 <script lang="ts">
     import ShoppingCartActions from '$lib/frontend/components/ShoppingCartActions.svelte'
+    import Image from '$lib/frontend/components/Image.svelte'
 
     export let id: string
     export let image: string
@@ -16,11 +17,9 @@
      on:mouseover={()=> isProductHovered = true}
      role="none"
 >
-    <img
-            alt={name}
-            class="object-contain h-[15rem] sm:h-[30rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] py-5"
-            src={image}
-    />
+    <Image imageRemoteUrl="{image}" name={name}
+           classes="object-contain h-[15rem] sm:h-[30rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] py-5"
+            width="{640}"/>
     <div
             class={`h-16 flex items-center justify-center gap-2 text-3xl rounded-none ${isProductHovered ? 'bg-green-50' : 'bg-white'}`}
     >

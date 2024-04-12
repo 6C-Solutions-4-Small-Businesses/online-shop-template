@@ -3,7 +3,6 @@ import {
     clearShoppingCartStore,
     LOCAL_STORAGE_SHOPPING_CART_STORE_KEY
 } from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
-import {afterEach} from 'vitest'
 
 describe('ShoppingCartStore', () => {
 

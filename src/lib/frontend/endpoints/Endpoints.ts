@@ -1,3 +1,4 @@
+import type {CheckoutRequest, CheckoutResponse} from '$lib/frontend/requests/CheckoutRequest'
 import {toastError} from '$lib/frontend/core/ToasterUtils'
 import {Email, type FindUserRequest} from '$lib/frontend/requests/FindUserRequest'
 import type {UserAccountSummaryPresentation} from '$lib/frontend/presentations/UserAccountSummaryPresentation'
