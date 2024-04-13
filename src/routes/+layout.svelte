@@ -18,6 +18,7 @@
     import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
     import type {PageData} from './$types'
     import TermsAndConditionsModal from '$lib/frontend/components/TermsAndConditionsModal.svelte'
+    import CookiesDisclaimerModal from "$lib/frontend/components/CookiesDisclaimerModal.svelte";
 
     export let data: PageData
 
@@ -96,6 +97,7 @@
                 Contactez-nous
             </button>
         </Drawer>
+        <CookiesDisclaimerModal/>
         <div class="footer w-full flex flex-col justify-center items-center bg-green-100 py-6 gap-7">
             <div class={`w-11/12 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 grid-flow-row gap-y-2 gap-x-5`}>
                 {#each data.categories as {id, name}}
