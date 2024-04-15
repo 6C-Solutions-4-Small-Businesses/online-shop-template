@@ -9,7 +9,8 @@
         getModalStore,
         initializeStores,
         Modal,
-        type ModalComponent
+        type ModalComponent,
+        Toast,
     } from '@skeletonlabs/skeleton'
     import {Toaster} from 'svelte-french-toast'
     import IdentificationModal from '$lib/frontend/components/IdentificationModal.svelte'
@@ -72,6 +73,7 @@
     }
 </script>
 <Toaster/>
+<Toast/>
 <Modal components="{modalRegistry}"/>
 <div class="bg-white">
     <CustomAppBar

@@ -8,9 +8,9 @@ import {
     prepareResponseStub
 } from '$tests/unit/src/lib/frontend/FrontendTestHelpers'
 import '$mocks/packages/svelte-french-toast'
-import toast from 'svelte-french-toast'
 import {getOrderDetails} from '$lib/frontend/endpoints/OrderEndpoints'
 import type {OrderDetailsPresentation} from '$lib/frontend/presentations/OrderDetailsPresentation'
+import {EndpointError} from '$lib/frontend/endpoints/EndpointError'
 
 describe('getOrderDetails exposes /api/v1/order/[id]', () => {
 
@@ -20,8 +20,7 @@ describe('getOrderDetails exposes /api/v1/order/[id]', () => {
         let requestInitialization: {}
 
         beforeEach(async () => {
-
-            mockedFetch.mockResolvedValue(mock<Response>())
+            mockedFetch.mockResolvedValue(prepareResponseStub(200, {}))
 
             await getOrderDetails(anOrderId)
 
@@ -60,17 +59,15 @@ describe('getOrderDetails exposes /api/v1/order/[id]', () => {
     describe('on failure', () => {
 
         test.each([
-            [400,],
-            [404,],
-            [500,],
-        ])('should toast error when response status code is "%d"', async (statusCode) => {
+            [400],
+            [404],
+            [500]
+        ])('should throw endpoint error when response status code is "%d"', async (statusCode) => {
 
             const stubResponse = prepareResponseStub(statusCode, {})
             mockedFetch.mockResolvedValue(stubResponse)
 
-            await getOrderDetails(anOrderId)
-
-            expect(toast.error).toHaveBeenCalledWith(errorResponseText, anyObject())
+            expect(getOrderDetails(anOrderId)).rejects.toThrowError(new EndpointError(errorResponseText))
         })
     })
 
