@@ -9,16 +9,14 @@
         getModalStore,
         initializeStores,
         Modal,
-        type ModalComponent,
-        type ModalSettings
+        type ModalComponent
     } from '@skeletonlabs/skeleton'
     import {Toaster} from 'svelte-french-toast'
     import IdentificationModal from '$lib/frontend/components/IdentificationModal.svelte'
     import {page} from '$app/stores'
     import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
     import type {PageData} from './$types'
-    import TermsAndConditionsModal from '$lib/frontend/components/TermsAndConditionsModal.svelte'
-    import CookiesDisclaimerModal from "$lib/frontend/components/CookiesDisclaimerModal.svelte";
+    import CookiesDisclaimerModal from "$lib/frontend/components/CookiesDisclaimerModal.svelte"
 
     export let data: PageData
 
@@ -32,7 +30,6 @@
 
     const modalRegistry: Record<string, ModalComponent> = {
         identificationModal: {ref: IdentificationModal},
-        termsAndConditionsModal: {ref: TermsAndConditionsModal}
     }
 
     async function navigateToContactUsPage(): Promise<void> {
@@ -61,14 +58,8 @@
         }
     }
 
-    function openTermsAndConditionsModal() {
-        const modal: ModalSettings = {
-            type: 'component',
-            title: 'Termes et conditions',
-            component: 'termsAndConditionsModal',
-        }
-
-        modalStore.trigger(modal)
+    async function goToTermsAndConditions(): Promise<void> {
+        await goto('/terms-and-conditions')
     }
 
     async function goToProductsPage(categoryId: string): Promise<void> {
@@ -107,7 +98,7 @@
             </div>
             <div class="terms-conditions w-full md:w-11/12 flex flex-col md:flex-row-reverse md:justify-between items-center gap-3 md:gap-0 text-sm md:text-md">
                 <button class="text-slate-500" data-testid="terms-and-condition-button"
-                        on:click={openTermsAndConditionsModal}>Termes et conditions
+                        on:click={() => goToTermsAndConditions()}>Termes et conditions
                 </button>
                 <span class="text-slate-500">v{data.version} ©{(new Date()).getFullYear()} <b>6C Solutions</b>. Tous droits reservés.</span>
             </div>

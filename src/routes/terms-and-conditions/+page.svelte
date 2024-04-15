@@ -1,44 +1,25 @@
-<script lang="ts">
-    import CloseCircleIcon from '~icons/mdi/close-circle'
-    import {getModalStore, type ModalSettings} from '@skeletonlabs/skeleton'
-    import type {SvelteComponent} from 'svelte'
+<div class="bg-white flex flex-col items-center">
+    <div class="flex flex-col gap-4 mx-10 pb-10">
+        <div class="flex flex-col gap-2">
+            <h1 class="text-xl md:text-2xl font-bold my-10">Terms and Conditions</h1>
+        </div>
 
-    export let parent: SvelteComponent
-
-    const modalStore = getModalStore()
-    const modalSettings = $modalStore[0] as ModalSettings
-</script>
-
-<div class={`bg-white w-screen h-screen overflow-scroll pb-5 flex flex-col gap-7 items-center rounded-md`}>
-    <header
-            class=" w-full flex  justify-between items-center text-md font-bold uppercase bg-green-50 h-14 text-center p-3 text-black rounded-t-md">
-        <p>{modalSettings.title}</p>
-        <button
-                class="w-8 h-8 flex items-center justify-center rounded-full"
-                data-testid="close-button"
-                on:click={parent.onClose}>
-            <CloseCircleIcon/>
-        </button>
-    </header>
-    <div class="flex flex-col gap-4 w-11/12">
         <div class="flex flex-col gap-2 md:gap-3">
             <span class="text-xl md:text-2xl font-bold">Conditions Générales d'Utilisation</span>
-            <p class="text-slate-500 text-justify text-lg md:text-xl">Ces conditions générales régissent votre
-                utilisation de
-                l'application web <span class="font-bold">Static Web Site</span>, ci-après dénommée "l'Application". En
-                utilisant cette Application, vous acceptez ces
-                conditions dans leur intégralité. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser
-                l'Application.</p>
-        </div>
-        <div class="flex flex-col gap-2 md:gap-3">
-            <span class="text-xl md:text-2xl font-bold">Acceptation des Conditions</span>
+
             <p class="text-slate-500 text-justify text-lg md:text-xl">
-                En utilisant l'Application, vous acceptez d'être lié par ces conditions générales, ainsi que par notre
-                politique de confidentialité. Si vous n'êtes pas d'accord avec l'une de ces conditions, veuillez ne pas
-                utiliser
-                l'Application.
+                Ces conditions générales régissent votre utilisation de l'application web <span class="font-bold">Static Web Site</span>, ci-après dénommée "l'Application". En utilisant cette Application, vous acceptez ces conditions dans leur intégralité. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'Application.
             </p>
         </div>
+
+        <div class="flex flex-col gap-2 md:gap-3">
+            <span class="text-xl md:text-2xl font-bold">Acceptation des Conditions</span>
+
+            <p class="text-slate-500 text-justify text-lg md:text-xl">
+                En utilisant l'Application, vous acceptez d'être lié par ces conditions générales, ainsi que par notre politique de confidentialité. Si vous n'êtes pas d'accord avec l'une de ces conditions, veuillez ne pas utiliser l'Application.
+            </p>
+        </div>
+
         <div class="flex flex-col gap-2 md:gap-3">
             <span class="text-xl md:text-2xl font-bold">Utilisation de l'Application</span>
             <p class="text-slate-500 text-justify text-lg md:text-xl">
@@ -63,7 +44,8 @@
         <div class="flex flex-col gap-2 md:gap-3">
             <span class="text-xl md:text-2xl font-bold"> Limitation de Responsabilité</span>
             <p class="text-slate-500 text-justify text-lg md:text-xl">
-                L'utilisation de l'Application se fait à vos propres risques. En aucun cas, <span class="font-bold">6C Solutions</span>
+                L'utilisation de l'Application se fait à vos propres risques. En aucun cas, <span
+                    class="font-bold">6C Solutions</span>
                 ne sera
                 responsable des dommages directs, indirects, accessoires, spéciaux ou consécutifs découlant de
                 l'utilisation ou
