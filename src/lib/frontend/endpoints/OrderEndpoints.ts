@@ -1,20 +1,21 @@
 import type {OrderDetailsPresentation} from '$lib/frontend/presentations/OrderDetailsPresentation'
-import {toastError} from '$lib/frontend/core/ToasterUtils'
 import {API_BASE_ENDPOINT, BASE_HEADERS} from '$lib/frontend/Constants'
+import {EndpointError} from '$lib/frontend/endpoints/EndpointError'
 
-export async function getOrderDetails(id: string): Promise<OrderDetailsPresentation | undefined> {
+export async function getOrderDetails(id: string): Promise<OrderDetailsPresentation> {
     const response = await fetch(
         `${API_BASE_ENDPOINT}/order/${id}`,
         {
             method: 'GET',
-            headers: BASE_HEADERS,
+            headers: BASE_HEADERS
         }
     )
 
-    if (response.status === 200) {
-        return await response.json()
-    } else {
-        toastError(await response.text())
+    switch (response.status) {
+        case 200:
+            return await response.json()
+        default:
+            throw new EndpointError(await response.text())
     }
 }
 
