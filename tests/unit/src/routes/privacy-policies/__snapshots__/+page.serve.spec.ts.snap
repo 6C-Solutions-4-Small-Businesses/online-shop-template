@@ -1,0 +1,167 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TermsAndConditions > statically > should have the expected HTML structure 1`] = `
+<body>
+  <div>
+    <div
+      class="min-h-full bg-white flex flex-col items-center"
+    >
+      <div
+        class="flex flex-col gap-4 mx-10 pb-10"
+      >
+        <div
+          class="flex flex-col gap-2 mb-4"
+        >
+          <h1
+            class="text-xl md:text-2xl font-bold mt-10"
+          >
+            Privacy Policies
+          </h1>
+           
+          <h3>
+            Effective Date: [Insert Date]
+          </h3>
+        </div>
+         
+        <div
+          class="flex flex-col gap-2 md:gap-3"
+        >
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Welcome to [Convenience Store Name]! Your privacy and trust are important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services. By accessing or using our website, you agree to the terms outlined in this Privacy Policy.
+          </p>
+           
+          <span
+            class="text-xl md:text-2xl font-bold mt-4"
+          >
+            Information We Collect:
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Personal Information: When you use our website, we may collect personal information such as your name, email address, phone number, and address. We collect this information when you create an account, place an order, or subscribe to our newsletter.
+          </p>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Usage Data: We also collect information about how you interact with our website, including pages visited, products viewed, and actions taken. This information helps us improve our services and enhance your experience.
+          </p>
+           
+          <span
+            class="text-xl md:text-2xl font-bold mt-4"
+          >
+            How We Use Your Information:
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Personal Information: When you use our website, we may collect personal information such as your name, email address, phone number, and address. We collect this information when you create an account, place an order, or subscribe to our newsletter.
+          </p>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Order Processing: We use your personal information to process orders, communicate with you about your purchases, and provide customer support.
+          </p>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Marketing and Promotions: With your consent, we may send you promotional emails, newsletters, and offers about our products and services. You can opt-out of receiving marketing communications at any time.
+          </p>
+           
+          <span
+            class="text-xl md:text-2xl font-bold mt-4"
+          >
+            Data Sharing and Disclosure:
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Third-Party Service Providers: We may share your personal information with trusted third-party service providers who assist us in operating our website, processing payments, and delivering orders.
+          </p>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Legal Compliance: We may disclose your information when required by law or in response to legal requests, such as subpoenas or court orders.
+          </p>
+           
+          <span
+            class="text-xl md:text-2xl font-bold mt-4"
+          >
+            Data Security:
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or electronic storage is 100% secure. Therefore, we cannot guarantee absolute security.
+          </p>
+           
+          <span
+            class="text-xl md:text-2xl font-bold mt-4"
+          >
+            Your Rights:
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Access and Control: You have the right to access, update, or delete your personal information. You can manage your account settings or contact us for assistance.
+          </p>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Cookies: You can control cookies through your browser settings and opt-out of certain tracking technologies. However, disabling cookies may affect your ability to use some features of our website.
+          </p>
+           
+          <span
+            class="text-xl md:text-2xl font-bold mt-4"
+          >
+            Children's Privacy:
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children without parental consent.
+          </p>
+           
+          <span
+            class="text-xl md:text-2xl font-bold mt-4"
+          >
+            Changes to this Privacy Policy:
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the updated policy on our website.
+          </p>
+           
+          <span
+            class="text-xl md:text-2xl font-bold mt-4"
+          >
+            Contact Us:
+          </span>
+           
+          <p
+            class="text-slate-500 text-justify text-lg md:text-xl"
+          >
+            If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at [Contact Information].
+                By using our website, you consent to the collection and use of your information as described in this Privacy Policy.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--&lt;+page&gt;-->
+  </div>
+</body>
+`;
