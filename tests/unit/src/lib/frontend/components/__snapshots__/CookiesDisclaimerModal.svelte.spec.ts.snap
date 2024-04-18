@@ -4,7 +4,7 @@ exports[`Cookies Disclaimer > statically > should have matching snapshot 1`] = `
 <body>
   <div>
     <div
-      class="fixed bottom-0 p-1 right-0 bg-green-50 shadow-md cookies-container block s-_HEqA1ltobFh"
+      class="fixed bottom-0 p-1 right-0 bg-green-50 shadow-md cookies-container block} s-_HEqA1ltobFh"
     >
       <div
         class="border p-4 border-gray-600 s-_HEqA1ltobFh"
@@ -22,8 +22,10 @@ exports[`Cookies Disclaimer > statically > should have matching snapshot 1`] = `
         <p
           class="font-thin s-_HEqA1ltobFh"
         >
-          We use cookies to enhance your experience on our website. Your experience may be hindered if you decline our use
-      of cookies.
+          We use cookies to enhance your experience on our website. Your experience may be hindered if you decline
+                our
+                use
+                of cookies.
         </p>
          
         <br
@@ -47,12 +49,14 @@ exports[`Cookies Disclaimer > statically > should have matching snapshot 1`] = `
         >
           <button
             class="btn variant-soft rounded-none mr-5 s-_HEqA1ltobFh"
+            data-testid="decline"
           >
             Decline
           </button>
            
           <button
             class="btn variant-filled rounded-none s-_HEqA1ltobFh"
+            data-testid="accept"
           >
             Accept
           </button>
