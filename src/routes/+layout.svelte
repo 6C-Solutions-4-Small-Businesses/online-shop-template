@@ -98,7 +98,7 @@
             </div>
             <div class="terms-conditions w-full md:w-11/12 flex flex-col md:flex-row-reverse md:justify-between items-center gap-3 md:gap-0 text-sm md:text-md">
                 <button class="text-slate-500" data-testid="terms-and-condition-button"
-                        on:click={() => goToTermsAndConditions()}>Termes et conditions
+                        on:click={goToTermsAndConditions}>Termes et conditions
                 </button>
                 <span class="text-slate-500">v{data.version} ©{(new Date()).getFullYear()} <b>6C Solutions</b>. Tous droits reservés.</span>
             </div>
