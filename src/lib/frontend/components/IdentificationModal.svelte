@@ -1,19 +1,21 @@
 <script lang="ts">
     import BaseModal from '$lib/frontend/components/BaseModal.svelte'
     import Input from '$lib/frontend/components/Input.svelte'
-    import {getModalStore, type ModalSettings} from '@skeletonlabs/skeleton'
+    import {getModalStore, getToastStore, type ModalSettings, type ToastSettings} from '@skeletonlabs/skeleton'
     import type {SvelteComponent} from 'svelte'
     import {writable, type Writable} from 'svelte/store'
     import {isEmailInvalid as isEmailInvalidFunction} from '$lib/frontend/core/Helper'
     import {findUser} from '$lib/frontend/endpoints/Endpoints'
     import {Email} from '$lib/frontend/requests/FindUserRequest'
     import type {FoundUserPresentation} from '$lib/frontend/presentations/FoundUserPresentation'
+    import {getErrorToastSettings} from '$lib/frontend/core/ToasterUtils'
 
     export let parent: SvelteComponent
     export let isEmailInvalid: Writable<boolean> = writable(true)
     export let email: Writable<string> = writable()
 
     const modalStore = getModalStore()
+    const toastStore = getToastStore()
     const modalSettings = $modalStore[0] as ModalSettings
 
     function onChangeHandler(event: Event) {
@@ -33,9 +35,21 @@
 
     async function onFormSubmit(): Promise<void> {
         const foundUser = await findUser(Email.create($email))
-        if (modalSettings.response) {
-            modalSettings.response({account: foundUser, email: $email} satisfies FoundUserPresentation)
+        if (foundUser) {
+            if (modalSettings.response) {
+                modalSettings.response({account: foundUser, email: $email} satisfies FoundUserPresentation)
+            }
+        } else {
+            if (modalSettings.meta && modalSettings.meta.showError) {
+                const toastSettings: ToastSettings = getErrorToastSettings('Compte non trouvé. Veuillez vérifier votre adresse e-mail.')
+                toastStore.trigger(toastSettings)
+            } else {
+                if (modalSettings.response) {
+                    modalSettings.response({email: $email})
+                }
+            }
         }
+
         modalStore.close()
     }
 </script>

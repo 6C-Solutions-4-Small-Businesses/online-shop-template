@@ -3,9 +3,10 @@
     import type {PageData} from './$types'
     import * as GMaps from '@googlemaps/js-api-loader'
     import {PUBLIC_GOOGLE_MAPS_JAVASCRIPT_API_KEY} from '$env/static/public'
-    import {toastError, toastSuccess} from '$lib/frontend/core/ToasterUtils'
     import Button from '$lib/frontend/components/Button.svelte'
     import {contactBusiness} from '$lib/frontend/endpoints/Endpoints'
+    import {getToastStore, type ToastSettings} from '@skeletonlabs/skeleton'
+    import {getErrorToastSettings, getSuccessToastSettings} from '$lib/frontend/core/ToasterUtils'
 
     export let data: PageData
 
@@ -15,6 +16,8 @@
     let email: string
     let subject: string
     let message: string
+
+    const toastStore = getToastStore()
 
     $: isSendButtonDisabled = !name || !email || !subject || !message
 
@@ -38,18 +41,18 @@
                             fullscreenControl: false,
                             zoomControl: true,
                             streetViewControl: false,
-                            mapId: 'business-location-map'
+                            mapId: 'business-location-map',
                         })
                     })
                     loader.importLibrary('marker').then(({AdvancedMarkerElement}) => {
                         new AdvancedMarkerElement({
                             position: location,
                             map,
-                            title: data.name
+                            title: data.name,
                         })
                     })
                 } else {
-                    toastError('Une erreur est survenue durant l\'affichage de la carte.')
+                    toastStore.trigger(getErrorToastSettings('Une erreur est survenue durant l\'affichage de la carte.'))
                     console.log('Geocode was not successful for the following reason: ' + status)
                 }
             })
@@ -68,12 +71,17 @@
     }
 
     async function contactBusinessHandler() {
-        const response = await contactBusiness({name, email, subject, message})
+        let toastSettings: ToastSettings
 
-        if (response) {
+        const presentation = await contactBusiness({name, email, subject, message})
+        if (presentation) {
             clearContactUsForm()
-            toastSuccess('Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais. Merci !')
+            toastSettings = getSuccessToastSettings('Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais. Merci !')
+        } else {
+            toastSettings = getErrorToastSettings('Malheureusement, nous n\'avons pas pu envoyer votre message. Veuillez réessayer plus tard.')
         }
+
+        toastStore.trigger(toastSettings)
     }
 </script>
 

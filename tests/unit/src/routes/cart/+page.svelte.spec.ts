@@ -23,7 +23,7 @@ describe('Page at /cart', () => {
         })
         vi.mock('@skeletonlabs/skeleton', async () => {
             const actual = await import('@skeletonlabs/skeleton')
-            const {modalStore} = await import('$mocks/src/lib/frontend/components/Modals')
+            const {modalStore} = await import('$mocks/src/lib/frontend/stores/ModalStore')
             return {
                 ...actual,
                 getModalStore: (): ModalStore => modalStore

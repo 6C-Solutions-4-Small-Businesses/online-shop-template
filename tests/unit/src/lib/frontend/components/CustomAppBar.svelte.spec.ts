@@ -1,10 +1,10 @@
 import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
 import '@testing-library/jest-dom'
 import {afterEach, beforeAll, expect, type Mock} from 'vitest'
-import {modalStore} from '$mocks/src/lib/frontend/components/Modals'
+import {modalStore} from '$mocks/src/lib/frontend/stores/ModalStore'
 import {cleanup, render, screen, waitFor} from '@testing-library/svelte'
 import CustomAppBar from '$lib/frontend/components/CustomAppBar.svelte'
-import type {ModalStore} from '@skeletonlabs/skeleton'
+import type {ModalStore, ToastStore} from '@skeletonlabs/skeleton'
 
 describe('Custom App Bar Component', () => {
     beforeEach(() => {
@@ -54,9 +54,11 @@ describe('Custom App Bar Component', () => {
 
 vi.mock('@skeletonlabs/skeleton', async () => {
     const actual = await import('@skeletonlabs/skeleton')
-    const {modalStore} = await import('$mocks/src/lib/frontend/components/Modals')
+    const {modalStore} = await import('$mocks/src/lib/frontend/stores/ModalStore')
+    const {toastStore} = await import('$mocks/src/lib/frontend/stores/ToastStore')
     return {
         ...actual,
-        getModalStore: (): ModalStore => modalStore
+        getModalStore: (): ModalStore => modalStore,
+        getToastStore: (): ToastStore => toastStore
     }
 })

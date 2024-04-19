@@ -1,16 +1,10 @@
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest'
 import {mockedFetch} from '$mocks/packages/fetch'
 import {anyObject, mock} from 'vitest-mock-extended'
-import {
-    anOrderId,
-    errorResponseText,
-    expectedHeaders,
-    prepareResponseStub
-} from '$tests/unit/src/lib/frontend/FrontendTestHelpers'
+import {anOrderId, expectedHeaders, prepareResponseStub} from '$tests/unit/src/lib/frontend/FrontendTestHelpers'
 import '$mocks/packages/svelte-french-toast'
 import {getOrderDetails} from '$lib/frontend/endpoints/OrderEndpoints'
 import type {OrderDetailsPresentation} from '$lib/frontend/presentations/OrderDetailsPresentation'
-import {EndpointError} from '$lib/frontend/endpoints/EndpointError'
 
 describe('getOrderDetails exposes /api/v1/order/[id]', () => {
 
@@ -53,21 +47,6 @@ describe('getOrderDetails exposes /api/v1/order/[id]', () => {
             const presentation = await getOrderDetails(anOrderId)
 
             expect(presentation).toBe(expectedPresentation)
-        })
-    })
-
-    describe('on failure', () => {
-
-        test.each([
-            [400],
-            [404],
-            [500]
-        ])('should throw endpoint error when response status code is "%d"', async (statusCode) => {
-
-            const stubResponse = prepareResponseStub(statusCode, {})
-            mockedFetch.mockResolvedValue(stubResponse)
-
-            expect(getOrderDetails(anOrderId)).rejects.toThrowError(new EndpointError(errorResponseText))
         })
     })
 

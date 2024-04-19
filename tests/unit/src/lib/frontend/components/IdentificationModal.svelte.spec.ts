@@ -6,7 +6,7 @@ import {cleanup, render, type RenderResult, screen as vScreen} from '@testing-li
 import IdentificationModal from '$lib/frontend/components/IdentificationModal.svelte'
 import {mock} from 'vitest-mock-extended'
 import type {SvelteComponent} from 'svelte'
-import type {ModalStore} from '@skeletonlabs/skeleton'
+import type {ModalStore, ToastStore} from '@skeletonlabs/skeleton'
 import type {UserAccountSummaryPresentation} from '$lib/frontend/presentations/UserAccountSummaryPresentation'
 
 const validEmail = 'a@mail.com'
@@ -111,7 +111,7 @@ describe('IdentificationModal component', () => {
 
                 it('should close the modal', async () => {
                     const {currentModalStoreOnClose} = await import(
-                        '$mocks/src/lib/frontend/components/Modals'
+                        '$mocks/src/lib/frontend/stores/ModalStore'
                         )
 
                     expect(currentModalStoreOnClose).toHaveBeenCalled()
@@ -129,7 +129,7 @@ describe('IdentificationModal component', () => {
 
                 it('should send the found user as response to the modal store', async () => {
                     const {currentModalStoreOnResponse} = await import(
-                        '$mocks/src/lib/frontend/components/Modals'
+                        '$mocks/src/lib/frontend/stores/ModalStore'
                         )
 
                     expect(currentModalStoreOnResponse).toHaveBeenCalledWith(
@@ -149,7 +149,7 @@ describe('IdentificationModal component', () => {
 
                 it('should send the email as response to the modal store', async () => {
                     const {currentModalStoreOnResponse} = await import(
-                        '$mocks/src/lib/frontend/components/Modals'
+                        '$mocks/src/lib/frontend/stores/ModalStore'
                         )
 
                     expect(currentModalStoreOnResponse).toHaveBeenCalledWith({
@@ -190,10 +190,12 @@ describe('IdentificationModal component', () => {
 
 vi.mock('@skeletonlabs/skeleton', async () => {
     const actual = await import('@skeletonlabs/skeleton')
-    const {modalStore} = await import('$mocks/src/lib/frontend/components/Modals')
+    const {modalStore} = await import('$mocks/src/lib/frontend/stores/ModalStore')
+    const {toastStore} = await import('$mocks/src/lib/frontend/stores/ToastStore')
     return {
         ...actual,
-        getModalStore: (): ModalStore => modalStore
+        getModalStore: (): ModalStore => modalStore,
+        getToastStore: (): ToastStore => toastStore
     }
 })
 

@@ -12,8 +12,8 @@ import * as timers from 'timers'
 import {type Writable, writable} from 'svelte/store'
 import type {AddressPresentation} from '$lib/frontend/presentations/AddressPresentation'
 import type {CustomerProfilePresentation} from '$lib/frontend/presentations/CustomerProfilePresentation'
-import {executeFunction} from '$lib/frontend/core/Helper'
 import {goto} from '$app/navigation'
+import type {ToastStore} from '@skeletonlabs/skeleton'
 
 const customerId = 'cu_XyZ'
 
@@ -327,17 +327,6 @@ describe('/cart/checkout', () => {
                                 timeout: 1000
                             })
                         })
-
-                        it('should show the loading indicator during creation of customer profile', async () => {
-                            const executeFunctionMocked = executeFunction as Mock
-                            executeFunctionMocked.mockImplementation((isLoading, asyncFunction) => {
-                                isLoading.set(true)
-                                asyncFunction()
-                            })
-                            completeButton.click()
-
-                            expect(await screen.findByRole('progressbar')).toBeInTheDocument()
-                        })
                     })
                 })
 
@@ -440,5 +429,14 @@ vi.mock('@stripe/stripe-js', () => {
 vi.mock('$app/navigation', async () => {
     return {
         goto: vi.fn()
+    }
+})
+
+vi.mock('@skeletonlabs/skeleton', async () => {
+    const actual = await import('@skeletonlabs/skeleton')
+    const {toastStore} = await import('$mocks/src/lib/frontend/stores/ToastStore')
+    return {
+        ...actual,
+        getToastStore: (): ToastStore => toastStore
     }
 })

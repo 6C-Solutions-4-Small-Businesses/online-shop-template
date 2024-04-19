@@ -4,7 +4,7 @@
     import Button from '$lib/frontend/components/Button.svelte'
     import Collection from '$lib/frontend/components/Collection.svelte'
     import {isEmailInvalid} from '$lib/frontend/core/Helper'
-    import {toastError, toastGenericError, toastSuccess} from '$lib/frontend/core/ToasterUtils'
+    import {getErrorToastSettings, getSuccessToastSettings} from '$lib/frontend/core/ToasterUtils'
     import Autoplay from 'embla-carousel-autoplay'
     import emblaCarouselSvelte from 'embla-carousel-svelte'
     import {onMount} from 'svelte'
@@ -14,6 +14,7 @@
     import {PUBLIC_BUSINESS_NAME, PUBLIC_OWNER_ID} from '$env/static/public'
     import {API_BASE_ENDPOINT, BASE_HEADERS} from '$lib/frontend/Constants'
     import SpotlightedProductCard from '$lib/frontend/components/SpotlightedProductCard.svelte'
+    import {getToastStore} from '@skeletonlabs/skeleton'
 
     export let data: PageData
 
@@ -24,6 +25,8 @@
     let guessEmail: Writable<string> = writable()
     let options = {loop: true}
     let plugins = [Autoplay({stopOnMouseEnter: true, stopOnInteraction: false})]
+
+    const toastStore = getToastStore()
 
     onMount(() => {
         initialiseCollections()
@@ -57,14 +60,14 @@
 
             if (response.ok) {
                 guessEmail.set('')
-                toastSuccess('Merci de vous être abonné à notre infolettre!')
+                toastStore.trigger(getSuccessToastSettings('Merci de vous être abonné à notre infolettre!'))
             } else {
                 const jsonResponse = await response.json()
 
                 if (jsonResponse?.error === 'SUBSCRIPTION_ALREADY_EXIST') {
-                    toastError('Merci! vous faites déja partis de nos abonnés')
+                    toastStore.trigger(getErrorToastSettings('Merci! vous faites déja partis de nos abonnés'))
                 } else {
-                    toastGenericError()
+                    toastStore.trigger(getErrorToastSettings('Nous sommes désolés, mais nous ne pouvons pas vous inscrire a l\'infolettre pour le moment. Veuillez réessayer plus tard.'))
                 }
             }
         }

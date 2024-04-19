@@ -25,7 +25,7 @@
 
     async function startCheckout(): Promise<void> {
 
-        const userInfo = await openAuthenticationModal(modalStore)
+        const userInfo = await openAuthenticationModal(modalStore, false)
 
         if (userInfo) {
             let endpoint = `/cart/checkout?`

@@ -2,6 +2,7 @@ import {render} from '@testing-library/svelte'
 import {beforeAll, describe, expect} from 'vitest'
 import HomePage from '$routes/+page.svelte'
 import {IntersectionObserver} from '$mocks/src/lib/frontend/IntersectionObserverStub'
+import type {ToastStore} from '@skeletonlabs/skeleton'
 
 describe('Home page', () => {
     beforeAll(() => {
@@ -128,4 +129,13 @@ describe('Home page', () => {
 
         expect(container).toMatchSnapshot()
     })
+})
+
+vi.mock('@skeletonlabs/skeleton', async () => {
+    const actual = await import('@skeletonlabs/skeleton')
+    const {toastStore} = await import('$mocks/src/lib/frontend/stores/ToastStore')
+    return {
+        ...actual,
+        getToastStore: (): ToastStore => toastStore
+    }
 })
