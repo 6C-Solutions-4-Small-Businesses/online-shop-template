@@ -9,7 +9,8 @@ import '$mocks/packages/svelte-french-toast'
 import {currentPageParams} from '$mocks/src/lib/frontend/stores/PageStore'
 import {resetShoppingCartStubs} from '$mocks/src/lib/frontend/stores/ShoppingCartStore'
 import {clearShoppingCartStore} from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
-import {toastError} from '$lib/frontend/core/ToasterUtils'
+import type {ToastSettings, ToastStore} from '@skeletonlabs/skeleton'
+import {toastStore} from '$mocks/src/lib/frontend/stores/ToastStore'
 
 describe('/cart/checkout/[session_id]', () => {
 
@@ -55,13 +56,14 @@ describe('/cart/checkout/[session_id]', () => {
     describe('on failure', () => {
 
         it('should toast error if call to "finalizeCheckoutSession" fails', async () => {
-
-            const message = 'an error message'
-            mockedFinalizeCheckoutSession.mockRejectedValue(new Error(message))
+            mockedFinalizeCheckoutSession.mockRejectedValue(new Error())
 
             render(CheckoutSessionPage)
 
-            await waitFor(() => expect(toastError).toHaveBeenCalledWith(message))
+            await waitFor(() => expect(toastStore.trigger).toHaveBeenCalledWith<[ToastSettings]>({
+                message: 'Nous sommes désolés, mais nous n\'avons pas pu finaliser votre session de paiement. Veuillez réessayer plus tard.',
+                background: 'variant-filled-error'
+            }))
         })
 
         it('should NOT clear the cart if the order was NOT finalized successfully', async () => {
@@ -95,14 +97,6 @@ vi.mock('$lib/frontend/core/Helper', () => {
     }
 })
 
-vi.mock('svelte-french-toast', () => {
-    return {
-        default: {
-            error: vi.fn(),
-        },
-    }
-})
-
 vi.mock('$app/stores', async () => {
 
     return await import('$mocks/src/lib/frontend/stores/PageStore')
@@ -116,8 +110,11 @@ vi.mock('$lib/frontend/stores/shoppingCartStore/ShoppingCartStore', async () => 
     }
 })
 
-vi.mock('$lib/frontend/core/ToasterUtils', () => {
+vi.mock('@skeletonlabs/skeleton', async () => {
+    const actual = await import('@skeletonlabs/skeleton')
+    const {toastStore} = await import('$mocks/src/lib/frontend/stores/ToastStore')
     return {
-        toastError: vi.fn(),
+        ...actual,
+        getToastStore: (): ToastStore => toastStore
     }
 })

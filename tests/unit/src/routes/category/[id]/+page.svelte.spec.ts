@@ -5,6 +5,7 @@ import {mock} from 'vitest-mock-extended'
 import '@testing-library/jest-dom'
 import type {CategorySummaryPresentation} from '$lib/frontend/presentations/CategorySummaryPresentation'
 import type {PaginationPresentation} from '$lib/frontend/core/PaginationPresentation'
+import type {ToastStore} from '@skeletonlabs/skeleton'
 
 describe('/category/[id]', () => {
 
@@ -132,3 +133,12 @@ function getCategoryProducts({limit = 18, totalPages = 3, currentPage = 2,} = {}
         previousPage: currentPage > 1 ? currentPage - 1 : null,
     })
 }
+
+vi.mock('@skeletonlabs/skeleton', async () => {
+    const actual = await import('@skeletonlabs/skeleton')
+    const {toastStore} = await import('$mocks/src/lib/frontend/stores/ToastStore')
+    return {
+        ...actual,
+        getToastStore: (): ToastStore => toastStore
+    }
+})

@@ -1,6 +1,5 @@
 <script lang="ts">
     import {writable, type Writable} from 'svelte/store'
-    import {executeFunction} from '$lib/frontend/core/Helper'
 
     export let id: string
     export let classNames: string
@@ -13,8 +12,9 @@
     const isProcessing: Writable<boolean> = writable(false)
 
     async function onClickHandler(): Promise<void> {
-
-        await executeFunction(isProcessing, async () => await onClick())
+        isProcessing.set(true)
+        await onClick()
+        isProcessing.set(false)
     }
 
 </script>

@@ -1,20 +1,22 @@
 <script lang="ts">
     import type {OfferSummaryPresentation} from '$lib/frontend/presentations/OfferSummaryPresentation'
     import ProductDataTable from '$lib/frontend/components/ProductDataTable.svelte'
-    import {executeAction} from '$lib/frontend/core/Helper'
     import {writable, type Writable} from 'svelte/store'
     import type {PageData} from './$types'
-    import {API_BASE_ENDPOINT, BASE_HEADERS} from '$lib/frontend/Constants'
     import type {PaginationPresentation} from '$lib/frontend/core/PaginationPresentation'
+    import {fetchCategoryProducts} from '$lib/frontend/endpoints/OfferEndpoints'
+    import {getErrorToastSettings} from '$lib/frontend/core/ToasterUtils'
+    import {getToastStore} from '@skeletonlabs/skeleton'
 
     export let data: PageData
 
-    let pageLimit = 18
     let loadedCategoryId: string
     let currentPage: number
     let currentCategoryOffers: PaginationPresentation<OfferSummaryPresentation>
     let currentCategoryButtonElement: HTMLElement
+
     const isLoading: Writable<boolean> = writable(false)
+    const toastStore = getToastStore()
 
     $: {
         if (currentCategoryButtonElement) {
@@ -27,33 +29,38 @@
     $: currentPage = currentCategoryOffers.currentPage
 
     async function loadCategoryProducts(categoryId: string) {
-        await executeAction(isLoading, fetchCategoryProducts, categoryId)
+        await handleCategoryProductsFetch(categoryId)
         loadedCategoryId = categoryId
     }
 
-    async function fetchCategoryProducts(categoryId: string, page?: number): Promise<void> {
-        const response = await fetch(`${API_BASE_ENDPOINT}/offer?categoryId=${categoryId}&${page ? `page=${page}&` : ''}limit=${pageLimit}`, {
-            method: 'GET',
-            headers: {...BASE_HEADERS}
-        })
+    async function handleCategoryProductsFetch(categoryId: string, page?: number): Promise<void> {
+        isLoading.set(true)
 
-        currentCategoryOffers = await response.json()
+        const presentation = await fetchCategoryProducts(categoryId, page)
+
+        if (presentation) {
+            currentCategoryOffers = presentation
+        } else {
+            toastStore.trigger(getErrorToastSettings('Nous sommes désolés, mais nous avons des difficultés à charger la catégorie avec les produits associés. Veuillez réessayer plus tard.'))
+        }
+
+        isLoading.set(false)
     }
 
     async function goToNextPage(): Promise<void> {
-        await executeAction(isLoading, fetchCategoryProducts, loadedCategoryId, currentPage + 1)
+        await handleCategoryProductsFetch(loadedCategoryId, currentPage + 1)
     }
 
     async function goToPreviousPage(): Promise<void> {
-        await executeAction(isLoading, fetchCategoryProducts, loadedCategoryId, currentPage - 1)
+        await handleCategoryProductsFetch(loadedCategoryId, currentPage - 1)
     }
 
     async function goToLastPage(): Promise<void> {
-        await executeAction(isLoading, fetchCategoryProducts, loadedCategoryId, currentCategoryOffers.totalPages)
+        await handleCategoryProductsFetch(loadedCategoryId, currentCategoryOffers.totalPages)
     }
 
     async function goToFirstPage(): Promise<void> {
-        await executeAction(isLoading, fetchCategoryProducts, loadedCategoryId, 1)
+        await handleCategoryProductsFetch(loadedCategoryId)
     }
 </script>
 

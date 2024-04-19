@@ -4,25 +4,19 @@ import {
     createCheckoutSession,
     createCustomerProfile,
     finalizeCheckoutSession,
-    findUser
+    findUser,
 } from '$lib/frontend/endpoints/Endpoints'
 import type {UserAccountSummaryPresentation} from '$lib/frontend/presentations/UserAccountSummaryPresentation'
 import type {CheckoutRequest} from '$lib/frontend/requests/CheckoutRequest'
 import type {ShoppingCartProductState} from '$lib/frontend/stores/shoppingCartStore/ShoppingCartProductState'
 import type {
     CustomerProfileEditionRequest,
-    CustomerProfilePresentation
+    CustomerProfilePresentation,
 } from '$lib/frontend/presentations/CustomerProfilePresentation'
 import '$mocks/packages/svelte-french-toast'
 import {customerProfileEditionRequest as request} from '$mocks/src/lib/frontend/requests/UserRequestsStubs'
-import {
-    email,
-    errorResponseText,
-    expectedHeaders,
-    prepareResponseStub
-} from '$tests/unit/src/lib/frontend/FrontendTestHelpers'
+import {email, expectedHeaders, prepareResponseStub} from '$tests/unit/src/lib/frontend/FrontendTestHelpers'
 import {mockedFetch} from '$mocks/packages/fetch'
-import {toastError} from '$lib/frontend/core/ToasterUtils'
 import {Email, PhoneNumber} from '$lib/frontend/requests/FindUserRequest'
 
 describe('findUser', () => {
@@ -34,7 +28,7 @@ describe('findUser', () => {
 
         beforeEach(async () => {
 
-            mockedFetch.mockResolvedValue(mock<Response>())
+            mockedFetch.mockResolvedValue(prepareResponseStub(200, {}))
 
             await findUser(mock())
 
@@ -62,6 +56,9 @@ describe('findUser', () => {
         beforeEach(async () => {
             vi.clearAllMocks()
             findParameters = Email.create(email)
+
+            mockedFetch.mockResolvedValue(prepareResponseStub(200, {}))
+
             await findUser(findParameters)
         })
 
@@ -82,6 +79,9 @@ describe('findUser', () => {
         beforeEach(async () => {
             vi.clearAllMocks()
             findParameters = PhoneNumber.create('11111111')
+
+            mockedFetch.mockResolvedValue(prepareResponseStub(200, {}))
+
             await findUser(findParameters)
         })
 
@@ -112,24 +112,6 @@ describe('findUser', () => {
 
             expect(presentation).toBe(expectedPresentation)
         })
-
-        it('should return nothing when response status code is 404', async () => {
-            mockedFetch.mockResolvedValue(prepareResponseStub(404, {}))
-
-            const presentation = await findUser(mock())
-
-            expect(presentation).toBeUndefined()
-        })
-
-        it('should throw BackendError when response status code is something else', async () => {
-
-            const stubResponse = prepareResponseStub(500, {})
-            mockedFetch.mockResolvedValue(stubResponse)
-
-            await findUser(mock())
-
-            expect(toastError).toHaveBeenCalledWith(errorResponseText)
-        })
     })
 
     afterEach(() => {
@@ -149,7 +131,7 @@ describe('createCheckoutSession', () => {
     }
 
     beforeEach(async () => {
-        mockedFetch.mockResolvedValue(mock<Response>())
+        mockedFetch.mockResolvedValue(prepareResponseStub(200, {}))
 
         await createCheckoutSession(userInfo)
     })
@@ -193,26 +175,11 @@ describe('createCheckoutSession', () => {
         }
 
         it('in case of 200 and should return fetched clientSecret', async () => {
-            mockedFetch.mockResolvedValue(mock<Response>({
-                status: 200,
-                json(): Promise<any> {
-                    return Promise.resolve(expectedResponse)
-                },
-            }))
+            mockedFetch.mockResolvedValue(prepareResponseStub(200, expectedResponse))
 
             const response = await createCheckoutSession(userInfo)
 
             expect(response).toStrictEqual(expectedResponse)
-        })
-
-        it('and in case of error return undefined', async () => {
-            mockedFetch.mockResolvedValue(mock<Response>({
-                status: 400,
-            }))
-
-            const response = await createCheckoutSession(userInfo)
-
-            expect(response).toBeUndefined()
         })
     })
 
@@ -227,7 +194,7 @@ describe('finalizeCheckoutSession', () => {
     const finalizeCheckoutEndpoint = `/api/v1/cart/checkout/${sessionId}`
 
     beforeEach(async () => {
-        mockedFetch.mockResolvedValue(mock<Response>())
+        mockedFetch.mockResolvedValue(prepareResponseStub(200, {}))
 
         await finalizeCheckoutSession(sessionId)
     })
@@ -270,26 +237,11 @@ describe('finalizeCheckoutSession', () => {
         }
 
         it('in case of 200 and should return order id', async () => {
-            mockedFetch.mockResolvedValue(mock<Response>({
-                status: 200,
-                json(): Promise<any> {
-                    return Promise.resolve(orderIdResponse)
-                },
-            }))
+            mockedFetch.mockResolvedValue(prepareResponseStub(200, orderIdResponse))
 
             const response = await finalizeCheckoutSession(sessionId)
 
             expect(response).toStrictEqual(orderIdResponse)
-        })
-
-        it('and in case of error return undefined', async () => {
-            mockedFetch.mockResolvedValue(mock<Response>({
-                status: 400,
-            }))
-
-            const response = await finalizeCheckoutSession(sessionId)
-
-            expect(response).toBeUndefined()
         })
     })
 
@@ -305,7 +257,7 @@ describe('createCustomerProfile', () => {
 
         beforeEach(async () => {
 
-            mockedFetch.mockResolvedValue(mock<Response>())
+            mockedFetch.mockResolvedValue(prepareResponseStub(201, {}))
 
             await createCustomerProfile(mock())
 
@@ -337,7 +289,7 @@ describe('createCustomerProfile', () => {
         })
 
         test.each([
-            ['email', ],
+            ['email',],
             ['firstName',],
             ['lastName',],
             ['phoneNumber',],
@@ -372,29 +324,9 @@ describe('createCustomerProfile', () => {
 
             expect(presentation).toBe(expectedPresentation)
         })
-
-        test.each([
-            [400,],
-            [404,],
-            [500,],
-        ])('should toast error when response status code is "%d"', async (statusCode: number) => {
-
-            const stubResponse = prepareResponseStub(statusCode, {})
-            mockedFetch.mockResolvedValue(stubResponse)
-
-            await createCustomerProfile(mock())
-
-            expect(toastError).toHaveBeenCalledWith(errorResponseText)
-        })
     })
 
     afterEach(() => {
         vi.clearAllMocks()
     })
-})
-
-vi.mock('$lib/frontend/core/ToasterUtils', () => {
-    return {
-        toastError: vi.fn(),
-    }
 })

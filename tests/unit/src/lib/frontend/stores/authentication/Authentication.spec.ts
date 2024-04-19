@@ -1,4 +1,4 @@
-import {currentModalStoreOnTrigger, modalStore} from '$mocks/src/lib/frontend/components/Modals'
+import {currentModalStoreOnTrigger, modalStore} from '$mocks/src/lib/frontend/stores/ModalStore'
 import type {ModalSettings} from '@skeletonlabs/skeleton'
 import {mock} from 'vitest-mock-extended'
 import type {UserAccountSummaryPresentation} from '$lib/frontend/presentations/UserAccountSummaryPresentation'

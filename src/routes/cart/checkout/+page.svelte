@@ -4,17 +4,17 @@
     import {loadStripe, type StripeEmbeddedCheckout} from '@stripe/stripe-js'
     import {PUBLIC_STRIPE_BUSINESS_CONNECT_ACCOUNT_ID, PUBLIC_STRIPE_KEY} from '$env/static/public'
     import {createCheckoutSession, createCustomerProfile} from '$lib/frontend/endpoints/Endpoints'
-    import {ProgressBar, Step, Stepper,} from '@skeletonlabs/skeleton'
+    import {getToastStore, ProgressBar, Step, Stepper} from '@skeletonlabs/skeleton'
     import {page} from '$app/stores'
     import {onDestroy} from 'svelte'
-    import {writable} from 'svelte/store'
+    import {type Writable, writable} from 'svelte/store'
     import AddressForm from '$lib/frontend/components/AddressForm.svelte'
     import type {AddressPresentation} from '$lib/frontend/presentations/AddressPresentation'
     import type {AddressUpdatedEvent} from '$lib/frontend/Types'
-    import {executeFunction} from '$lib/frontend/core/Helper.js'
     import {goto} from '$app/navigation'
     import Input from '$lib/frontend/components/Input.svelte'
     import SlideToggleInput from '$lib/frontend/components/SlideToggleInput.svelte'
+    import {getErrorToastSettings} from '$lib/frontend/core/ToasterUtils'
 
     type StepChangedEvent = { detail: { state: { current: number, total: number }, step: number } }
 
@@ -54,14 +54,15 @@
     export let useShippingAddress = true
     export let customerId = writable(retrievedCustomerId)
     let isCreatingCustomerProfile = writable(false)
-
     let isPersonalInformationIncomplete = writable(true)
+    const isLoading: Writable<boolean> = writable(false)
+    const toastStore = getToastStore()
+
     let checkout: StripeEmbeddedCheckout | undefined
 
     async function checkoutShoppingCart(customerId: string): Promise<void> {
-
         const checkoutSession = await createCheckoutSession({
-            user: {customerId,},
+            user: {customerId},
             products: [...$cart.values()],
         })
 
@@ -77,6 +78,7 @@
 
             checkout?.mount(`#${checkoutSessionContainerId}`)
         } else {
+            toastStore.trigger(getErrorToastSettings('Nous sommes désolés, mais nous ne pouvons pas créer votre session de paiement pour le moment. Veuillez réessayer plus tard.'))
             await goto('/cart')
         }
     }
@@ -116,22 +118,26 @@
     }
 
     async function onComplete(_state: StepChangedEvent) {
+        isLoading.set(true)
 
-        const customerProfile = await executeFunction(isCreatingCustomerProfile, () =>
-            createCustomerProfile({
-                email,
-                firstName: $firstName,
-                lastName: $lastName,
-                phoneNumber: $phoneNumber,
-                details: {
-                    shippingAddress,
-                    billingAddress,
-                },
-            }))
+        const customerProfile = await createCustomerProfile({
+            email,
+            firstName: $firstName,
+            lastName: $lastName,
+            phoneNumber: $phoneNumber,
+            details: {
+                shippingAddress,
+                billingAddress,
+            },
+        })
 
         if (customerProfile) {
             customerId.set(customerProfile.customerId)
+        } else {
+            toastStore.trigger(getErrorToastSettings('Nous sommes désolés, mais nous ne pouvons pas créer votre profil pour le moment. Veuillez réessayer plus tard.'))
         }
+
+        isLoading.set(false)
     }
 
     function onUseShippingAddressChanged() {

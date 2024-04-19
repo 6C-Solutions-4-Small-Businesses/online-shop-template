@@ -12,7 +12,6 @@
         type ModalComponent,
         Toast,
     } from '@skeletonlabs/skeleton'
-    import {Toaster} from 'svelte-french-toast'
     import IdentificationModal from '$lib/frontend/components/IdentificationModal.svelte'
     import {page} from '$app/stores'
     import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
@@ -72,7 +71,6 @@
         await goto(`/category/${categoryId}`)
     }
 </script>
-<Toaster/>
 <Toast/>
 <Modal components="{modalRegistry}"/>
 <div class="bg-white">

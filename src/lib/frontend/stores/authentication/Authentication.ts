@@ -3,7 +3,8 @@ import type {ModalSettings, ModalStore} from '@skeletonlabs/skeleton'
 import type {FoundUserPresentation} from '$lib/frontend/presentations/FoundUserPresentation'
 
 export async function openAuthenticationModal(
-    store: ModalStore
+    store: ModalStore,
+    showError: boolean = true
 ): Promise<UserAccountSummaryPresentation | string | undefined> {
     return await new Promise<UserAccountSummaryPresentation | string | undefined>((resolve) => {
         const modal: ModalSettings = {
@@ -13,6 +14,7 @@ export async function openAuthenticationModal(
             body: 'Tapez votre adresse courriel afin que nous puissions vous identifier.',
             buttonTextSubmit: 'Soumettre',
             buttonTextCancel: 'Annuler',
+            meta: {showError},
 
             response: (userInfo: FoundUserPresentation | null) => {
                 if (userInfo === null || userInfo === undefined) {

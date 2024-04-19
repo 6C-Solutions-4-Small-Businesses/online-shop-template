@@ -1,8 +1,11 @@
 <script lang="ts">
 
-    import {toastError} from '$lib/frontend/core/ToasterUtils'
-    import {ProgressBar} from '@skeletonlabs/skeleton'
+    import {getErrorToastSettings} from '$lib/frontend/core/ToasterUtils'
+    import {getToastStore, ProgressBar} from '@skeletonlabs/skeleton'
     import {getUserProfile} from '$lib/frontend/endpoints/UserProfileEndpoints'
+
+    const toastStore = getToastStore()
+
 </script>
 <div class="w-full max-w-full h-screen bg-gray-50 overflow-y-scroll md:overflow-hidden">
     {#await getUserProfile()}
@@ -14,7 +17,7 @@
 
             </div>
         {/if}
-    {:catch error}
-        {toastError(error.message)}
+    {:catch _}
+        {toastStore.trigger(getErrorToastSettings('Nous n\'avons pas pu charger votre profil. Veuillez réessayer plus tard.'))}
     {/await}
 </div>

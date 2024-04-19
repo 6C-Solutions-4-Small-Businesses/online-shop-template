@@ -1,52 +1,73 @@
 <script lang="ts">
-  import ProductDataTable from '$lib/frontend/components/ProductDataTable.svelte'
-  import {executeAction} from '$lib/frontend/core/Helper'
-  import {searchedProductResult, submittedProductName} from '$lib/frontend/stores/productStore/SearchProductStore'
-  import {writable, type Writable} from 'svelte/store'
-  import {fetchSearchedOffersResult} from '$lib/frontend/endpoints/OfferEndpoints'
+    import ProductDataTable from '$lib/frontend/components/ProductDataTable.svelte'
+    import {searchedProductResult, submittedProductName} from '$lib/frontend/stores/productStore/SearchProductStore'
+    import {writable, type Writable} from 'svelte/store'
+    import {fetchSearchedOffersResult} from '$lib/frontend/endpoints/OfferEndpoints'
+    import type {PaginationPresentation} from '$lib/frontend/core/PaginationPresentation'
+    import type {OfferSummaryPresentation} from '$lib/frontend/presentations/OfferSummaryPresentation'
+    import {getToastStore} from '@skeletonlabs/skeleton'
+    import {getErrorToastSettings} from '$lib/frontend/core/ToasterUtils'
 
-  const isLoading: Writable<boolean> = writable(false);
+    const isLoading: Writable<boolean> = writable(false)
+    const toastStore = getToastStore()
 
-  $: currentPage = $searchedProductResult ? $searchedProductResult.currentPage : 1;
+    $: currentPage = $searchedProductResult ? $searchedProductResult.currentPage : 1
 
-  async function goToNextPage(): Promise<void> {
-    await executeAction(isLoading, fetchSearchedOffersResult, $submittedProductName, currentPage + 1)
-  }
+    async function fetchSearchedOffersResultHandler(
+        productName: string,
+        page?: number,
+    ): Promise<void> {
+        isLoading.set(true)
 
-  async function goToPreviousPage(): Promise<void> {
-    await executeAction(isLoading, fetchSearchedOffersResult, $submittedProductName, currentPage - 1)
-  }
+        const results: PaginationPresentation<OfferSummaryPresentation> | undefined = await fetchSearchedOffersResult(productName, page)
 
-  async function goToLastPage(): Promise<void> {
-    await executeAction(isLoading, fetchSearchedOffersResult, $submittedProductName, $searchedProductResult.totalPages)
-  }
+        if (results) {
+            searchedProductResult.set(results)
+        } else {
+            toastStore.trigger(getErrorToastSettings('Nous sommes désolés, mais nous avons des difficultés à charger d\'autres produits. Veuillez réessayer plus tard.'))
+        }
 
-  async function goToFirstPage(): Promise<void> {
-    await executeAction(isLoading, fetchSearchedOffersResult, $submittedProductName)
-  }
+        isLoading.set(false)
+    }
+
+    async function goToNextPage(): Promise<void> {
+        await fetchSearchedOffersResultHandler($submittedProductName, currentPage + 1)
+    }
+
+    async function goToPreviousPage(): Promise<void> {
+        await fetchSearchedOffersResultHandler($submittedProductName, currentPage - 1)
+    }
+
+    async function goToLastPage(): Promise<void> {
+        await fetchSearchedOffersResultHandler($submittedProductName, $searchedProductResult.totalPages)
+    }
+
+    async function goToFirstPage(): Promise<void> {
+        await fetchSearchedOffersResultHandler($submittedProductName)
+    }
 </script>
 
 <div class="w-full max-w-full h-full bg-slate-100">
-  {#if ($searchedProductResult && $searchedProductResult.totalPages > 0)}
-    <div class="w-full h-[13%] md:h-[8%] flex justify-center items-center bg-white p-2">
+    {#if ($searchedProductResult && $searchedProductResult.totalPages > 0)}
+        <div class="w-full h-[13%] md:h-[8%] flex justify-center items-center bg-white p-2">
     <span class="text-sm md:text-xl font-bold">Voici ce que nous avons trouvé pour <span
-      class="text-orange-500">"{$submittedProductName}"</span></span>
-    </div>
-    <ProductDataTable
-      products={$searchedProductResult.items}
-      currentPage={$searchedProductResult.currentPage}
-      totalPages={$searchedProductResult.totalPages}
-      isLoading={$isLoading}
-      on:first={goToFirstPage}
-      on:next={goToNextPage}
-      on:previous={goToPreviousPage}
-      on:last={goToLastPage}
-    />
-  {:else}
-    <div class="w-full h-[13%] md:h-[8%] flex justify-center items-center bg-white">
-      <div class="flex justify-center items-center text-sm md:text-xl font-bold p-2 text-justify">
-        Désolé, mais rien ne correspond à vos termes de recherche. Veuillez réessayer avec d'autres mots-clés.
-      </div>
-    </div>
-  {/if}
+            class="text-orange-500">"{$submittedProductName}"</span></span>
+        </div>
+        <ProductDataTable
+                products={$searchedProductResult.items}
+                currentPage={$searchedProductResult.currentPage}
+                totalPages={$searchedProductResult.totalPages}
+                isLoading={$isLoading}
+                on:first={goToFirstPage}
+                on:next={goToNextPage}
+                on:previous={goToPreviousPage}
+                on:last={goToLastPage}
+        />
+    {:else}
+        <div class="w-full h-[13%] md:h-[8%] flex justify-center items-center bg-white">
+            <div class="flex justify-center items-center text-sm md:text-xl font-bold p-2 text-justify">
+                Désolé, mais rien ne correspond à vos termes de recherche. Veuillez réessayer avec d'autres mots-clés.
+            </div>
+        </div>
+    {/if}
 </div>
