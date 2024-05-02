@@ -29,7 +29,8 @@ export default defineConfig({
             {find: '$routes', replacement: resolve(__dirname, './src/routes')},
             {find: '$tests', replacement: resolve(__dirname, './tests')},
             {find: '$mocks', replacement: resolve(__dirname, './tests/__mocks__')},
-            {find: '$scripts', replacement: resolve(__dirname, './scripts')}
+            {find: '$scripts', replacement: resolve(__dirname, './scripts')},
+            {find: '$translations', replacement: resolve(__dirname, './translations')},
         ]
     },
     resolve: {

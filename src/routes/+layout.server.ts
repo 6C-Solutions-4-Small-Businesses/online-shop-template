@@ -1,4 +1,4 @@
-import {loadTranslations} from '$lib/frontend/translations'
+import {loadTranslations} from '../translations'
 import type {LayoutServerLoad} from './$types'
 import type {CategorySummaryPresentation} from '$lib/frontend/presentations/CategorySummaryPresentation'
 
