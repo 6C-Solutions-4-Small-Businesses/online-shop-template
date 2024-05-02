@@ -18,6 +18,7 @@
     import type {PageData} from './$types'
     import {showCookiesDisclaimer} from "$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore"
     import {browser} from "$app/environment"
+    import CookiesDisclaimerModal from "$lib/frontend/components/CookiesDisclaimerModal.svelte";
 
     export let data: PageData
 

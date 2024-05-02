@@ -30,6 +30,7 @@ const config = {
             $mocks: './tests/__mocks__',
             $scripts: 'scripts',
             $data: './example-data',
+            $translations: 'src/translations',
         },
         prerender: {
             handleHttpError: ({path, referrer, message}) => {
