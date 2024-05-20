@@ -1,6 +1,8 @@
 {
   "title": "Your privacy, your choice!",
   "body": "We use cookies to enhance your experience on our website. Your experience may be hindered if you decline\n            our\n            use\n            of cookies.",
+  "note": "By clicking 'Accept' you agree to our use of cookies. To learn more about how we use cookies, please see our",
+  "link": "privacy policies",
   "accept": "Accept",
   "decline": "Decline"
 }

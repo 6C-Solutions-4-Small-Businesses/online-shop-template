@@ -1,7 +1,7 @@
 <script lang="ts">
     import {wereCookiesAccepted} from '$lib/frontend/stores/localStorageStore/AcceptCookiesStore'
     import {showCookiesDisclaimer} from "$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore"
-    import t from 'sveltekit-i18n'
+    import {t} from '$translations/index'
 
     wereCookiesAccepted.subscribe(value => {
         if (!value) {
@@ -13,35 +13,33 @@
         wereCookiesAccepted.set(accepted)
         showCookiesDisclaimer.set(false)
     }
+
 </script>
 
 <div class="fixed bottom-0 p-1 right-0 bg-green-50 shadow-md cookies-container block}">
     <div class="border p-4 border-gray-600">
-        <p class="font-light text-xl">{t('title')}</p>
+        <p class="font-light text-xl">{$t('lib/frontend/components/cookies-disclaimer.title')}</p>
 
         <br>
 
         <p class="font-thin">
-            We use cookies to enhance your experience on our website. Your experience may be hindered if you decline
-            our
-            use
-            of cookies.
+            {$t('lib/frontend/components/cookies-disclaimer.body')}
         </p>
 
         <br>
 
         <p class="font-thin">
-            By clicking accept you consent to our <a href="./">privacy policies.</a>
+            {$t('lib/frontend/components/cookies-disclaimer.note')} <a href="./privacy-policies">{$t('lib/frontend/components/cookies-disclaimer.link')}.</a>
         </p>
 
         <div class="flex justify-center mt-4">
             <button data-testid="decline" class="btn variant-soft rounded-none mr-5"
                     on:click={() => updateCookies(false)}>
-                Decline
+                {$t('lib/frontend/components/cookies-disclaimer.decline')}
             </button>
 
             <button data-testid="accept" class="btn variant-filled rounded-none" on:click={() => updateCookies(true)}>
-                Accept
+                {$t('lib/frontend/components/cookies-disclaimer.accept')}
             </button>
         </div>
     </div>

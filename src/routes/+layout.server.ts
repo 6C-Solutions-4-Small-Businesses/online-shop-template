@@ -1,4 +1,4 @@
-import {loadTranslations} from '../translations'
+import {initialLocale, loadTranslations} from '../translations'
 import type {LayoutServerLoad} from './$types'
 import type {CategorySummaryPresentation} from '$lib/frontend/presentations/CategorySummaryPresentation'
 
@@ -7,7 +7,6 @@ export const prerender = false
 export type LayoutPageData = { categories: CategorySummaryPresentation[]; version?: string }
 
 export const load: LayoutServerLoad = async (event): Promise<LayoutPageData> => {
-    const initialLocale = 'en'
 
     await loadTranslations(initialLocale)
 
