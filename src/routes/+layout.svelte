@@ -18,7 +18,8 @@
     import type {PageData} from './$types'
     import {showCookiesDisclaimer} from "$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore"
     import {browser} from "$app/environment"
-    import CookiesDisclaimerModal from "$lib/frontend/components/CookiesDisclaimerModal.svelte";
+    import CookiesDisclaimerModal from "$lib/frontend/components/CookiesDisclaimerModal.svelte"
+    import {initialLocale, loadTranslations, locale} from "$translations/index"
 
     export let data: PageData
 
@@ -91,7 +92,10 @@
             </button>
         </Drawer>
         {#if browser && $showCookiesDisclaimer}
-            <CookiesDisclaimerModal/>
+            {#await loadTranslations(initialLocale)}{/await}
+            {#if $locale}
+                <CookiesDisclaimerModal/>
+            {/if}
         {/if}
         <div class="footer w-full flex flex-col justify-center items-center bg-green-100 py-6 gap-7">
             <div class={`w-11/12 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 grid-flow-row gap-y-2 gap-x-5`}>
