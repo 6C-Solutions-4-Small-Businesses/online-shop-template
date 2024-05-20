@@ -2,12 +2,12 @@
     <div class="flex flex-col gap-4 mx-10 pb-10">
         <div class="flex flex-col gap-2 mb-4">
             <h1 class="text-xl md:text-2xl font-bold mt-10">Privacy Policies</h1>
-            <h3>Effective Date: [Insert Date]</h3>
+            <h3>Effective Date: January 1st 2024</h3>
         </div>
 
         <div class="flex flex-col gap-2 md:gap-3">
             <p class="text-slate-500 text-justify text-lg md:text-xl">
-                Welcome to [Convenience Store Name]! Your privacy and trust are important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services. By accessing or using our website, you agree to the terms outlined in this Privacy Policy.
+                Your privacy and trust are important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services. By accessing or using our website, you agree to the terms outlined in this Privacy Policy.
             </p>
 
             <span class="text-xl md:text-2xl font-bold mt-4">Information We Collect:</span>

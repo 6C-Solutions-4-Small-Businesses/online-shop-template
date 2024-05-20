@@ -1,7 +1,7 @@
 import {render, type RenderResult} from '@testing-library/svelte'
-import PrivacyPolicies from '$routes/privacy-policies/+page.svelte'
+import PrivacyPolicies from '$routes/privacy-policies/en/+page.svelte'
 
-describe('TermsAndConditions', () => {
+describe('Privacy Policies', () => {
     let view: RenderResult<PrivacyPolicies>
 
     describe('statically', () => {

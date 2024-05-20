@@ -19,14 +19,14 @@ export const config: Config = {
             loader: async () => (await import('./en/routes/layout.json')).default
         },
         {
-            locale: 'en',
-            key: 'lib/frontend/components/cookies-disclaimer',
-            loader: async () => (await import('./en/lib/frontend/components/cookies-disclaimer.json')).default
-        },
-        {
             locale: 'fr',
             key: 'layout',
             loader: async () => (await import('./fr/routes/layout.json')).default
+        },
+        {
+            locale: 'en',
+            key: 'lib/frontend/components/cookies-disclaimer',
+            loader: async () => (await import('./en/lib/frontend/components/cookies-disclaimer.json')).default
         },
         {
             locale: 'fr',

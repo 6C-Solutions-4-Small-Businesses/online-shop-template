@@ -1,7 +1,7 @@
 <script lang="ts">
     import {wereCookiesAccepted} from '$lib/frontend/stores/localStorageStore/AcceptCookiesStore'
     import {showCookiesDisclaimer} from "$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore"
-    import {t} from '$translations/index'
+    import {t, locale} from '$translations/index'
 
     wereCookiesAccepted.subscribe(value => {
         if (!value) {
@@ -29,7 +29,7 @@
         <br>
 
         <p class="font-thin">
-            {$t('lib/frontend/components/cookies-disclaimer.note')} <a href="./privacy-policies">{$t('lib/frontend/components/cookies-disclaimer.link')}.</a>
+            {$t('lib/frontend/components/cookies-disclaimer.note')} <a href="{'./privacy-policies/' + $locale}">{$t('lib/frontend/components/cookies-disclaimer.link')}.</a>
         </p>
 
         <div class="flex justify-center mt-4">
