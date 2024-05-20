@@ -16,10 +16,11 @@
     import {page} from '$app/stores'
     import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
     import type {PageData} from './$types'
-    import {showCookiesDisclaimer} from "$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore"
-    import {browser} from "$app/environment"
-    import CookiesDisclaimerModal from "$lib/frontend/components/CookiesDisclaimerModal.svelte"
-    import {initialLocale, loadTranslations, locale} from "$translations/index"
+    import {showCookiesDisclaimer} from '$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore'
+    import {browser, dev} from '$app/environment'
+    import CookiesDisclaimerModal from '$lib/frontend/components/CookiesDisclaimerModal.svelte'
+    import {initialLocale, loadTranslations, locale} from '$translations/index'
+    import { inject } from '@vercel/analytics'
 
     export let data: PageData
 
@@ -30,6 +31,7 @@
     const drawerStore = getDrawerStore()
     const modalStore = getModalStore()
 
+    inject({ mode: dev ? 'development' : 'production' })
 
     const modalRegistry: Record<string, ModalComponent> = {
         identificationModal: {ref: IdentificationModal},
