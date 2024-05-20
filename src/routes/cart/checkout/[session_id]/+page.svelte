@@ -7,6 +7,10 @@
     import {clearShoppingCartStore} from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
     import OrderDetail from '$lib/frontend/components/OrderDetail.svelte'
     import {PUBLIC_BUSINESS_NAME} from '$env/static/public'
+    import {track} from '@vercel/analytics'
+    import {CHECKOUT_COMPLETED_EVENT} from '$lib/shared/Analytics'
+
+    track(CHECKOUT_COMPLETED_EVENT)
 </script>
 <div class="w-full max-w-full h-screen bg-gray-50 overflow-y-scroll md:overflow-hidden">
     {#await
