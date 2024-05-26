@@ -7,7 +7,7 @@
     import {clearShoppingCartStore} from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
     import OrderDetail from '$lib/frontend/components/OrderDetail.svelte'
     import {PUBLIC_BUSINESS_NAME} from '$env/static/public'
-    import {track} from '@vercel/analytics'
+    import {track} from '@vercel/analytics/server'
     import {CHECKOUT_COMPLETED_EVENT} from '$lib/shared/Analytics'
 
     track(CHECKOUT_COMPLETED_EVENT)
