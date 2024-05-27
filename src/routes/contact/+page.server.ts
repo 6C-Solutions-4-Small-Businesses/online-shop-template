@@ -1,7 +1,13 @@
 import type {BusinessContactPresentation} from '$lib/frontend/presentations/BusinessContactPresentation'
 import {throwInternalServerError, throwInvalidRequestError} from '$lib/shared/ErrorsHandling'
+import {FORCE_INCREMENTAL_STATIC_REGENERATION_TOKEN} from '$env/static/private'
 
-export const prerender = true
+export const config = {
+    isr: {
+        expiration: false,
+        bypassToken: FORCE_INCREMENTAL_STATIC_REGENERATION_TOKEN,
+    },
+}
 
 export const load = async (event): Promise<BusinessContactPresentation> => {
     let response: Response

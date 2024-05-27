@@ -1,11 +1,12 @@
 import {afterEach, describe} from 'vitest'
-import {load, prerender} from '$routes/+page.server'
+import {config, load} from '$routes/+page.server'
 import {mockedFetch} from '$mocks/packages/fetch'
 import {anyObject, anyString, mock, type MockProxy} from 'vitest-mock-extended'
 import type {ServerLoadEvent} from '@sveltejs/kit'
 import type {CollectionPresentation} from '$lib/frontend/presentations/CollectionPresentation'
 import type {RouteParams} from '$svelteKitTypes/src/routes/$types'
 import type {CategorySummaryPresentation} from '$lib/frontend/presentations/CategorySummaryPresentation'
+import {FORCE_INCREMENTAL_STATIC_REGENERATION_TOKEN} from '$env/static/private'
 
 describe('Home page at "/" server script', () => {
 
@@ -13,8 +14,16 @@ describe('Home page at "/" server script', () => {
 
     describe('configuration', () => {
 
-        it('should be pre-rendered', () => {
-            expect(prerender).toBe(true)
+        it('should enable ISR', () => {
+            expect(config).toBeDefined()
+        })
+
+        it('should set ISR to never expire', () => {
+            expect(config.isr.expiration).toBe(false)
+        })
+
+        it('should set ISR bypassing token to FORCE_INCREMENTAL_STATIC_REGENERATION_TOKEN', () => {
+            expect(config.isr.bypassToken).toBe(FORCE_INCREMENTAL_STATIC_REGENERATION_TOKEN)
         })
     })
 
@@ -34,7 +43,7 @@ describe('Home page at "/" server script', () => {
 
             beforeEach(async () => {
                 mockedFetch.mockResolvedValue({
-                    json: async () => (fetchedCollections)
+                    json: async () => (fetchedCollections),
                 })
                 event = mock({
                     fetch: mockedFetch,

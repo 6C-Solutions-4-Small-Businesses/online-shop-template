@@ -1,10 +1,12 @@
-import {load, prerender} from '$routes/contact/+page.server'
+import {load} from '$routes/contact/+page.server'
 import {anyObject, anyString, mock, type MockProxy} from 'vitest-mock-extended'
 import {afterEach, describe, vi} from 'vitest'
 import type {ServerLoadEvent} from '@sveltejs/kit'
 import {mockedFetch} from '$mocks/packages/fetch'
 import type {BusinessContactPresentation} from '$lib/frontend/presentations/BusinessContactPresentation'
 import type {RouteParams} from '$svelteKitTypes/src/routes/contact/$types'
+import {config} from '$routes/+page.server'
+import {FORCE_INCREMENTAL_STATIC_REGENERATION_TOKEN} from '$env/static/private'
 
 describe('Contact page at "/contact" server script', () => {
 
@@ -12,8 +14,16 @@ describe('Contact page at "/contact" server script', () => {
 
     describe('configuration', () => {
 
-        it('should be pre-rendered', () => {
-            expect(prerender).toBe(true)
+        it('should enable ISR', () => {
+            expect(config).toBeDefined()
+        })
+
+        it('should set ISR to never expire', () => {
+            expect(config.isr.expiration).toBe(false)
+        })
+
+        it('should set ISR bypassing token to FORCE_INCREMENTAL_STATIC_REGENERATION_TOKEN', () => {
+            expect(config.isr.bypassToken).toBe(FORCE_INCREMENTAL_STATIC_REGENERATION_TOKEN)
         })
     })
 
