@@ -20,7 +20,7 @@
         <div class="justify-end items-center gap-2.5 flex">
             <button class="text-center text-teal-950 text-sm font-semibold flex items-center capitalize"
                     on:click={goToProductsPage}>
-                {$t('lib/frontend/components/collection.showMore')}
+                {$t('collection.showMore')}
                 <img alt="remove" class="h-3 w-3 ml-2" src="arrow-left.svg">
             </button>
 

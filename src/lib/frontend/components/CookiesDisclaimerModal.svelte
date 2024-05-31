@@ -18,28 +18,28 @@
 
 <div class="fixed bottom-0 p-1 right-0 bg-green-50 shadow-md cookies-container block}">
     <div class="border p-4 border-gray-600">
-        <p class="font-light text-xl">{$t('lib/frontend/components/cookies-disclaimer.title')}</p>
+        <p class="font-light text-xl">{$t('cookies-disclaimer.title')}</p>
 
         <br>
 
         <p class="font-thin">
-            {$t('lib/frontend/components/cookies-disclaimer.body')}
+            {$t('cookies-disclaimer.body')}
         </p>
 
         <br>
 
         <p class="font-thin">
-            {$t('lib/frontend/components/cookies-disclaimer.note')} <a href="{'./privacy-policies/' + $locale}">{$t('lib/frontend/components/cookies-disclaimer.link')}.</a>
+            {$t('cookies-disclaimer.note')} <a href="{'./privacy-policies/' + $locale}">{$t('cookies-disclaimer.link')}.</a>
         </p>
 
         <div class="flex justify-center mt-4">
             <button data-testid="decline" class="btn variant-soft rounded-none mr-5"
                     on:click={() => updateCookies(false)}>
-                {$t('lib/frontend/components/cookies-disclaimer.decline')}
+                {$t('cookies-disclaimer.decline')}
             </button>
 
             <button data-testid="accept" class="btn variant-filled rounded-none" on:click={() => updateCookies(true)}>
-                {$t('lib/frontend/components/cookies-disclaimer.accept')}
+                {$t('cookies-disclaimer.accept')}
             </button>
         </div>
     </div>
