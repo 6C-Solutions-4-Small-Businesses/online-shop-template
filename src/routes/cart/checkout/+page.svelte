@@ -253,8 +253,3 @@
         {/key}
     </div>
 </div>
-<style lang="css">
-    .title {
-        font-family: Roboto, sans-serif
-    }
-</style>

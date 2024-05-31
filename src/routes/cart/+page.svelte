@@ -79,8 +79,3 @@
         </button>
     </div>
 {/if}
-<style lang="css">
-    .title {
-        font-family: Roboto, sans-serif
-    }
-</style>
