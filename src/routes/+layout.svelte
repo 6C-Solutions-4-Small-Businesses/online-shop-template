@@ -9,7 +9,7 @@
         getModalStore,
         initializeStores,
         Modal,
-        type ModalComponent
+        type ModalComponent,
     } from '@skeletonlabs/skeleton'
     import {Toaster} from 'svelte-french-toast'
     import IdentificationModal from '$lib/frontend/components/IdentificationModal.svelte'
@@ -19,8 +19,9 @@
     import {showCookiesDisclaimer} from '$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore'
     import {browser, dev} from '$app/environment'
     import CookiesDisclaimerModal from '$lib/frontend/components/CookiesDisclaimerModal.svelte'
-    import {initialLocale, loadTranslations, locale} from '$translations/index'
+    import {initialLocale, loadTranslations, locale, t} from '$translations/index'
     import {inject} from '@vercel/analytics'
+    import {onMount} from 'svelte'
 
     export let data: PageData
 
@@ -36,6 +37,10 @@
     const modalRegistry: Record<string, ModalComponent> = {
         identificationModal: {ref: IdentificationModal},
     }
+
+    onMount(() => {
+        loadTranslations(initialLocale)
+    })
 
     async function navigateToContactUsPage(): Promise<void> {
         drawerStore.close()
@@ -56,7 +61,7 @@
                 rounded: 'none',
                 width: 'w-8/12',
                 position: 'right',
-                padding: 'pt-14'
+                padding: 'pt-14',
             }
 
             drawerStore.open(drawerSettings)
@@ -94,7 +99,6 @@
             </button>
         </Drawer>
         {#if browser && $showCookiesDisclaimer}
-            {#await loadTranslations(initialLocale)}{/await}
             {#if $locale}
                 <CookiesDisclaimerModal/>
             {/if}
@@ -110,21 +114,21 @@
 
             <div class="h-[90px] px-[19px] flex-col justify-center gap-2.5 inline-flex font-semibold text-white">
                 <div class="gap-[30px] inline-flex">
-                    <div>About Us</div>
+                    <div>{$t('layout.aboutUs')}</div>
 
                     <div>
-                        <button data-testid="terms-and-condition-button"
-                                on:click={goToTermsAndConditions}>Termes et conditions
+                        <button data-testid="terms-and-condition-button" on:click={goToTermsAndConditions}>
+                            {$t('layout.termsAndConditions')}
                         </button>
                     </div>
 
-                    <div>Contact us</div>
+                    <div>{$t('layout.contactUs')}</div>
                 </div>
 
                 <div class="w-full text-center text-xs">
                     <span>
                         v{data.version} ©{(new Date()).getFullYear()}
-                        <b>6C Solutions</b>. Tous droits reservés.
+                        <b>6C Solutions</b>. {$t('layout.allRightsReserved')}
                     </span>
                 </div>
             </div>
