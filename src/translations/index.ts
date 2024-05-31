@@ -33,6 +33,16 @@ export const config: Config = {
             key: 'lib/frontend/components/cookies-disclaimer',
             loader: async () => (await import('./fr/lib/frontend/components/cookies-disclaimer.json')).default
         },
+        {
+            locale: 'en',
+            key: 'lib/frontend/components/collection',
+            loader: async () => (await import('./en/lib/frontend/components/collection.json')).default
+        },
+        {
+            locale: 'fr',
+            key: 'lib/frontend/components/collection',
+            loader: async () => (await import('./fr/lib/frontend/components/collection.json')).default
+        },
     ]
 };
 
