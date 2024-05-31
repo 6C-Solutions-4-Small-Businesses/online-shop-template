@@ -20,7 +20,7 @@
     import {browser, dev} from '$app/environment'
     import CookiesDisclaimerModal from '$lib/frontend/components/CookiesDisclaimerModal.svelte'
     import {initialLocale, loadTranslations, locale} from '$translations/index'
-    import { inject } from '@vercel/analytics'
+    import {inject} from '@vercel/analytics'
 
     export let data: PageData
 
@@ -31,7 +31,7 @@
     const drawerStore = getDrawerStore()
     const modalStore = getModalStore()
 
-    inject({ mode: dev ? 'development' : 'production' })
+    inject({mode: dev ? 'development' : 'production'})
 
     const modalRegistry: Record<string, ModalComponent> = {
         identificationModal: {ref: IdentificationModal},
@@ -99,18 +99,34 @@
                 <CookiesDisclaimerModal/>
             {/if}
         {/if}
-        <div class="footer w-full flex flex-col justify-center items-center bg-green-100 py-6 gap-7">
-            <div class={`w-11/12 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 grid-flow-row gap-y-2 gap-x-5`}>
+        <div class="footer w-full flex flex-col justify-center items-center bg-teal-950 py-6 gap-7">
+            <div class={`w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 grid-flow-row gap-y-2 gap-x-5 border-b-[1px] border-teal-950 p-10`}>
                 {#each data.categories as {id, name}}
-                    <button class="font-light hover:underline text-left truncate text-sm xl:text-md"
-                            on:click={() => goToProductsPage(id)}>{name}</button>
+                    <button class="font-semibold hover:underline text-left truncate text-sm xl:text-md text-white"
+                            on:click={() => goToProductsPage(id)}>{name}
+                    </button>
                 {/each}
             </div>
-            <div class="terms-conditions w-full md:w-11/12 flex flex-col md:flex-row-reverse md:justify-between items-center gap-3 md:gap-0 text-sm md:text-md">
-                <button class="text-slate-500" data-testid="terms-and-condition-button"
-                        on:click={goToTermsAndConditions}>Termes et conditions
-                </button>
-                <span class="text-slate-500">v{data.version} ©{(new Date()).getFullYear()} <b>6C Solutions</b>. Tous droits reservés.</span>
+
+            <div class="h-[90px] px-[19px] flex-col justify-center gap-2.5 inline-flex font-semibold text-white">
+                <div class="gap-[30px] inline-flex">
+                    <div>About Us</div>
+
+                    <div>
+                        <button data-testid="terms-and-condition-button"
+                                on:click={goToTermsAndConditions}>Termes et conditions
+                        </button>
+                    </div>
+
+                    <div>Contact us</div>
+                </div>
+
+                <div class="w-full text-center text-xs">
+                    <span>
+                        v{data.version} ©{(new Date()).getFullYear()}
+                        <b>6C Solutions</b>. Tous droits reservés.
+                    </span>
+                </div>
             </div>
         </div>
     </div>
