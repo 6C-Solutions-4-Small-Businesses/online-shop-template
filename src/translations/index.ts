@@ -12,7 +12,7 @@ export const initialLocale = 'fr';
 
 const locales: string[] = ['en', 'fr'];
 const components: string[] = ['cookies-disclaimer', 'collection'];
-const pages: string[] = [];
+const pages: string[] = ['terms-and-conditions'];
 
 async function loadComponentsTranslation(locale: string, key: string): Promise<object> {
     return (await import(`./${locale}/lib/frontend/components/${key}.json`)).default;
@@ -27,6 +27,11 @@ const loaders: TranslationLoader[] = locales.flatMap((locale) => [
         locale,
         key: 'layout',
         loader: async () => (await import(`./${locale}/routes/layout.json`)).default,
+    },
+    {
+        locale,
+        key: 'page',
+        loader: async () => (await import(`./${locale}/routes/page.json`)).default,
     },
     ...pages.map((page): TranslationLoader => ({
         locale,

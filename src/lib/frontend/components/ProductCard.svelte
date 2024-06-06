@@ -27,11 +27,18 @@
         return pricePart ? pricePart : '00'
     }
 
-    function getDiscountClass() {
-        return percentage == null ? undefined :
-            percentage <= 10 ? 'discount-bg-low' :
-                percentage <= 50 ? 'discount-bg-mid' :
-                    'discount-bg-high';
+    function getDiscountClass(): undefined | string {
+        if (percentage == null) {
+            return undefined;
+        }
+
+        if (percentage <= 10) {
+            return 'discount-bg-low';
+        } else if (percentage <= 50) {
+            return 'discount-bg-mid';
+        } else {
+            return 'discount-bg-high';
+        }
     }
 </script>
 

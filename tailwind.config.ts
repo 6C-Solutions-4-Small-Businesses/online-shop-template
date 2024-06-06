@@ -19,6 +19,7 @@ export default {
     ],
     theme: {
         screens: {
+            xs: '0',
             sm: `${SM_SCREEN_SIZE}px`,
             md: `${MD_SCREEN_SIZE}px`,
             lg: `${LG_SCREEN_SIZE}px`,

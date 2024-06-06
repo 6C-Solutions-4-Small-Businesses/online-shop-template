@@ -78,13 +78,13 @@
 </script>
 <Toaster/>
 <Modal components="{modalRegistry}"/>
-<div class="bg-white">
+<div class="bg-transparent">
     <CustomAppBar
             isDrawerOpened={$drawerStore.open}
             isOnHomePage={isOnHomePage}
             on:toggleDrawer={toggleDrawer}
     />
-    <div class="absolute top-0 -z-10 w-full h-full pt-14">
+    <div class="absolute top-0 -z-10 w-full h-full">
         <slot/>
         <Drawer>
             <button
@@ -92,10 +92,11 @@
                     data-testid="user-profile-drawer-button"
                     on:click={onUserProfileClicked}
             >
-                Profil
+                {$t('layout.profile')}
             </button>
+
             <button class="w-full text-lg text-center font-thin mt-4" on:click={navigateToContactUsPage}>
-                Contactez-nous
+                {$t('layout.contactUs')}
             </button>
         </Drawer>
         {#if browser && $showCookiesDisclaimer}

@@ -1,0 +1,22 @@
+{
+  "newsletter": {
+    "info": "Thanks for subscribe",
+    "title": "Join the family and start getting your groceries at home.",
+    "altTitle": "Exclusive Discounts",
+    "description": "As a Preferred Subscriber, you'll have exclusive access to special offers and promotions, ensuring you save more every time you shop.",
+    "qualities": {
+      "first": "Fast same day delivery",
+      "second": "Buy directly from Whatsapp",
+      "third": "Discounts on every delivery",
+      "fourth": "Easy checkout with saved cart"
+    },
+    "button": {
+      "title": "Subscribe me",
+      "alt": "Subscribe button",
+      "search": "Search"
+    },
+    "input": {
+      "placeholder": "Entrer votre courriel"
+    }
+  }
+}
