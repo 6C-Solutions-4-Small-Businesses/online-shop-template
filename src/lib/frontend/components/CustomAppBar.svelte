@@ -4,7 +4,7 @@
     import SearchInput from '$lib/frontend/components/SearchInput.svelte'
     import {cart} from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
     import '@fontsource/dancing-script'
-    import {AppBar, getModalStore} from '@skeletonlabs/skeleton'
+    import {AppBar, getModalStore, getToastStore} from '@skeletonlabs/skeleton'
     import {createEventDispatcher, onDestroy} from 'svelte'
     import CloseIcon from '~icons/mdi/alpha-x-box-outline'
     import CartIcon from '~icons/mdi/cart-outline'
@@ -15,6 +15,13 @@
     import HomeIcon from '~icons/mdi/home-outline'
     import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
     import {PUBLIC_BUSINESS_NAME} from '$env/static/public'
+    import {fetchSearchedOffersResult} from '$lib/frontend/endpoints/OfferEndpoints'
+    import {
+        searchedProductName,
+        searchedProductResult,
+        submittedProductName,
+    } from '$lib/frontend/stores/productStore/SearchProductStore'
+    import {getErrorToastSettings} from '$lib/frontend/core/ToasterUtils'
 
     export let isDrawerOpened = false
     export let isOnHomePage: boolean
@@ -23,6 +30,7 @@
     const businessNameFirstPart = businessName?.split(' ')[0] ?? 'Demo'
     const businessNameSecondPart = businessName?.split(' ')[1] ?? 'Merchant'
     const modalStore = getModalStore()
+    const toastStore = getToastStore()
     const dispatch = createEventDispatcher()
 
     let numberOfProductsInCart = 0
@@ -66,6 +74,17 @@
         await openAuthenticationModal(modalStore)
     }
 
+    async function onSearchSubmitHandler(searchTerm: string): Promise<void> {
+        const results = await fetchSearchedOffersResult($searchedProductName)
+        if (results) {
+            searchedProductResult.set(results)
+            submittedProductName.set($searchedProductName)
+            await goto('/offer/search')
+        } else {
+            toastStore.trigger(getErrorToastSettings('Nous sommes désolés, mais nous avons des difficultés à rechercher des produits. Veuillez réessayer plus tard.'))
+        }
+    }
+
     onDestroy(unsubscribe)
 </script>
 
@@ -86,7 +105,12 @@
                 class='business-name font-thin'>{businessNameSecondPart}</span>
         </div>
         <div class='hidden xl:flex w-1/2'>
-            <SearchInput buttonId="app-bar-search-input-button" inputId="app-bar-search-input" width='w-full'/>
+            <SearchInput
+                    buttonId="app-bar-search-input-button"
+                    inputId="app-bar-search-input"
+                    width='w-full'
+                    onSearchSubmitHandler="{onSearchSubmitHandler}"
+            />
         </div>
     </div>
     <svelte:fragment slot='trail'>
@@ -156,7 +180,12 @@
 <div class={`fixed ${isOverlaySearchBarVisible ? 'flex justify-center' : 'hidden'} items-center w-full h-20 z-30 top-14 bg-white shadow-2xl xl:hidden`}
      data-testid="overlay-search-input-container"
 >
-    <SearchInput buttonId="overlay-search-input-button" inputId="overlay-search-input" width='w-full md:w-2/3'/>
+    <SearchInput
+            buttonId="overlay-search-input-button"
+            inputId="overlay-search-input"
+            width='w-full md:w-2/3'
+            onSearchSubmitHandler="{onSearchSubmitHandler}"
+    />
 </div>
 
 <style lang='css'>

@@ -5,53 +5,95 @@ import {afterEach, beforeEach, describe, expect} from 'vitest'
 import type {ToastStore} from '@skeletonlabs/skeleton'
 
 describe('Search input', () => {
-    let renderResult: RenderResult<SearchInput, typeof import('@testing-library/dom/types/queries')>
+
     const inputId = 'search-input-id'
     const buttonId = 'search-input-button-id'
+    const onSearchSubmitHandler = vi.fn()
+    const onSearchTermChangeHandler = vi.fn()
+    const onSearchResetHandler = vi.fn()
+
+    let searchButton: HTMLButtonElement
+    let searchInput: HTMLButtonElement
+    let renderResult: RenderResult<SearchInput, typeof import('@testing-library/dom/types/queries')>
 
     beforeEach(() => {
         renderResult = render(SearchInput, {
             props: {
                 inputId,
                 buttonId,
-                width: 'w-20'
-            }
+                width: 'w-20',
+                onSearchSubmitHandler,
+                onSearchTermChangeHandler,
+                onSearchResetHandler,
+            },
         })
+        searchButton = screen.getByTestId(buttonId) as HTMLButtonElement
+        searchInput = screen.getByTestId(inputId) as HTMLButtonElement
     })
 
     it('should have match snapshot', () => {
         expect(renderResult.container).toMatchSnapshot()
     })
 
-    it('Search button should not be disable when searched product name length is greater than two', async () => {
-        const searchButton = screen.getByTestId(buttonId) as HTMLButtonElement
-        const searchInput = screen.getByTestId(inputId) as HTMLButtonElement
+    describe('always', () => {
 
-        await fireEvent.input(searchInput, {target: {value: 'riz'}})
+        it('should invoke "onSearchTermChangeHandler"', () => {
 
-        expect(searchButton.disabled).toBe(false)
+            fireEvent.input(searchInput, {target: {value: 'a'}})
+
+            expect(onSearchTermChangeHandler).toHaveBeenCalledWith('a')
+        })
+
+        it('should invoke "onSearchResetHandler" when clear button is clicked', async () => {
+
+            await fireEvent.input(searchInput, {target: {value: 'ri'}})
+            const clearButton = screen.getByTestId('search-input-clear-button') as HTMLButtonElement
+
+            await fireEvent.click(clearButton)
+
+            expect(onSearchResetHandler).toHaveBeenCalled()
+        })
     })
 
-    it('Search button should be disable when searched product name length is inferior to two', async () => {
-        const searchButton = screen.getByTestId(buttonId) as HTMLButtonElement
-        const searchInput = screen.getByTestId(inputId) as HTMLButtonElement
+    describe('when search term is valid', () => {
 
-        await fireEvent.input(searchInput, {target: {value: 'r'}})
+        beforeEach(async () => {
 
-        expect(searchButton.disabled).toBe(true)
+            await fireEvent.input(searchInput, {target: {value: 'ri'}})
+        })
+
+        it('Search button should not be disable when searched product name length is greater than two', async () => {
+
+            expect(searchButton.disabled).toBe(false)
+        })
+
+        it('should invoke "onSearchSubmitHandler" when search button is clicked', () => {
+
+            fireEvent.click(searchButton)
+
+            expect(onSearchSubmitHandler).toBeCalled()
+        })
+
+        it('should invoke "onSearchSubmitHandler" when "Enter" key is pressed while search term is valid', () => {
+
+            fireEvent.keyPress(searchInput, {key: 'Enter', code: 'Enter', keyCode: 13, charCode: 13})
+
+            expect(onSearchSubmitHandler).toBeCalled()
+        })
+    })
+
+    describe('when search term is invalid', () => {
+
+        it('Search button should be disable when searched product name length is inferior to two', async () => {
+
+            await fireEvent.input(searchInput, {target: {value: 'r'}})
+
+            expect(searchButton.disabled).toBe(true)
+        })
     })
 
     afterEach(() => {
         cleanup()
         vi.clearAllMocks()
     })
-})
-
-vi.mock('@skeletonlabs/skeleton', async () => {
-    const actual = await import('@skeletonlabs/skeleton')
-    const {toastStore} = await import('$mocks/src/lib/frontend/stores/ToastStore')
-    return {
-        ...actual,
-        getToastStore: (): ToastStore => toastStore
-    }
 })
