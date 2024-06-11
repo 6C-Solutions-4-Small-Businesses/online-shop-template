@@ -5,9 +5,12 @@ exports[`OrderedItemSummaryCard > should have match snapshot 1`] = `
   <div>
     <div
       class="h-32 xl:h-36 flex bg-white rounded-md shadow-md s-ReROHsK2djRp"
+      data-testid="ordered-item-id"
     >
       <img
+        alt="ordered-item-name"
         class="w-2/5 p-2 h-full product-image object-contain"
+        src="image"
         width="160"
       />
       <!--&lt;Image&gt;-->
@@ -21,7 +24,7 @@ exports[`OrderedItemSummaryCard > should have match snapshot 1`] = `
           <div
             class="font-thin flex justify-center items-center s-ReROHsK2djRp"
           >
-            undefined x undefined
+            1 x ordered-item-name
           </div>
         </div>
          
@@ -32,7 +35,7 @@ exports[`OrderedItemSummaryCard > should have match snapshot 1`] = `
             class="w-4/12 font-thin flex items-center s-ReROHsK2djRp"
           >
             $
-            NaN
+            1.00
           </div>
         </div>
       </div>

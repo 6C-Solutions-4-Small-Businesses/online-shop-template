@@ -1,0 +1,14 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button component > Structure > should have match snapshot 1`] = `
+<body>
+  <div>
+    <button
+      class=" justify-around items-center uppercase rounded-sm font-bold text-white bg-blue-500 border-2 Button text"
+      data-testid="button-id"
+      id="button-id"
+    />
+    <!--&lt;Button&gt;-->
+  </div>
+</body>
+`;

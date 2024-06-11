@@ -1,6 +1,6 @@
-import {beforeEach, describe, expect} from 'vitest'
+import {afterEach, beforeEach, describe, expect} from 'vitest'
 import '@testing-library/jest-dom'
-import {render, type RenderResult, screen as vScreen} from '@testing-library/svelte'
+import {render, type RenderResult, screen as vScreen, waitFor} from '@testing-library/svelte'
 import BaseModal from '$lib/frontend/components/BaseModal.svelte'
 import type {SvelteComponent} from 'svelte'
 import {mock} from 'vitest-mock-extended'
@@ -12,6 +12,7 @@ describe('BaseModal component', () => {
     const buttonTextSubmit = 'soumettre'
     const parentOnModalClosed = vi.fn()
     const onSubmitClickHandler = vi.fn()
+    const onCancelClickHandler = vi.fn()
     let view: RenderResult<BaseModal, typeof import('@testing-library/dom/types/queries')>
 
     beforeEach(() => {
@@ -21,10 +22,10 @@ describe('BaseModal component', () => {
                 body,
                 buttonTextCancel,
                 buttonTextSubmit,
-                parent: mock<SvelteComponent>({
-                    onClose: parentOnModalClosed
-                }),
-                onSubmitClickHandler
+                background: 'bg-gray-500 bg-opacity-50',
+                parent: mock<SvelteComponent>(),
+                onSubmitClickHandler,
+                onCancelClickHandler,
             }
         })
     })
@@ -53,5 +54,65 @@ describe('BaseModal component', () => {
             const submitButton = vScreen.getByText(buttonTextSubmit)
             expect(submitButton).toBeInTheDocument()
         })
+    })
+
+    describe('Behavior', () => {
+        it('should call "onSubmitClickHandler" when submit button is clicked', async () => {
+            const submitButton = vScreen.getByText(buttonTextSubmit)
+            submitButton.click()
+
+            await waitFor(() => expect(onSubmitClickHandler).toHaveBeenCalled())
+        })
+
+        it('should call "parentOnModalClosed" when cancel button is clicked if "onCancelClickHandler" is not set', async () => {
+            view.rerender({
+                props: {
+                    title,
+                    body: '<div>Body</div>',
+                    buttonTextCancel,
+                    buttonTextSubmit,
+                    parent: mock<SvelteComponent>({
+                        onClose: parentOnModalClosed
+                    }),
+                    onSubmitClickHandler,
+                }
+            })
+
+            const cancelButton = vScreen.getByText(buttonTextCancel)
+            cancelButton.click()
+
+            await waitFor(() => expect(parentOnModalClosed).toHaveBeenCalled())
+        })
+
+        it('should call "onCancelClickHandler" if defined when cancel button is clicked', () => {
+            const cancelButton = vScreen.getByText(buttonTextCancel)
+            cancelButton.click()
+
+            expect(onCancelClickHandler).toHaveBeenCalled()
+        })
+
+        it('should display body has html if "isHtml" is true', () => {
+            view.rerender({
+                props: {
+                    title,
+                    body: '<div>Body</div>',
+                    buttonTextCancel,
+                    buttonTextSubmit,
+                    parent: mock<SvelteComponent>({
+                        onClose: parentOnModalClosed
+                    }),
+                    onSubmitClickHandler,
+                    isHtml: true
+                }
+            })
+
+            const bodyElement = vScreen.getByText('Body')
+            expect(bodyElement).toBeInTheDocument()
+        })
+    })
+
+    afterEach(() => {
+        view.unmount()
+        vi.clearAllMocks()
     })
 })

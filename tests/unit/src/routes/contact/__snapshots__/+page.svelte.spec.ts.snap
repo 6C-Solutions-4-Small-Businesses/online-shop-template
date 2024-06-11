@@ -411,7 +411,7 @@ exports[`Contact Page > HTML > should match snapshot 1`] = `
                 class="flex justify-end s-2CpGgZ1sTTPV"
               >
                 <button
-                  class="flex justify-around items-center uppercase rounded-sm font-bold w-36 h-12 border border-white shadow-sm mb-2 bg-slate-200  border border-black text-black"
+                  class="flex justify-around items-center uppercase rounded-sm font-bold w-36 h-12 border border-white shadow-sm mb-2 bg-slate-200  border border-gray-300 text-gray-500"
                   data-testid="contact-business-button"
                   disabled=""
                   id="contact-business-button"

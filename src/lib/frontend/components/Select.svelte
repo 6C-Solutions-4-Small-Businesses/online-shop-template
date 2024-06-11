@@ -50,7 +50,7 @@
             {/if}
         </button>
         <div
-                class={`${$showOptions ? 'visible bg-slate-100 shadow-lg p-2 rounded-lg overflow-scroll' : 'hidden'} absolute ${optionsBottom ? 'top-22' : 'bottom-14'} flex flex-col w-full font-bold gap-4 z-30 ${optionsListSize}`}>
+                class={`${$showOptions ? 'visible bg-slate-100 shadow-lg p-2 rounded-lg overflow-scroll' : 'hidden'} absolute ${optionsBottom ? 'top-22' : 'bottom-14'} flex flex-col w-full font-bold gap-1 z-30 ${optionsListSize}`}>
             {#each options as option}
                 <SelectOption
                         label={option}

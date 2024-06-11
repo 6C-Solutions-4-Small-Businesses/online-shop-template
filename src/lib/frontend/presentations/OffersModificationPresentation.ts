@@ -1,8 +1,11 @@
 import type {NewCategoryPresentation} from '$lib/frontend/presentations/NewCategoryPresentation'
 import type {CategorySummaryPresentation} from '$lib/frontend/presentations/CategorySummaryPresentation'
 
-export type NewOfferPresentation = {
-    imageData: string
+export type OffersModificationPresentation = {
+    id?: string | null
+    imageData?: string | null
+    image?: string | null
+    deleted?: boolean | null
     name: string
     price: number
     quantity: number

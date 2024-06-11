@@ -38,7 +38,7 @@ const config = {
 
                 throw new Error(message)
             }
-        }
+        },
         // In local development only
         // csrf: {
         // 	checkOrigin: false

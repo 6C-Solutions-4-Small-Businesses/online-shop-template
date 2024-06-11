@@ -4,7 +4,8 @@ exports[`Input Component > html structure > should have match snapshot 1`] = `
 <body>
   <div>
     <div
-      class="w-full"
+      class="bg-red-500"
+      data-testid="input-container"
     >
       <h4
         class="mb-1 text-black"
@@ -15,7 +16,9 @@ exports[`Input Component > html structure > should have match snapshot 1`] = `
       </h4>
        
       <input
-        class="w-full p-3.5 rounded-md border-gray-500 bg-white focus:outline-none focus:border-blue-500"
+        accept="*"
+        capture="user"
+        class="w-full h-fit  p-3.5 rounded-md border-gray-500 bg-white focus:outline-none focus:border-blue-500"
         data-testid="test-id"
         id="test-id"
         placeholder="input-placeholder"
