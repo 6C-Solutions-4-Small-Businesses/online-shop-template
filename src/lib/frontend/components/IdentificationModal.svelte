@@ -60,8 +60,8 @@
                 title={modalSettings.title}
                 body={modalSettings.body}
                 parent={parent}
-                buttonTextCancel={modalSettings.buttonTextCancel}
-                buttonTextSubmit={modalSettings.buttonTextSubmit}
+                buttonTextCancel={modalSettings.buttonTextCancel ?? 'Annuler'}
+                buttonTextSubmit={modalSettings.buttonTextSubmit ?? 'Continuer'}
                 submitButtonDisabled={$isEmailInvalid}
                 onSubmitClickHandler={onFormSubmit}
         >

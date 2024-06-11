@@ -1,0 +1,125 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ConfirmationModal component > Structure > should have match snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="w-full md:w-6/12 lg:w-6/12 xl:w-4/12"
+    >
+      <div
+        class="bg-white w-full flex flex-col gap-7 items-center rounded-md"
+      >
+        <header
+          class="w-full flex justify-between items-center text-md font-bold uppercase bg-green-50 h-14 text-center p-3 text-black rounded-t-md"
+        >
+          <p>
+            Title
+          </p>
+           
+          <button
+            class="w-8 h-8 flex items-center justify-center rounded-full"
+          >
+            <svg
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M12 2c5.53 0 10 4.47 10 10s-4.47 10-10 10S2 17.53 2 12S6.47 2 12 2m3.59 5L12 10.59L8.41 7L7 8.41L10.59 12L7 15.59L8.41 17L12 13.41L15.59 17L17 15.59L13.41 12L17 8.41z"
+                fill="currentColor"
+              />
+            </svg>
+            <!--&lt;Close-circle&gt;-->
+          </button>
+        </header>
+         
+        <div
+          class="px-3 text-slate-600"
+        >
+          <b>
+            Body
+          </b>
+        </div>
+         
+         
+        <footer
+          class="w-11/12 flex flex-row md:justify-between gap-2 mb-5"
+        >
+          <button
+            class="flex justify-around items-center uppercase rounded-sm font-bold w-full md:w-2/3 btn function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) => a[1] = o).catch((o) => {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  }  h-12 bg-white hover:bg-orange-50 border text-black"
+            data-testid="cancel-button"
+            id="cancel-button"
+          >
+            annuler
+          </button>
+          <!--&lt;Button&gt;-->
+           
+          <button
+            class="flex justify-around items-center uppercase rounded-sm font-bold w-full md:w-2/3 shadow-sm h-12 btn function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) => a[1] = o).catch((o) => {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  } bg-orange-50 hover:bg-white border border-orange-500 text-orange-500"
+            data-testid="continue-button"
+            id="continue-button"
+          >
+            soumettre
+          </button>
+          <!--&lt;Button&gt;-->
+        </footer>
+      </div>
+      <!--&lt;BaseModal&gt;-->
+    </div>
+    
+    <!--&lt;ConfirmationModal&gt;-->
+  </div>
+</body>
+`;

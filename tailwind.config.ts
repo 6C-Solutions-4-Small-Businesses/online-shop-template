@@ -1,6 +1,7 @@
 import {skeleton} from '@skeletonlabs/tw-plugin'
 import {join} from 'path'
 import type {Config} from 'tailwindcss'
+import aspect_ratio from '@tailwindcss/aspect-ratio'
 import {
     DOUBLE_XL_SCREEN_SIZE,
     LG_SCREEN_SIZE,
@@ -44,5 +45,6 @@ export default {
             }
         }),
         forms,
+        aspect_ratio,
     ]
 } satisfies Config

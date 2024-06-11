@@ -1,4 +1,4 @@
-export const createImage = (url: string): Promise<HTMLImageElement | undefined> =>
+const createImage = (url: string): Promise<HTMLImageElement | undefined> =>
     new Promise((resolve, reject) => {
         const image = new Image()
         image.addEventListener('load', () => resolve(image))

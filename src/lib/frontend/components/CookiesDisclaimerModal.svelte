@@ -1,7 +1,7 @@
 <script lang="ts">
     import {wereCookiesAccepted} from '$lib/frontend/stores/localStorageStore/AcceptCookiesStore'
     import {showCookiesDisclaimer} from "$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore"
-    import {t, locale} from '$translations/index'
+    import {t, locale} from '$translations'
 
     wereCookiesAccepted.subscribe(value => {
         if (!value) {

@@ -14,7 +14,6 @@ describe('Collection', () => {
                     price: 100,
                     image: 'image-1',
                     description: 'a product description',
-                    quantity: 5,
                     isSoldByQuantities: false,
                     unit: 'Centiliter',
                 },
@@ -24,7 +23,6 @@ describe('Collection', () => {
                     price: 100,
                     image: 'image-2',
                     description: 'a product description',
-                    quantity: 10,
                     isSoldByQuantities: true,
                     unit: 'Centiliter',
                 }

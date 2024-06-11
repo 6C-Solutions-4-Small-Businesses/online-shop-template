@@ -8,6 +8,7 @@ import {mock} from 'vitest-mock-extended'
 import type {SvelteComponent} from 'svelte'
 import type {ModalStore, ToastStore} from '@skeletonlabs/skeleton'
 import type {UserAccountSummaryPresentation} from '$lib/frontend/presentations/UserAccountSummaryPresentation'
+import {currentModalSettings} from '$mocks/src/lib/frontend/stores/ModalStore'
 
 const validEmail = 'a@mail.com'
 
@@ -26,9 +27,15 @@ describe('IdentificationModal component', () => {
                 isEmailInvalid: isEmailInvalidProperty,
                 email: emailProperty,
                 parent: mock<SvelteComponent>({
-                    onClose: parentOnModalClosed
-                })
-            }
+                    onClose: parentOnModalClosed,
+                }),
+            },
+        })
+    })
+
+    describe('Structure', () => {
+        it('should have match snapshot', () => {
+            expect(view.container).toMatchSnapshot()
         })
     })
 
@@ -72,7 +79,7 @@ describe('IdentificationModal component', () => {
     })
 
     describe(`submit button`, () => {
-        describe('behavior', () => {
+        describe('Structure', () => {
             it(`should contain an ${submitButtonTestId}`, () => {
                 expect(vScreen.getByTestId(submitButtonTestId)).toBeInTheDocument()
             })
@@ -86,11 +93,28 @@ describe('IdentificationModal component', () => {
                 view.rerender({
                     props: {
                         parent: mock<SvelteComponent>(),
-                        isEmailInvalid: isEmailInvalidProperty
-                    }
+                        isEmailInvalid: isEmailInvalidProperty,
+                    },
                 })
 
                 expect(vScreen.getByTestId(submitButtonTestId)).toBeEnabled()
+            })
+
+            it('should have the label "Continuer" when the buttonTextSubmit is not defined', () => {
+                expect(vScreen.getByTestId(submitButtonTestId)).toHaveTextContent('Continuer')
+            })
+
+            it('should have the expected label when buttonTextSubmit is set', () => {
+                currentModalSettings.buttonTextSubmit = 'Submit'
+
+                view.rerender({
+                    props: {
+                        parent: mock<SvelteComponent>(),
+                        isEmailInvalid: isEmailInvalidProperty,
+                    },
+                })
+
+                expect(vScreen.getByTestId(submitButtonTestId)).toHaveTextContent('Submit')
             })
         })
 
@@ -104,8 +128,8 @@ describe('IdentificationModal component', () => {
                 it(`should call "findUser" with the entered email`, async () => {
                     expect(mockedFindUser).toHaveBeenCalledWith(
                         expect.objectContaining({
-                            value: validEmail
-                        })
+                            value: validEmail,
+                        }),
                     )
                 })
 
@@ -134,8 +158,8 @@ describe('IdentificationModal component', () => {
 
                     expect(currentModalStoreOnResponse).toHaveBeenCalledWith(
                         expect.objectContaining({
-                            account: user
-                        })
+                            account: user,
+                        }),
                     )
                 })
             })
@@ -153,7 +177,7 @@ describe('IdentificationModal component', () => {
                         )
 
                     expect(currentModalStoreOnResponse).toHaveBeenCalledWith({
-                        email: validEmail
+                        email: validEmail,
                     })
                 })
             })
@@ -161,13 +185,30 @@ describe('IdentificationModal component', () => {
     })
 
     describe(`cancel button`, () => {
-        describe('behavior', () => {
+        describe('Structure', () => {
             it(`should contain an ${cancelButtonTestId}`, () => {
                 expect(vScreen.getByTestId(cancelButtonTestId)).toBeInTheDocument()
             })
 
             it(`should have the ${cancelButtonTestId} enabled by default`, () => {
                 expect(vScreen.getByTestId(cancelButtonTestId)).toBeEnabled()
+            })
+
+            it('should have the label "Annuler" when the buttonTextCancel is not defined', () => {
+                expect(vScreen.getByTestId(cancelButtonTestId)).toHaveTextContent('Annuler')
+            })
+
+            it('should have the expected label when buttonTextCancel is set', () => {
+                currentModalSettings.buttonTextCancel = 'Cancel'
+
+                view.rerender({
+                    props: {
+                        parent: mock<SvelteComponent>(),
+                        isEmailInvalid: isEmailInvalidProperty,
+                    },
+                })
+
+                expect(vScreen.getByTestId(cancelButtonTestId)).toHaveTextContent('Cancel')
             })
         })
 
@@ -195,7 +236,7 @@ vi.mock('@skeletonlabs/skeleton', async () => {
     return {
         ...actual,
         getModalStore: (): ModalStore => modalStore,
-        getToastStore: (): ToastStore => toastStore
+        getToastStore: (): ToastStore => toastStore,
     }
 })
 
@@ -203,7 +244,7 @@ vi.mock('$lib/frontend/core/Helper', async () => {
     const actual = await import('$lib/frontend/core/Helper')
     return {
         ...actual,
-        isEmailInvalid: vi.fn((email) => email !== validEmail)
+        isEmailInvalid: vi.fn((email) => email !== validEmail),
     }
 })
 
@@ -211,6 +252,6 @@ vi.mock('$lib/frontend/endpoints/Endpoints', async () => {
     const actual = await import('$lib/frontend/endpoints/Endpoints')
     return {
         ...actual,
-        findUser: vi.fn()
+        findUser: vi.fn(),
     }
 })

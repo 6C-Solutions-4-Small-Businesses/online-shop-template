@@ -3,10 +3,11 @@
 
     export let id: string
     export let classNames: string
-    export let background: string = 'bg-white hover:bg-orange-50'
-    export let border: string = 'border'
-    export let text: string = 'text-black'
-    export let disabled: boolean = false
+    export let background = 'bg-white hover:bg-orange-50'
+    export let border = 'border'
+    export let text = 'text-black'
+    export let disabled = false
+    export let block = false
     export let onClick: () => Promise<void>
 
     const isProcessing: Writable<boolean> = writable(false)
@@ -20,7 +21,7 @@
 </script>
 
 <button
-        class={`flex justify-around items-center uppercase rounded-sm font-bold ${classNames} ${disabled ? 'bg-slate-200  border border-black text-black': `${background} ${border} ${text}`}`}
+        class={`${block ? '' : 'flex'} justify-around items-center uppercase rounded-sm font-bold ${classNames} ${disabled ? 'bg-slate-200  border border-gray-300 text-gray-500': `${background} ${border} ${text}`}`}
         data-testid="{id}"
         disabled={$isProcessing || disabled}
         id="{id}"

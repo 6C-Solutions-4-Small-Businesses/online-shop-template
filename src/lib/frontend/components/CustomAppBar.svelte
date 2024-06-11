@@ -74,13 +74,15 @@
         await openAuthenticationModal(modalStore)
     }
 
-    async function onSearchSubmitHandler(searchTerm: string): Promise<void> {
-        const results = await fetchSearchedOffersResult($searchedProductName)
+    export async function onSearchSubmitHandler(searchTerm: string): Promise<void> {
+        searchedProductName.set(searchTerm)
+        const results = await fetchSearchedOffersResult(searchTerm)
         if (results) {
             searchedProductResult.set(results)
             submittedProductName.set($searchedProductName)
             await goto('/offer/search')
         } else {
+            console.log('error')
             toastStore.trigger(getErrorToastSettings('Nous sommes désolés, mais nous avons des difficultés à rechercher des produits. Veuillez réessayer plus tard.'))
         }
     }

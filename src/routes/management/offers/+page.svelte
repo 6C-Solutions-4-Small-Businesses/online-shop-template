@@ -5,25 +5,29 @@
     import RemoveIcon from '~icons/mdi/delete'
     import {fly} from 'svelte/transition'
     import {getModalStore, type ModalSettings} from '@skeletonlabs/skeleton'
-    import type {NewOfferPresentation} from '$lib/frontend/presentations/NewOfferPresentation'
-    import NewOfferCard from '$lib/frontend/components/NewOfferCard.svelte'
+    import type {OffersModificationPresentation} from '$lib/frontend/presentations/OffersModificationPresentation'
+    import OffersModificationCard from '$lib/frontend/components/OffersModificationCard.svelte'
     import ClearModificationIcon from '~icons/mdi/close'
     import EditModificationIcon from '~icons/mdi/edit'
+    import type {OfferSummaryPresentation} from '$lib/frontend/presentations/OfferSummaryPresentation'
 
     const modalStore = getModalStore()
-    const areModificationsPending = () => newOffers.length > 0
+    const areModificationsPending = () => offersModifications.length > 0
 
-    let newOffers: NewOfferPresentation[] = []
+    let offersModifications: OffersModificationPresentation[] = []
 
-    async function startOffersModification(offerModification?: NewOfferPresentation | undefined) {
+    async function startOffersModification(offer?: OffersModificationPresentation | undefined, index?: number) {
+
+        const isModification = !!offer
         const modal: ModalSettings = {
             type: 'component',
-            title: 'Nouvelle Offre',
-            component: 'offerManagementModal',
-            buttonTextSubmit: 'Créer',
+            title: isModification ? "Modification d'Offre" : 'Nouvelle Offre',
+            component: 'offersModificationModal',
+            buttonTextSubmit: isModification ? 'Modifier' : 'Créer',
             buttonTextCancel: 'Annuler',
             meta: {
-                offerModification,
+                offer,
+                offerIndex: index,
                 onClose,
                 taxCategories: [
                     'Alimentation',
@@ -71,18 +75,39 @@
                 ],
             },
 
-            response: (offer: NewOfferPresentation) => {
-                if (offerModification) {
-                    newOffers = newOffers.map((o) => o === offerModification ? offer : o)
+            response: (data: { offer: OffersModificationPresentation, index?: number }) => {
+
+                if (data.index === undefined) {
+                    offersModifications = [...offersModifications, data.offer]
                 } else {
-                    newOffers = [...newOffers, offer]
+                    offersModifications[data.index] = data.offer
                 }
             },
         }
         modalStore.trigger(modal)
     }
 
-    async function startOfferSearch() {
+    function toOfferModificationPresentation(offer: OfferSummaryPresentation): OffersModificationPresentation {
+        return {
+            id: offer.id,
+            name: offer.name,
+            description: offer.description,
+            price: offer.price / 100,
+            quantity: 1,
+            unit: offer.unit ?? 'Unité',
+            //TODO(https://github.com/6C-Solutions-4-Small-Businesses/static-web-site/issues/375)
+            categories: [{
+                id: '27f313bb-b390-41e1-aaa0-028024bb9c0e',
+                name: 'Viande et Volaille',
+            }],
+            taxCategory: 'Alimentation',
+            image: offer.image,
+            barCode: '1234567890',
+            inventory: 99,
+        }
+    }
+
+    async function startOfferSearch(followUpAction: { isEdition: boolean }) {
         const modal: ModalSettings = {
             type: 'component',
             component: 'offerSearchModal',
@@ -93,11 +118,26 @@
                 onClose,
             },
 
-            response: (offer: NewOfferPresentation) => {
-                console.log(offer)
+            response: (offer: OfferSummaryPresentation) => {
+                modalStore.close()
+                const offersModificationPresentation = toOfferModificationPresentation(offer)
+                if (followUpAction.isEdition) {
+                    startOffersModification(offersModificationPresentation)
+                } else {
+                    offersModificationPresentation.deleted = true
+                    offersModifications = [...offersModifications, offersModificationPresentation]
+                }
             },
         }
         modalStore.trigger(modal)
+    }
+
+    async function startOfferSearchForEdition() {
+        await startOfferSearch({ isEdition: true })
+    }
+
+    async function startOfferSearchForDeletion() {
+        await startOfferSearch({ isEdition: false })
     }
 
     function onClose() {
@@ -115,7 +155,7 @@
             buttonTextCancel: 'Non',
             response: (confirmed: boolean) => {
                 if (confirmed) {
-                    newOffers = []
+                    offersModifications = []
                 }
             },
         }
@@ -123,7 +163,7 @@
     }
 
     async function onModificationsApplyClickHandler() {
-        function formatModificationsConfirmationMessage(newOffers: NewOfferPresentation[]) {
+        function formatModificationsConfirmationMessage(newOffers: OffersModificationPresentation[]) {
             return `Voulez-vous vraiment appliquer les modifications suivantes aux produits et services? <br/><br/> <span class="text-xl block">Création d'offre</span> <br/><ul class="list-disc pl-5 space-y-2">${newOffers.map(o => `<li>${o.name}</li>`).join('')}</ul>`
         }
 
@@ -131,7 +171,7 @@
             type: 'component',
             component: 'confirmationModal',
             title: 'Appliquer les modifications',
-            body: formatModificationsConfirmationMessage(newOffers),
+            body: formatModificationsConfirmationMessage(offersModifications),
             buttonTextConfirm: 'Oui',
             buttonTextCancel: 'Non',
             meta: {
@@ -139,7 +179,7 @@
             },
             response: (confirmed: boolean) => {
                 if (confirmed) {
-                    newOffers = []
+                    offersModifications = []
                 }
             },
         }
@@ -179,7 +219,7 @@
                         border="border-black"
                         background="bg-blue-500 hover:bg-blue-600"
                         disabled="{false}"
-                        onClick={startOfferSearch}
+                        onClick={startOfferSearchForEdition}
                 >
                     <div class="flex flex-row">
                         <EditIcon class="inline"/>
@@ -194,10 +234,7 @@
                         border="border-black"
                         background="bg-red-500 hover:bg-red-600"
                         disabled="{false}"
-                        onClick={() => {
-                            console.log('Supprimer un produit ou service')
-                            return Promise.resolve()
-                        }}
+                        onClick={startOfferSearchForDeletion}
                 >
                     <div class="flex flex-row">
                         <RemoveIcon class="inline"/>
@@ -208,12 +245,12 @@
         <div class="w-full border-opacity-50 pt-2 pb-3">
             <div class="divider h-0.5 bg-black"></div>
         </div>
-        {#if newOffers.length}
+        {#if offersModifications.length}
             <div class="w-full flex flex-col pt-5 gap-3">
-                {#each newOffers as o, i(o)}
-                    <div class="relative h-[34rem]">
+                {#each offersModifications as o, i(o)}
+                    <div class="relative h-[28rem]"> <!-- HELP -->
                         <div class="absolute w-full" transition:fly={{ x: -20, duration: 300 }}>
-                            <NewOfferCard newOffer="{o}"/>
+                            <OffersModificationCard offer="{o}"/>
                         </div>
                         <Button
                                 id="delete-modification-button"
@@ -222,7 +259,7 @@
                                 text="text-white"
                                 block="{true}"
                                 onClick={() => {
-                                    newOffers = newOffers.filter((offer, index) => index !== i)
+                                    offersModifications = offersModifications.filter((offer, index) => index !== i)
                                     return Promise.resolve()
                                 }}>
                             <ClearModificationIcon
@@ -236,7 +273,7 @@
                                 text="text-white"
                                 block="{true}"
                                 onClick={() => {
-                                    startOffersModification(o)
+                                    startOffersModification(o, i)
                                     return Promise.resolve()
                                 }}>
                             <EditModificationIcon
@@ -250,11 +287,11 @@
             <div class="flex-1 flex bg-gray-200 mt-5">
                 <div class="flex-1 flex items-center justify-center">
                     <p class="text-xl font-thin text-center p-3"><span class="text-3xl block my-2">Vos modifications apparaîtront ici.</span><br>
-                        Appuyez sur le <b>Appliquer</b> pour les soumettre ou <b>Annuler</b> pour les abandonner.</p>
+                        Appuyez sur <b>Appliquer</b> pour les soumettre ou sur <b>Annuler</b> pour les abandonner.</p>
                 </div>
             </div>
         {/if}
-        {#key newOffers}
+        {#key offersModifications}
             <div class="w-full flex flex-row justify-between py-4">
                 <div class="p-3 sm:px-1">
                     <Button

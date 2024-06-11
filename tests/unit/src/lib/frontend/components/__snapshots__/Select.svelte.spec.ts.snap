@@ -9,6 +9,7 @@ exports[`Select Component > html structure > should have match snapshot 1`] = `
       >
         <div
           class="w-full"
+          data-testid="input-container"
         >
           <h4
             class="mb-1 text-black"
@@ -19,7 +20,8 @@ exports[`Select Component > html structure > should have match snapshot 1`] = `
           </h4>
            
           <input
-            class="w-full p-3.5 rounded-md border-gray-500 bg-white focus:outline-none focus:border-blue-500"
+            accept="*"
+            class="w-full h-fit  p-3.5 rounded-md border-gray-500 bg-white focus:outline-none focus:border-blue-500"
             data-testid="test-id"
             id="test-id"
             placeholder="input-placeholder"
@@ -46,7 +48,7 @@ exports[`Select Component > html structure > should have match snapshot 1`] = `
         </button>
          
         <div
-          class="hidden absolute top-22 flex flex-col w-full font-bold gap-4 z-30 h-56"
+          class="hidden absolute top-22 flex flex-col w-full font-bold gap-1 z-30 h-56"
         >
           <button
             class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-orange-100 text-red-500"

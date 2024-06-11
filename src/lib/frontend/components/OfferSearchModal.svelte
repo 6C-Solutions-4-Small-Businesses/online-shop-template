@@ -32,7 +32,6 @@
     onMount(() => {
         searchedProductResult.subscribe((newSearchedProductResult) => {
             if (newSearchedProductResult) {
-                console.log(newSearchedProductResult.items.length)
                 matchedOffers = newSearchedProductResult.items
             }
         })
@@ -51,8 +50,8 @@
         >
             <div class="w-full px-4">
                 <SearchInput
-                        inputId="searchInput"
-                        buttonId="searchButton"
+                        inputId="search-input"
+                        buttonId="search-submit-button"
                         width="w-full"
                         onSearchTermChangeHandler="{handleSearchTermChange}"
                         onSearchResetHandler="{onSearchResetHandler}"
@@ -67,14 +66,15 @@
                                             name="{offer.name}"
                                             image="{offer.image}"
                                             price="{offer.price}"
+                                            onClickHandler="{() => modalSettings?.response?.call({}, offer)}"
                                     />
                                 {/each}
                             </div>
                         {:else}
-                            <p class="text-center text-gray-700"><span>{@html `Aucune offre trouvée pour "<b>${searchTerm}</b>"`}</span></p>
+                            <p class="text-center text-gray-700" data-testid="no-match-message"><span>{@html `Aucune offre trouvée pour "<b>${searchTerm}</b>"`}</span></p>
                         {/if}
                     {:else}
-                        <p class="text-center text-gray-700"><span>Cherchez l'offre que vous désirez modifier.</span></p>
+                        <p class="text-center text-gray-700" data-testid="description-message"><span>Cherchez l'offre que vous désirez modifier.</span></p>
                     {/if}
                 </div>
             </div>

@@ -4,7 +4,7 @@
     import {
         Autocomplete,
         type AutocompleteOption,
-        getModalStore,
+        getModalStore, getToastStore,
         InputChip,
         type ModalSettings,
     } from '@skeletonlabs/skeleton'
@@ -14,25 +14,26 @@
     import ClearImageIcon from '~icons/mdi/close'
     import {compareStringsCaseInsensitive, includesString} from '$lib/frontend/core/StringsHelper.js'
     import Select from '$lib/frontend/components/Select.svelte'
-    import {toastError} from '$lib/frontend/core/ToasterUtils'
-    import type {NewOfferPresentation} from '$lib/frontend/presentations/NewOfferPresentation'
+    import type {OffersModificationPresentation} from '$lib/frontend/presentations/OffersModificationPresentation'
     import type {CategorySummaryPresentation} from '$lib/frontend/presentations/CategorySummaryPresentation'
     import type {NewCategoryPresentation} from '$lib/frontend/presentations/NewCategoryPresentation'
     import Cropper from 'svelte-easy-crop'
     import {getCroppedImage} from '$lib/frontend/core/ImagesHelper'
+    import Image from '$lib/frontend/components/Image.svelte'
+    import {getErrorToastSettings} from '$lib/frontend/core/ToasterUtils'
 
     export let parent: SvelteComponent
 
     const modalStore = getModalStore()
     const modalSettings = $modalStore[0] as ModalSettings
-    const availableCategories: AutocompleteOption<string>[] = new Array(...modalSettings.meta.categories).map((category) =>
+    const availableCategories: AutocompleteOption<string>[] = new Array(...modalSettings.meta?.categories ?? []).map((category) =>
         ({
             value: Object.keys(category)[0],
             label: Object.values(category)[0] as string,
         }),
     ).sort((a, b) => a.label.localeCompare(b.label))
-    const validUnits = new Array(...modalSettings.meta.units)
-    const taxCategories = new Array(...modalSettings.meta.taxCategories)
+    const validUnits = new Array(...modalSettings.meta?.units ?? [])
+    const taxCategories = new Array(...modalSettings.meta?.taxCategories ?? [])
 
     const MAX_NUMBER_OF_CATEGORIES = 3
     const isImageValid = () => image !== undefined || imageData !== undefined
@@ -75,7 +76,14 @@
         "MSI": /^\d+$/,
     };
     const isBarCodeValid = () => {
-        return barCode !== undefined && Object.entries(barCodesRegexes).some((barCodeTypeEntry) => barCode && barCodeTypeEntry[1].test(barCode))
+        return barCode !== undefined && Object.entries(barCodesRegexes)
+            .some((barCodeTypeEntry) => {
+                const matches = barCode && barCodeTypeEntry[1].test(barCode)
+                if (matches) {
+                    console.log(`barcode ${barCode} matches type`, barCodeTypeEntry[0])
+                }
+                return matches
+            })
     }
     const isInventoryValid = () => {
         try {
@@ -86,18 +94,21 @@
         }
     }
     const isTaxInfoSet = () => taxCategory !== undefined
+    const toastStore = getToastStore()
 
-    let image: Blob | undefined = undefined
-    let imageData: string | undefined = modalSettings.meta?.offerModification?.imageData
+    let image: string | undefined = modalSettings.meta?.offer?.image
+    let imageData: string | undefined = modalSettings.meta?.offer?.imageData
     let croppedImageData: string | undefined = undefined
     let crop = {x: 0, y: 0}
+    let cropSize = {width: 0, height: 0}
+    let cropperContainer: HTMLDivElement
     let croppedAreaPixelsInfo = {x: 0, y: 0, width: 0, height: 0}
-    let name: string | undefined = modalSettings.meta?.offerModification?.name
-    let price: string | undefined = modalSettings.meta?.offerModification?.price
-    let quantity = modalSettings.meta?.offerModification?.quantity?.toString() ?? '1'
-    let unit = modalSettings.meta?.offerModification?.unit ?? 'Unité'
+    let name: string | undefined = modalSettings.meta?.offer?.name
+    let price: string | undefined = modalSettings.meta?.offer?.price
+    let quantity = modalSettings.meta?.offer?.quantity?.toString() ?? '1'
+    let unit = modalSettings.meta?.offer?.unit ?? 'Unité'
     let selectedCategoriesValues: { label: string, value?: string | undefined }[] =
-        modalSettings.meta?.offerModification?.categories
+        modalSettings.meta?.offer?.categories
             ?.map((c: (NewCategoryPresentation | CategorySummaryPresentation)) => ({
                 label: c.name,
                 //@ts-ignore value is not defined in NewCategoryPresentation
@@ -106,15 +117,11 @@
     let autoCompleteCategories = new Array(...availableCategories)
     let categoriesChips: InputChip
     let isCategoryAutocompleteVisible = false
-    let description = modalSettings.meta?.offerModification?.description ?? ''
-    let inventory = modalSettings.meta?.offerModification?.inventory?.toString() ?? '1'
-    let barCode: string | undefined = modalSettings.meta?.offerModification?.barCode
-    let taxCategory: string | undefined = modalSettings.meta?.offerModification?.taxCategory
+    let description = modalSettings.meta?.offer?.description ?? ''
+    let inventory = modalSettings.meta?.offer?.inventory?.toString() ?? '1'
+    let barCode: string | undefined = modalSettings.meta?.offer?.barCode
+    let taxCategory: string | undefined = modalSettings.meta?.offer?.taxCategory
     let formIsComplete = isFormComplete()
-
-    function findPreviewImage(): HTMLImageElement | undefined {
-        return document.getElementById('offer-preview-image') as HTMLImageElement
-    }
 
     function findFileInput() {
         return document.getElementById('image-file-input') as HTMLInputElement
@@ -152,19 +159,15 @@
 
     async function onFileHandler(event: Event) {
         //@ts-ignore Files is defined in the event target
-        image = event?.target?.files[0]
-        formIsComplete = isFormComplete()
-        if (image) {
+        const imageBlob = event?.target?.files[0]
+        if (imageBlob) {
             const reader = new FileReader()
             reader.onload = (e) => {
-                const previewImage = findPreviewImage()
                 imageData = <string>e!.target!.result!
                 croppedImageData = imageData
-                if (previewImage) {
-                    previewImage.src = imageData
-                }
+                formIsComplete = isFormComplete()
             }
-            reader.readAsDataURL(image)
+            reader.readAsDataURL(imageBlob)
         }
     }
 
@@ -188,13 +191,13 @@
     function onCategoriesChipInvalidHandler(event: CustomEvent) {
         const label = event.detail.input
         if (selectedCategoriesValues.some((category) => compareStringsCaseInsensitive(category.label, label))) {
-            toastError(`La catégorie "${label}" a déjà été rattachée à cette offre.`)
+            toastStore.trigger(getErrorToastSettings(`La catégorie "${label}" a déjà été rattachée à cette offre.`))
         } else if (label.length < MAX_NUMBER_OF_CATEGORIES) {
-            toastError(`Le nom d'une catégorie doit comprendre entre ${MIN_CATEGORY_NAME_LENGTH} et ${MAX_CATEGORY_NAME_LENGTH} charactères de l'alphabet.`)
+            toastStore.trigger(getErrorToastSettings(`Le nom d'une catégorie doit comprendre entre ${MIN_CATEGORY_NAME_LENGTH} et ${MAX_CATEGORY_NAME_LENGTH} charactères de l'alphabet.`))
         } else if (!isCategoryNameValid(label)) {
-            toastError("Seulement les caractères de l'alphabet sont autorisé dans le nom d'une catégorie.")
+            toastStore.trigger(getErrorToastSettings(`Seulement les caractères de l'alphabet sont autorisé dans le nom d'une catégorie.`))
         } else {
-            toastError("Une offre ne peut apparternir à plus de 3 catégories.")
+            toastStore.trigger(getErrorToastSettings("Une offre ne peut apparternir à plus de 3 catégories."))
         }
     }
 
@@ -264,15 +267,17 @@
 
     function isFormComplete() {
         const imageValid = isImageValid()
-        const nameIsValid = isNameValid()
+        const nameValid = isNameValid()
         const priceValid = isPriceValid()
+        const quantityValid = isQuantityValid()
         const categoriesSet = areCategoriesSet()
         const barCodeValid = isBarCodeValid()
         const inventoryValid = isInventoryValid()
         const taxInfoSet = isTaxInfoSet()
         return imageValid &&
-            nameIsValid &&
+            nameValid &&
             priceValid &&
+            quantityValid &&
             categoriesSet &&
             barCodeValid &&
             inventoryValid &&
@@ -284,32 +289,41 @@
             croppedImageData = await getCroppedImage(imageData, croppedAreaPixelsInfo)
         }
         if (modalSettings.response) {
-            modalSettings.response(toNewOfferPresentation())
+            modalSettings.response({
+                offer: toOfferManagementPresentation(),
+                index: modalSettings.meta?.offerIndex,
+            })
         }
         modalStore.close()
     }
 
-    function toNewOfferPresentation(): NewOfferPresentation | undefined {
-        if (!croppedImageData || !name || !price || !selectedCategoriesValues || !barCode || !taxCategory) {
+    function mapSelectedCategories() {
+        return selectedCategoriesValues
+            .map((category: { label: string, value?: string | undefined }) => {
+
+                if (category.value) {
+                    return {
+                        name: category.label,
+                        id: category.value,
+                    } satisfies CategorySummaryPresentation
+                }
+                return {name: category.label} satisfies NewCategoryPresentation
+            })
+    }
+
+    function toOfferManagementPresentation(): OffersModificationPresentation | undefined {
+        if (!(croppedImageData || image) || !name || !price || !selectedCategoriesValues || !barCode || !taxCategory) {
             return undefined
         }
 
         return {
+            id: modalSettings.meta?.offer?.id,
+            image,
             imageData: croppedImageData,
             name,
             price: parseFloat(price),
             quantity: parseInt(quantity),
-            categories: selectedCategoriesValues
-                .map((category: { label: string, value?: string | undefined }) => {
-
-                    if (category.value) {
-                        return {
-                            name: category.label,
-                            id: category.value,
-                        } satisfies CategorySummaryPresentation
-                    }
-                    return {name: category.label} satisfies NewCategoryPresentation
-                }),
+            categories: mapSelectedCategories(),
             inventory: parseInt(inventory),
             unit,
             description,
@@ -321,6 +335,12 @@
     onMount(() => {
         for (const category of selectedCategoriesValues) {
             categoriesChips?.addChip(category.label)
+        }
+        if (cropperContainer) {
+            cropSize = {
+                width: cropperContainer.offsetWidth,
+                height: cropperContainer.offsetHeight,
+            }
         }
     })
 
@@ -336,16 +356,60 @@
                 buttonTextSubmit={modalSettings.buttonTextSubmit}
                 submitButtonDisabled={!formIsComplete}
                 onSubmitClickHandler={onFormSubmit}
-                onCancelClickHandler={modalSettings.meta.onClose}
+                onCancelClickHandler={modalSettings.meta?.onClose}
         >
             <form class="w-11/12 h-[36rem] overflow-y-scroll">
                 <div class="mb-2">
                     <h4 class="mb-1 text-black" data-testid="input-label-id">Image
                         <span class="text-red-500">*</span>
                     </h4>
-                    {#key image}
-                        <div class="{`py-2 relative w-full aspect-1 flex flex-row items-center bg-gray-300 ${isImageValid() ? '' : 'border-2 border-red-500'}`}">
-                            {#if !image && !imageData}
+                    {#key imageData}
+                        <div bind:this={cropperContainer}
+                             class="{`py-2 relative w-full aspect-1 flex flex-row items-center bg-gray-300 ${isImageValid() ? '' : 'border-2 border-red-500'}`}">
+                            {#if image}
+                                <div class="absolute w-full h-full bg-white">
+                                    <Image
+                                            imageRemoteUrl="{image}"
+                                            name="{name ?? ''}"
+                                            classes="w-full h-full object-contain"/>
+                                    <Button
+                                            id="clear-image-button"
+                                            classNames="absolute top-1 right-2 border-none p-2"
+                                            background="background-none"
+                                            text="text-white"
+                                            block="{true}"
+                                            onClick={clearImage}>
+                                        <ClearImageIcon
+                                                class="text-3xl font-bold bg-red-400 rounded-full p-1 hover:bg-red-500"
+                                        />
+                                    </Button>
+                                </div>
+                            {:else if imageData}
+                                <div
+                                        id="offer-preview-container"
+                                        class="absolute w-full h-full border-2">
+                                    <div class="relative h-full">
+                                        <Cropper
+                                                image="{imageData}"
+                                                aspect="{1}"
+                                                restrictPosition="{false}"
+                                                bind:cropSize
+                                                bind:crop
+                                                on:cropcomplete={onCropComplete}/>
+                                        <Button
+                                                id="clear-image-button"
+                                                classNames="border-none p-2"
+                                                background="background-none"
+                                                text="text-white"
+                                                block="{true}"
+                                                onClick={clearImage}>
+                                            <ClearImageIcon
+                                                    class="absolute right-2 text-3xl font-bold bg-red-400 rounded-full p-1 hover:bg-red-500"
+                                            />
+                                        </Button>
+                                    </div>
+                                </div>
+                            {:else}
                                 <div class="absolute w-full flex-1 flex flex-col items-center">
                                     <Input
                                             id="image-file-input"
@@ -367,31 +431,6 @@
                                             <span class="flex-1">Choisir image</span>
                                         </div>
                                     </Button>
-                                </div>
-                            {/if}
-                            {#if imageData}
-                                <div
-                                        id="offer-preview-container"
-                                        class="absolute w-full h-full border-2">
-                                    <div class="relative h-full">
-                                        <Cropper
-                                                image="{imageData}"
-                                                aspect="{1}"
-                                                restrictPosition="{true}"
-                                                bind:crop
-                                                on:cropcomplete={onCropComplete}/>
-                                        <Button
-                                                id="clear-image-button"
-                                                classNames="border-none p-2"
-                                                background="background-none"
-                                                text="text-white"
-                                                block="{true}"
-                                                onClick={clearImage}>
-                                            <ClearImageIcon
-                                                    class="absolute right-2 text-3xl font-bold bg-red-400 rounded-full p-1 hover:bg-red-500"
-                                            />
-                                        </Button>
-                                    </div>
                                 </div>
                             {/if}
                         </div>
@@ -492,6 +531,7 @@
                     </h4>
                     {#each taxCategories as c}
                         <button
+                                data-testid="{c}"
                                 class="chip text-lg {taxCategory === c ? 'variant-filled' : 'variant-soft'} mr-2"
                                 data-category="{c}"
                                 on:click={onTaxCategoryClickHandler}

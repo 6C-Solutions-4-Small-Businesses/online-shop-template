@@ -4,7 +4,7 @@ exports[`BaseModal component > Structure > should have match snapshot 1`] = `
 <body>
   <div>
     <div
-      class="bg-white w-full flex flex-col gap-7 items-center rounded-md"
+      class="bg-gray-500 bg-opacity-50 w-full flex flex-col gap-7 items-center rounded-md"
     >
       <header
         class="w-full flex justify-between items-center text-md font-bold uppercase bg-green-50 h-14 text-center p-3 text-black rounded-t-md"
@@ -15,6 +15,7 @@ exports[`BaseModal component > Structure > should have match snapshot 1`] = `
          
         <button
           class="w-8 h-8 flex items-center justify-center rounded-full"
+          data-testid="close-modal-button"
         >
           <svg
             height="1.2em"
@@ -38,7 +39,7 @@ exports[`BaseModal component > Structure > should have match snapshot 1`] = `
        
        
       <footer
-        class="w-11/12 flex flex-col md:flex-row md:justify-between gap-4 mb-5"
+        class="w-11/12 flex flex-row md:justify-between gap-2 mb-5"
       >
         <button
           class="flex justify-around items-center uppercase rounded-sm font-bold w-full md:w-2/3 btn function(...s) {

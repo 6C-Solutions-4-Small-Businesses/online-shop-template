@@ -13,14 +13,17 @@
         Toast,
     } from '@skeletonlabs/skeleton'
     import IdentificationModal from '$lib/frontend/components/IdentificationModal.svelte'
+    import OffersModificationModal from '$lib/frontend/components/OffersModificationModal.svelte'
     import {page} from '$app/stores'
     import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
     import type {PageData} from './$types'
     import {showCookiesDisclaimer} from '$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore'
     import {browser, dev} from '$app/environment'
     import CookiesDisclaimerModal from '$lib/frontend/components/CookiesDisclaimerModal.svelte'
-    import {initialLocale, loadTranslations, locale} from '$translations/index'
+    import {initialLocale, loadTranslations, locale} from '$translations'
     import { inject } from '@vercel/analytics'
+    import ConfirmationModal from '$lib/frontend/components/ConfirmationModal.svelte'
+    import OfferSearchModal from '$lib/frontend/components/OfferSearchModal.svelte'
 
     export let data: PageData
 
@@ -35,6 +38,9 @@
 
     const modalRegistry: Record<string, ModalComponent> = {
         identificationModal: {ref: IdentificationModal},
+        offersModificationModal: {ref: OffersModificationModal},
+        confirmationModal: {ref: ConfirmationModal},
+        offerSearchModal: { ref: OfferSearchModal},
     }
 
     async function navigateToContactUsPage(): Promise<void> {
@@ -70,6 +76,7 @@
     async function goToProductsPage(categoryId: string): Promise<void> {
         await goto(`/category/${categoryId}`)
     }
+
 </script>
 <Toast/>
 <Modal components="{modalRegistry}"/>
