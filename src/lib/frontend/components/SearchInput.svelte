@@ -28,29 +28,30 @@
     }
 </script>
 
-<div class={`${width} h-10 flex justify-center`}>
+<div class={`${width} h-10 flex`}>
     <div class="relative w-8/12">
         <input
                 data-testid={inputId}
                 bind:value={$searchedProductName}
-                class="w-full h-full focus:outline-none text-black text-left pl-2 rounded-none border border-l-gray-500 border-t-gray-500 border-b-gray-500"
+                class="w-full h-12 focus:outline-transparent text-black text-left pl-2 rounded-l-lg border-none"
                 on:keypress={onEnterPressNavigateToProductSearchPage}
                 placeholder="Chercher un produit"
                 type="text"
         >
-        {#if $searchedProductName}
-            <button
-                    class="absolute w-6 h-6 flex items-center justify-center text-sm text-white right-3 bottom-2 border rounded-full bg-orange-500 pb-0.5 shadow-md"
-                    on:click={resetInput}
-            >x
-            </button>
-        {/if}
+        <!--{#if $searchedProductName}-->
+        <!--    <button-->
+        <!--            class="absolute w-6 h-6 flex items-center justify-center text-sm text-white right-3 bottom-2 border rounded-full bg-orange-500 pb-0.5 shadow-md"-->
+        <!--            on:click={resetInput}-->
+        <!--    >x-->
+        <!--    </button>-->
+        <!--{/if}-->
     </div>
     <button
             data-testid={buttonId}
-            class={`w-3/12 h-full text-sm xl:text-lg text-white ${isSearchButtonDisabled ? "bg-slate-500": "bg-orange-500"} p-1`}
+            class='h-12 text-sm xl:text-lg text-white p-1 rounded-r-lg bg-white'
             disabled={isSearchButtonDisabled}
             on:click={navigateToProductSearchPage}
-    >Rechercher
+    >
+        <img src="user.svg" alt="search" class={`rounded-r-lg py-1.5 px-2.5 h-10 text-black ${isSearchButtonDisabled ? "bg-teal-950": "bg-teal-950"} p-1`}>
     </button>
 </div>

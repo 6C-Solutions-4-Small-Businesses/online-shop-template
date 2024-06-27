@@ -80,7 +80,7 @@
                         <span class="text-center text-teal-950 text-[8px] font-bold line-through">
                             CAD${getPriceFirstPart(regularPrice)}.{getPriceSecondPart(regularPrice)}
                         </span>
-                        <div class="text-center text-red600 text-15 font-bold flex flex-row ml-3">
+                        <div class="text-center text-red-600 text-15 font-bold flex flex-row ml-3">
                             CAD${getPriceFirstPart(salePrice)}.{getPriceSecondPart(salePrice)}
                             {#if (isSoldByQuantities)}
                                 <span>/{getAbbreviatedUnit(unit)}</span>

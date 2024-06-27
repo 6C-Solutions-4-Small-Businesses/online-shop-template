@@ -109,9 +109,9 @@
          class="object-cover w-full max-w-full h-screen brightness-75 blur-xs relative -z-1" src={storeImage}>
 
     <div class="absolute top-44 w-full flex justify-center px-10">
-        <div class="w-[45%] self-center">
+        <div class="w-[40%] self-center">
             <h1 class="text-[40px] font-bold mb-4 leading-[48px] text-white w-5/6">
-                Rejoignez la famille et commencez à faire vos courses à la maison.
+                {$t('page.shop.title')}
             </h1>
 
             <div class=''>
@@ -120,7 +120,7 @@
         </div>
 
         {#if (spotlightCollection != null)}
-            <div class="embla w-[55%]" use:emblaCarouselSvelte="{{ options,plugins }}">
+            <div class="overflow-hidden w-[60%]" use:emblaCarouselSvelte="{{ options,plugins }}">
                 <div class="embla__container">
                     {#each spotlightCollection?.offers as onSaleProduct}
                         <div class="embla__slide w-2/3 md:w-2/3 xl:w-1/3">
@@ -152,7 +152,7 @@
                          src="delivery.png">
                 </div>
             </div>
-            {#if (!false)}
+            {#if (false)}
                 <div class="xs:py-8 xs:px-0 sm:py-10 sm:px-2 lg:p-8 md:py-12 p-16 flex flex-col justify-center">
                     <h1 class="2xl:text-3xl 3xl:text-5xl text-2xl sm:text-3xl md:text-3xl font-bold mb-5">
                         {$t('page.newsletter.altTitle')}
@@ -163,30 +163,30 @@
                     <div class="mt-10 justify-start items-center gap-2.5 inline-flex">
                         <input
                                 bind:value={$guessEmail}
-                                class={`2xl:h-20 xs:w-full sm:w-2/3 w-auto text-lg font-normal h-[52px] opacity-60 rounded-lg text-black ${$isGuessEmailInvalid ? 'border-2 border-red-500' : 'border-gray-500'}`}
+                                class={`3xl:h-20 2xl:h-12 xs:w-full sm:w-2/3 w-auto text-lg font-normal h-[52px] opacity-60 rounded-lg text-black ${$isGuessEmailInvalid ? 'border-2 border-red-500' : 'border-gray-500'}`}
                                 on:input={changeGuessEmail}
                                 placeholder={$t('page.newsletter.input.placeholder')}
                                 type="email"
                         >
 
-                        <Button classNames="2xl:w-[220px] md:w-[180px] 2xl:h-20 w-auto xs:px-3 lg:px-2 py-3 rounded-xl text-center text-black text-lg font-semibold uppercase"
+                        <Button classNames="md:w-[180px] 3xl:h-20 2xl:h-12 2xl:px-3 w-auto xs:px-3 lg:px-2 py-3 rounded-xl text-center text-black text-lg font-semibold uppercase"
                                 disabled="{false}" id="" onClick={subscribeToNewsLetter}>
                             <span class="hidden md:inline-flex lg:text-md text-[14px]">{$t('page.newsletter.button.title')}</span>
 
-                            <img src="send.svg" alt={$t('page.newsletter.button.search')} />
+                            <img src="send.svg" alt={$t('page.newsletter.button.search')}/>
                         </Button>
                     </div>
                 </div>
             {:else}
                 <div class="xs:py-8 xs:px-0 xs:m-0 sm:px-0 sm:mx-0 md:px-4 md:mx-0 mx-8 lg:px-10 xl:p-0 p-10 text-white flex">
                     <div class="lg:p-10 flex flex-col justify-center">
-                        <p class="2xl:text-2xl xs:text-sm lg:text-lg font-medium xl:text-xl mb-2">{$t('page.newsletter.info')}</p>
+                        <p class="2xl:text-xl xs:text-sm lg:text-lg font-medium xl:text-xl mb-2">{$t('page.newsletter.info')}</p>
 
-                        <h1 class="2xl:text-5xl xs:text-2xl md:text-3xl xl:text-4xl font-bold xs:mb-8 mb-10">
+                        <h1 class="3xl:text-5xl xs:text-2xl md:text-3xl xl:text-3xl font-bold xs:mb-8 mb-10">
                             {$t('page.newsletter.title')}
                         </h1>
 
-                        <ul class="2xl:text-3xl md:text-sm xs:text-lg xl:text-xl xs:columns-1 sm:columns-2">
+                        <ul class="2xl:text-xl 3xl:text-3xl md:text-sm xs:text-lg xl:text-xl xs:columns-1 sm:columns-2">
                             <li class="flex gap-2 mb-3 items-start">
                                 <img src="vector.svg" class="align-top flex 2xl:w-[30px]" alt="search">
                                 {$t('page.newsletter.qualities.first')}
@@ -225,10 +225,6 @@
 </div>
 
 <style lang="css">
-    .embla {
-        overflow: hidden;
-    }
-
     .embla__container {
         display: flex;
     }
