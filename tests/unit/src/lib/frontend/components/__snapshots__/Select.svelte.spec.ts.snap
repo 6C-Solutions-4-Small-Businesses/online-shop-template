@@ -1,137 +1,119 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Select Component > html structure > should have match snapshot 1`] = `
-<body>
+<div>
   <div>
-    <div>
+    <div
+      class="relative"
+    >
       <div
-        class="relative"
+        class="w-full"
+        data-testid="input-container"
       >
-        <div
-          class="w-full"
-          data-testid="input-container"
+        <h4
+          class="mb-1 text-black"
+          data-testid="input-label-id"
         >
-          <h4
-            class="mb-1 text-black"
-            data-testid="input-label-id"
-          >
-            select-label
-             
-          </h4>
+          select-label
            
-          <input
-            accept="*"
-            class="w-full h-fit  p-3.5 rounded-md border-gray-500 bg-white focus:outline-none focus:border-blue-500"
-            data-testid="test-id"
-            id="test-id"
-            placeholder="input-placeholder"
-            type="text"
+        </h4>
+         
+        <input
+          accept="*"
+          class="w-full h-fit  p-3.5 rounded-md border-gray-500 bg-white focus:outline-none focus:border-blue-500"
+          data-testid="test-id"
+          id="test-id"
+          placeholder="input-placeholder"
+          type="text"
+        />
+      </div>
+       
+      <button
+        class="absolute bottom-2.5 right-1"
+      >
+        <svg
+          class="w-8 h-8 text-gray-400"
+          height="1.2em"
+          viewBox="0 0 24 24"
+          width="1.2em"
+        >
+          <path
+            d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z"
+            fill="currentColor"
           />
-        </div>
-        <!--&lt;Input&gt;-->
-         
+        </svg>
+      </button>
+       
+      <div
+        class="hidden absolute top-22 flex flex-col w-full font-bold gap-1 z-30 h-56"
+      >
         <button
-          class="absolute bottom-2.5 right-1"
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-orange-100 text-red-500"
         >
-          <svg
-            class="w-8 h-8 text-gray-400"
-            height="1.2em"
-            viewBox="0 0 24 24"
-            width="1.2em"
-          >
-            <path
-              d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z"
-              fill="currentColor"
-            />
-          </svg>
-          <!--&lt;Chevron-down&gt;-->
+          Québec
         </button>
-         
-        <div
-          class="hidden absolute top-22 flex flex-col w-full font-bold gap-1 z-30 h-56"
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
         >
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-orange-100 text-red-500"
-          >
-            Québec
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Ontario
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            British Columbia
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Alberta
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Manitoba
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Saskatchewan
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Nova Scotia
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            New Brunswick
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Newfoundland and Labrador
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Prince Edward Island
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Northwest Territories
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Yukon
-          </button>
-          <!--&lt;SelectOption&gt;-->
-          <button
-            class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-          >
-            Nunavut
-          </button>
-          <!--&lt;SelectOption&gt;-->
-        </div>
+          Ontario
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          British Columbia
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          Alberta
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          Manitoba
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          Saskatchewan
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          Nova Scotia
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          New Brunswick
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          Newfoundland and Labrador
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          Prince Edward Island
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          Northwest Territories
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          Yukon
+        </button>
+        <button
+          class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+        >
+          Nunavut
+        </button>
       </div>
     </div>
-    <!--&lt;Select&gt;-->
   </div>
-</body>
+</div>
 `;

@@ -1,14 +1,11 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Select option Component > html structure > should have match snapshot 1`] = `
-<body>
-  <div>
-    <button
-      class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
-    >
-      Option 1
-    </button>
-    <!--&lt;SelectOption&gt;-->
-  </div>
-</body>
+<div>
+  <button
+    class="h-14 flex justify-start items-center shadow-md pl-3.5 py-4 hover:bg-orange-100 hover:text-red-500 rounded-md bg-white"
+  >
+    Option 1
+  </button>
+</div>
 `;

@@ -1,43 +1,39 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`OfferSummaryCard > Structure > should have match snapshot 1`] = `
-<body>
-  <div>
-    <button
-      class="flex bg-white m-1 rounded-md border-1 border-gray-600 shadow-md hover:bg-orange-100"
-      data-testid="ordered-item-id"
-      id="ordered-item-id"
+<div>
+  <button
+    class="flex bg-white m-1 rounded-md border-1 border-gray-600 shadow-md hover:bg-orange-100"
+    data-testid="ordered-item-id"
+    id="ordered-item-id"
+  >
+    <div
+      class="w-full h-32 flex flex-row"
     >
+      <img
+        alt="ordered-item-name"
+        class="w-2/5 p-2 h-full object-contain"
+        src="https://cdn-cemal.nitrocdn.com/iwTMUnSsYeigzDpMWgwdBZhpcIeWwszq/assets/images/optimized/rev-59c8081/www.aaronfaber.com/wp-content/uploads/2017/03/product-placeholder-wp-95907_800x675.jpg"
+        width="160"
+      />
+       
       <div
-        class="w-full h-32 flex flex-row"
+        class="w-3/5 flex flex-col h-w p-2 items-stretch"
       >
-        <img
-          alt="ordered-item-name"
-          class="w-2/5 p-2 h-full object-contain"
-          src="https://cdn-cemal.nitrocdn.com/iwTMUnSsYeigzDpMWgwdBZhpcIeWwszq/assets/images/optimized/rev-59c8081/www.aaronfaber.com/wp-content/uploads/2017/03/product-placeholder-wp-95907_800x675.jpg"
-          width="160"
-        />
-        <!--&lt;Image&gt;-->
-         
-        <div
-          class="w-3/5 flex flex-col h-w p-2 items-stretch"
+        <p
+          class="flex-1 font-thin text-xl text-left"
         >
-          <p
-            class="flex-1 font-thin text-xl text-left"
-          >
-            ordered-item-name
-          </p>
-           
-          <p
-            class="w-full text-xl font-bold text-right"
-          >
-            $
-            100.99
-          </p>
-        </div>
+          ordered-item-name
+        </p>
+         
+        <p
+          class="w-full text-xl font-bold text-right"
+        >
+          $
+          100.99
+        </p>
       </div>
-    </button>
-    <!--&lt;OfferSummaryCard&gt;-->
-  </div>
-</body>
+    </div>
+  </button>
+</div>
 `;

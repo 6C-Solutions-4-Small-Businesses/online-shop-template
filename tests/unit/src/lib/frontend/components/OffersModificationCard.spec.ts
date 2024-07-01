@@ -1,4 +1,4 @@
-import {cleanup, render, type RenderResult} from '@testing-library/svelte'
+import {cleanup, render, type RenderResult, waitFor} from '@testing-library/svelte'
 import {afterEach, describe, expect} from 'vitest'
 import OffersModificationCard from '$lib/frontend/components/OffersModificationCard.svelte'
 import {mock, type MockProxy} from 'vitest-mock-extended'
@@ -23,9 +23,16 @@ describe('OffersModificationCard', () => {
             unit,
         })
         view = render(OffersModificationCard, {
-            props: getComponentProperties(),
+            props: getComponentProperties(offer),
         })
     })
+
+    function rerender() {
+        view.unmount()
+        view = render(OffersModificationCard, {
+            props: getComponentProperties(offer),
+        })
+    }
 
     describe('Structure', () => {
 
@@ -38,11 +45,9 @@ describe('OffersModificationCard', () => {
 
             const imageUrl = 'https://cdn-cemal.nitrocdn.com/iwTMUnSsYeigzDpMWgwdBZhpcIeWwszq/assets/images/optimized/rev-59c8081/www.aaronfaber.com/wp-content/uploads/2017/03/product-placeholder-wp-95907_800x675.jpg'
 
-            beforeEach(() => {
+            beforeEach(async () => {
                 offer.image = imageUrl
-                view.rerender({
-                    props: getComponentProperties(),
-                })
+                rerender()
             })
 
             it('should show the image', () => {
@@ -56,11 +61,9 @@ describe('OffersModificationCard', () => {
 
             const imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABjElEQVRIS+2UwQ3CMAxFX4'
 
-            beforeEach(() => {
+            beforeEach(async () => {
                 offer.imageData = imageData
-                view.rerender({
-                    props: getComponentProperties(),
-                })
+                rerender()
             })
 
             it('should show the image as well', () => {
@@ -72,17 +75,16 @@ describe('OffersModificationCard', () => {
 
         describe('when offer modification has no id and "deleted" undefined', () => {
 
-            beforeEach(() => {
+            beforeEach(async () => {
                 offer.id = undefined
                 offer.deleted = undefined
-                view.rerender({
-                    props: getComponentProperties(),
-                })
+
+                rerender()
             })
 
-            it('should show a banner labeled "ajouté"', () => {
+            it('should show a banner labeled "ajouté"', async () => {
 
-                const banner = view.getByText('ajouté')
+                const banner = await waitFor(() => view.getByText('ajouté'))
                 expect(banner).toBeInTheDocument()
             })
 
@@ -93,11 +95,9 @@ describe('OffersModificationCard', () => {
 
         describe('when offer modification has "deleted" property set', () => {
 
-            beforeEach(() => {
+            beforeEach(async () => {
                 offer.deleted = true
-                view.rerender({
-                    props: getComponentProperties(),
-                })
+                rerender()
             })
 
             it('should show a banner labeled "supprimé"', () => {
@@ -113,11 +113,9 @@ describe('OffersModificationCard', () => {
 
         describe('when offer modification has an id but not the "deleted" property set', () => {
 
-            beforeEach(() => {
+            beforeEach(async () => {
                 offer.deleted = undefined
-                view.rerender({
-                    props: getComponentProperties(),
-                })
+                rerender()
             })
 
             it('should show a banner labeled "modifié"', () => {
@@ -133,7 +131,7 @@ describe('OffersModificationCard', () => {
     })
 
 
-    function getComponentProperties() {
+    function getComponentProperties(offer: MockProxy<OffersModificationPresentation>) {
         return {
             offer,
         }

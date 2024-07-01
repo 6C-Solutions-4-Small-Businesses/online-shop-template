@@ -1,68 +1,60 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Cookies Disclaimer > statically > should have matching snapshot 1`] = `
-<body>
-  <div>
+<div>
+  <div
+    class="fixed bottom-0 p-1 right-0 bg-green-50 shadow-md cookies-container block} svelte-1ny8pk0"
+  >
     <div
-      class="fixed bottom-0 p-1 right-0 bg-green-50 shadow-md cookies-container block} s-_HEqA1ltobFh"
+      class="border p-4 border-gray-600"
     >
-      <div
-        class="border p-4 border-gray-600 s-_HEqA1ltobFh"
+      <p
+        class="font-light text-xl"
       >
-        <p
-          class="font-light text-xl s-_HEqA1ltobFh"
+        
+      </p>
+       
+      <br />
+       
+      <p
+        class="font-thin"
+      >
+        
+      </p>
+       
+      <br />
+       
+      <p
+        class="font-thin"
+      >
+        
+         
+        <a
+          href="./privacy-policies/undefined"
         >
           
-        </p>
-         
-        <br
-          class="s-_HEqA1ltobFh"
-        />
-         
-        <p
-          class="font-thin s-_HEqA1ltobFh"
+          .
+        </a>
+      </p>
+       
+      <div
+        class="flex justify-center mt-4"
+      >
+        <button
+          class="btn variant-soft rounded-none mr-5"
+          data-testid="decline"
         >
           
-        </p>
+        </button>
          
-        <br
-          class="s-_HEqA1ltobFh"
-        />
-         
-        <p
-          class="font-thin s-_HEqA1ltobFh"
+        <button
+          class="btn variant-filled rounded-none"
+          data-testid="accept"
         >
           
-           
-          <a
-            class="s-_HEqA1ltobFh"
-            href="./privacy-policies/undefined"
-          >
-            
-            .
-          </a>
-        </p>
-         
-        <div
-          class="flex justify-center mt-4 s-_HEqA1ltobFh"
-        >
-          <button
-            class="btn variant-soft rounded-none mr-5 s-_HEqA1ltobFh"
-            data-testid="decline"
-          >
-            
-          </button>
-           
-          <button
-            class="btn variant-filled rounded-none s-_HEqA1ltobFh"
-            data-testid="accept"
-          >
-            
-          </button>
-        </div>
+        </button>
       </div>
     </div>
-    <!--&lt;CookiesDisclaimerModal&gt;-->
   </div>
-</body>
+</div>
 `;

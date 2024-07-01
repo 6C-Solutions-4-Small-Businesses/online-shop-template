@@ -83,28 +83,28 @@ describe('Input Component', () => {
             expect(containerElement.classList).toContain(classNames)
         })
 
-        it('should set the hide the input if the "hidden" property is set to true', () => {
+        it('should set the hide the input if the "hidden" property is set to true', async () => {
 
-            rerenderComponent({hidden: true})
+            await rerenderComponent({hidden: true})
 
             const hiddenInputElement = rendering.getByTestId(inputId) as HTMLInputElement
 
             expect(hiddenInputElement.classList).toContain('hidden')
         })
 
-        it('should set the "accept" property of the input to the value provided to the property "accept"', () => {
+        it('should set the "accept" property of the input to the value provided to the property "accept"', async () => {
             const accept = 'image/*'
 
-            rerenderComponent({accept})
+            await rerenderComponent({accept})
 
             const imageInputElement = rendering.getByTestId(inputId) as HTMLInputElement
             expect(imageInputElement.accept).toStrictEqual(accept)
         })
 
-        it('should set the increment and decrement step of the input to the value provided to the property "step"', () => {
+        it('should set the increment and decrement step of the input to the value provided to the property "step"', async () => {
             const step = '0.0001'
 
-            rerenderComponent({step})
+            await rerenderComponent({step})
 
             const stepInputElement = rendering.getByTestId(inputId) as HTMLInputElement
             expect(stepInputElement.step).toStrictEqual(step)
@@ -128,7 +128,7 @@ describe('Input Component', () => {
         })
     })
 
-    function rerenderComponent(
+    async function rerenderComponent(
         options: {
             hidden?: boolean,
             accept?: string,
@@ -136,18 +136,16 @@ describe('Input Component', () => {
             step?: string,
         } = {hidden: false, accept: '*'},
     ) {
-        rendering.rerender({
-            props: {
-                id: inputId,
-                label: inputLabel,
-                type: inputType,
-                placeholder: inputPlaceHolder,
-                value: initialInputValue,
-                hidden: options.hidden,
-                accept: options.accept,
-                capture: options.capture,
-                step: options.step,
-            },
+        await rendering.rerender({
+            id: inputId,
+            label: inputLabel,
+            type: inputType,
+            placeholder: inputPlaceHolder,
+            value: initialInputValue,
+            hidden: options.hidden,
+            accept: options.accept,
+            capture: options.capture,
+            step: options.step,
         })
     }
 
