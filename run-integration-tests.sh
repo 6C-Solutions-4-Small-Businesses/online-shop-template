@@ -13,7 +13,6 @@ cp -fRp ./src \
  ./config \
  ./tests \
  ./package.json \
- ./package-lock.json \
  ./tsconfig.json  \
  ./playwright.config.ts \
  ./vite.config.ts \
@@ -22,8 +21,7 @@ cp -fRp ./src \
  ./postcss.config.cjs \
  ./.npmrc \
  ./.env \
- ./.env.test \
- ./test-results ./integration-test
+ ./.env.test ./integration-test
 
 echo "Moving into the integration-test directory"
 cd ./integration-test || exit

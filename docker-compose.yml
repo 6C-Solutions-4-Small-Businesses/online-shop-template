@@ -9,8 +9,8 @@ services:
       /bin/bash -c '
       apt-get update &&
       apt-get install -y build-essential &&
-      npm ci &&
-      npm run build &&
+      npm install &&
+      npm run build:ost &&
       npx playwright install --with-deps &&
       npx playwright test ${UPDATE} ${PLAYWRIGHT_TEST}'
     network_mode: host

@@ -1,12 +1,13 @@
 {
   "name": "static-web-site",
-  "version": "0.0.21",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vite dev --host",
     "apply-migration": "prisma migrate deploy",
     "prebuild": "cp package.json src",
     "build": "cp package.json ./src && prisma generate && vite build",
+    "build:ost": "cp package.json ./src && vite build",
     "preview": "vite preview",
     "test": "npm run test:integration && npm run test:component && npm run test:unit",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

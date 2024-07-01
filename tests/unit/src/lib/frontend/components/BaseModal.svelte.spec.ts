@@ -26,7 +26,7 @@ describe('BaseModal component', () => {
                 parent: mock<SvelteComponent>(),
                 onSubmitClickHandler,
                 onCancelClickHandler,
-            }
+            },
         })
     })
 
@@ -65,18 +65,7 @@ describe('BaseModal component', () => {
         })
 
         it('should call "parentOnModalClosed" when cancel button is clicked if "onCancelClickHandler" is not set', async () => {
-            view.rerender({
-                props: {
-                    title,
-                    body: '<div>Body</div>',
-                    buttonTextCancel,
-                    buttonTextSubmit,
-                    parent: mock<SvelteComponent>({
-                        onClose: parentOnModalClosed
-                    }),
-                    onSubmitClickHandler,
-                }
-            })
+            rerender()
 
             const cancelButton = vScreen.getByText(buttonTextCancel)
             cancelButton.click()
@@ -92,24 +81,29 @@ describe('BaseModal component', () => {
         })
 
         it('should display body has html if "isHtml" is true', () => {
-            view.rerender({
-                props: {
-                    title,
-                    body: '<div>Body</div>',
-                    buttonTextCancel,
-                    buttonTextSubmit,
-                    parent: mock<SvelteComponent>({
-                        onClose: parentOnModalClosed
-                    }),
-                    onSubmitClickHandler,
-                    isHtml: true
-                }
-            })
+            rerender({ isHtml: true })
 
             const bodyElement = vScreen.getByText('Body')
             expect(bodyElement).toBeInTheDocument()
         })
     })
+
+    function rerender(properties: { isHtml: boolean } = { isHtml: false }) {
+        view.unmount()
+        view = render(BaseModal, {
+            props: {
+                title,
+                body: '<div>Body</div>',
+                buttonTextCancel,
+                buttonTextSubmit,
+                parent: mock<SvelteComponent>({
+                    onClose: parentOnModalClosed,
+                }),
+                onSubmitClickHandler,
+                isHtml: properties.isHtml,
+            },
+        })
+    }
 
     afterEach(() => {
         view.unmount()

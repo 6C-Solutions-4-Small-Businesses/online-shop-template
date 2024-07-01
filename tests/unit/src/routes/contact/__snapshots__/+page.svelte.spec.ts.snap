@@ -1,267 +1,266 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Contact Page > HTML > should match snapshot 1`] = `
-<body>
-  <div>
+<div>
+  <div
+    class="w-full max-w-full h-fit flex flex-col justify-center items-center bg-slate-100"
+  >
     <div
-      class="w-full max-w-full h-fit flex flex-col justify-center items-center bg-slate-100 s-2CpGgZ1sTTPV"
+      class="w-full lg:w-9/12 bg-white py-6 mb-0 lg:my-5"
     >
-      <div
-        class="w-full lg:w-9/12 bg-white py-6 mb-0 lg:my-5 s-2CpGgZ1sTTPV"
+      <p
+        class="title text-2xl text-center font-light svelte-1sglhln"
       >
-        <p
-          class="title text-2xl text-center font-light s-2CpGgZ1sTTPV"
-        >
-          Contactez-nous
-        </p>
-         
+        Contactez-nous
+      </p>
+       
+      <div
+        class="w-full h-full flex flex-col md:flex-row"
+      >
         <div
-          class="w-full h-full flex flex-col md:flex-row s-2CpGgZ1sTTPV"
+          class="w-full md:w-1/2 h-full flex flex-col justify-center items-center py-6 sm:py-14 gap-6"
         >
           <div
-            class="w-full md:w-1/2 h-full flex flex-col justify-center items-center py-6 sm:py-14 gap-6 s-2CpGgZ1sTTPV"
+            class="w-10/12 md:w-9/12 h-full flex flex-col gap-4"
           >
-            <div
-              class="w-10/12 md:w-9/12 h-full flex flex-col gap-4 s-2CpGgZ1sTTPV"
+            <h4
+              class="text-xl uppercase"
             >
-              <h4
-                class="text-xl uppercase s-2CpGgZ1sTTPV"
-              >
-                Où nous trouver
-              </h4>
-               
-              <div
-                class="h-96 bg-slate-100 s-2CpGgZ1sTTPV"
-              />
-            </div>
+              Où nous trouver
+            </h4>
              
             <div
-              class="w-10/12 md:w-9/12 flex flex-col gap-4 s-2CpGgZ1sTTPV"
+              class="h-96 bg-slate-100"
+            />
+          </div>
+           
+          <div
+            class="w-10/12 md:w-9/12 flex flex-col gap-4"
+          >
+            <h4
+              class="text-xl uppercase"
             >
-              <h4
-                class="text-xl uppercase s-2CpGgZ1sTTPV"
-              >
-                Coordonnées
-              </h4>
-               
-              <div
-                class="flex flex-col gap-2 s-2CpGgZ1sTTPV"
-              >
-                <div
-                  class="w-full md:w-7/12 text-md font-light s-2CpGgZ1sTTPV"
-                >
-                  function(...s) {
-    let r = A(t);
-    r.called = !0, r.callCount++, r.calls.push(s);
-    let m = r.next.shift();
-    if (m) {
-      r.results.push(m);
-      let [l, o] = m;
-      if (l === "ok")
-        return o;
-      throw o;
-    }
-    let p, d = "ok";
-    if (r.impl)
-      try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
-      } catch (l) {
-        throw p = l, d = "error", r.results.push([d, l]), l;
-      }
-    let a = [d, p];
-    if (b(p)) {
-      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
-        throw a[0] = "error", a[1] = o, o;
-      });
-      Object.assign(l, p), p = l;
-    }
-    return r.results.push(a), p;
-  }
-                </div>
-                 
-                <div
-                  class="w-full md:w-7/12 text-md font-light s-2CpGgZ1sTTPV"
-                >
-                  function(...s) {
-    let r = A(t);
-    r.called = !0, r.callCount++, r.calls.push(s);
-    let m = r.next.shift();
-    if (m) {
-      r.results.push(m);
-      let [l, o] = m;
-      if (l === "ok")
-        return o;
-      throw o;
-    }
-    let p, d = "ok";
-    if (r.impl)
-      try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
-      } catch (l) {
-        throw p = l, d = "error", r.results.push([d, l]), l;
-      }
-    let a = [d, p];
-    if (b(p)) {
-      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
-        throw a[0] = "error", a[1] = o, o;
-      });
-      Object.assign(l, p), p = l;
-    }
-    return r.results.push(a), p;
-  }
-                </div>
-                 
-                <div
-                  class="w-full md:w-7/12 text-md font-light s-2CpGgZ1sTTPV"
-                >
-                  function(...s) {
-    let r = A(t);
-    r.called = !0, r.callCount++, r.calls.push(s);
-    let m = r.next.shift();
-    if (m) {
-      r.results.push(m);
-      let [l, o] = m;
-      if (l === "ok")
-        return o;
-      throw o;
-    }
-    let p, d = "ok";
-    if (r.impl)
-      try {
-        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
-      } catch (l) {
-        throw p = l, d = "error", r.results.push([d, l]), l;
-      }
-    let a = [d, p];
-    if (b(p)) {
-      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
-        throw a[0] = "error", a[1] = o, o;
-      });
-      Object.assign(l, p), p = l;
-    }
-    return r.results.push(a), p;
-  }
-                </div>
-              </div>
-            </div>
+              Coordonnées
+            </h4>
              
             <div
-              class="w-10/12 md:w-9/12 flex flex-col gap-4 s-2CpGgZ1sTTPV"
+              class="flex flex-col gap-2"
             >
-              <h4
-                class="text-xl uppercase s-2CpGgZ1sTTPV"
+              <div
+                class="w-full md:w-7/12 text-md font-light"
               >
-                Nous sommes ouverts
-              </h4>
+                function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  }
+              </div>
                
               <div
-                class="w-full lg:w-7/12 flex flex-col gap-2 s-2CpGgZ1sTTPV"
+                class="w-full md:w-7/12 text-md font-light"
               >
-                <div
-                  class="w-full flex font-light text-justify s-2CpGgZ1sTTPV"
-                >
-                  <div
-                    class="w-7/12 s-2CpGgZ1sTTPV"
-                  >
-                    Lundi
-                  </div>
-                   
-                  <div
-                    class="w-5/12 text-end s-2CpGgZ1sTTPV"
-                  >
-                    11:00 - 17:00
-                  </div>
-                </div>
-                 
+                function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  }
               </div>
-              
+               
               <div
-                class="w-full lg:w-7/12 flex flex-col gap-2 s-2CpGgZ1sTTPV"
+                class="w-full md:w-7/12 text-md font-light"
               >
-                <div
-                  class="w-full flex font-light text-justify s-2CpGgZ1sTTPV"
-                >
-                  <div
-                    class="w-7/12 s-2CpGgZ1sTTPV"
-                  >
-                    Mardi - Vendredi
-                  </div>
-                   
-                  <div
-                    class="w-5/12 text-end s-2CpGgZ1sTTPV"
-                  >
-                    10:00 - 19:00
-                  </div>
-                </div>
-                 
+                function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  }
               </div>
-              
-              <div
-                class="w-full lg:w-7/12 flex flex-col gap-2 s-2CpGgZ1sTTPV"
-              >
-                <div
-                  class="w-full flex font-light text-justify s-2CpGgZ1sTTPV"
-                >
-                  <div
-                    class="w-7/12 s-2CpGgZ1sTTPV"
-                  >
-                    Samedi
-                  </div>
-                   
-                  <div
-                    class="w-5/12 text-end s-2CpGgZ1sTTPV"
-                  >
-                    10:00 - 18:00
-                  </div>
-                </div>
-                 
-              </div>
-              
-              <div
-                class="w-full lg:w-7/12 flex flex-col gap-2 s-2CpGgZ1sTTPV"
-              >
-                <div
-                  class="w-full flex font-light text-justify s-2CpGgZ1sTTPV"
-                >
-                  <div
-                    class="w-7/12 s-2CpGgZ1sTTPV"
-                  >
-                    Dimanche
-                  </div>
-                   
-                  <div
-                    class="w-5/12 text-end s-2CpGgZ1sTTPV"
-                  >
-                    11:00 - 17:00
-                  </div>
-                </div>
-                 
-              </div>
-              
             </div>
           </div>
            
           <div
-            class="w-full md:w-1/2 flex flex-col py-6 sm:py-14 items-center gap-3 s-2CpGgZ1sTTPV"
+            class="w-10/12 md:w-9/12 flex flex-col gap-4"
           >
-            <div
-              class="w-10/12 md:w-9/12 flex flex-col gap-2 s-2CpGgZ1sTTPV"
+            <h4
+              class="text-xl uppercase"
             >
-              <h4
-                class="text-xl uppercase s-2CpGgZ1sTTPV"
+              Nous sommes ouverts
+            </h4>
+             
+            <div
+              class="w-full lg:w-7/12 flex flex-col gap-2"
+            >
+              <div
+                class="w-full flex font-light text-justify"
               >
-                Prenez contact avec nous !
-              </h4>
+                <div
+                  class="w-7/12"
+                >
+                  Lundi
+                </div>
+                 
+                <div
+                  class="w-5/12 text-end"
+                >
+                  11:00 - 17:00
+                </div>
+              </div>
                
-              <p
-                class="text-justify font-light s-2CpGgZ1sTTPV"
+            </div>
+            
+            <div
+              class="w-full lg:w-7/12 flex flex-col gap-2"
+            >
+              <div
+                class="w-full flex font-light text-justify"
               >
-                Si vous avez des questions ou si vous souhaitez prendre rendez-vous, veuillez utiliser le
+                <div
+                  class="w-7/12"
+                >
+                  Mardi - Vendredi
+                </div>
+                 
+                <div
+                  class="w-5/12 text-end"
+                >
+                  10:00 - 19:00
+                </div>
+              </div>
+               
+            </div>
+            
+            <div
+              class="w-full lg:w-7/12 flex flex-col gap-2"
+            >
+              <div
+                class="w-full flex font-light text-justify"
+              >
+                <div
+                  class="w-7/12"
+                >
+                  Samedi
+                </div>
+                 
+                <div
+                  class="w-5/12 text-end"
+                >
+                  10:00 - 18:00
+                </div>
+              </div>
+               
+            </div>
+            
+            <div
+              class="w-full lg:w-7/12 flex flex-col gap-2"
+            >
+              <div
+                class="w-full flex font-light text-justify"
+              >
+                <div
+                  class="w-7/12"
+                >
+                  Dimanche
+                </div>
+                 
+                <div
+                  class="w-5/12 text-end"
+                >
+                  11:00 - 17:00
+                </div>
+              </div>
+               
+            </div>
+            
+          </div>
+        </div>
+         
+        <div
+          class="w-full md:w-1/2 flex flex-col py-6 sm:py-14 items-center gap-3"
+        >
+          <div
+            class="w-10/12 md:w-9/12 flex flex-col gap-2"
+          >
+            <h4
+              class="text-xl uppercase"
+            >
+              Prenez contact avec nous !
+            </h4>
+             
+            <p
+              class="text-justify font-light"
+            >
+              Si vous avez des questions ou si vous souhaitez prendre rendez-vous, veuillez utiliser le
                         formulaire de contact ci-dessous ou appelez-nous directement au
                         
-                <a
-                  class="text-blue-600 s-2CpGgZ1sTTPV"
-                  href="tel:function(...s) {
+              <a
+                class="text-blue-600"
+                href="tel:function(...s) {
     let r = A(t);
     r.called = !0, r.callCount++, r.calls.push(s);
     let m = r.next.shift();
@@ -288,8 +287,8 @@ exports[`Contact Page > HTML > should match snapshot 1`] = `
     }
     return r.results.push(a), p;
   }"
-                >
-                  function(...s) {
+              >
+                function(...s) {
     let r = A(t);
     r.called = !0, r.callCount++, r.calls.push(s);
     let m = r.next.shift();
@@ -316,116 +315,105 @@ exports[`Contact Page > HTML > should match snapshot 1`] = `
     }
     return r.results.push(a), p;
   }
-                </a>
-                .
-              </p>
+              </a>
+              .
+            </p>
+          </div>
+           
+          <div
+            class="w-10/12 md:w-9/12 flex flex-col gap-3 font-light"
+          >
+            <div
+              class="flex flex-col gap-2"
+            >
+              <div>
+                Name
+                <span
+                  class="text-red-500"
+                >
+                  *
+                </span>
+              </div>
+               
+              <input
+                class="h-10 border-2"
+                required=""
+                type="text"
+              />
             </div>
              
             <div
-              class="w-10/12 md:w-9/12 flex flex-col gap-3 font-light s-2CpGgZ1sTTPV"
+              class="flex flex-col gap-2"
             >
-              <div
-                class="flex flex-col gap-2 s-2CpGgZ1sTTPV"
-              >
-                <div
-                  class="s-2CpGgZ1sTTPV"
+              <div>
+                Email
+                <span
+                  class="text-red-500"
                 >
-                  Name
-                  <span
-                    class="text-red-500 s-2CpGgZ1sTTPV"
-                  >
-                    *
-                  </span>
-                </div>
-                 
-                <input
-                  class="h-10 border-2 s-2CpGgZ1sTTPV"
-                  required=""
-                  type="text"
-                />
+                  *
+                </span>
               </div>
                
-              <div
-                class="flex flex-col gap-2 s-2CpGgZ1sTTPV"
-              >
-                <div
-                  class="s-2CpGgZ1sTTPV"
+              <input
+                class="h-10 border-2"
+                required=""
+                type="email"
+              />
+            </div>
+             
+            <div
+              class="flex flex-col gap-2"
+            >
+              <div>
+                Sujet
+                <span
+                  class="text-red-500"
                 >
-                  Email
-                  <span
-                    class="text-red-500 s-2CpGgZ1sTTPV"
-                  >
-                    *
-                  </span>
-                </div>
-                 
-                <input
-                  class="h-10 border-2 s-2CpGgZ1sTTPV"
-                  required=""
-                  type="email"
-                />
+                  *
+                </span>
               </div>
                
-              <div
-                class="flex flex-col gap-2 s-2CpGgZ1sTTPV"
-              >
-                <div
-                  class="s-2CpGgZ1sTTPV"
+              <input
+                class="h-10 border-2"
+                type="text"
+              />
+            </div>
+             
+            <div
+              class="flex flex-col gap-2"
+            >
+              <div>
+                Message
+                <span
+                  class="text-red-500"
                 >
-                  Sujet
-                  <span
-                    class="text-red-500 s-2CpGgZ1sTTPV"
-                  >
-                    *
-                  </span>
-                </div>
-                 
-                <input
-                  class="h-10 border-2 s-2CpGgZ1sTTPV"
-                  type="text"
-                />
+                  *
+                </span>
               </div>
                
-              <div
-                class="flex flex-col gap-2 s-2CpGgZ1sTTPV"
+              <textarea
+                class="border-2"
+                required=""
+                rows="4"
+              />
+            </div>
+             
+            <div
+              class="flex justify-end"
+            >
+              <button
+                class="flex justify-around items-center uppercase rounded-sm font-bold w-36 h-12 border border-white shadow-sm mb-2 bg-slate-200  border border-gray-300 text-gray-500"
+                data-testid="contact-business-button"
+                disabled=""
+                id="contact-business-button"
               >
-                <div
-                  class="s-2CpGgZ1sTTPV"
-                >
-                  Message
-                  <span
-                    class="text-red-500 s-2CpGgZ1sTTPV"
-                  >
-                    *
-                  </span>
-                </div>
-                 
-                <textarea
-                  class="border-2 s-2CpGgZ1sTTPV"
-                  required=""
-                  rows="4"
-                />
-              </div>
-               
-              <div
-                class="flex justify-end s-2CpGgZ1sTTPV"
-              >
-                <button
-                  class="flex justify-around items-center uppercase rounded-sm font-bold w-36 h-12 border border-white shadow-sm mb-2 bg-slate-200  border border-gray-300 text-gray-500"
-                  data-testid="contact-business-button"
-                  disabled=""
-                  id="contact-business-button"
-                >
-                  Envoyer
-                </button>
-                <!--&lt;Button&gt;-->
-              </div>
+                Envoyer
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!--&lt;+page&gt;-->
   </div>
-</body>
+</div>
 `;

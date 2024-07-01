@@ -1,32 +1,29 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Search input > should have match snapshot 1`] = `
-<body>
-  <div>
+<div>
+  <div
+    class="w-20 h-10 flex justify-center"
+  >
     <div
-      class="w-20 h-10 flex justify-center"
+      class="relative w-8/12"
     >
-      <div
-        class="relative w-8/12"
-      >
-        <input
-          class="w-full h-full focus:outline-none text-black text-left pl-2 rounded-none border border-l-gray-500 border-t-gray-500 border-b-gray-500"
-          data-testid="search-input-id"
-          placeholder="Chercher un produit"
-          type="text"
-        />
-         
-      </div>
+      <input
+        class="w-full h-full focus:outline-none text-black text-left pl-2 rounded-none border border-l-gray-500 border-t-gray-500 border-b-gray-500"
+        data-testid="search-input-id"
+        placeholder="Chercher un produit"
+        type="text"
+      />
        
-      <button
-        class="w-3/12 h-full text-sm xl:text-lg text-white bg-slate-500 p-1"
-        data-testid="search-input-button-id"
-        disabled=""
-      >
-        Rechercher
-      </button>
     </div>
-    <!--&lt;SearchInput&gt;-->
+     
+    <button
+      class="w-3/12 h-full text-sm xl:text-lg text-white bg-slate-500 p-1"
+      data-testid="search-input-button-id"
+      disabled=""
+    >
+      Rechercher
+    </button>
   </div>
-</body>
+</div>
 `;

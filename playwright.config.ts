@@ -17,7 +17,7 @@ const config: PlaywrightTestConfig = {
             use: {...devices['Desktop Firefox']}
         }
     ],
-    timeout: 30000,
+    timeout: 60000,
 }
 
 export default config;

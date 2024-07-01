@@ -1,7 +1,7 @@
 import {afterEach, beforeEach, describe, expect, it, type Mock} from 'vitest'
 import '@testing-library/jest-dom'
 import {findUser} from '$lib/frontend/endpoints/Endpoints'
-import {writable} from 'svelte/store'
+import {type Writable, writable} from 'svelte/store'
 import {cleanup, render, type RenderResult, screen as vScreen} from '@testing-library/svelte'
 import IdentificationModal from '$lib/frontend/components/IdentificationModal.svelte'
 import {mock} from 'vitest-mock-extended'
@@ -90,12 +90,7 @@ describe('IdentificationModal component', () => {
 
             it(`should enable the ${submitButtonTestId} when email is valid`, () => {
                 isEmailInvalidProperty.set(false)
-                view.rerender({
-                    props: {
-                        parent: mock<SvelteComponent>(),
-                        isEmailInvalid: isEmailInvalidProperty,
-                    },
-                })
+                rerender()
 
                 expect(vScreen.getByTestId(submitButtonTestId)).toBeEnabled()
             })
@@ -107,12 +102,7 @@ describe('IdentificationModal component', () => {
             it('should have the expected label when buttonTextSubmit is set', () => {
                 currentModalSettings.buttonTextSubmit = 'Submit'
 
-                view.rerender({
-                    props: {
-                        parent: mock<SvelteComponent>(),
-                        isEmailInvalid: isEmailInvalidProperty,
-                    },
-                })
+                rerender()
 
                 expect(vScreen.getByTestId(submitButtonTestId)).toHaveTextContent('Submit')
             })
@@ -184,6 +174,16 @@ describe('IdentificationModal component', () => {
         })
     })
 
+    function rerender(properties: { isEmailInvalid: Writable<boolean> } = {isEmailInvalid: isEmailInvalidProperty }) {
+        view.unmount()
+        view = render(IdentificationModal, {
+            props: {
+                parent: mock<SvelteComponent>(),
+                isEmailInvalid: isEmailInvalidProperty,
+            }
+        })
+    }
+
     describe(`cancel button`, () => {
         describe('Structure', () => {
             it(`should contain an ${cancelButtonTestId}`, () => {
@@ -200,13 +200,7 @@ describe('IdentificationModal component', () => {
 
             it('should have the expected label when buttonTextCancel is set', () => {
                 currentModalSettings.buttonTextCancel = 'Cancel'
-
-                view.rerender({
-                    props: {
-                        parent: mock<SvelteComponent>(),
-                        isEmailInvalid: isEmailInvalidProperty,
-                    },
-                })
+                rerender()
 
                 expect(vScreen.getByTestId(cancelButtonTestId)).toHaveTextContent('Cancel')
             })
