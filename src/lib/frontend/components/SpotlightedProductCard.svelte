@@ -11,22 +11,13 @@
     let isProductHovered = false
 </script>
 
-<div class="w-full relative flex flex-col bg-white"
+<div class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px]"
      on:focus={() => isProductHovered = true}
      on:mouseleave={()=> isProductHovered = false}
      on:mouseover={()=> isProductHovered = true}
      role="none"
 >
-    <Image imageRemoteUrl="{image}" name={name}
-           classes="object-contain h-[15rem] sm:h-[30rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] py-5"
-            width="{640}"/>
-    <div
-            class={`h-16 flex items-center justify-center gap-2 text-3xl rounded-none ${isProductHovered ? 'bg-green-50' : 'bg-white'}`}
-    >
-        <span>{name}</span>
-        <span class="font-bold text-red-500"> {price / 100 >= 1 ? "$" : "¢"}{price / 100}</span>
-    </div>
-    <div class={`${isProductHovered ? 'w-full md:w-2/3 absolute top-0 right-0 flex justify-end' : 'hidden'}`}>
+    <div class={`${isProductHovered ? 'w-full absolute flex justify-end top-0 right-0' : 'hidden'}`}>
         <ShoppingCartActions
                 image={image}
                 name={name}
@@ -34,5 +25,19 @@
                 regularPrice={price}
                 salePrice={salePrice}
         />
+    </div>
+
+    <div class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex mx-auto">
+        <Image imageRemoteUrl="{image}" name={name} classes="w-[238px] h-[200px] object-contain"/>
+    </div>
+
+    <div class="w-full flex-col justify-start items-start gap-2.5 flex mt-6">
+        <div class="w-full justify-between items-center flex">
+            <div class="text-accent pl-1.5 overflow-hidden max-h-[35px]">{name}</div>
+
+            <div class="text-primary text-15 flex ml-3">
+                {price / 100 >= 1 ? "$" : "¢"}{price / 100}
+            </div>
+        </div>
     </div>
 </div>

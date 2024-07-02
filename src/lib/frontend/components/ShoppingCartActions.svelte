@@ -1,11 +1,11 @@
 <script lang="ts">
-    import CartIcon from '~icons/mdi/cart-plus'
     import {writable, type Writable} from 'svelte/store'
     import {
         cart,
         decreaseProductSelectedQuantityFromShoppingCartStore,
         upsertProductToShoppingCartStore
     } from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
+    import {t} from '$translations/index'
 
     export let productId: string
     export let image: string
@@ -46,36 +46,25 @@
 
         decreaseProductSelectedQuantityFromShoppingCartStore(productId, $selectedQuantity)
     }
-
 </script>
 
-<div
-        class={`text-2xl  ${expanded ? 'w-4/5': 'w-2/12'} h-10 flex items-center justify-center text-red-500`}
-        on:mouseenter={()=> expanded = true}
-        on:mouseleave={()=> expanded = false}
-        role="region"
+<div class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+     on:mouseenter={() => expanded = true}
+     on:mouseleave={() => expanded = false}
+     role="region"
 >
     {#if expanded}
-        <button
-                class="w-3/12 h-full bg-red-100 border border-y-red-500 border-l-red-500"
-                on:click={decreaseSelectedQuantity}
-        >-
+        <button class="px-2 py-1 focus:outline-none" on:click={decreaseSelectedQuantity}>
+            <img class="h-5 w-5" src="remove-button.svg" alt={$t('collection.remove')}>
         </button>
-        <input
-                class="w-5/12 h-full focus:outline-none outline-none text-black text-center rounded-none border border-red-500"
-                type="text"
-                bind:value={$selectedQuantity}
-                on:input={changeSelectedQuantity}
-        >
-        <button
-                class="w-3/12 h-full bg-red-100 border border-y-red-500"
-                on:click={increaseSelectedQuantity}
-        >+
-        </button>
+
+        <input class="w-[78px] h-[30px] rounded-[10px] text-center bg-gray text-xs font-semibold"
+               type="text" bind:value={$selectedQuantity}
+               on:input={changeSelectedQuantity}/>
     {/if}
-    <div
-            class={`border border-red-500 ${ expanded ? 'w-3/12' : 'w-full'} h-full flex justify-center items-center bg-red-100`}
-    >
-        <CartIcon/>
-    </div>
+
+    <button class="px-2 py-1 focus:outline-none" on:click={increaseSelectedQuantity}>
+        <img alt="add" class="h-6 w-6" src="add-button.svg">
+    </button>
+
 </div>

@@ -28,12 +28,12 @@
 
 </script>
 
-<div class={`${width} h-10 flex justify-center`}>
-    <div class="{`relative ${onSearchSubmitHandler ? 'w-8/12' : 'w-full'}`}">
+<div class={`${width} h-10 flex`}>
+    <div class="{`relative w-full lg:w-8/12 lg:mb-0 mb-4`}">
         <input
                 data-testid={inputId}
                 bind:value={searchTerm}
-                class="w-full h-full focus:outline-none text-black text-left pl-2 rounded-none border border-l-gray-500 border-t-gray-500 border-b-gray-500"
+                class="w-full h-12 focus:outline-transparent text-black text-left pl-2 rounded-l-lg border-none"
                 on:keypress={onEnterPressSubmitSearch}
                 on:input={onSearchInputChangeHandler}
                 placeholder="Chercher un produit"
@@ -48,13 +48,12 @@
             </button>
         {/if}
     </div>
-    {#if onSearchSubmitHandler}
-        <button
-                data-testid={buttonId}
-                class={`w-3/12 h-full text-sm xl:text-lg text-white ${isSearchTermInvalid ? "bg-slate-500": "bg-orange-500"} p-1`}
-                disabled={isSearchTermInvalid}
-                on:click={() => onSearchSubmitHandler?.call({}, searchTerm)}
-        >Rechercher
-        </button>
-    {/if}
+    <button
+            data-testid={buttonId}
+            class='h-12 text-sm xl:text-lg text-white p-1 rounded-r-lg bg-white'
+            disabled={isSearchTermInvalid}
+            on:click={() => onSearchSubmitHandler?.call({}, searchTerm)}
+    >
+        <img src="search.svg" width="40" alt="search" class={`rounded-r-lg py-1 px-2.5 h-10 text-black ${isSearchTermInvalid ? "bg-primary": "bg-teal-950"} p-1`}>
+    </button>
 </div>

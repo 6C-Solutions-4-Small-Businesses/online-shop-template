@@ -6,7 +6,12 @@
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
+	<body class="font-family" data-sveltekit-preload-data="hover" data-theme="skeleton">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
+<style>
+	.font-family {
+		font-family: 'Inter', sans-serif;
+	}
+</style>
