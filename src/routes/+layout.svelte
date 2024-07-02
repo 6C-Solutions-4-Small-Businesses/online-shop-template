@@ -20,10 +20,11 @@
     import {showCookiesDisclaimer} from '$lib/frontend/stores/localStorageStore/ShowCookiesDisclaimerStore'
     import {browser, dev} from '$app/environment'
     import CookiesDisclaimerModal from '$lib/frontend/components/CookiesDisclaimerModal.svelte'
-    import {initialLocale, loadTranslations, locale} from '$translations'
-    import { inject } from '@vercel/analytics'
+    import {initialLocale, loadTranslations, locale, t} from '$translations/index'
+    import {inject} from '@vercel/analytics'
     import ConfirmationModal from '$lib/frontend/components/ConfirmationModal.svelte'
     import OfferSearchModal from '$lib/frontend/components/OfferSearchModal.svelte'
+    import {onMount} from 'svelte'
 
     export let data: PageData
 
@@ -34,7 +35,7 @@
     const drawerStore = getDrawerStore()
     const modalStore = getModalStore()
 
-    inject({ mode: dev ? 'development' : 'production' })
+    inject({mode: dev ? 'development' : 'production'})
 
     const modalRegistry: Record<string, ModalComponent> = {
         identificationModal: {ref: IdentificationModal},
@@ -42,6 +43,10 @@
         confirmationModal: {ref: ConfirmationModal},
         offerSearchModal: { ref: OfferSearchModal},
     }
+
+    onMount(() => {
+        loadTranslations(initialLocale)
+    })
 
     async function navigateToContactUsPage(): Promise<void> {
         drawerStore.close()
@@ -62,7 +67,7 @@
                 rounded: 'none',
                 width: 'w-8/12',
                 position: 'right',
-                padding: 'pt-14'
+                padding: 'pt-14',
             }
 
             drawerStore.open(drawerSettings)
@@ -80,13 +85,13 @@
 </script>
 <Toast/>
 <Modal components="{modalRegistry}"/>
-<div class="bg-white">
+<div class="bg-transparent">
     <CustomAppBar
             isDrawerOpened={$drawerStore.open}
             isOnHomePage={isOnHomePage}
             on:toggleDrawer={toggleDrawer}
     />
-    <div class="absolute top-0 -z-10 w-full h-full pt-14">
+    <div class="absolute top-0 -z-10 w-full h-full">
         <slot/>
         <Drawer>
             <button
@@ -94,30 +99,46 @@
                     data-testid="user-profile-drawer-button"
                     on:click={onUserProfileClicked}
             >
-                Profil
+                {$t('layout.profile')}
             </button>
+
             <button class="w-full text-lg text-center font-thin mt-4" on:click={navigateToContactUsPage}>
-                Contactez-nous
+                {$t('layout.contactUs')}
             </button>
         </Drawer>
         {#if browser && $showCookiesDisclaimer}
-            {#await loadTranslations(initialLocale)}{/await}
             {#if $locale}
                 <CookiesDisclaimerModal/>
             {/if}
         {/if}
-        <div class="footer w-full flex flex-col justify-center items-center bg-green-100 py-6 gap-7">
-            <div class={`w-11/12 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 grid-flow-row gap-y-2 gap-x-5`}>
+        <div class="footer w-full flex flex-col justify-center items-center bg-primary py-6 gap-7">
+            <div class={`w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 grid-flow-row gap-y-2 gap-x-5 border-b-[1px] border-primary p-10`}>
                 {#each data.categories as {id, name}}
-                    <button class="font-light hover:underline text-left truncate text-sm xl:text-md"
-                            on:click={() => goToProductsPage(id)}>{name}</button>
+                    <button class="font-semibold hover:underline text-left truncate text-sm xl:text-md text-white"
+                            on:click={() => goToProductsPage(id)}>{name}
+                    </button>
                 {/each}
             </div>
-            <div class="terms-conditions w-full md:w-11/12 flex flex-col md:flex-row-reverse md:justify-between items-center gap-3 md:gap-0 text-sm md:text-md">
-                <button class="text-slate-500" data-testid="terms-and-condition-button"
-                        on:click={goToTermsAndConditions}>Termes et conditions
-                </button>
-                <span class="text-slate-500">v{data.version} ©{(new Date()).getFullYear()} <b>6C Solutions</b>. Tous droits reservés.</span>
+
+            <div class="h-[90px] px-[19px] flex-col justify-center gap-2.5 inline-flex font-semibold text-white">
+                <div class="gap-[30px] inline-flex">
+                    <div>{$t('layout.aboutUs')}</div>
+
+                    <div>
+                        <button data-testid="terms-and-condition-button" on:click={goToTermsAndConditions}>
+                            {$t('layout.termsAndConditions')}
+                        </button>
+                    </div>
+
+                    <div>{$t('layout.contactUs')}</div>
+                </div>
+
+                <div class="w-full text-center text-xs">
+                    <span>
+                        v{data.version} ©{(new Date()).getFullYear()}
+                        <b>6C Solutions</b>. {$t('layout.allRightsReserved')}
+                    </span>
+                </div>
             </div>
         </div>
     </div>

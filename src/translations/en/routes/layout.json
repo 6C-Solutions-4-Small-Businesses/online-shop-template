@@ -1,4 +1,9 @@
 {
   "title": "Welcome to home page",
-  "message": "A welcome message to static web site powered by Sveltekit"
+  "message": "A welcome message to static web site powered by Sveltekit",
+  "profile": "Profile",
+  "aboutUs": "About Us",
+  "termsAndConditions": "Terms and Conditions",
+  "contactUs": "Contact us",
+  "allRightsReserved": "All rights reserved."
 }

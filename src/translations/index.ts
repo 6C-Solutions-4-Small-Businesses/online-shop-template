@@ -1,51 +1,71 @@
 import {dev} from '$app/environment';
-import type {Config} from 'sveltekit-i18n';
-import i18n from 'sveltekit-i18n';
+import i18n, {type Config} from 'sveltekit-i18n';
 import lang from './lang.json';
 
-export const initialLocale = 'fr'
+interface TranslationLoader {
+    locale: string;
+    key: string;
+    loader: any;
+}
+
+export const initialLocale = 'fr';
+
+const locales: string[] = ['en', 'fr'];
+const components: string[] = ['cookies-disclaimer', 'collection', 'custom-app-bar'];
+const pages: string[] = ['terms-and-conditions'];
+
+async function loadComponentsTranslation(locale: string, key: string): Promise<object> {
+    return (await import(`./${locale}/lib/frontend/components/${key}.json`)).default;
+}
+
+async function loadPagesTranslation(locale: string, key: string): Promise<object> {
+    return (await import(`./${locale}/routes/${key}/page.json`)).default;
+}
+
+const loaders: TranslationLoader[] = locales.flatMap((locale) => [
+    {
+        locale,
+        key: 'layout',
+        loader: async () => (await import(`./${locale}/routes/layout.json`)).default,
+    },
+    {
+        locale,
+        key: 'page',
+        loader: async () => (await import(`./${locale}/routes/page.json`)).default,
+    },
+    ...pages.map((page): TranslationLoader => ({
+        locale,
+        key: page,
+        loader: () => loadPagesTranslation(locale, page)
+    })),
+    ...components.map((component): TranslationLoader => ({
+        locale,
+        key: component,
+        loader: () => loadComponentsTranslation(locale, component),
+    })),
+]);
+
 export const config: Config = {
     log: {
-        level: dev ? 'warn' : 'error'
+        level: dev ? 'warn' : 'error',
     },
     translations: {
         en: {lang},
-        fr: {lang}
+        fr: {lang},
     },
-    loaders: [
-        {
-            locale: 'en',
-            key: 'layout',
-            loader: async () => (await import('./en/routes/layout.json')).default
-        },
-        {
-            locale: 'fr',
-            key: 'layout',
-            loader: async () => (await import('./fr/routes/layout.json')).default
-        },
-        {
-            locale: 'en',
-            key: 'lib/frontend/components/cookies-disclaimer',
-            loader: async () => (await import('./en/lib/frontend/components/cookies-disclaimer.json')).default
-        },
-        {
-            locale: 'fr',
-            key: 'lib/frontend/components/cookies-disclaimer',
-            loader: async () => (await import('./fr/lib/frontend/components/cookies-disclaimer.json')).default
-        },
-    ]
+    loaders,
 };
 
 export const {
     t,
     loading,
-    locales,
+    locales: loadedLocales,
     locale,
     translations,
     loadTranslations,
     addTranslations,
     setLocale,
-    setRoute
+    setRoute,
 } = new i18n(config);
 
 loading.subscribe(($loading) => $loading && console.log('Loading translations...'));
