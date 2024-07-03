@@ -3,7 +3,7 @@
     import logo from '$lib/frontend/assets/images/logo.png'
     import {cart} from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
     import '@fontsource/dancing-script'
-    import {AppBar, getModalStore, getToastStore} from '@skeletonlabs/skeleton'
+    import {AppBar, getModalStore} from '@skeletonlabs/skeleton'
     import {createEventDispatcher, onDestroy} from 'svelte'
     import CloseIcon from '~icons/mdi/alpha-x-box-outline'
     import MenuIcon from '~icons/mdi/menu'
@@ -11,6 +11,8 @@
     import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
     import {PUBLIC_BUSINESS_NAME} from '$env/static/public'
     import {t} from '$translations/index'
+    import UserIcon from '$lib/frontend/components/icons/UserIcon.svelte'
+    import ShoppingCartIcon from '$lib/frontend/components/icons/ShoppingCartIcon.svelte'
 
     export let isDrawerOpened = false
     export let isOnHomePage: boolean
@@ -19,13 +21,9 @@
     const businessNameFirstPart = businessName?.split(' ')[0] ?? 'Demo'
     const businessNameSecondPart = businessName?.split(' ')[1] ?? 'Merchant'
     const modalStore = getModalStore()
-    const toastStore = getToastStore()
     const dispatch = createEventDispatcher()
 
     let numberOfProductsInCart = 0
-    let isOverlaySearchBarVisible: boolean
-
-    $: isOverlaySearchBarVisible = false
 
     const unsubscribe = cart.subscribe((newShoppingCartStoreMapValue) => {
         if (newShoppingCartStoreMapValue.size > 0) {
@@ -99,7 +97,7 @@
             {/if}
             <div class='text-3xl flex relative'>
                 <button class='hover:text-orange-500' on:click={navigateToShoppingCartPage}>
-                    <img alt={$t('custom-app-bar.shoppingCart')} class="h-5 w-5" src="shopping-cart.svg">
+                    <ShoppingCartIcon  classNames="h-5 w-5"/>
                 </button>
 
                 <span class='absolute left-4 bottom-4 bg-red text-10 text-white w-4 h-4 flex justify-center items-center rounded-full border border-orange-500'>
@@ -112,7 +110,7 @@
                         class='hover:text-orange-500 flex justify-center items-center'
                         data-testid="user-profile-button"
                         on:click={onUserProfileClicked}>
-                    <img alt={$t('custom-app-bar.user')} class="h-5 w-5 ml-2" src="user.svg">
+                        <UserIcon classNames="h-5 w-5 ml-2"/>
                 </button>
             </div>
 

@@ -3,609 +3,760 @@
 exports[`Home page > should have match snapshot 1`] = `
 <div>
   <div>
-    <img
-      alt="Demo MERCHANT, Business Slogan"
-      class="object-cover w-full max-w-full h-screen brightness-75 blur-xs relative -z-1"
-      src="/src/lib/frontend/assets/images/location-interior.webp"
-    />
-     
     <div
-      class="absolute top-44 w-full flex justify-center"
+      class="bg-cover-container svelte-rhv64o"
+      style="background-image: url(/src/lib/frontend/assets/images/market.webp);"
     >
       <div
-        class="embla w-10/12 md:w-2/3 xl:w-1/3 svelte-1tdgnot"
+        class="test flex flex-col lg:flex-row justify-center items-center min-h-[586px] px-10 principal-container svelte-rhv64o"
       >
         <div
-          class="embla__container svelte-1tdgnot"
-          style="transform: translate3d(0px,0px,0px);"
+          class="lg:w-[40%] lg:pr-5 w-full mb-10 lg:mb-0"
+        >
+          <h1
+            class="text-[40px] hidden lg:flex font-bold mb-4 leading-[48px] text-white lg:w-5/6"
+          >
+            
+          </h1>
+           
+          <div>
+            <div
+              class="undefined h-10 flex"
+            >
+              <div
+                class="relative w-full lg:w-8/12 lg:mb-0 mb-4"
+              >
+                <input
+                  class="w-full h-12 focus:outline-transparent text-black text-left pl-2 rounded-l-lg border-none"
+                  data-testid="app-bar-search-input"
+                  placeholder="Chercher un produit"
+                  type="text"
+                />
+                 
+              </div>
+               
+              <button
+                class="h-12 text-sm xl:text-lg text-white p-1 rounded-r-lg bg-white"
+                data-testid="app-bar-search-input-button"
+                disabled=""
+              >
+                <div
+                  class="flex items-center rounded-r-lg py-1 px-2.5 h-10 text-black bg-primary p-1"
+                >
+                  <svg
+                    fill="none"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    width="21"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g
+                      id="ðŸ¦† icon "search""
+                    >
+                      <path
+                        d="M19.5 19L13.5 13M15.5 8C15.5 11.866 12.366 15 8.5 15C4.63401 15 1.5 11.866 1.5 8C1.5 4.13401 4.63401 1 8.5 1C12.366 1 15.5 4.13401 15.5 8Z"
+                        id="Vector"
+                        stroke="white"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+         
+        <div
+          class="overflow-hidden lg:w-[60%] w-full"
         >
           <div
-            class="embla__slide w-2/3 md:w-2/3 xl:w-1/3 svelte-1tdgnot"
+            class="embla__container svelte-rhv64o"
+            style="transform: translate3d(0px,0px,0px);"
           >
             <div
-              class="w-full relative flex flex-col bg-white"
-              role="none"
+              class="embla__slide embla__class-names svelte-rhv64o"
             >
-              <img
-                alt="product-1"
-                class="object-contain h-[15rem] sm:h-[30rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] py-5"
-                src="an-image-url"
-                width="640"
-              />
-               
               <div
-                class="h-16 flex items-center justify-center gap-2 text-3xl rounded-none bg-white"
-              >
-                <span>
-                  product-1
-                </span>
-                 
-                <span
-                  class="font-bold text-red-500"
-                >
-                  $
-                  1
-                </span>
-              </div>
-               
-              <div
-                class="hidden"
+                class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px]"
+                role="none"
               >
                 <div
-                  class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
-                  role="region"
+                  class="hidden"
                 >
-                   
                   <div
-                    class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+                    class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+                    role="region"
                   >
-                    <svg
-                      height="1.2em"
-                      viewBox="0 0 24 24"
-                      width="1.2em"
+                     
+                    <button
+                      class="px-2 py-1 focus:outline-none"
                     >
-                      <path
-                        d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
-                        fill="currentColor"
-                      />
-                    </svg>
+                      <div
+                        class="h-6 w-6"
+                      >
+                        <svg
+                          fill="none"
+                          height="26"
+                          viewBox="0 0 18 26"
+                          width="18"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                            id="Add Button"
+                            stroke="#0A3B2F"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                 
+                <div
+                  class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex mx-auto"
+                >
+                  <img
+                    alt="product-1"
+                    class="w-[238px] h-[200px] object-contain"
+                    src="an-image-url"
+                    width="160"
+                  />
+                </div>
+                 
+                <div
+                  class="w-full flex-col justify-start items-start gap-2.5 flex mt-6"
+                >
+                  <div
+                    class="w-full justify-between items-center flex"
+                  >
+                    <div
+                      class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                    >
+                      product-1
+                    </div>
+                     
+                    <div
+                      class="text-primary text-15 flex ml-3"
+                    >
+                      $
+                      1
+                    </div>
                   </div>
                 </div>
               </div>
+               
             </div>
-             
-          </div>
-          <div
-            class="embla__slide w-2/3 md:w-2/3 xl:w-1/3 svelte-1tdgnot"
-          >
             <div
-              class="w-full relative flex flex-col bg-white"
-              role="none"
+              class="embla__slide embla__class-names svelte-rhv64o"
             >
-              <img
-                alt="product-2"
-                class="object-contain h-[15rem] sm:h-[30rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] py-5"
-                src="an-image-url"
-                width="640"
-              />
-               
               <div
-                class="h-16 flex items-center justify-center gap-2 text-3xl rounded-none bg-white"
-              >
-                <span>
-                  product-2
-                </span>
-                 
-                <span
-                  class="font-bold text-red-500"
-                >
-                  $
-                  8
-                </span>
-              </div>
-               
-              <div
-                class="hidden"
+                class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px]"
+                role="none"
               >
                 <div
-                  class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
-                  role="region"
+                  class="hidden"
                 >
-                   
                   <div
-                    class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+                    class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+                    role="region"
                   >
-                    <svg
-                      height="1.2em"
-                      viewBox="0 0 24 24"
-                      width="1.2em"
+                     
+                    <button
+                      class="px-2 py-1 focus:outline-none"
                     >
-                      <path
-                        d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
-                        fill="currentColor"
-                      />
-                    </svg>
+                      <div
+                        class="h-6 w-6"
+                      >
+                        <svg
+                          fill="none"
+                          height="26"
+                          viewBox="0 0 18 26"
+                          width="18"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                            id="Add Button"
+                            stroke="#0A3B2F"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                 
+                <div
+                  class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex mx-auto"
+                >
+                  <img
+                    alt="product-2"
+                    class="w-[238px] h-[200px] object-contain"
+                    src="an-image-url"
+                    width="160"
+                  />
+                </div>
+                 
+                <div
+                  class="w-full flex-col justify-start items-start gap-2.5 flex mt-6"
+                >
+                  <div
+                    class="w-full justify-between items-center flex"
+                  >
+                    <div
+                      class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                    >
+                      product-2
+                    </div>
+                     
+                    <div
+                      class="text-primary text-15 flex ml-3"
+                    >
+                      $
+                      8
+                    </div>
                   </div>
                 </div>
               </div>
+               
             </div>
-             
-          </div>
-          <div
-            class="embla__slide w-2/3 md:w-2/3 xl:w-1/3 svelte-1tdgnot"
-          >
             <div
-              class="w-full relative flex flex-col bg-white"
-              role="none"
+              class="embla__slide embla__class-names svelte-rhv64o"
             >
-              <img
-                alt="product-3"
-                class="object-contain h-[15rem] sm:h-[30rem] md:h-[30rem] lg:h-[30rem] xl:h-[30rem] py-5"
-                src="an-image-url"
-                width="640"
-              />
-               
               <div
-                class="h-16 flex items-center justify-center gap-2 text-3xl rounded-none bg-white"
-              >
-                <span>
-                  product-3
-                </span>
-                 
-                <span
-                  class="font-bold text-red-500"
-                >
-                  $
-                  12
-                </span>
-              </div>
-               
-              <div
-                class="hidden"
+                class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px]"
+                role="none"
               >
                 <div
-                  class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
-                  role="region"
+                  class="hidden"
                 >
-                   
                   <div
-                    class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+                    class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+                    role="region"
                   >
-                    <svg
-                      height="1.2em"
-                      viewBox="0 0 24 24"
-                      width="1.2em"
+                     
+                    <button
+                      class="px-2 py-1 focus:outline-none"
                     >
-                      <path
-                        d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
-                        fill="currentColor"
-                      />
-                    </svg>
+                      <div
+                        class="h-6 w-6"
+                      >
+                        <svg
+                          fill="none"
+                          height="26"
+                          viewBox="0 0 18 26"
+                          width="18"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                            id="Add Button"
+                            stroke="#0A3B2F"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                 
+                <div
+                  class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex mx-auto"
+                >
+                  <img
+                    alt="product-3"
+                    class="w-[238px] h-[200px] object-contain"
+                    src="an-image-url"
+                    width="160"
+                  />
+                </div>
+                 
+                <div
+                  class="w-full flex-col justify-start items-start gap-2.5 flex mt-6"
+                >
+                  <div
+                    class="w-full justify-between items-center flex"
+                  >
+                    <div
+                      class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                    >
+                      product-3
+                    </div>
+                     
+                    <div
+                      class="text-primary text-15 flex ml-3"
+                    >
+                      $
+                      12
+                    </div>
                   </div>
                 </div>
               </div>
+               
             </div>
-             
           </div>
         </div>
       </div>
     </div>
      
     <div
-      class="w-full"
+      class="bg-neutral w-full my-8"
     >
       <div
-        class="w-full pt-8 pb-8 bg-green-50"
+        class="w-full py-8"
       >
         <div
-          class="w-full flex justify-center text-3xl collection-name not-italic font-light mb-5 svelte-bzuqro"
-        >
-          En spéciale
-        </div>
-         
-        <div
-          class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 3xl:grid-cols-6"
+          class="px-10 py-5 justify-between items-center flex"
         >
           <div
-            class="product-box relative w-full h-[22rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[17rem] bg-white shadow-2xl svelte-d6kc1z"
-            role="none"
+            class="text-primary text-2xl"
           >
-            <div
-              class="absolute flex w-12 h-12 top-0 text-white items-center invisible svelte-d6kc1z"
-            >
-              <svg
-                height="100"
-                viewBox="0 0 490 490"
-                width="100"
-                x="0px"
-                xml:space="preserve"
-                y="0px"
-              >
-                <polygon
-                  points="0,0 490,0 0,490"
-                  style="fill: #ff0000;"
-                />
-              </svg>
-               
-              <div
-                class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold"
-              >
-                -
-                null
-                %
-              </div>
-            </div>
-             
-            <img
-              alt="product-4"
-              class="product-image object-contain absolute h-full w-full top-0 p-4"
-              src="an-image-url"
-              width="160"
-            />
-             
-            <div
-              class="w-full absolute flex justify-end"
-            >
-              <div
-                class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
-                role="region"
-              >
-                 
-                <div
-                  class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
-                >
-                  <svg
-                    height="1.2em"
-                    viewBox="0 0 24 24"
-                    width="1.2em"
-                  >
-                    <path
-                      d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-             
-            <div
-              class="absolute bottom-0 right-0 w-full flex justify-end svelte-d6kc1z"
-            >
-              <div
-                class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg svelte-d6kc1z"
-                role="region"
-              >
-                 
-                <div
-                  class="w-full flex flex-col svelte-d6kc1z"
-                >
-                   
-                  <div
-                    class="w-full items-center justify-center flex text-xl font-semibold svelte-d6kc1z"
-                  >
-                    <span
-                      class="block"
-                    >
-                      $
-                      1
-                      <sup>
-                        00
-                      </sup>
-                    </span>
-                     
-                  </div>
-                </div>
-              </div>
-            </div>
+            En spéciale
           </div>
+           
           <div
-            class="product-box relative w-full h-[22rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[17rem] bg-white shadow-2xl svelte-d6kc1z"
-            role="none"
+            class="justify-end items-center gap-2.5 flex"
           >
-            <div
-              class="absolute flex w-12 h-12 top-0 text-white items-center invisible svelte-d6kc1z"
+            <button
+              class="text-secondary flex items-center capitalize"
             >
-              <svg
-                height="100"
-                viewBox="0 0 490 490"
-                width="100"
-                x="0px"
-                xml:space="preserve"
-                y="0px"
-              >
-                <polygon
-                  points="0,0 490,0 0,490"
-                  style="fill: #ff0000;"
-                />
-              </svg>
+              
                
               <div
-                class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold"
+                class="ml-2"
               >
-                -
-                null
-                %
+                <svg
+                  fill="none"
+                  height="17"
+                  viewBox="0 0 10 17"
+                  width="10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L8.5 8.5L1 16"
+                    id="Vector"
+                    stroke="#0A3B2F"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
               </div>
-            </div>
+            </button>
              
-            <img
-              alt="product-5"
-              class="product-image object-contain absolute h-full w-full top-0 p-4"
-              src="an-image-url"
-              width="160"
+            <div
+              class="px-2 py-1 rounded-sm justify-center items-center gap-2.5 flex"
             />
-             
-            <div
-              class="w-full absolute flex justify-end"
-            >
-              <div
-                class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
-                role="region"
-              >
-                 
-                <div
-                  class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
-                >
-                  <svg
-                    height="1.2em"
-                    viewBox="0 0 24 24"
-                    width="1.2em"
-                  >
-                    <path
-                      d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-             
-            <div
-              class="absolute bottom-0 right-0 w-full flex justify-end svelte-d6kc1z"
-            >
-              <div
-                class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg svelte-d6kc1z"
-                role="region"
-              >
-                 
-                <div
-                  class="w-full flex flex-col svelte-d6kc1z"
-                >
-                   
-                  <div
-                    class="w-full items-center justify-center flex text-xl font-semibold svelte-d6kc1z"
-                  >
-                    <span
-                      class="block"
-                    >
-                      $
-                      8
-                      <sup>
-                        00
-                      </sup>
-                    </span>
-                     
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="product-box relative w-full h-[22rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[17rem] bg-white shadow-2xl svelte-d6kc1z"
-            role="none"
-          >
-            <div
-              class="absolute flex w-12 h-12 top-0 text-white items-center invisible svelte-d6kc1z"
-            >
-              <svg
-                height="100"
-                viewBox="0 0 490 490"
-                width="100"
-                x="0px"
-                xml:space="preserve"
-                y="0px"
-              >
-                <polygon
-                  points="0,0 490,0 0,490"
-                  style="fill: #ff0000;"
-                />
-              </svg>
-               
-              <div
-                class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold"
-              >
-                -
-                null
-                %
-              </div>
-            </div>
-             
-            <img
-              alt="product-6"
-              class="product-image object-contain absolute h-full w-full top-0 p-4"
-              src="an-image-url"
-              width="160"
-            />
-             
-            <div
-              class="w-full absolute flex justify-end"
-            >
-              <div
-                class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
-                role="region"
-              >
-                 
-                <div
-                  class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
-                >
-                  <svg
-                    height="1.2em"
-                    viewBox="0 0 24 24"
-                    width="1.2em"
-                  >
-                    <path
-                      d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-             
-            <div
-              class="absolute bottom-0 right-0 w-full flex justify-end svelte-d6kc1z"
-            >
-              <div
-                class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg svelte-d6kc1z"
-                role="region"
-              >
-                 
-                <div
-                  class="w-full flex flex-col svelte-d6kc1z"
-                >
-                   
-                  <div
-                    class="w-full items-center justify-center flex text-xl font-semibold svelte-d6kc1z"
-                  >
-                    <span
-                      class="block"
-                    >
-                      $
-                      12
-                      <sup>
-                        00
-                      </sup>
-                    </span>
-                     
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
          
         <div
-          class="w-full flex justify-center items-center text-xl collection-name not-italic font-light h-10 mt-5 svelte-bzuqro"
+          class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-6"
         >
-          <button
-            class="hover:text-green-500"
+          <div
+            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
           >
-            Afficher Plus
-          </button>
+            <div
+              class="absolute left-0 flex w-12 h-12 top-0 items-center justify-center discount-container undefined invisible svelte-rta6ws"
+            >
+              <div
+                class="text-white text-xs font-bold"
+              >
+                -
+                null
+                %
+              </div>
+            </div>
+             
+            <div
+              class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
+            >
+              <img
+                alt="product-4"
+                class="w-[238px] h-[200px] object-contain scale"
+                src="an-image-url"
+                width="160"
+              />
+            </div>
+             
+            <div
+              class="w-full absolute flex justify-end top-0 right-0"
+            >
+              <div
+                class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+                role="region"
+              >
+                 
+                <button
+                  class="px-2 py-1 focus:outline-none"
+                >
+                  <div
+                    class="h-6 w-6"
+                  >
+                    <svg
+                      fill="none"
+                      height="26"
+                      viewBox="0 0 18 26"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                        id="Add Button"
+                        stroke="#0A3B2F"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+             
+            <div
+              class="w-full flex-col justify-start items-start gap-2.5 flex"
+            >
+              <div
+                class="w-full justify-between items-center flex"
+              >
+                <div
+                  class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                >
+                  product-4
+                </div>
+                 
+                <div
+                  class="text-primary text-15 flex ml-3"
+                >
+                  CAD$
+                  1
+                  .
+                  00
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="absolute left-0 flex w-12 h-12 top-0 items-center justify-center discount-container undefined invisible svelte-rta6ws"
+            >
+              <div
+                class="text-white text-xs font-bold"
+              >
+                -
+                null
+                %
+              </div>
+            </div>
+             
+            <div
+              class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
+            >
+              <img
+                alt="product-5"
+                class="w-[238px] h-[200px] object-contain scale"
+                src="an-image-url"
+                width="160"
+              />
+            </div>
+             
+            <div
+              class="w-full absolute flex justify-end top-0 right-0"
+            >
+              <div
+                class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+                role="region"
+              >
+                 
+                <button
+                  class="px-2 py-1 focus:outline-none"
+                >
+                  <div
+                    class="h-6 w-6"
+                  >
+                    <svg
+                      fill="none"
+                      height="26"
+                      viewBox="0 0 18 26"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                        id="Add Button"
+                        stroke="#0A3B2F"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+             
+            <div
+              class="w-full flex-col justify-start items-start gap-2.5 flex"
+            >
+              <div
+                class="w-full justify-between items-center flex"
+              >
+                <div
+                  class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                >
+                  product-5
+                </div>
+                 
+                <div
+                  class="text-primary text-15 flex ml-3"
+                >
+                  CAD$
+                  8
+                  .
+                  00
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          >
+            <div
+              class="absolute left-0 flex w-12 h-12 top-0 items-center justify-center discount-container undefined invisible svelte-rta6ws"
+            >
+              <div
+                class="text-white text-xs font-bold"
+              >
+                -
+                null
+                %
+              </div>
+            </div>
+             
+            <div
+              class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
+            >
+              <img
+                alt="product-6"
+                class="w-[238px] h-[200px] object-contain scale"
+                src="an-image-url"
+                width="160"
+              />
+            </div>
+             
+            <div
+              class="w-full absolute flex justify-end top-0 right-0"
+            >
+              <div
+                class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+                role="region"
+              >
+                 
+                <button
+                  class="px-2 py-1 focus:outline-none"
+                >
+                  <div
+                    class="h-6 w-6"
+                  >
+                    <svg
+                      fill="none"
+                      height="26"
+                      viewBox="0 0 18 26"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                        id="Add Button"
+                        stroke="#0A3B2F"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+             
+            <div
+              class="w-full flex-col justify-start items-start gap-2.5 flex"
+            >
+              <div
+                class="w-full justify-between items-center flex"
+              >
+                <div
+                  class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                >
+                  product-6
+                </div>
+                 
+                <div
+                  class="text-primary text-15 flex ml-3"
+                >
+                  CAD$
+                  12
+                  .
+                  00
+                   
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       
        
       <div
-        class="news-letter-box w-full flex flex-col items-center xl:flex-row xl:justify-center bg-green-100"
+        class="max-h-[452px] mt-[50px] 2xl:max-h-[552px] xl:px-4 xs:mx-5 mx-8 px-10 gradient-background rounded-[30px] text-white shadow-lg flex overflow-hidden svelte-rhv64o"
       >
         <div
-          class="flex flex-col w-10/12 xl:w-7/12 py-12 xl:py-20"
+          class="md:inline-flex 2xl:h-[500px] md:h-[330px] lg:h-[452px] xl:px-[38px] xl:py-[60px] md:px-0 md:pr-4 px-6 py-10 flex-col hidden"
         >
           <div
-            class="flex flex-col"
+            class="md:w-[320px] xl:w-[450px] 2xl:w-[550px] lg:w-[429px] rounded-[20px] overflow-hidden justify-center items-center inline-flex"
           >
-            <div
-              class="text-3xl text-green-900 my-2"
-            >
-              Rabais Exclusifs
-            </div>
-             
-            <p
-              class="font-thin text-justify"
-            >
-              En tant qu'abonné privilégié, vous bénéficierez d'un accès exclusif à des offres spéciales et à
-                        des
-                        promotions, vous assurant de réaliser plus d'économies à chaque fois que vous faites vos achats
-            </p>
-          </div>
-           
-          <div
-            class="flex flex-col"
-          >
-            <div
-              class="text-3xl text-green-900 my-2"
-            >
-              Premier Arrivé, Premier Servi
-            </div>
-             
-            <p
-              class="font-thin text-justify"
-            >
-              Abonnez-vous dès maintenant et soyez le premier à savoir quand nous réapprovisionnons en
-                        produits frais,
-                        produits laitiers et autres denrées périssables, vous garantissant ainsi de toujours obtenir les
-                        choix les
-                        plus frais de nos rayons.
-            </p>
+            <img
+              alt="Family with delivery"
+              class="rounded-[30px] md:mt-[100px] xl:mt-[120px] mt-60px object-cover object-top"
+              src="delivery.webp"
+            />
           </div>
         </div>
          
         <div
-          class="w-10/12 xl:w-3/12 flex flex-col justify-center items-center"
+          class="xs:py-8 xs:px-0 sm:py-10 sm:px-2 lg:p-8 md:py-12 p-16 flex flex-col justify-center"
         >
-          <div
-            class="w-80 h-80 flex flex-col items-center bg-green-300 rounded-full justify-center"
+          <h1
+            class="2xl:text-3xl 3xl:text-5xl text-2xl sm:text-3xl md:text-3xl font-bold mb-5"
           >
-            <div
-              class="w-4/5 mt-5 mb-8 text-2xl text-center text-green-900 font-thin"
-            >
-              Abonnez-vous à notre
-                        Infolettre
-            </div>
-             
+            
+          </h1>
+           
+          <p
+            class="2xl:text-2xl 3xl:text-3xl 3xl:mt-5 font-medium text-lg xs:text-sm sm:text-lg md:text-lg mb-2"
+          >
+            
+          </p>
+           
+          <div
+            class="mt-10 justify-start items-center gap-2.5 inline-flex"
+          >
             <input
-              class="w-4/5 h-10 border border-gray-500  rounded-sm pl-2 focus:outline-none  focus:border-2 svelte-1tdgnot"
-              placeholder="Entrer votre courriel"
+              class="3xl:h-20 2xl:h-12 xs:w-full sm:w-2/3 w-auto text-lg font-normal h-[52px] opacity-60 rounded-lg text-black border-gray-500 svelte-rhv64o"
+              placeholder=""
               type="email"
             />
              
             <button
-              class="flex justify-around items-center uppercase rounded-sm font-bold w-36 shadow-sm border border-orange-500 text-orange-500 bg-orange-50 h-12 hover:bg-white mt-10 bg-white hover:bg-orange-50 border text-black"
+              class="flex justify-around items-center uppercase rounded-sm font-bold md:w-[180px] 3xl:h-20 2xl:h-12 2xl:px-3 w-auto xs:px-3 lg:px-2 py-3 rounded-xl text-center text-black text-lg font-semibold uppercase bg-white hover:bg-orange-50 border text-black"
               data-testid=""
               id=""
             >
-              S'abonner
+              <span
+                class="hidden md:inline-flex lg:text-md text-[14px]"
+              >
+                
+              </span>
+               
+              <div>
+                <svg
+                  fill="none"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  width="25"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M6.50004 12L3.76904 3.125C10.3019 5.025 16.4624 8.02646 21.985 12C16.4627 15.9735 10.3026 18.9749 3.77004 20.875L6.50004 12ZM6.50004 12H14"
+                      stroke="black"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                </svg>
+              </div>
             </button>
           </div>
         </div>
       </div>
        
       <div
-        class="w-full pt-8 pb-8 bg-green-50"
+        class="w-full py-8"
       >
         <div
-          class="w-full flex justify-center text-3xl collection-name not-italic font-light mb-5 svelte-bzuqro"
+          class="px-10 py-5 justify-between items-center flex"
         >
-          Nous vous recommandons
+          <div
+            class="text-primary text-2xl"
+          >
+            Nous vous recommandons
+          </div>
+           
+          <div
+            class="justify-end items-center gap-2.5 flex"
+          >
+            <button
+              class="text-secondary flex items-center capitalize"
+            >
+              
+               
+              <div
+                class="ml-2"
+              >
+                <svg
+                  fill="none"
+                  height="17"
+                  viewBox="0 0 10 17"
+                  width="10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 1L8.5 8.5L1 16"
+                    id="Vector"
+                    stroke="#0A3B2F"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </button>
+             
+            <div
+              class="px-2 py-1 rounded-sm justify-center items-center gap-2.5 flex"
+            />
+          </div>
         </div>
          
         <div
-          class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 3xl:grid-cols-6"
+          class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-6"
         >
           <div
-            class="product-box relative w-full h-[22rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[17rem] bg-white shadow-2xl svelte-d6kc1z"
-            role="none"
+            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
           >
             <div
-              class="absolute flex w-12 h-12 top-0 text-white items-center invisible svelte-d6kc1z"
+              class="absolute left-0 flex w-12 h-12 top-0 items-center justify-center discount-container undefined invisible svelte-rta6ws"
             >
-              <svg
-                height="100"
-                viewBox="0 0 490 490"
-                width="100"
-                x="0px"
-                xml:space="preserve"
-                y="0px"
-              >
-                <polygon
-                  points="0,0 490,0 0,490"
-                  style="fill: #ff0000;"
-                />
-              </svg>
-               
               <div
-                class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold"
+                class="text-white text-xs font-bold"
               >
                 -
                 null
@@ -613,91 +764,84 @@ exports[`Home page > should have match snapshot 1`] = `
               </div>
             </div>
              
-            <img
-              alt="product-7"
-              class="product-image object-contain absolute h-full w-full top-0 p-4"
-              src="an-image-url"
-              width="160"
-            />
+            <div
+              class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
+            >
+              <img
+                alt="product-7"
+                class="w-[238px] h-[200px] object-contain scale"
+                src="an-image-url"
+                width="160"
+              />
+            </div>
              
             <div
-              class="w-full absolute flex justify-end"
+              class="w-full absolute flex justify-end top-0 right-0"
             >
               <div
-                class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+                class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
                 role="region"
               >
                  
-                <div
-                  class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+                <button
+                  class="px-2 py-1 focus:outline-none"
                 >
-                  <svg
-                    height="1.2em"
-                    viewBox="0 0 24 24"
-                    width="1.2em"
+                  <div
+                    class="h-6 w-6"
                   >
-                    <path
-                      d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
+                    <svg
+                      fill="none"
+                      height="26"
+                      viewBox="0 0 18 26"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                        id="Add Button"
+                        stroke="#0A3B2F"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
              
             <div
-              class="absolute bottom-0 right-0 w-full flex justify-end svelte-d6kc1z"
+              class="w-full flex-col justify-start items-start gap-2.5 flex"
             >
               <div
-                class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg svelte-d6kc1z"
-                role="region"
+                class="w-full justify-between items-center flex"
               >
+                <div
+                  class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                >
+                  product-7
+                </div>
                  
                 <div
-                  class="w-full flex flex-col svelte-d6kc1z"
+                  class="text-primary text-15 flex ml-3"
                 >
+                  CAD$
+                  1
+                  .
+                  00
                    
-                  <div
-                    class="w-full items-center justify-center flex text-xl font-semibold svelte-d6kc1z"
-                  >
-                    <span
-                      class="block"
-                    >
-                      $
-                      1
-                      <sup>
-                        00
-                      </sup>
-                    </span>
-                     
-                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="product-box relative w-full h-[22rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[17rem] bg-white shadow-2xl svelte-d6kc1z"
-            role="none"
+            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
           >
             <div
-              class="absolute flex w-12 h-12 top-0 text-white items-center invisible svelte-d6kc1z"
+              class="absolute left-0 flex w-12 h-12 top-0 items-center justify-center discount-container undefined invisible svelte-rta6ws"
             >
-              <svg
-                height="100"
-                viewBox="0 0 490 490"
-                width="100"
-                x="0px"
-                xml:space="preserve"
-                y="0px"
-              >
-                <polygon
-                  points="0,0 490,0 0,490"
-                  style="fill: #ff0000;"
-                />
-              </svg>
-               
               <div
-                class="absolute -rotate-45 origin-center top-1 right-2 w-full text-[1rem] text-center font-semibold"
+                class="text-white text-xs font-bold"
               >
                 -
                 null
@@ -705,78 +849,76 @@ exports[`Home page > should have match snapshot 1`] = `
               </div>
             </div>
              
-            <img
-              alt="product-8"
-              class="product-image object-contain absolute h-full w-full top-0 p-4"
-              src="an-image-url"
-              width="160"
-            />
+            <div
+              class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
+            >
+              <img
+                alt="product-8"
+                class="w-[238px] h-[200px] object-contain scale"
+                src="an-image-url"
+                width="160"
+              />
+            </div>
              
             <div
-              class="w-full absolute flex justify-end"
+              class="w-full absolute flex justify-end top-0 right-0"
             >
               <div
-                class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+                class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
                 role="region"
               >
                  
-                <div
-                  class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+                <button
+                  class="px-2 py-1 focus:outline-none"
                 >
-                  <svg
-                    height="1.2em"
-                    viewBox="0 0 24 24"
-                    width="1.2em"
+                  <div
+                    class="h-6 w-6"
                   >
-                    <path
-                      d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
+                    <svg
+                      fill="none"
+                      height="26"
+                      viewBox="0 0 18 26"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                        id="Add Button"
+                        stroke="#0A3B2F"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
              
             <div
-              class="absolute bottom-0 right-0 w-full flex justify-end svelte-d6kc1z"
+              class="w-full flex-col justify-start items-start gap-2.5 flex"
             >
               <div
-                class="filter backdrop-blur-sm bg-green-300/40 font-sans w-28 h-[2.5rem] justify-center flex items-center text-lg svelte-d6kc1z"
-                role="region"
+                class="w-full justify-between items-center flex"
               >
+                <div
+                  class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                >
+                  product-8
+                </div>
                  
                 <div
-                  class="w-full flex flex-col svelte-d6kc1z"
+                  class="text-primary text-15 flex ml-3"
                 >
+                  CAD$
+                  8
+                  .
+                  00
                    
-                  <div
-                    class="w-full items-center justify-center flex text-xl font-semibold svelte-d6kc1z"
-                  >
-                    <span
-                      class="block"
-                    >
-                      $
-                      8
-                      <sup>
-                        00
-                      </sup>
-                    </span>
-                     
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-         
-        <div
-          class="w-full flex justify-center items-center text-xl collection-name not-italic font-light h-10 mt-5 svelte-bzuqro"
-        >
-          <button
-            class="hover:text-green-500"
-          >
-            Afficher Plus
-          </button>
         </div>
       </div>
       

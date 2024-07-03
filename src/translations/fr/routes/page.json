@@ -15,8 +15,7 @@
     },
     "button": {
       "title": "Subscribe me",
-      "alt": "Subscribe button",
-      "search": "Search"
+      "alt": "Subscribe button"
     },
     "input": {
       "placeholder": "Entrer votre courriel"
