@@ -3,6 +3,7 @@
     import type {OfferSummaryPresentation} from "$lib/frontend/presentations/OfferSummaryPresentation";
     import ProductCard from "$lib/frontend/components/ProductCard.svelte";
     import {t} from '$translations/index'
+    import ArrowLeftIcon from '$lib/frontend/components/icons/ArrowLeftIcon.svelte'
 
     export let id: string;
     export let name: string;
@@ -22,7 +23,7 @@
                     on:click={goToProductsPage}>
                 {$t('collection.showMore')}
 
-                <img alt={$t('collection.remove')} class="h-3 w-3 ml-2" src="arrow-left.svg">
+                <ArrowLeftIcon classNames="ml-2"/>
             </button>
 
             <div class="px-2 py-1 rounded-sm justify-center items-center gap-2.5 flex"></div>

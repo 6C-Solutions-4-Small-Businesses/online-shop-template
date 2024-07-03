@@ -17,6 +17,8 @@
     import {t} from '$translations/index'
     import Button from '$lib/frontend/components/Button.svelte'
     import {getToastStore} from '@skeletonlabs/skeleton'
+    import CircleCheckIcon from '$lib/frontend/components/icons/CircleCheckIcon.svelte'
+    import SendIcon from '$lib/frontend/components/icons/SendIcon.svelte'
 
     export let data: PageData
 
@@ -120,8 +122,8 @@
                     {$t('page.shop.title')}
                 </h1>
 
-                <div class=''>
-                    <SearchInput buttonId="app-bar-search-input-button" inputId="app-bar-search-input" width=""/>
+                <div>
+                    <SearchInput buttonId="app-bar-search-input-button" inputId="app-bar-search-input" />
                 </div>
             </div>
 
@@ -181,8 +183,7 @@
                         <Button classNames="md:w-[180px] 3xl:h-20 2xl:h-12 2xl:px-3 w-auto xs:px-3 lg:px-2 py-3 rounded-xl text-center text-black text-lg font-semibold uppercase"
                                 disabled="{false}" id="" onClick={subscribeToNewsLetter}>
                             <span class="hidden md:inline-flex lg:text-md text-[14px]">{$t('page.newsletter.button.title')}</span>
-
-                            <img src="send.svg" alt={$t('page.newsletter.button.search')}/>
+                            <SendIcon />
                         </Button>
                     </div>
                 </div>
@@ -197,22 +198,22 @@
 
                         <ul class="2xl:text-xl 3xl:text-3xl md:text-sm xs:text-lg xl:text-xl xs:columns-1 sm:columns-2">
                             <li class="flex gap-2 mb-3 items-start">
-                                <img src="vector.svg" class="align-top flex 2xl:w-[30px]" alt="search">
+                                <CircleCheckIcon classNames="align-top flex 2xl:w-[30px]"/>
                                 {$t('page.newsletter.qualities.first')}
                             </li>
 
                             <li class="flex gap-2 mb-3 items-start">
-                                <img src="vector.svg" class="align-top flex 2xl:w-[30px]" alt="search">
+                                <CircleCheckIcon classNames="align-top flex 2xl:w-[30px]"/>
                                 {$t('page.newsletter.qualities.second')}
                             </li>
 
                             <li class="flex gap-2 mb-3 items-start">
-                                <img src="vector.svg" class="align-top flex 2xl:w-[30px]" alt="search">
+                                <CircleCheckIcon classNames="align-top flex 2xl:w-[30px]"/>
                                 {$t('page.newsletter.qualities.third')}
                             </li>
 
                             <li class="flex gap-2 mb-3 items-start">
-                                <img src="vector.svg" class="align-top flex 2xl:w-[30px]" alt="search">
+                                <CircleCheckIcon classNames="align-top flex 2xl:w-[30px]"/>
                                 {$t('page.newsletter.qualities.fourth')}
                             </li>
                         </ul>

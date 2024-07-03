@@ -3,24 +3,34 @@
 exports[`Spotlight product card > should have match snapshot 1`] = `
 <div>
   <div
-    class="text-2xl  w-2/12 h-10 flex items-center justify-center text-red-500"
+    class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
     role="region"
   >
      
-    <div
-      class="border border-red-500 w-full h-full flex justify-center items-center bg-red-100"
+    <button
+      class="px-2 py-1 focus:outline-none"
     >
-      <svg
-        height="1.2em"
-        viewBox="0 0 24 24"
-        width="1.2em"
+      <div
+        class="h-6 w-6"
       >
-        <path
-          d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
+        <svg
+          fill="none"
+          height="26"
+          viewBox="0 0 18 26"
+          width="18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+            id="Add Button"
+            stroke="#0A3B2F"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
+        </svg>
+      </div>
+    </button>
   </div>
 </div>
 `;

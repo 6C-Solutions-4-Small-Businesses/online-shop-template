@@ -1,7 +1,9 @@
 <script lang="ts">
+    import SearchIcon from '$lib/frontend/components/icons/SearchIcon.svelte'
+
     export let inputId: string
     export let buttonId: string
-    export let width: string
+    export let width: string | undefined = undefined
     export let onSearchSubmitHandler: ((searchTerm: string) => Promise<void>) | undefined = undefined
     export let onSearchTermChangeHandler: ((searchTerm: string) => void) | undefined = undefined
     export let onSearchResetHandler: (() => void) | undefined = undefined
@@ -54,6 +56,6 @@
             disabled={isSearchTermInvalid}
             on:click={() => onSearchSubmitHandler?.call({}, searchTerm)}
     >
-        <img src="search.svg" width="40" alt="search" class={`rounded-r-lg py-1 px-2.5 h-10 text-black ${isSearchTermInvalid ? "bg-primary": "bg-teal-950"} p-1`}>
+        <SearchIcon classNames={`flex items-center rounded-r-lg py-1 px-2.5 h-10 text-black ${isSearchTermInvalid ? "bg-primary": "bg-teal-950"} p-1`}/>
     </button>
 </div>

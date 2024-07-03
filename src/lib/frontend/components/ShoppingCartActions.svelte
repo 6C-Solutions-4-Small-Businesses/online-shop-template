@@ -3,9 +3,10 @@
     import {
         cart,
         decreaseProductSelectedQuantityFromShoppingCartStore,
-        upsertProductToShoppingCartStore
+        upsertProductToShoppingCartStore,
     } from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
-    import {t} from '$translations/index'
+    import RemoveShoppingCartIcon from '$lib/frontend/components/icons/RemoveShoppingCartIcon.svelte'
+    import AddShoppingCartIcon from '$lib/frontend/components/icons/AddShoppingCartIcon.svelte'
 
     export let productId: string
     export let image: string
@@ -55,7 +56,7 @@
 >
     {#if expanded}
         <button class="px-2 py-1 focus:outline-none" on:click={decreaseSelectedQuantity}>
-            <img class="h-5 w-5" src="remove-button.svg" alt={$t('collection.remove')}>
+            <RemoveShoppingCartIcon classNames="h-5 w-5"/>
         </button>
 
         <input class="w-[78px] h-[30px] rounded-[10px] text-center bg-gray text-xs font-semibold"
@@ -64,7 +65,7 @@
     {/if}
 
     <button class="px-2 py-1 focus:outline-none" on:click={increaseSelectedQuantity}>
-        <img alt="add" class="h-6 w-6" src="add-button.svg">
+        <AddShoppingCartIcon classNames="h-6 w-6"/>
     </button>
 
 </div>
