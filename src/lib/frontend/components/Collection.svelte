@@ -14,7 +14,7 @@
     }
 </script>
 
-<div class="w-full py-8">
+<div class="w-full pt-6 pb-10">
     <div class="px-10 py-5 justify-between items-center flex">
         <div class="text-primary text-2xl">{name}</div>
 

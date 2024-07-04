@@ -91,7 +91,7 @@
             isOnHomePage={isOnHomePage}
             on:toggleDrawer={toggleDrawer}
     />
-    <div class="absolute top-0 -z-10 w-full h-full">
+    <div class="{isOnHomePage ? 'top-0' : ''} absolute -z-10 w-full h-full">
         <slot/>
         <Drawer>
             <button

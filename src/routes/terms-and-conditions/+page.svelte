@@ -1,6 +1,7 @@
 <script lang="ts">
     import {t} from '$translations/index'
 </script>
+
 <div class="bg-white flex flex-col items-center">
     <div class="flex flex-col gap-4 mx-10 pb-10">
         <div class="flex flex-col gap-2">
@@ -8,68 +9,44 @@
         </div>
 
         <div class="flex flex-col gap-2 md:gap-3">
-            <span class="text-xl md:text-2xl font-bold">Conditions Générales d'Utilisation</span>
-
+            <span class="text-xl md:text-2xl font-bold">{$t('terms-and-conditions.conditions-of-use')}</span>
             <p class="text-slate-500 text-justify text-lg md:text-xl">
-                Ces conditions générales régissent votre utilisation de l'application web <span class="font-bold">Static Web Site</span>,
-                ci-après dénommée "l'Application". En utilisant cette Application, vous acceptez ces conditions dans
-                leur intégralité. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'Application.
+                {$t('terms-and-conditions.paragraph-1')}
             </p>
         </div>
 
         <div class="flex flex-col gap-2 md:gap-3">
-            <span class="text-xl md:text-2xl font-bold">Acceptation des Conditions</span>
-
+            <span class="text-xl md:text-2xl font-bold">{$t('terms-and-conditions.acceptance-of-conditions')}</span>
             <p class="text-slate-500 text-justify text-lg md:text-xl">
-                En utilisant l'Application, vous acceptez d'être lié par ces conditions générales, ainsi que par notre
-                politique de confidentialité. Si vous n'êtes pas d'accord avec l'une de ces conditions, veuillez ne pas
-                utiliser l'Application.
+                {$t('terms-and-conditions.paragraph-2')}
             </p>
         </div>
 
         <div class="flex flex-col gap-2 md:gap-3">
-            <span class="text-xl md:text-2xl font-bold">Utilisation de l'Application</span>
+            <span class="text-xl md:text-2xl font-bold">{$t('terms-and-conditions.use-of-application')}</span>
             <p class="text-slate-500 text-justify text-lg md:text-xl">
-                Vous pouvez utiliser l'Application à des fins légales et autorisées uniquement. Vous acceptez de ne pas
-                utiliser l'Application à des fins illégales ou interdites par ces conditions. Vous ne devez pas
-                interférer avec
-                le bon fonctionnement de l'Application, ni tenter d'accéder à des zones sécurisées de l'Application sans
-                autorisation.
+                {$t('terms-and-conditions.paragraph-3')}
             </p>
         </div>
+
         <div class="flex flex-col gap-2 md:gap-3">
-            <span class="text-xl md:text-2xl font-bold"> Propriété Intellectuelle</span>
+            <span class="text-xl md:text-2xl font-bold">{$t('terms-and-conditions.intellectual-property')}</span>
             <p class="text-slate-500 text-justify text-lg md:text-xl">
-                L'Application et son contenu, y compris mais sans s'y limiter, le texte, les graphiques, les logos, les
-                images et les clips audio, sont la propriété de <span class="font-bold">6C Solutions</span> et sont
-                protégés par les lois sur la
-                propriété intellectuelle. Vous acceptez de ne pas copier, distribuer, ou modifier le contenu de
-                l'Application sans
-                autorisation écrite préalable.
+                {$t('terms-and-conditions.paragraph-4')}
             </p>
         </div>
+
         <div class="flex flex-col gap-2 md:gap-3">
-            <span class="text-xl md:text-2xl font-bold"> Limitation de Responsabilité</span>
+            <span class="text-xl md:text-2xl font-bold">{$t('terms-and-conditions.limitation-of-liability')}</span>
             <p class="text-slate-500 text-justify text-lg md:text-xl">
-                L'utilisation de l'Application se fait à vos propres risques. En aucun cas, <span
-                    class="font-bold">6C Solutions</span>
-                ne sera
-                responsable des dommages directs, indirects, accessoires, spéciaux ou consécutifs découlant de
-                l'utilisation ou
-                de l'incapacité à utiliser l'Application.
+                {$t('terms-and-conditions.paragraph-5')}
             </p>
         </div>
+
         <div class="flex flex-col gap-2 md:gap-3">
-            <span class="text-xl md:text-2xl font-bold">Modifications des Conditions</span>
+            <span class="text-xl md:text-2xl font-bold">{$t('terms-and-conditions.modifications-of-conditions')}</span>
             <p class="text-slate-500 text-justify text-lg md:text-xl">
-                <span class="font-bold">6C Solutions</span> se réserve le droit de modifier ces conditions à tout
-                moment.
-                Les modifications prendront effet immédiatement après leur publication sur l'Application. En continuant
-                à utiliser l'Application
-                après la publication des modifications, vous acceptez les conditions révisées.
-                <br>
-                Ces conditions générales d'utilisation sont sujettes à changement et peuvent être complétées par des
-                conditions supplémentaires spécifiques à certaines fonctionnalités de l'Application.
+                {$t('terms-and-conditions.paragraph-6')}
             </p>
         </div>
     </div>

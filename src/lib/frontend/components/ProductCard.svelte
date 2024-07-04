@@ -43,7 +43,7 @@
     }
 </script>
 
-<div class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex">
+<div class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex cart-product">
     <div class={`absolute left-0 flex w-12 h-12 top-0 items-center justify-center discount-container ${getDiscountClass()} ${percentage ? 'visible z-10' : 'invisible'}`}>
         <div class="text-white text-xs font-bold">
             -{percentage}%
@@ -51,7 +51,7 @@
     </div>
 
     <div class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex">
-        <Image imageRemoteUrl="{image}" name={name} classes="w-[238px] h-[200px] object-contain scale"/>
+        <Image classes="w-[238px] h-[200px] object-contain scale" imageRemoteUrl="{image}" name={name}/>
     </div>
 
     <div class="w-full absolute flex justify-end top-0 right-0">
@@ -108,5 +108,9 @@
     .discount-bg-high {
         background-color: #ff0000;
         border-radius: 10px 0 20px 0;
+    }
+
+    .cart-product {
+        border: 1px solid #f3f3f3;
     }
 </style>

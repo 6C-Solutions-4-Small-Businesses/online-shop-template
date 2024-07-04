@@ -13,6 +13,23 @@ import {
 } from "./config/ScreenSizeConfig";
 import plugin from 'tailwindcss/plugin'
 
+const themeColors = {
+    'primary': '#0A3B2F',
+    'secondary': '#70C247',
+    'neutral': '#EEEDF0',
+    'stone': '#1D1D1D',
+    'amber-900': '#78350F',
+    'amber-500': '#F59E0B',
+    'neutral-400': '#999999',
+    'neutral-100': '#F7F7F7',
+    'orange-800': '#9A3412',
+    'orange-700': '#C2410C',
+    'error': '#FF0000',
+    gray: '#F2F2F2',
+    red: '#EF4444',
+    transparent: 'transparent',
+}
+
 export default {
     darkMode: 'class',
     content: [
@@ -33,22 +50,7 @@ export default {
             aspectRatio: {
                 1: '1',
             },
-            colors: {
-                'primary': '#0A3B2F',
-                'secondary': '#70C247',
-                'neutral': '#EEEDF0',
-                'stone': '#1D1D1D',
-                'amber-900': '#78350F',
-                'amber-500': '#F59E0B',
-                'neutral-400': '#999999',
-                'neutral-100': '#F7F7F7',
-                'orange-800': '#9A3412',
-                'orange-700': '#C2410C',
-                'error': '#FF0000',
-                gray: '#F2F2F2',
-                red: '#EF4444',
-                transparent: 'transparent',
-            },
+            colors: themeColors,
             fontSize: {
                 8: '8px',
                 10: '10px',
@@ -76,20 +78,24 @@ export default {
             const newUtilities = {
                 '.text-primary': {
                     textAlign: 'center',
-                    color: '#0A3B2F',
+                    color: themeColors.primary,
                     fontWeight: 'bold',
                 },
                 '.text-secondary': {
                     textAlign: 'center',
-                    color: '#0A3B2F',
+                    color: themeColors.primary,
                     fontSize: '0.875rem',
                     fontWeight: '600',
                 },
                 '.text-accent': {
-                    color: '#1D1D1D',
+                    color: themeColors.stone,
                     fontWeight: '400',
                     fontSize: '0.75rem',
+                    lineHeight: 'normal'
                 },
+                '.odd': {
+                    backgroundColor: 'white',
+                }
             };
 
             const options = {

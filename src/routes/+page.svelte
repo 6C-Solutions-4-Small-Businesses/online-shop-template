@@ -147,7 +147,7 @@
         </div>
     </div>
 
-    <div class="bg-neutral w-full my-8">
+    <div class="bg-neutral-100 w-full my-8">
         {#if onSaleCollection != null}
             {#if onSaleCollection.offers.length > 0}
                 <Collection id={onSaleCollection.id} name={onSaleCollection.name} products={onSaleCollection.offers}/>
@@ -222,13 +222,15 @@
             {/if}
         </div>
 
-        {#each $remainingCollections as collection}
+        {#each $remainingCollections as collection, index}
             {#if collection.offers.length > 0}
-                <Collection
-                        id={collection.id}
-                        name={collection.name}
-                        products={collection.offers}
-                />
+                <div class="{index % 2 === 0 ? 'even' : 'odd'}">
+                    <Collection
+                            id={collection.id}
+                            name={collection.name}
+                            products={collection.offers}
+                    />
+                </div>
             {/if}
         {/each}
     </div>
