@@ -20,7 +20,7 @@ exports[`Shopping card product card > should have match snapshot 1`] = `
         class="w-full h-[12px] flex justify-end"
       >
         <div
-          class="font-thin flex items-center text-primary text-sm"
+          class="font-bold flex items-center text-sm text-primary"
         >
           CAD$
           2.50
@@ -30,11 +30,135 @@ exports[`Shopping card product card > should have match snapshot 1`] = `
       <div
         class="w-full h-[100px] flex flex-col justify-end gap-1"
       >
-        <p
-          class="w-full min-h-12 h-12 text-stone text-16 leading-6 font-bold line-clamp-2"
+        <div
+          class="flex items-center w-full min-h-12 h-12"
         >
-          a-product-name
-        </p>
+          <p
+            class="w-full text-stone text-16 leading-6 font-bold line-clamp-2"
+          >
+            a-product-name
+          </p>
+        </div>
+         
+        <div
+          class="w-full h-[50px] pb-2.5"
+        >
+          <div
+            class="px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] w-[161px] h-[50px] justify-center items-center gap-2.5 inline-flex"
+            role="region"
+          >
+            <button
+              class="px-2 py-1 focus:outline-none"
+            >
+              <div
+                class="h-5 w-5"
+              >
+                <svg
+                  fill="none"
+                  height="22"
+                  viewBox="0 0 18 22"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 4.66666H2.77778L3.13333 6.44444M3.13333 6.44444H17L13.4444 13.5555H4.55556M3.13333 6.44444L4.55556 13.5555M4.55556 13.5555L2.51743 15.5937C1.95746 16.1537 2.35405 17.1111 3.14596 17.1111H13.4444M13.4444 17.1111C12.4626 17.1111 11.6667 17.907 11.6667 18.8889C11.6667 19.8707 12.4626 20.6667 13.4444 20.6667C14.4263 20.6667 15.2222 19.8707 15.2222 18.8889C15.2222 17.907 14.4263 17.1111 13.4444 17.1111ZM6.33333 1.33333H13.4444M6.33333 18.8889C6.33333 19.8707 5.5374 20.6667 4.55556 20.6667C3.57372 20.6667 2.77778 19.8707 2.77778 18.8889C2.77778 17.907 3.57372 17.1111 4.55556 17.1111C5.5374 17.1111 6.33333 17.907 6.33333 18.8889Z"
+                    id="Remove Button"
+                    stroke="#0A3B2F"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </button>
+             
+            <input
+              class="w-[78px] h-[30px] rounded-[10px] text-center bg-gray text-xs font-semibold"
+              type="text"
+            />
+             
+            <button
+              class="px-2 py-1 focus:outline-none"
+            >
+              <div
+                class="h-6 w-6"
+              >
+                <svg
+                  fill="none"
+                  height="26"
+                  viewBox="0 0 18 26"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                    id="Add Button"
+                    stroke="#0A3B2F"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Shopping card product card with promotion > should have match snapshot 1`] = `
+<div>
+  <div
+    class="relative w-[367px] h-[149px] p-[15px] flex gap-4 bg-white rounded-10"
+  >
+    <div
+      class="absolute left-0 flex w-12 h-12 top-0 items-center justify-center rounded-tl-[10px] rounded-tr-none rounded-br-[20px] rounded-bl-none bg-promotion-high visible z-10"
+    >
+      <div
+        class="text-white text-xs font-bold"
+      >
+        -
+        85
+        %
+      </div>
+    </div>
+     
+    <img
+      alt="a-product-name"
+      class="w-[161px] h-[119px] object-contain scale"
+      src="a-product-image"
+      width="160"
+    />
+     
+    <div
+      class="w-[161px] h-[119px] flex flex-col justify-between"
+    >
+      <div
+        class="w-full h-[12px] flex justify-end"
+      >
+        <div
+          class="font-bold flex items-center text-sm text-error"
+        >
+          CAD$
+          2.99
+        </div>
+      </div>
+       
+      <div
+        class="w-full h-[100px] flex flex-col justify-end gap-1"
+      >
+        <div
+          class="flex items-center w-full min-h-12 h-12"
+        >
+          <p
+            class="w-full text-stone text-16 leading-6 font-bold line-clamp-2"
+          >
+            a-product-name
+          </p>
+        </div>
          
         <div
           class="w-full h-[50px] pb-2.5"
