@@ -54,8 +54,8 @@
                             id={shoppingCartProductState.id}
                             name={shoppingCartProductState.name}
                             image={shoppingCartProductState.image}
-                            selectedQuantity={shoppingCartProductState.selectedQuantity}
                             price={shoppingCartProductState.price}
+                            percentage={shoppingCartProductState.promotion?.percentage}
                     />
                 {/if}
             {/each}

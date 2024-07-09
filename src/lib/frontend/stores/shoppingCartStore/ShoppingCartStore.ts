@@ -85,18 +85,6 @@ export function decreaseProductSelectedQuantityFromShoppingCartStore(
     }
 }
 
-export function removeProductFromShoppingCartStore(id: string): void {
-    if (cart) {
-        cart.update((previousCartValue: Map<string, ShoppingCartProductState>) => {
-            if (previousCartValue.has(id)) {
-                previousCartValue.delete(id)
-            }
-
-            return previousCartValue
-        })
-    }
-}
-
 export function clearShoppingCartStore(): void {
     if (cart) {
         cart.set(new Map())

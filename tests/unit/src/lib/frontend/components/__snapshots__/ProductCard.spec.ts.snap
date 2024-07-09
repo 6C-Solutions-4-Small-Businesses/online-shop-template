@@ -5,17 +5,6 @@ exports[`Product card > should have match snapshot 1`] = `
   <div
     class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
   >
-    <div
-      class="absolute left-0 flex w-12 h-12 top-0 items-center justify-center discount-container undefined invisible svelte-rta6ws"
-    >
-      <div
-        class="text-white text-xs font-bold"
-      >
-        -
-        null
-        %
-      </div>
-    </div>
      
     <div
       class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
@@ -32,7 +21,7 @@ exports[`Product card > should have match snapshot 1`] = `
       class="w-full absolute flex justify-end top-0 right-0"
     >
       <div
-        class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+        class="px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] min-w-[40px] h-[50px] shadow justify-center items-center gap-2.5 inline-flex"
         role="region"
       >
          
