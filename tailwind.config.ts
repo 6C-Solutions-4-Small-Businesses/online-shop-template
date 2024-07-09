@@ -55,10 +55,14 @@ export default {
                 8: '8px',
                 10: '10px',
                 15: '15px',
+                16: '16px',
             },
             blur: {
                 xs: '2px',
             },
+            borderRadius: {
+                10: '10px',
+            }
         },
     },
     plugins: [

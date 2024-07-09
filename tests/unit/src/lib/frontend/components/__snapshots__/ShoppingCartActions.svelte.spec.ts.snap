@@ -3,7 +3,7 @@
 exports[`Spotlight product card > should have match snapshot 1`] = `
 <div>
   <div
-    class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+    class="px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] min-w-[40px] h-[50px] shadow justify-center items-center gap-2.5 inline-flex"
     role="region"
   >
      

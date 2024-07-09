@@ -1,74 +1,36 @@
 <script lang="ts">
-    import {
-        decreaseProductSelectedQuantityFromShoppingCartStore,
-        removeProductFromShoppingCartStore,
-        upsertProductToShoppingCartStore
-    } from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
-    import DeleteIcon from '~icons/mdi/delete-outline'
     import Image from '$lib/frontend/components/Image.svelte'
+    import ShoppingCartActions from '$lib/frontend/components/ShoppingCartActions.svelte'
+    import DiscountSticker from '$lib/frontend/components/DiscountSticker.svelte'
 
     export let id: string
     export let name: string
     export let image: string
-    export let selectedQuantity: number
     export let price: number
-
-    function changeSelectedQuantity(event: Event) {
-        const quantity = parseInt((event.target as HTMLInputElement).value)
-        if (!isNaN(quantity)) {
-            selectedQuantity = quantity
-            upsertProductToShoppingCartStore(id, name, image, selectedQuantity, price)
-        }
-    }
-
-    function increaseSelectedQuantity(): void {
-        ++selectedQuantity
-        upsertProductToShoppingCartStore(id, name, image, selectedQuantity, price)
-    }
-
-    function decreaseSelectedQuantity(): void {
-        if (selectedQuantity != 0) {
-            --selectedQuantity
-            decreaseProductSelectedQuantityFromShoppingCartStore(id, selectedQuantity)
-        }
-    }
-
-    function deleteShoppingCartProduct(): void {
-        removeProductFromShoppingCartStore(id)
-    }
+    export let percentage: number | null | undefined = null
 </script>
 
-<div class="h-32 xl:h-36 flex bg-white rounded-md shadow-md">
-    <Image imageRemoteUrl="{image}" name={name} classes="w-2/5 p-2 h-full product-image object-contain"/>
-    <div class="w-3/5 flex flex-col justify-between hover:bg-orange-100 pl-2">
-        <div class="w-full flex justify-between">
-            <div class="w-10/12 font-thin flex justify-center items-center">{name}</div>
-            <button
-                    class="w-9 h-9 flex justify-center items-center text-xl shadow-md border border-orange-500 text-red-500 bg-orange-100"
-                    on:click={deleteShoppingCartProduct}
-            >
-                <DeleteIcon/>
-            </button>
+<div class="relative w-[367px] h-[149px] p-[15px] flex gap-4 bg-white rounded-10">
+    {#if (percentage)}
+        <DiscountSticker percentage={percentage}/>
+    {/if}
+    <Image classes="w-[161px] h-[119px] object-contain scale" imageRemoteUrl="{image}" name={name}/>
+    <div class="w-[161px] h-[119px] flex flex-col justify-between">
+        <div class="w-full h-[12px] flex justify-end">
+            <div class="font-thin flex items-center text-primary text-sm">CAD${(price / 100).toFixed(2)}</div>
         </div>
-        <div class="flex justify-between h-10">
-            <div class="w-4/12 font-thin flex items-center">${(price / 100).toFixed(2)}</div>
-            <div class="w-7/12 flex">
-                <button
-                        class="w-3/12 text-2xl text-red-500 bg-orange-100"
-                        on:click={decreaseSelectedQuantity}
-                >-
-                </button>
-                <input
-                        bind:value={selectedQuantity}
-                        class="w-6/12 focus:outline-none text-black text-center rounded-none"
-                        on:input={changeSelectedQuantity}
-                        type="text"
-                >
-                <button
-                        class="w-3/12 text-2xl text-red-500 bg-orange-100"
-                        on:click={increaseSelectedQuantity}
-                >+
-                </button>
+        <div class="w-full h-[100px] flex flex-col justify-end gap-1">
+            <p class="w-full min-h-12 h-12 text-stone text-16 leading-6 font-bold line-clamp-2">{name}</p>
+            <div class="w-full h-[50px] pb-2.5">
+                <ShoppingCartActions
+                        full
+                        width={161}
+                        height={50}
+                        productId={id}
+                        name={name}
+                        image={image}
+                        regularPrice={price}
+                />
             </div>
         </div>
     </div>

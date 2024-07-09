@@ -13,6 +13,10 @@
     export let name: string
     export let regularPrice: number
     export let salePrice: number | undefined | null = null
+    export let full: boolean = false
+    export let width: number = 40
+    export let height: number = 50
+
 
     let expanded = false
     let selectedQuantity: Writable<number> = writable(cart && $cart.has(productId) ? $cart.get(productId)?.selectedQuantity : 0)
@@ -49,12 +53,12 @@
     }
 </script>
 
-<div class="min-w-[40px] h-[50px] px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] shadow justify-center items-center gap-2.5 inline-flex"
+<div class={`px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] ${full ? `w-[${width}px] h-[${height}px]` : `min-w-[${width}px] h-[${height}px] shadow`} justify-center items-center gap-2.5 inline-flex`}
      on:mouseenter={() => expanded = true}
      on:mouseleave={() => expanded = false}
      role="region"
 >
-    {#if expanded}
+    {#if (expanded || full)}
         <button class="px-2 py-1 focus:outline-none" on:click={decreaseSelectedQuantity}>
             <RemoveShoppingCartIcon classNames="h-5 w-5"/>
         </button>
