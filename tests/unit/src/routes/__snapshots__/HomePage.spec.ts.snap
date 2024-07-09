@@ -310,10 +310,10 @@ exports[`Home page > should have match snapshot 1`] = `
     </div>
      
     <div
-      class="bg-neutral w-full my-8"
+      class="bg-neutral-100 w-full my-8"
     >
       <div
-        class="w-full py-8"
+        class="w-full pt-6 pb-10"
       >
         <div
           class="px-10 py-5 justify-between items-center flex"
@@ -666,205 +666,210 @@ exports[`Home page > should have match snapshot 1`] = `
       </div>
        
       <div
-        class="w-full py-8"
+        class="even"
       >
         <div
-          class="px-10 py-5 justify-between items-center flex"
+          class="w-full pt-6 pb-10"
         >
           <div
-            class="text-primary text-2xl"
+            class="px-10 py-5 justify-between items-center flex"
           >
-            Nous vous recommandons
+            <div
+              class="text-primary text-2xl"
+            >
+              Nous vous recommandons
+            </div>
+             
+            <div
+              class="justify-end items-center gap-2.5 flex"
+            >
+              <button
+                class="text-secondary flex items-center capitalize"
+              >
+                
+                 
+                <div
+                  class="ml-2"
+                >
+                  <svg
+                    fill="none"
+                    height="17"
+                    viewBox="0 0 10 17"
+                    width="10"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L8.5 8.5L1 16"
+                      id="Vector"
+                      stroke="#0A3B2F"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </div>
+              </button>
+               
+              <div
+                class="px-2 py-1 rounded-sm justify-center items-center gap-2.5 flex"
+              />
+            </div>
           </div>
            
           <div
-            class="justify-end items-center gap-2.5 flex"
+            class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-6"
           >
-            <button
-              class="text-secondary flex items-center capitalize"
+            <div
+              class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
             >
-              
                
               <div
-                class="ml-2"
+                class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
               >
-                <svg
-                  fill="none"
-                  height="17"
-                  viewBox="0 0 10 17"
-                  width="10"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 1L8.5 8.5L1 16"
-                    id="Vector"
-                    stroke="#0A3B2F"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                  />
-                </svg>
+                <img
+                  alt="product-7"
+                  class="w-[238px] h-[200px] object-contain scale"
+                  src="an-image-url"
+                  width="160"
+                />
               </div>
-            </button>
-             
+               
+              <div
+                class="w-full absolute flex justify-end top-0 right-0"
+              >
+                <div
+                  class="px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] min-w-[40px] h-[50px] shadow justify-center items-center gap-2.5 inline-flex"
+                  role="region"
+                >
+                   
+                  <button
+                    class="px-2 py-1 focus:outline-none"
+                  >
+                    <div
+                      class="h-6 w-6"
+                    >
+                      <svg
+                        fill="none"
+                        height="26"
+                        viewBox="0 0 18 26"
+                        width="18"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                          id="Add Button"
+                          stroke="#0A3B2F"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+               
+              <div
+                class="w-full flex-col justify-start items-start gap-2.5 flex"
+              >
+                <div
+                  class="w-full justify-between items-center flex"
+                >
+                  <div
+                    class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                  >
+                    product-7
+                  </div>
+                   
+                  <div
+                    class="text-primary text-15 flex ml-3"
+                  >
+                    CAD$
+                    1
+                    .
+                    00
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
             <div
-              class="px-2 py-1 rounded-sm justify-center items-center gap-2.5 flex"
-            />
+              class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+            >
+               
+              <div
+                class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
+              >
+                <img
+                  alt="product-8"
+                  class="w-[238px] h-[200px] object-contain scale"
+                  src="an-image-url"
+                  width="160"
+                />
+              </div>
+               
+              <div
+                class="w-full absolute flex justify-end top-0 right-0"
+              >
+                <div
+                  class="px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] min-w-[40px] h-[50px] shadow justify-center items-center gap-2.5 inline-flex"
+                  role="region"
+                >
+                   
+                  <button
+                    class="px-2 py-1 focus:outline-none"
+                  >
+                    <div
+                      class="h-6 w-6"
+                    >
+                      <svg
+                        fill="none"
+                        height="26"
+                        viewBox="0 0 18 26"
+                        width="18"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
+                          id="Add Button"
+                          stroke="#0A3B2F"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+               
+              <div
+                class="w-full flex-col justify-start items-start gap-2.5 flex"
+              >
+                <div
+                  class="w-full justify-between items-center flex"
+                >
+                  <div
+                    class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
+                  >
+                    product-8
+                  </div>
+                   
+                  <div
+                    class="text-primary text-15 flex ml-3"
+                  >
+                    CAD$
+                    8
+                    .
+                    00
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
          
-        <div
-          class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-6"
-        >
-          <div
-            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
-          >
-             
-            <div
-              class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
-            >
-              <img
-                alt="product-7"
-                class="w-[238px] h-[200px] object-contain scale"
-                src="an-image-url"
-                width="160"
-              />
-            </div>
-             
-            <div
-              class="w-full absolute flex justify-end top-0 right-0"
-            >
-              <div
-                class="px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] min-w-[40px] h-[50px] shadow justify-center items-center gap-2.5 inline-flex"
-                role="region"
-              >
-                 
-                <button
-                  class="px-2 py-1 focus:outline-none"
-                >
-                  <div
-                    class="h-6 w-6"
-                  >
-                    <svg
-                      fill="none"
-                      height="26"
-                      viewBox="0 0 18 26"
-                      width="18"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
-                        id="Add Button"
-                        stroke="#0A3B2F"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </div>
-            </div>
-             
-            <div
-              class="w-full flex-col justify-start items-start gap-2.5 flex"
-            >
-              <div
-                class="w-full justify-between items-center flex"
-              >
-                <div
-                  class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
-                >
-                  product-7
-                </div>
-                 
-                <div
-                  class="text-primary text-15 flex ml-3"
-                >
-                  CAD$
-                  1
-                  .
-                  00
-                   
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
-          >
-             
-            <div
-              class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex"
-            >
-              <img
-                alt="product-8"
-                class="w-[238px] h-[200px] object-contain scale"
-                src="an-image-url"
-                width="160"
-              />
-            </div>
-             
-            <div
-              class="w-full absolute flex justify-end top-0 right-0"
-            >
-              <div
-                class="px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] min-w-[40px] h-[50px] shadow justify-center items-center gap-2.5 inline-flex"
-                role="region"
-              >
-                 
-                <button
-                  class="px-2 py-1 focus:outline-none"
-                >
-                  <div
-                    class="h-6 w-6"
-                  >
-                    <svg
-                      fill="none"
-                      height="26"
-                      viewBox="0 0 18 26"
-                      width="18"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 8.33334H2.77778L3.13333 10.1111M3.13333 10.1111H17L13.4444 17.2222H4.55556M3.13333 10.1111L4.55556 17.2222M4.55556 17.2222L2.51743 19.2604C1.95746 19.8204 2.35405 20.7778 3.14596 20.7778H13.4444M13.4444 20.7778C12.4626 20.7778 11.6667 21.5737 11.6667 22.5556C11.6667 23.5374 12.4626 24.3333 13.4444 24.3333C14.4263 24.3333 15.2222 23.5374 15.2222 22.5556C15.2222 21.5737 14.4263 20.7778 13.4444 20.7778ZM9.88889 1.66667V8.33334M6.33333 5.00001H13.4444M6.33333 22.5556C6.33333 23.5374 5.5374 24.3333 4.55556 24.3333C3.57372 24.3333 2.77778 23.5374 2.77778 22.5556C2.77778 21.5737 3.57372 20.7778 4.55556 20.7778C5.5374 20.7778 6.33333 21.5737 6.33333 22.5556Z"
-                        id="Add Button"
-                        stroke="#0A3B2F"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </div>
-            </div>
-             
-            <div
-              class="w-full flex-col justify-start items-start gap-2.5 flex"
-            >
-              <div
-                class="w-full justify-between items-center flex"
-              >
-                <div
-                  class="text-accent pl-1.5 overflow-hidden max-h-[35px]"
-                >
-                  product-8
-                </div>
-                 
-                <div
-                  class="text-primary text-15 flex ml-3"
-                >
-                  CAD$
-                  8
-                  .
-                  00
-                   
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       
     </div>

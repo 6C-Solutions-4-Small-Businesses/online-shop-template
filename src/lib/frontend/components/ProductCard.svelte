@@ -2,7 +2,7 @@
     import ShoppingCartActions from '$lib/frontend/components/ShoppingCartActions.svelte'
     import {getAbbreviatedUnit} from "$lib/frontend/core/Helper";
     import Image from '$lib/frontend/components/Image.svelte'
-    import DiscountSticker from '$lib/frontend/components/DiscountSticker.svelte'
+    import PromotionSticker from '$lib/frontend/components/PromotionSticker.svelte'
 
     export let id: string
     export let name: string
@@ -28,7 +28,7 @@
 
 <div class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex">
     {#if (percentage)}
-        <DiscountSticker percentage={percentage}/>
+        <PromotionSticker percentage={percentage}/>
     {/if}
 
     <div class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex">

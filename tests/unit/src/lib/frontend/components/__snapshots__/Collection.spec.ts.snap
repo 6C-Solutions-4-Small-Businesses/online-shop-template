@@ -3,7 +3,7 @@
 exports[`Collection > should have match snapshot 1`] = `
 <div>
   <div
-    class="w-full py-8"
+    class="w-full pt-6 pb-10"
   >
     <div
       class="px-10 py-5 justify-between items-center flex"

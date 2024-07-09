@@ -25,9 +25,12 @@ const themeColors = {
     'orange-800': '#9A3412',
     'orange-700': '#C2410C',
     'error': '#FF0000',
-    gray: '#F2F2F2',
-    red: '#EF4444',
-    transparent: 'transparent',
+    'gray': '#F2F2F2',
+    'red': '#EF4444',
+    'transparent': 'transparent',
+    'promotion-low': '#a67b5b',
+    'promotion-medium': '#fd7e14',
+    'promotion-high': '#ff0000',
 }
 
 export default {
@@ -62,7 +65,7 @@ export default {
             },
             borderRadius: {
                 10: '10px',
-            }
+            },
         },
     },
     plugins: [

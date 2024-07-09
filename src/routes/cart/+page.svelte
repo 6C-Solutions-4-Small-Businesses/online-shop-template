@@ -16,7 +16,7 @@
             const newShoppingCartStoreArrayValue = Array.from(newShoppingCartStoreMapValue)
             totalPrice = newShoppingCartStoreArrayValue.reduce(
                 (accumulator, [_, currentValue]) => accumulator + (currentValue.selectedQuantity * currentValue.price),
-                0
+                0,
             )
         } else {
             totalPrice = 0
@@ -56,6 +56,7 @@
                             image={shoppingCartProductState.image}
                             price={shoppingCartProductState.price}
                             percentage={shoppingCartProductState.promotion?.percentage}
+                            salePrice={shoppingCartProductState.promotion?.salePrice}
                     />
                 {/if}
             {/each}
