@@ -1,4 +1,5 @@
 import type {PromotionSummaryPresentation} from '$lib/frontend/presentations/PromotionSummaryPresentation'
+import type {CategorySummaryPresentation} from '$lib/frontend/presentations/CategorySummaryPresentation'
 
 export type OfferSummaryPresentation = {
     id: string
@@ -9,4 +10,5 @@ export type OfferSummaryPresentation = {
     isSoldByQuantities: boolean
     unit: string | null
     promotion?: PromotionSummaryPresentation | null
+    categories?: CategorySummaryPresentation[] | null
 }
