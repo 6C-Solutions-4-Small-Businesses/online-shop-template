@@ -1,0 +1,45 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Page at /cart > should have the expected HTML structure 1`] = `
+<div>
+  <div
+    class="w-full max-w-full h-screen bg-slate-100 overflow-y-scroll md:overflow-hidden"
+  >
+    <div
+      class="title text-3xl font-thin pt-5 pl-5"
+    >
+      Shopping Cart
+    </div>
+     
+    <div
+      class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4"
+    >
+      
+    </div>
+  </div>
+   
+  <div
+    class="sticky flex flex-col justify-center items-center gap-5 bottom-0 bg-white h-42 sm:flex-row sm:justify-end sm:items-center sm:h-22 md:h-30"
+  >
+    <div
+      class="text-xl font-semibold text-primary"
+    >
+      Sub Total: 
+      <span
+        class="text-28 leading-[33px] font-semibold text-primary"
+      >
+        $
+        NaN
+      </span>
+    </div>
+     
+    <button
+      class="uppercase w-[300px] h-[39px] mr-6 rounded-[10px] text-white bg-primary font-semibold text-base"
+      data-testid="checkout-button"
+    >
+      checkout
+    </button>
+  </div>
+  
+</div>
+`;
