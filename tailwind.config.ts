@@ -59,6 +59,12 @@ export default {
                 10: '10px',
                 15: '15px',
                 16: '16px',
+                28: '28px',
+            },
+            height: {
+                22: '91px',
+                30: '120px',
+                42: '150px'
             },
             blur: {
                 xs: '2px',

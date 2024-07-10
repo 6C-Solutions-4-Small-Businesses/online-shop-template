@@ -71,10 +71,10 @@
     {/if}
 </div>
 {#if $cart.size > 0}
-    <div class="sticky flex justify-end items-center bottom-0 bg-green-50 h-14">
-        <div class="mr-10 text-lg font-thin">Sub Total: <span
-                class="text-3xl font-light text-orange-500">${(totalPrice / 100).toFixed(2)}</span></div>
-        <button class="uppercase w-36 h-11 mr-10 border border-orange-500 rounded-sm text-orange-500 bg-orange-50"
+    <div class="sticky flex flex-col justify-center items-center gap-5 bottom-0 bg-white h-42 sm:flex-row sm:justify-end sm:items-center sm:h-22 md:h-30">
+        <div class="text-xl font-semibold text-primary">Sub Total: <span
+                class="text-28 leading-[33px] font-semibold text-primary">${(totalPrice / 100).toFixed(2)}</span></div>
+        <button class="uppercase w-[300px] h-[39px] mr-6 rounded-[10px] text-white bg-primary font-semibold text-base"
                 data-testid="checkout-button"
                 on:click={startCheckout}>checkout
         </button>
