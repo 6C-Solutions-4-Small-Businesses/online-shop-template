@@ -9,16 +9,18 @@ import {afterEach, type Mock} from 'vitest'
 import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
 
 const {cart} = await vi.hoisted(
-    () => import('$mocks/src/lib/frontend/stores/ShoppingCartStore')
+    () => import('$mocks/src/lib/frontend/stores/ShoppingCartStore'),
 )
 
 describe('Page at /cart', () => {
     const checkoutButtonTestId = 'checkout-button'
 
+    let container: HTMLElement
+
     beforeEach(() => {
         vi.mock('$lib/frontend/stores/shoppingCartStore/ShoppingCartStore', async () => {
             return {
-                cart
+                cart,
             }
         })
         vi.mock('@skeletonlabs/skeleton', async () => {
@@ -26,16 +28,22 @@ describe('Page at /cart', () => {
             const {modalStore} = await import('$mocks/src/lib/frontend/stores/ModalStore')
             return {
                 ...actual,
-                getModalStore: (): ModalStore => modalStore
+                getModalStore: (): ModalStore => modalStore,
             }
         })
         vi.mock('$app/navigation', async () => {
             return {
-                goto: vi.fn()
+                goto: vi.fn(),
             }
         })
 
-        render(CartPage)
+        const result = render(CartPage)
+        container = result.container
+    })
+
+    it('should have the expected HTML structure', () => {
+
+        expect(container).toMatchSnapshot()
     })
 
     describe('Checkout Button', () => {
@@ -59,7 +67,7 @@ describe('Page at /cart', () => {
             beforeAll(() => {
                 vi.mock('$lib/frontend/stores/authentication/Authentication', async () => {
                     return {
-                        openAuthenticationModal: vi.fn()
+                        openAuthenticationModal: vi.fn(),
                     }
                 })
             })
@@ -73,16 +81,16 @@ describe('Page at /cart', () => {
                 openAuthenticationModalMock.mockResolvedValue(
                     mock<UserAccountSummaryPresentation>({
                         email: userEmail,
-                        customerId: existingUserCustomerId
-                    })
+                        customerId: existingUserCustomerId,
+                    }),
                 )
 
                 checkoutButton.click()
 
                 await waitFor(() =>
                     expect(goto).toHaveBeenCalledWith(
-                        `/cart/checkout?customerId=${encodeURIComponent(existingUserCustomerId)}`
-                    )
+                        `/cart/checkout?customerId=${encodeURIComponent(existingUserCustomerId)}`,
+                    ),
                 )
             })
 
@@ -92,7 +100,7 @@ describe('Page at /cart', () => {
                 checkoutButton.click()
 
                 await waitFor(() =>
-                    expect(goto).toHaveBeenCalledWith(`/cart/checkout?email=${encodeURIComponent(userEmail)}`)
+                    expect(goto).toHaveBeenCalledWith(`/cart/checkout?email=${encodeURIComponent(userEmail)}`),
                 )
             })
 
@@ -107,7 +115,7 @@ describe('Page at /cart', () => {
                 checkoutButton.click()
 
                 await waitFor(() =>
-                    expect(goto).toHaveBeenCalledWith(`/cart/checkout?email=${encodeURIComponent(userEmail)}&phoneNumber=${encodeURIComponent(phoneNumber)}`)
+                    expect(goto).toHaveBeenCalledWith(`/cart/checkout?email=${encodeURIComponent(userEmail)}&phoneNumber=${encodeURIComponent(phoneNumber)}`),
                 )
             })
         })
