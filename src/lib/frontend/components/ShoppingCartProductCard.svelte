@@ -2,6 +2,13 @@
     import Image from '$lib/frontend/components/Image.svelte'
     import ShoppingCartActions from '$lib/frontend/components/ShoppingCartActions.svelte'
     import PromotionSticker from '$lib/frontend/components/PromotionSticker.svelte'
+    import {
+        cart,
+        decreaseProductSelectedQuantity,
+        increaseProductSelectedQuantity,
+        modifyProductSelectedQuantity
+    } from "$lib/frontend/stores/shoppingCartStore/ShoppingCartStore";
+    import {writable, type Writable} from "svelte/store";
 
     export let id: string
     export let name: string
@@ -9,6 +16,24 @@
     export let price: number
     export let percentage: number | null | undefined = null
     export let salePrice: number | null | undefined = null
+
+    let selectedQuantity: Writable<number>
+    $:selectedQuantity = writable(cart && $cart.has(id) ? $cart.get(id)?.selectedQuantity : 0)
+
+    function changeSelectedQuantity(event: Event): void {
+        const quantity = parseInt((event.target as HTMLInputElement).value)
+        if (!isNaN(quantity)) {
+
+            modifyProductSelectedQuantity(
+                id,
+                name,
+                image,
+                quantity,
+                salePrice,
+                price,
+            )
+        }
+    }
 </script>
 
 <div class="relative w-[367px] h-[149px] p-[15px] flex gap-4 bg-white rounded-10">
@@ -27,13 +52,13 @@
             </div>
             <div class="w-full h-[50px] pb-2.5">
                 <ShoppingCartActions
+                        selectedQuantity={$selectedQuantity}
+                        changeSelectedQuantityHandler={changeSelectedQuantity}
+                        decreaseSelectedQuantityHandler={() => decreaseProductSelectedQuantity(id)}
                         full
                         height={50}
+                        increaseSelectedQuantityHandler={() =>increaseProductSelectedQuantity(id,name,image,salePrice,price)}
                         width={161}
-                        image={image}
-                        name={name}
-                        productId={id}
-                        regularPrice={price}
                 />
             </div>
         </div>
