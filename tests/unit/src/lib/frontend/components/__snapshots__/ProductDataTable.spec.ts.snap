@@ -74,9 +74,7 @@ exports[`Product data table > when on the any other page > should have match sna
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              1
-              .
-              00
+              1.00
                
             </div>
           </div>
@@ -148,9 +146,7 @@ exports[`Product data table > when on the any other page > should have match sna
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              8
-              .
-              00
+              8.00
                
               <span>
                 /
@@ -226,9 +222,7 @@ exports[`Product data table > when on the any other page > should have match sna
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              12
-              .
-              00
+              12.00
                
             </div>
           </div>
@@ -394,9 +388,7 @@ exports[`Product data table > when on the first page > should have match snapsho
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              1
-              .
-              00
+              1.00
                
             </div>
           </div>
@@ -468,9 +460,7 @@ exports[`Product data table > when on the first page > should have match snapsho
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              8
-              .
-              00
+              8.00
                
               <span>
                 /
@@ -546,9 +536,7 @@ exports[`Product data table > when on the first page > should have match snapsho
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              12
-              .
-              00
+              12.00
                
             </div>
           </div>
@@ -716,9 +704,7 @@ exports[`Product data table > when on the last page > should have match snapshot
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              1
-              .
-              00
+              1.00
                
             </div>
           </div>
@@ -790,9 +776,7 @@ exports[`Product data table > when on the last page > should have match snapshot
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              8
-              .
-              00
+              8.00
                
               <span>
                 /
@@ -868,9 +852,7 @@ exports[`Product data table > when on the last page > should have match snapshot
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              12
-              .
-              00
+              12.00
                
             </div>
           </div>

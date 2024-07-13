@@ -17,7 +17,7 @@
     export let regularPrice: number
     export let isSoldByQuantities: boolean
     export let unit: string | null
-    export let salePrice: number | undefined | null = null
+    export let salePrice: number | undefined  = undefined
     export let percentage: number | null | undefined = null
 
     let selectedQuantity: Writable<number>
@@ -34,6 +34,7 @@
                 quantity,
                 salePrice,
                 regularPrice,
+                percentage,
                 isSoldByQuantities,
                 unit
             )
@@ -59,8 +60,9 @@
                         id,
                         name,
                         image,
-                        salePrice,
                         regularPrice,
+                        salePrice,
+                        percentage,
                         isSoldByQuantities,
                         unit
                         )

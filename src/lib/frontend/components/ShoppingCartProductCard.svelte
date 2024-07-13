@@ -14,8 +14,8 @@
     export let name: string
     export let image: string
     export let price: number
+    export let salePrice: number | undefined = undefined
     export let percentage: number | null | undefined = null
-    export let salePrice: number | null | undefined = null
 
     let selectedQuantity: Writable<number>
     $:selectedQuantity = writable(cart && $cart.has(id) ? $cart.get(id)?.selectedQuantity : 0)
@@ -52,12 +52,12 @@
             </div>
             <div class="w-full h-[50px] pb-2.5">
                 <ShoppingCartActions
-                        selectedQuantity={$selectedQuantity}
                         changeSelectedQuantityHandler={changeSelectedQuantity}
                         decreaseSelectedQuantityHandler={() => decreaseProductSelectedQuantity(id)}
                         full
                         height={50}
-                        increaseSelectedQuantityHandler={() =>increaseProductSelectedQuantity(id,name,image,salePrice,price)}
+                        increaseSelectedQuantityHandler={() =>increaseProductSelectedQuantity(id,name,image,price)}
+                        selectedQuantity={$selectedQuantity}
                         width={161}
                 />
             </div>

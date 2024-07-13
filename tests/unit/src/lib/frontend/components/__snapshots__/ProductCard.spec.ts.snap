@@ -68,9 +68,7 @@ exports[`Product card > should have match snapshot 1`] = `
           class="text-primary text-15 flex ml-3"
         >
           CAD$
-          2
-          .
-          50
+          2.50
            
         </div>
       </div>
@@ -164,18 +162,14 @@ exports[`Product card with promotion > should have match snapshot 1`] = `
               class="text-primary text-[8px] line-through"
             >
               CAD$
-              2
-              .
-              50
+              2.50
             </span>
              
             <div
               class="text-center text-error text-15 font-bold flex flex-row ml-3"
             >
               CAD$
-              1
-              .
-              50
+              1.50
                
             </div>
           </div>
