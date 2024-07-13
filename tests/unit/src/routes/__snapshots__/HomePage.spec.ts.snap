@@ -429,9 +429,7 @@ exports[`Home page > should have match snapshot 1`] = `
                   class="text-primary text-15 flex ml-3"
                 >
                   CAD$
-                  1
-                  .
-                  00
+                  1.00
                    
                 </div>
               </div>
@@ -503,9 +501,7 @@ exports[`Home page > should have match snapshot 1`] = `
                   class="text-primary text-15 flex ml-3"
                 >
                   CAD$
-                  8
-                  .
-                  00
+                  8.00
                    
                 </div>
               </div>
@@ -577,9 +573,7 @@ exports[`Home page > should have match snapshot 1`] = `
                   class="text-primary text-15 flex ml-3"
                 >
                   CAD$
-                  12
-                  .
-                  00
+                  12.00
                    
                 </div>
               </div>
@@ -785,9 +779,7 @@ exports[`Home page > should have match snapshot 1`] = `
                     class="text-primary text-15 flex ml-3"
                   >
                     CAD$
-                    1
-                    .
-                    00
+                    1.00
                      
                   </div>
                 </div>
@@ -859,9 +851,7 @@ exports[`Home page > should have match snapshot 1`] = `
                     class="text-primary text-15 flex ml-3"
                   >
                     CAD$
-                    8
-                    .
-                    00
+                    8.00
                      
                   </div>
                 </div>

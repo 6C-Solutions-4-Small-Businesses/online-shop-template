@@ -35,8 +35,9 @@ export function modifyProductSelectedQuantity(
     name: string,
     image: string,
     selectedQuantity: number,
-    salePrice: number | null | undefined,
+    salePrice: number | undefined,
     regularPrice: number,
+    percentage: number | null | undefined = null,
     isSoldByQuantities: boolean | undefined = false,
     unit: string | null = 'Unit',
     description: string | undefined = '',
@@ -51,7 +52,7 @@ export function modifyProductSelectedQuantity(
             } else {
                 previousCartValue.set(
                     id,
-                    getDefaultProduct(id, name, image, salePrice, regularPrice, description, isSoldByQuantities, unit),
+                    getNewProduct(id, name, image, selectedQuantity, regularPrice, salePrice, percentage, description, isSoldByQuantities, unit),
                 )
             }
 
@@ -64,8 +65,9 @@ export function increaseProductSelectedQuantity(
     id: string,
     name: string,
     image: string,
-    salePrice: number | null | undefined,
     regularPrice: number,
+    salePrice: number | undefined = undefined,
+    percentage: number | null | undefined = null,
     isSoldByQuantities: boolean | undefined = false,
     unit: string | null = 'Unit',
     description: string | undefined = '',
@@ -80,12 +82,42 @@ export function increaseProductSelectedQuantity(
             } else {
                 previousCartValue.set(
                     id,
-                    getDefaultProduct(id, name, image, salePrice, regularPrice, description, isSoldByQuantities, unit),
+                    getNewProduct(id, name, image, 1, regularPrice, salePrice, percentage, description, isSoldByQuantities, unit),
                 )
             }
 
             return previousCartValue
         })
+    }
+}
+
+function getNewProduct(
+    id: string,
+    name: string,
+    image: string,
+    selectedQuantity: number,
+    regularPrice: number,
+    salePrice: number | undefined,
+    percentage: number | null | undefined,
+    description: string,
+    isSoldByQuantities: boolean,
+    unit: string | null) {
+
+    return {
+        id,
+        name,
+        image,
+        selectedQuantity,
+        price: salePrice ?? regularPrice,
+        description,
+        isSoldByQuantities,
+        unit,
+        promotion: {
+            id: undefined,
+            name: undefined,
+            salePrice,
+            percentage,
+        }
     }
 }
 
@@ -101,28 +133,6 @@ export function decreaseProductSelectedQuantity(id: string): void {
 
             return previousCartValue
         })
-    }
-}
-
-function getDefaultProduct(
-    id: string,
-    name: string,
-    image: string,
-    salePrice: number | null | undefined,
-    regularPrice: number,
-    description: string,
-    isSoldByQuantities: boolean,
-    unit: string | null) {
-
-    return {
-        id,
-        name,
-        image,
-        selectedQuantity: 0,
-        price: salePrice ?? regularPrice,
-        description,
-        isSoldByQuantities,
-        unit,
     }
 }
 

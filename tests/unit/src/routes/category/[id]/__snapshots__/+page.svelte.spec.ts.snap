@@ -92,9 +92,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                00
-                .
-                00
+                0.00
                  
                 <span>
                   /
@@ -170,9 +168,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                1
-                .
-                00
+                1.00
                  
               </div>
             </div>
@@ -244,9 +240,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                2
-                .
-                00
+                2.00
                  
                 <span>
                   /
@@ -322,9 +316,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                3
-                .
-                00
+                3.00
                  
               </div>
             </div>
@@ -396,9 +388,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                4
-                .
-                00
+                4.00
                  
                 <span>
                   /
@@ -474,9 +464,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                5
-                .
-                00
+                5.00
                  
               </div>
             </div>
@@ -548,9 +536,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                6
-                .
-                00
+                6.00
                  
                 <span>
                   /
@@ -626,9 +612,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                7
-                .
-                00
+                7.00
                  
               </div>
             </div>
@@ -700,9 +684,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                8
-                .
-                00
+                8.00
                  
                 <span>
                   /
@@ -778,9 +760,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                9
-                .
-                00
+                9.00
                  
               </div>
             </div>
@@ -852,9 +832,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                10
-                .
-                00
+                10.00
                  
                 <span>
                   /
@@ -930,9 +908,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                11
-                .
-                00
+                11.00
                  
               </div>
             </div>
@@ -1004,9 +980,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                12
-                .
-                00
+                12.00
                  
                 <span>
                   /
@@ -1082,9 +1056,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                13
-                .
-                00
+                13.00
                  
               </div>
             </div>
@@ -1156,9 +1128,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                14
-                .
-                00
+                14.00
                  
                 <span>
                   /
@@ -1234,9 +1204,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                15
-                .
-                00
+                15.00
                  
               </div>
             </div>
@@ -1308,9 +1276,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                16
-                .
-                00
+                16.00
                  
                 <span>
                   /
@@ -1386,9 +1352,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                17
-                .
-                00
+                17.00
                  
               </div>
             </div>
@@ -1573,9 +1537,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                00
-                .
-                00
+                0.00
                  
                 <span>
                   /
@@ -1651,9 +1613,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                1
-                .
-                00
+                1.00
                  
               </div>
             </div>
@@ -1725,9 +1685,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                2
-                .
-                00
+                2.00
                  
                 <span>
                   /
@@ -1803,9 +1761,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                3
-                .
-                00
+                3.00
                  
               </div>
             </div>
@@ -1877,9 +1833,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                4
-                .
-                00
+                4.00
                  
                 <span>
                   /
@@ -1955,9 +1909,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                5
-                .
-                00
+                5.00
                  
               </div>
             </div>
@@ -2029,9 +1981,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                6
-                .
-                00
+                6.00
                  
                 <span>
                   /
@@ -2107,9 +2057,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                7
-                .
-                00
+                7.00
                  
               </div>
             </div>
@@ -2181,9 +2129,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                8
-                .
-                00
+                8.00
                  
                 <span>
                   /
@@ -2259,9 +2205,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                9
-                .
-                00
+                9.00
                  
               </div>
             </div>
@@ -2333,9 +2277,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                10
-                .
-                00
+                10.00
                  
                 <span>
                   /
@@ -2411,9 +2353,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                11
-                .
-                00
+                11.00
                  
               </div>
             </div>
@@ -2485,9 +2425,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                12
-                .
-                00
+                12.00
                  
                 <span>
                   /
@@ -2563,9 +2501,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                13
-                .
-                00
+                13.00
                  
               </div>
             </div>
@@ -2637,9 +2573,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                14
-                .
-                00
+                14.00
                  
                 <span>
                   /
@@ -2715,9 +2649,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                15
-                .
-                00
+                15.00
                  
               </div>
             </div>
@@ -2789,9 +2721,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                16
-                .
-                00
+                16.00
                  
                 <span>
                   /
@@ -2867,9 +2797,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                17
-                .
-                00
+                17.00
                  
               </div>
             </div>
@@ -3073,9 +3001,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                00
-                .
-                00
+                0.00
                  
                 <span>
                   /
@@ -3151,9 +3077,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                1
-                .
-                00
+                1.00
                  
               </div>
             </div>
@@ -3225,9 +3149,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                2
-                .
-                00
+                2.00
                  
                 <span>
                   /
@@ -3303,9 +3225,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                3
-                .
-                00
+                3.00
                  
               </div>
             </div>
@@ -3377,9 +3297,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                4
-                .
-                00
+                4.00
                  
                 <span>
                   /
@@ -3455,9 +3373,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                5
-                .
-                00
+                5.00
                  
               </div>
             </div>
@@ -3529,9 +3445,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                6
-                .
-                00
+                6.00
                  
                 <span>
                   /
@@ -3607,9 +3521,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                7
-                .
-                00
+                7.00
                  
               </div>
             </div>
@@ -3681,9 +3593,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                8
-                .
-                00
+                8.00
                  
                 <span>
                   /
@@ -3759,9 +3669,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                9
-                .
-                00
+                9.00
                  
               </div>
             </div>
@@ -3833,9 +3741,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                10
-                .
-                00
+                10.00
                  
                 <span>
                   /
@@ -3911,9 +3817,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                11
-                .
-                00
+                11.00
                  
               </div>
             </div>
@@ -3985,9 +3889,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                12
-                .
-                00
+                12.00
                  
                 <span>
                   /
@@ -4063,9 +3965,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                13
-                .
-                00
+                13.00
                  
               </div>
             </div>
@@ -4137,9 +4037,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                14
-                .
-                00
+                14.00
                  
                 <span>
                   /
@@ -4215,9 +4113,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                15
-                .
-                00
+                15.00
                  
               </div>
             </div>
@@ -4289,9 +4185,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                16
-                .
-                00
+                16.00
                  
                 <span>
                   /
@@ -4367,9 +4261,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
                 class="text-primary text-15 flex ml-3"
               >
                 CAD$
-                17
-                .
-                00
+                17.00
                  
               </div>
             </div>

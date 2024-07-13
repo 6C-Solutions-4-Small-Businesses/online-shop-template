@@ -119,9 +119,7 @@ exports[`Collection > should have match snapshot 1`] = `
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              1
-              .
-              00
+              1.00
                
             </div>
           </div>
@@ -193,9 +191,7 @@ exports[`Collection > should have match snapshot 1`] = `
               class="text-primary text-15 flex ml-3"
             >
               CAD$
-              1
-              .
-              00
+              1.00
                
               <span>
                 /
