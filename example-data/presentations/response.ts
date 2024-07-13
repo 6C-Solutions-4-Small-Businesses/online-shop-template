@@ -38,7 +38,11 @@ export const response = [{
         'isTaxable': false,
         'locationId': '669d6def-9e8d-443d-a8e1-8ef599b9479b',
         'quantity': 4,
-        'status': 'Available'
+        'status': 'Available',
+        'promotion': {
+            'salePrice': 881,
+            'percentage': 30
+        }
     }, {
         'id': '2933bb63-eae2-422b-8509-72bacff878c9',
         'name': 'Farine de Manioc Tapioca',
@@ -146,7 +150,11 @@ export const response = [{
         'isTaxable': false,
         'locationId': '669d6def-9e8d-443d-a8e1-8ef599b9479b',
         'quantity': 680,
-        'status': 'Available'
+        'status': 'Available',
+        'promotion': {
+            'salePrice': 1678,
+            'percentage': 80
+        }
     }, {
         'id': '05ec33d1-5d12-482b-8a3a-8c8d582fa70c',
         'name': 'Lasagne Warda',
@@ -206,7 +214,11 @@ export const response = [{
         'isTaxable': false,
         'locationId': '669d6def-9e8d-443d-a8e1-8ef599b9479b',
         'quantity': 386,
-        'status': 'Available'
+        'status': 'Available',
+        'promotion': {
+            'salePrice': 598,
+            'percentage': 5
+        }
     }, {
         'id': '8c52277e-3f19-4696-a6c2-d6431de76edf',
         'name': 'Crémier Évaporé',
@@ -314,7 +326,11 @@ export const response = [{
         'isTaxable': false,
         'locationId': '669d6def-9e8d-443d-a8e1-8ef599b9479b',
         'quantity': 390,
-        'status': 'Available'
+        'status': 'Available',
+        'promotion': {
+            'salePrice': 323,
+            'percentage': 12
+        }
     }, {
         'id': '6def6b21-bbd6-4433-a73f-11712413bf8a',
         'name': 'Pâte de Tomate Concentrée',
@@ -578,7 +594,11 @@ export const response = [{
         'isTaxable': false,
         'locationId': '669d6def-9e8d-443d-a8e1-8ef599b9479b',
         'quantity': 8,
-        'status': 'Available'
+        'status': 'Available',
+        'promotion': {
+            'salePrice': 1335,
+            'percentage': 47
+        }
     }, {
         'id': 'e3885c05-0497-4f83-8ec2-de3bdb8a5b07',
         'name': 'Riz Crevette',

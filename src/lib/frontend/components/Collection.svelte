@@ -41,8 +41,6 @@
                     isSoldByQuantities={product.isSoldByQuantities}
                     salePrice={product.promotion?.salePrice}
                     percentage={product.promotion?.percentage}
-                    width="w-full"
-                    height="h-[22rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[17rem]"
             />
         {/each}
     </div>

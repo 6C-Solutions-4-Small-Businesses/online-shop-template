@@ -1,8 +1,15 @@
 <script lang="ts">
     import ShoppingCartActions from '$lib/frontend/components/ShoppingCartActions.svelte'
-    import {getAbbreviatedUnit} from "$lib/frontend/core/Helper";
+    import {getAbbreviatedUnit} from '$lib/frontend/core/Helper'
     import Image from '$lib/frontend/components/Image.svelte'
     import PromotionSticker from '$lib/frontend/components/PromotionSticker.svelte'
+    import {
+        cart,
+        decreaseProductSelectedQuantity,
+        increaseProductSelectedQuantity,
+        modifyProductSelectedQuantity
+    } from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore.js'
+    import {writable, type Writable} from "svelte/store";
 
     export let id: string
     export let name: string
@@ -12,17 +19,25 @@
     export let unit: string | null
     export let salePrice: number | undefined | null = null
     export let percentage: number | null | undefined = null
-    
-    function getPriceFirstPart(price: number | undefined | null): string {
-        const pricePart = price ? (price / 100).toString().split('.')[0] : null
 
-        return pricePart ? pricePart : '00'
-    }
+    let selectedQuantity: Writable<number>
+    $:selectedQuantity = writable(cart && $cart.has(id) ? $cart.get(id)?.selectedQuantity : 0)
 
-    function getPriceSecondPart(price: number | undefined | null): string {
-        const pricePart = price ? (price / 100).toFixed(2).toString().split('.')[1] : null
+    function changeSelectedQuantity(event: Event): void {
+        const quantity = parseInt((event.target as HTMLInputElement).value)
+        if (!isNaN(quantity)) {
 
-        return pricePart ? pricePart : '00'
+            modifyProductSelectedQuantity(
+                id,
+                name,
+                image,
+                quantity,
+                salePrice,
+                regularPrice,
+                isSoldByQuantities,
+                unit
+            )
+        }
     }
 </script>
 
@@ -32,16 +47,25 @@
     {/if}
 
     <div class="w-[238px] h-[200px] mt-10 self-center justify-between items-center flex">
-        <Image imageRemoteUrl="{image}" name={name} classes="w-[238px] h-[200px] object-contain scale"/>
+        <Image classes="w-[238px] h-[200px] object-contain scale" imageRemoteUrl="{image}" name={name}/>
     </div>
 
     <div class="w-full absolute flex justify-end top-0 right-0">
         <ShoppingCartActions
-                image={image}
-                name={name}
-                productId={id}
-                regularPrice={regularPrice}
-                salePrice={salePrice}
+                changeSelectedQuantityHandler={changeSelectedQuantity}
+                decreaseSelectedQuantityHandler={() => decreaseProductSelectedQuantity(id)}
+                increaseSelectedQuantityHandler={() =>
+                    increaseProductSelectedQuantity(
+                        id,
+                        name,
+                        image,
+                        salePrice,
+                        regularPrice,
+                        isSoldByQuantities,
+                        unit
+                        )
+                }
+                selectedQuantity={$selectedQuantity}
         />
     </div>
 
@@ -51,7 +75,7 @@
 
             {#if (!percentage)}
                 <div class="text-primary text-15 flex ml-3">
-                    CAD${getPriceFirstPart(regularPrice)}.{getPriceSecondPart(regularPrice)}
+                    CAD${(regularPrice / 100).toFixed(2)}
                     {#if (isSoldByQuantities)}
                         <span>/{getAbbreviatedUnit(unit)}</span>
                     {/if}
@@ -60,10 +84,10 @@
                 <div class="flex-col justify-start items-end gap-0.5 inline-flex">
                     <div class="flex items-end leading-normal flex-col">
                         <span class="text-primary text-[8px] line-through">
-                            CAD${getPriceFirstPart(regularPrice)}.{getPriceSecondPart(regularPrice)}
+                            CAD${(regularPrice / 100).toFixed(2)}
                         </span>
                         <div class="text-center text-error text-15 font-bold flex flex-row ml-3">
-                            CAD${getPriceFirstPart(salePrice)}.{getPriceSecondPart(salePrice)}
+                            CAD${salePrice && (salePrice / 100).toFixed(2)}
                             {#if (isSoldByQuantities)}
                                 <span>/{getAbbreviatedUnit(unit)}</span>
                             {/if}
