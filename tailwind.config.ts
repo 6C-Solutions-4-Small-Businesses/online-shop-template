@@ -60,6 +60,7 @@ export default {
                 15: '15px',
                 16: '16px',
                 28: '28px',
+                32: '32px',
             },
             height: {
                 22: '91px',
@@ -72,6 +73,9 @@ export default {
             borderRadius: {
                 10: '10px',
             },
+            margin: {
+                13: '50px'
+            }
         },
     },
     plugins: [

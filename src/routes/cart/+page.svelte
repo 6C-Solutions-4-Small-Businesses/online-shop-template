@@ -6,6 +6,8 @@
     import {goto} from '$app/navigation'
     import {getModalStore} from '@skeletonlabs/skeleton'
     import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
+    import {t} from "$translations/index";
+    import SortIcon from "$lib/frontend/components/icons/SortIcon.svelte";
 
     const modalStore = getModalStore()
 
@@ -44,10 +46,13 @@
 
     onDestroy(unsubscribe)
 </script>
-<div class="w-full max-w-full h-screen bg-slate-100 overflow-y-scroll md:overflow-hidden">
-    <div class="title text-3xl font-thin pt-5 pl-5">Shopping Cart</div>
+<div class="w-full max-w-full min-h-screen bg-slate-100">
+    <div class="title flex justify-between items-center mt-5 px-10 py-5 h-20 border-b border-black border-opacity-10">
+        <span class="text-primary uppercase text-2xl lg:text-32">{$t('cart.title')}</span>
+        <SortIcon/>
+    </div>
     {#if $cart.size > 0}
-        <div class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+        <div class="w-full px-2.5 py-6 grid gap-2.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7">
             {#each $cart.values() as shoppingCartProductState}
                 {#if (shoppingCartProductState.selectedQuantity > 0)}
                     <ShoppingCartProductCard
@@ -66,7 +71,7 @@
             <div class="text-[13rem] md:text-[15rem] mt-10">
                 <CartIcon/>
             </div>
-            <div class="text-2xl md:text-3xl font-thin text-orange-500 mt-7">Votre panier est actuellement vide.</div>
+            <div class="text-2xl md:text-3xl font-thin text-orange-500 mt-7">{$t('cart.empty')}</div>
         </div>
     {/if}
 </div>
@@ -76,7 +81,7 @@
                 class="text-28 leading-[33px] font-semibold text-primary">${(totalPrice / 100).toFixed(2)}</span></div>
         <button class="uppercase w-[300px] h-[39px] mr-6 rounded-[10px] text-white bg-primary font-semibold text-base"
                 data-testid="checkout-button"
-                on:click={startCheckout}>checkout
+                on:click={startCheckout}>{$t('cart.checkout')}
         </button>
     </div>
 {/if}

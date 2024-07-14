@@ -27,7 +27,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
         class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
       >
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -103,7 +103,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -175,7 +175,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -251,7 +251,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -323,7 +323,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -399,7 +399,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -471,7 +471,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -547,7 +547,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -619,7 +619,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -695,7 +695,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -767,7 +767,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -843,7 +843,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -915,7 +915,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -991,7 +991,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1063,7 +1063,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1139,7 +1139,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1211,7 +1211,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1287,7 +1287,7 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1472,7 +1472,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
         class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
       >
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1548,7 +1548,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1620,7 +1620,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1696,7 +1696,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1768,7 +1768,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1844,7 +1844,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1916,7 +1916,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -1992,7 +1992,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2064,7 +2064,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2140,7 +2140,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2212,7 +2212,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2288,7 +2288,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2360,7 +2360,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2436,7 +2436,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2508,7 +2508,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2584,7 +2584,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2656,7 +2656,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2732,7 +2732,7 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -2936,7 +2936,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
         class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
       >
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3012,7 +3012,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3084,7 +3084,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3160,7 +3160,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3232,7 +3232,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3308,7 +3308,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3380,7 +3380,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3456,7 +3456,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3528,7 +3528,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3604,7 +3604,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3676,7 +3676,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3752,7 +3752,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3824,7 +3824,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3900,7 +3900,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -3972,7 +3972,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -4048,7 +4048,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -4120,7 +4120,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
@@ -4196,7 +4196,7 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
           </div>
         </div>
         <div
-          class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+          class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
         >
            
           <div
