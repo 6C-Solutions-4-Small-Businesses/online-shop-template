@@ -134,10 +134,13 @@
                             <div class="embla__slide embla__class-names">
                                 <SpotlightedProductCard
                                         id={onSaleProduct.id}
-                                        image={onSaleProduct.image}
                                         name={onSaleProduct.name}
-                                        price={onSaleProduct.price}
+                                        image={onSaleProduct.image}
+                                        regularPrice={onSaleProduct.price}
+                                        unit={onSaleProduct.unit}
+                                        isSoldByQuantities={onSaleProduct.isSoldByQuantities}
                                         salePrice={onSaleProduct.promotion?.salePrice}
+                                        percentage={onSaleProduct.promotion?.percentage}
                                 />
                             </div>
                         {/each}
