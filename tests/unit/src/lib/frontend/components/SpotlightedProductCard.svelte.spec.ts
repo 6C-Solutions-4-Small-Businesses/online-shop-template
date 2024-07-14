@@ -9,9 +9,11 @@ describe('Spotlight product card', () => {
         ({container} = render(SpotlightedProductCard, {
             props: {
                 id: 'product-id',
-                image: 'product-image',
                 name: 'product-name',
-                price: 24.99,
+                image: 'product-image',
+                regularPrice: 24.99,
+                isSoldByQuantities: false,
+                unit: 'unit',
                 salePrice: 19.99,
             }
         }))
