@@ -42,7 +42,7 @@
     }
 </script>
 
-<div class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex">
+<div class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex">
     {#if (percentage)}
         <PromotionSticker percentage={percentage}/>
     {/if}

@@ -9,7 +9,7 @@ exports[`Product data table > when on the any other page > should have match sna
       class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
     >
       <div
-        class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+        class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
       >
          
         <div
@@ -81,7 +81,7 @@ exports[`Product data table > when on the any other page > should have match sna
         </div>
       </div>
       <div
-        class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+        class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
       >
          
         <div
@@ -157,7 +157,7 @@ exports[`Product data table > when on the any other page > should have match sna
         </div>
       </div>
       <div
-        class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+        class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
       >
          
         <div
@@ -323,7 +323,7 @@ exports[`Product data table > when on the first page > should have match snapsho
       class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
     >
       <div
-        class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+        class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
       >
          
         <div
@@ -395,7 +395,7 @@ exports[`Product data table > when on the first page > should have match snapsho
         </div>
       </div>
       <div
-        class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+        class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
       >
          
         <div
@@ -471,7 +471,7 @@ exports[`Product data table > when on the first page > should have match snapsho
         </div>
       </div>
       <div
-        class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+        class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
       >
          
         <div
@@ -639,7 +639,7 @@ exports[`Product data table > when on the last page > should have match snapshot
       class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
     >
       <div
-        class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+        class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
       >
          
         <div
@@ -711,7 +711,7 @@ exports[`Product data table > when on the last page > should have match snapshot
         </div>
       </div>
       <div
-        class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+        class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
       >
          
         <div
@@ -787,7 +787,7 @@ exports[`Product data table > when on the last page > should have match snapshot
         </div>
       </div>
       <div
-        class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+        class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
       >
          
         <div

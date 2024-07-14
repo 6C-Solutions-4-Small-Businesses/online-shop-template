@@ -36,11 +36,13 @@
     }
 </script>
 
-<div class="relative w-[367px] h-[149px] p-[15px] flex gap-4 bg-white rounded-10">
+<div class="relative h-[149px] p-[15px] flex justify-between gap-4 bg-white rounded-10 shadow">
     {#if (percentage)}
         <PromotionSticker percentage={percentage}/>
     {/if}
-    <Image classes="w-[161px] h-[119px] object-contain scale" imageRemoteUrl="{image}" name={name}/>
+    <div class="w-[161px] h-[119px] self-center justify-between items-center flex">
+        <Image classes="w-[161px] h-[119px] object-contain scale" imageRemoteUrl="{image}" name={name}/>
+    </div>
     <div class="w-[161px] h-[119px] flex flex-col justify-between">
         <div class="w-full h-[12px] flex justify-end">
             <div class={`font-bold flex items-center text-sm ${percentage ? 'text-error' : 'text-primary'}`}>
@@ -50,7 +52,7 @@
             <div class="flex items-center w-full min-h-12 h-12">
                 <p class="w-full text-stone text-16 leading-6 font-bold line-clamp-2">{name}</p>
             </div>
-            <div class="w-full h-[50px] pb-2.5">
+            <div class="w-full h-[50px] pb-2.5 flex">
                 <ShoppingCartActions
                         changeSelectedQuantityHandler={changeSelectedQuantity}
                         decreaseSelectedQuantityHandler={() => decreaseProductSelectedQuantity(id)}

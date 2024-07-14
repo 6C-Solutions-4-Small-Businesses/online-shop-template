@@ -364,7 +364,7 @@ exports[`Home page > should have match snapshot 1`] = `
           class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-6"
         >
           <div
-            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+            class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
           >
              
             <div
@@ -436,7 +436,7 @@ exports[`Home page > should have match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+            class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
           >
              
             <div
@@ -508,7 +508,7 @@ exports[`Home page > should have match snapshot 1`] = `
             </div>
           </div>
           <div
-            class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+            class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
           >
              
             <div
@@ -714,7 +714,7 @@ exports[`Home page > should have match snapshot 1`] = `
             class="w-full p-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-6"
           >
             <div
-              class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+              class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
             >
                
               <div
@@ -786,7 +786,7 @@ exports[`Home page > should have match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+              class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
             >
                
               <div

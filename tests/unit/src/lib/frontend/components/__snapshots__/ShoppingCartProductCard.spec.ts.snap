@@ -3,15 +3,19 @@
 exports[`Shopping card product card > should have match snapshot 1`] = `
 <div>
   <div
-    class="relative w-[367px] h-[149px] p-[15px] flex gap-4 bg-white rounded-10"
+    class="relative h-[149px] p-[15px] flex justify-between gap-4 bg-white rounded-10 shadow"
   >
      
-    <img
-      alt="a-product-name"
-      class="w-[161px] h-[119px] object-contain scale"
-      src="a-product-image"
-      width="160"
-    />
+    <div
+      class="w-[161px] h-[119px] self-center justify-between items-center flex"
+    >
+      <img
+        alt="a-product-name"
+        class="w-[161px] h-[119px] object-contain scale"
+        src="a-product-image"
+        width="160"
+      />
+    </div>
      
     <div
       class="w-[161px] h-[119px] flex flex-col justify-between"
@@ -41,7 +45,7 @@ exports[`Shopping card product card > should have match snapshot 1`] = `
         </div>
          
         <div
-          class="w-full h-[50px] pb-2.5"
+          class="w-full h-[50px] pb-2.5 flex"
         >
           <div
             class="px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] w-[161px] h-[50px] justify-center items-center gap-2.5 inline-flex"
@@ -112,7 +116,7 @@ exports[`Shopping card product card > should have match snapshot 1`] = `
 exports[`Shopping card product card with promotion > should have match snapshot 1`] = `
 <div>
   <div
-    class="relative w-[367px] h-[149px] p-[15px] flex gap-4 bg-white rounded-10"
+    class="relative h-[149px] p-[15px] flex justify-between gap-4 bg-white rounded-10 shadow"
   >
     <div
       class="absolute left-0 flex w-12 h-12 top-0 items-center justify-center rounded-tl-[10px] rounded-tr-none rounded-br-[20px] rounded-bl-none bg-promotion-high visible z-10"
@@ -126,12 +130,16 @@ exports[`Shopping card product card with promotion > should have match snapshot 
       </div>
     </div>
      
-    <img
-      alt="a-product-name"
-      class="w-[161px] h-[119px] object-contain scale"
-      src="a-product-image"
-      width="160"
-    />
+    <div
+      class="w-[161px] h-[119px] self-center justify-between items-center flex"
+    >
+      <img
+        alt="a-product-name"
+        class="w-[161px] h-[119px] object-contain scale"
+        src="a-product-image"
+        width="160"
+      />
+    </div>
      
     <div
       class="w-[161px] h-[119px] flex flex-col justify-between"
@@ -161,7 +169,7 @@ exports[`Shopping card product card with promotion > should have match snapshot 
         </div>
          
         <div
-          class="w-full h-[50px] pb-2.5"
+          class="w-full h-[50px] pb-2.5 flex"
         >
           <div
             class="px-1 bg-white rounded-bl-[10px] rounded-tr-[10px] w-[161px] h-[50px] justify-center items-center gap-2.5 inline-flex"

@@ -3,7 +3,7 @@
 exports[`Product card > should have match snapshot 1`] = `
 <div>
   <div
-    class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+    class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
   >
      
     <div
@@ -80,7 +80,7 @@ exports[`Product card > should have match snapshot 1`] = `
 exports[`Product card with promotion > should have match snapshot 1`] = `
 <div>
   <div
-    class="relative h-[326px] p-4 bg-white rounded-[10px] shadow flex-col justify-start items-start gap-[25px] inline-flex"
+    class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
   >
     <div
       class="absolute left-0 flex w-12 h-12 top-0 items-center justify-center rounded-tl-[10px] rounded-tr-none rounded-br-[20px] rounded-bl-none bg-promotion-high visible z-10"
