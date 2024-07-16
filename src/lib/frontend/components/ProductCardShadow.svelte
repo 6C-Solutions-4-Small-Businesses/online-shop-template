@@ -1,1 +1,0 @@
-<div class="w-full h-[20.5rem] sm:h-[19.5rem] md:h-[16.1rem] xl:h-[14rem] bg-slate-50 animate-pulse"></div>

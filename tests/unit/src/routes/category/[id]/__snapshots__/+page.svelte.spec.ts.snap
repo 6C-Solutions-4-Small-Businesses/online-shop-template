@@ -3,28 +3,24 @@
 exports[`/category/[id] > when on any other page > should have the expected HTML structure 1`] = `
 <div>
   <div
-    class="w-full max-w-full h-full bg-slate-100"
+    class="w-full max-w-full min-h-screen bg-slate-100"
   >
     <div
-      class="w-full h-[13%] md:h-[8%] flex items-center bg-white"
+      class="title flex justify-between items-center mt-5 px-10 py-5 h-20 border-b border-black border-opacity-10"
     >
-      <div
-        class="w-full flex space-x-4 categories-box overflow-x-scroll overflow-y-auto px-5 svelte-1ax7i5q"
+      <span
+        class="text-primary uppercase text-2xl lg:text-32"
       >
-        <button
-          class="whitespace-nowrap px-5 py-1.5 border border-white text-white bg-orange-500 outline-none rounded-sm svelte-1ax7i5q"
-        >
-          a-category-name
-        </button>
         
-      </div>
+      </span>
+       
     </div>
      
     <div
       class="w-full h-full"
     >
       <div
-        class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
+        class="w-full py-6  px-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-6"
       >
         <div
           class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
@@ -1358,87 +1354,18 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
             </div>
           </div>
         </div>
+         
       </div>
        
       <div
-        class="h-[12%] md:h-[6%] bg-white flex justify-center xl:justify-end visible"
+        class="flex justify-center items-center bg-slate-100 h-24"
       >
-        <div
-          class="flex w-full xl:w-1/4 space-x-2 xl:pr-5 justify-center xl:justify-end items-center"
+        <button
+          class="uppercase w-36 h-9 rounded-[10px] text-white bg-primary font-semibold text-base disabled:bg-slate-600"
+          data-testid="load-more-button"
         >
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M18.41 7.41L17 6l-6 6l6 6l1.41-1.41L13.83 12zm-6 0L11 6l-6 6l6 6l1.41-1.41L7.83 12z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 border border-white text-white bg-orange-500 text-lg xl:text-sm font-thin rounded-sm"
-          >
-            2
-          </button>
-           
-          <div
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center font-thin text-lg text-gray-500"
-          >
-            of 
-            3
-          </div>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-        </div>
+          
+        </button>
       </div>
     </div>
   </div>
@@ -1448,28 +1375,24 @@ exports[`/category/[id] > when on any other page > should have the expected HTML
 exports[`/category/[id] > when on last page > should have the expected HTML structure 1`] = `
 <div>
   <div
-    class="w-full max-w-full h-full bg-slate-100"
+    class="w-full max-w-full min-h-screen bg-slate-100"
   >
     <div
-      class="w-full h-[13%] md:h-[8%] flex items-center bg-white"
+      class="title flex justify-between items-center mt-5 px-10 py-5 h-20 border-b border-black border-opacity-10"
     >
-      <div
-        class="w-full flex space-x-4 categories-box overflow-x-scroll overflow-y-auto px-5 svelte-1ax7i5q"
+      <span
+        class="text-primary uppercase text-2xl lg:text-32"
       >
-        <button
-          class="whitespace-nowrap px-5 py-1.5 border border-white text-white bg-orange-500 outline-none rounded-sm svelte-1ax7i5q"
-        >
-          a-category-name
-        </button>
         
-      </div>
+      </span>
+       
     </div>
      
     <div
       class="w-full h-full"
     >
       <div
-        class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
+        class="w-full py-6  px-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-6"
       >
         <div
           class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
@@ -2803,89 +2726,19 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
             </div>
           </div>
         </div>
+         
       </div>
        
       <div
-        class="h-[12%] md:h-[6%] bg-white flex justify-center xl:justify-end visible"
+        class="flex justify-center items-center bg-slate-100 h-24"
       >
-        <div
-          class="flex w-full xl:w-1/4 space-x-2 xl:pr-5 justify-center xl:justify-end items-center"
+        <button
+          class="uppercase w-36 h-9 rounded-[10px] text-white bg-primary font-semibold text-base disabled:bg-slate-600"
+          data-testid="load-more-button"
+          disabled=""
         >
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M18.41 7.41L17 6l-6 6l6 6l1.41-1.41L13.83 12zm-6 0L11 6l-6 6l6 6l1.41-1.41L7.83 12z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 border border-white text-white bg-orange-500 text-lg xl:text-sm font-thin rounded-sm"
-          >
-            3
-          </button>
-           
-          <div
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center font-thin text-lg text-gray-500"
-          >
-            of 
-            3
-          </div>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-            disabled=""
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-            disabled=""
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-        </div>
+          
+        </button>
       </div>
     </div>
   </div>
@@ -2895,14 +2748,17 @@ exports[`/category/[id] > when on last page > should have the expected HTML stru
 exports[`/category/[id] > when there is no data > should have the expected HTML structure 1`] = `
 <div>
   <div
-    class="w-full max-w-full h-full bg-slate-100"
+    class="w-full max-w-full min-h-screen bg-slate-100"
   >
     <div
-      class="w-full h-[13%] md:h-[8%] flex items-center bg-white"
+      class="title flex justify-between items-center mt-5 px-10 py-5 h-20 border-b border-black border-opacity-10"
     >
-      <div
-        class="w-full flex space-x-4 categories-box overflow-x-scroll overflow-y-auto px-5 svelte-1ax7i5q"
-      />
+      <span
+        class="text-primary uppercase text-2xl lg:text-32"
+      >
+        
+      </span>
+       
     </div>
      
   </div>
@@ -2912,28 +2768,24 @@ exports[`/category/[id] > when there is no data > should have the expected HTML 
 exports[`/category/[id] > when there is one page > should have the expected HTML structure 1`] = `
 <div>
   <div
-    class="w-full max-w-full h-full bg-slate-100"
+    class="w-full max-w-full min-h-screen bg-slate-100"
   >
     <div
-      class="w-full h-[13%] md:h-[8%] flex items-center bg-white"
+      class="title flex justify-between items-center mt-5 px-10 py-5 h-20 border-b border-black border-opacity-10"
     >
-      <div
-        class="w-full flex space-x-4 categories-box overflow-x-scroll overflow-y-auto px-5 svelte-1ax7i5q"
+      <span
+        class="text-primary uppercase text-2xl lg:text-32"
       >
-        <button
-          class="whitespace-nowrap px-5 py-1.5 border border-white text-white bg-orange-500 outline-none rounded-sm svelte-1ax7i5q"
-        >
-          a-category-name
-        </button>
         
-      </div>
+      </span>
+       
     </div>
      
     <div
       class="w-full h-full"
     >
       <div
-        class="w-full h-[75%] md:h-[86%] grid p-4 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:grid-rows-3 overflow-y-scroll xl:overflow-hidden"
+        class="w-full py-6  px-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-6"
       >
         <div
           class="relative h-[326px] p-4 bg-white rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex"
@@ -4267,87 +4119,18 @@ exports[`/category/[id] > when there is one page > should have the expected HTML
             </div>
           </div>
         </div>
+         
       </div>
        
       <div
-        class="h-[12%] md:h-[6%] bg-white flex justify-center xl:justify-end visible"
+        class="flex justify-center items-center bg-slate-100 h-24"
       >
-        <div
-          class="flex w-full xl:w-1/4 space-x-2 xl:pr-5 justify-center xl:justify-end items-center"
+        <button
+          class="uppercase w-36 h-9 rounded-[10px] text-white bg-primary font-semibold text-base disabled:bg-slate-600"
+          data-testid="load-more-button"
         >
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M18.41 7.41L17 6l-6 6l6 6l1.41-1.41L13.83 12zm-6 0L11 6l-6 6l6 6l1.41-1.41L7.83 12z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6l6 6z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 border border-white text-white bg-orange-500 text-lg xl:text-sm font-thin rounded-sm"
-          >
-            2
-          </button>
-           
-          <div
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center font-thin text-lg text-gray-500"
-          >
-            of 
-            3
-          </div>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-           
-          <button
-            class="w-14 h-12 xl:w-10 xl:h-8 flex justify-center items-center border border-orange-500 text-2xl xl:text-lg text-orange-500 font-thin rounded-sm disabled:border disabled:border-gray-500 disabled:text-gray-500"
-          >
-            <svg
-              height="1.2em"
-              viewBox="0 0 24 24"
-              width="1.2em"
-            >
-              <path
-                d="M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-        </div>
+          
+        </button>
       </div>
     </div>
   </div>

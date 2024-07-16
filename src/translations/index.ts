@@ -11,8 +11,8 @@ interface TranslationLoader {
 export const initialLocale = 'fr';
 
 const locales: string[] = ['en', 'fr'];
-const components: string[] = ['cookies-disclaimer', 'collection', 'custom-app-bar'];
-const pages: string[] = ['terms-and-conditions', 'cart'];
+const components: string[] = ['cookies-disclaimer', 'collection', 'custom-app-bar', 'category-products'];
+const pages: string[] = ['terms-and-conditions', 'cart', 'category'];
 
 async function loadComponentsTranslation(locale: string, key: string): Promise<object> {
     return (await import(`./${locale}/lib/frontend/components/${key}.json`)).default;

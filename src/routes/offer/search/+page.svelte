@@ -1,5 +1,5 @@
 <script lang="ts">
-    import ProductDataTable from '$lib/frontend/components/ProductDataTable.svelte'
+    import CategoryProducts from '$lib/frontend/components/CategoryProducts.svelte'
     import {searchedProductResult, submittedProductName} from '$lib/frontend/stores/productStore/SearchProductStore'
     import {writable, type Writable} from 'svelte/store'
     import {fetchSearchedOffersResult} from '$lib/frontend/endpoints/OfferEndpoints'
@@ -33,18 +33,6 @@
     async function goToNextPage(): Promise<void> {
         await fetchSearchedOffersResultHandler($submittedProductName, currentPage + 1)
     }
-
-    async function goToPreviousPage(): Promise<void> {
-        await fetchSearchedOffersResultHandler($submittedProductName, currentPage - 1)
-    }
-
-    async function goToLastPage(): Promise<void> {
-        await fetchSearchedOffersResultHandler($submittedProductName, $searchedProductResult.totalPages)
-    }
-
-    async function goToFirstPage(): Promise<void> {
-        await fetchSearchedOffersResultHandler($submittedProductName)
-    }
 </script>
 
 <div class="w-full max-w-full h-full bg-slate-100">
@@ -53,15 +41,12 @@
     <span class="text-sm md:text-xl font-bold">Voici ce que nous avons trouvé pour <span
             class="text-orange-500">"{$submittedProductName}"</span></span>
         </div>
-        <ProductDataTable
+        <CategoryProducts
                 products={$searchedProductResult.items}
                 currentPage={$searchedProductResult.currentPage}
                 totalPages={$searchedProductResult.totalPages}
+                loadMoreHandler={goToNextPage}
                 isLoading={$isLoading}
-                on:first={goToFirstPage}
-                on:next={goToNextPage}
-                on:previous={goToPreviousPage}
-                on:last={goToLastPage}
         />
     {:else}
         <div class="w-full h-[13%] md:h-[8%] flex justify-center items-center bg-white">
