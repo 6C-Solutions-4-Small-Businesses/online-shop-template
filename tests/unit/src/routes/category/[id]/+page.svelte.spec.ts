@@ -21,7 +21,7 @@ describe('/category/[id]', () => {
                 data: {
                     id: categoryId,
                     categories: [],
-                    currentCategoryOffers: mock<PaginationPresentation<OfferSummaryPresentation>>()
+                    offers: mock<PaginationPresentation<OfferSummaryPresentation>>()
                 }
             }))
         })
@@ -39,7 +39,7 @@ describe('/category/[id]', () => {
                 data: {
                     id: categoryId,
                     categories: getAllCategories(),
-                    currentCategoryOffers: getCategoryProducts()
+                    offers: getCategoryProducts()
                 }
             }))
         })
@@ -57,7 +57,7 @@ describe('/category/[id]', () => {
                 data: {
                     id: categoryId,
                     categories: getAllCategories(),
-                    currentCategoryOffers: getCategoryProducts({
+                    offers: getCategoryProducts({
                         limit: 18,
                         totalPages: 3,
                         currentPage: 2,
@@ -79,7 +79,7 @@ describe('/category/[id]', () => {
                 data: {
                     id: categoryId,
                     categories: getAllCategories(),
-                    currentCategoryOffers: getCategoryProducts({
+                    offers: getCategoryProducts({
                         limit: 18,
                         totalPages: 3,
                         currentPage: 3,

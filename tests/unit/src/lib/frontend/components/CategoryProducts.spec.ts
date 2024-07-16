@@ -1,21 +1,22 @@
-import ProductDataTable from '$lib/frontend/components/ProductDataTable.svelte'
-import {cleanup, render} from '@testing-library/svelte'
-import {afterEach, describe, expect} from 'vitest'
+import CategoryProducts from '$lib/frontend/components/CategoryProducts.svelte'
+import {cleanup, fireEvent, render} from '@testing-library/svelte'
+import {afterEach, describe, expect, vi} from 'vitest'
 import type {OfferSummaryPresentation} from '$lib/frontend/presentations/OfferSummaryPresentation'
 
-describe('Product data table', () => {
+describe('Category products', () => {
 
     let container: HTMLElement
 
     describe('when there is no products', () => {
 
         beforeEach(() => {
-            ({container} = render(ProductDataTable, {
+            ({container} = render(CategoryProducts, {
                 props: {
                     products: [] as OfferSummaryPresentation[],
                     currentPage: 1,
                     totalPages: 1,
                     isLoading: false,
+                    loadMoreHandler: vi.fn()
                 }
             }))
         })
@@ -26,10 +27,10 @@ describe('Product data table', () => {
         })
     })
 
-    describe('when on the first page', () => {
+    describe('when first page is loaded', () => {
 
         beforeEach(() => {
-            ({container} = render(ProductDataTable, getAllProducts({
+            ({container} = render(CategoryProducts, getAllProducts({
                 currentPage: 1,
                 totalPages: 25,
             })))
@@ -39,36 +40,19 @@ describe('Product data table', () => {
 
             expect(container).toMatchSnapshot()
         })
-    })
 
-    describe('when on the any other page', () => {
-
-        beforeEach(() => {
-            ({container} = render(ProductDataTable, getAllProducts({
-                currentPage: 5,
+        it('calls loadMoreHandler when load more button is clicked', async () => {
+            const loadMoreHandlerMock = vi.fn();
+            const {getAllByTestId} = render(CategoryProducts, getAllProducts({
+                currentPage: 1,
                 totalPages: 25,
-            })))
-        })
+                loadMoreHandler: loadMoreHandlerMock
+            }));
 
-        it('should have match snapshot', () => {
-
-            expect(container).toMatchSnapshot()
-        })
-    })
-
-    describe('when on the last page', () => {
-
-        beforeEach(() => {
-            ({container} = render(ProductDataTable, getAllProducts({
-                currentPage: 25,
-                totalPages: 25,
-            })))
-        })
-
-        it('should have match snapshot', () => {
-
-            expect(container).toMatchSnapshot()
-        })
+            const loadMoreButtons = getAllByTestId('load-more-button');
+            await fireEvent.click(loadMoreButtons[1]);
+            expect(loadMoreHandlerMock).toHaveBeenCalledTimes(1);
+        });
     })
 
     function getProducts() {
@@ -114,12 +98,13 @@ describe('Product data table', () => {
         ]
     }
 
-    function getAllProducts({currentPage = 1, totalPages = 25} = {}) {
+    function getAllProducts({currentPage = 1, totalPages = 25, loadMoreHandler = vi.fn()} = {}) {
         return {
             products: getProducts(),
             currentPage,
             totalPages,
-            isLoading: false
+            isLoading: false,
+            loadMoreHandler
         }
     }
 

@@ -1,0 +1,1 @@
+<div class="h-[326px] p-4 rounded-10 shadow flex-col justify-start items-start gap-[25px] inline-flex w-full bg-slate-200 animate-pulse"></div>

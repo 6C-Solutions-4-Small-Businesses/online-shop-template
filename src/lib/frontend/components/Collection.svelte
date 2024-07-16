@@ -10,7 +10,11 @@
     export let products: OfferSummaryPresentation[];
 
     async function goToProductsPage(): Promise<void> {
-        await goto(`/category/${id}`);
+        await goto(`/category/${id}`, {
+            state: {
+                name
+            }
+        });
     }
 </script>
 

@@ -8,6 +8,7 @@
     import {openAuthenticationModal} from '$lib/frontend/stores/authentication/Authentication'
     import {t} from "$translations/index";
     import SortIcon from "$lib/frontend/components/icons/SortIcon.svelte";
+    import TitleBox from "$lib/frontend/components/TitleBox.svelte";
 
     const modalStore = getModalStore()
 
@@ -47,10 +48,9 @@
     onDestroy(unsubscribe)
 </script>
 <div class="w-full max-w-full min-h-screen bg-slate-100">
-    <div class="title flex justify-between items-center mt-5 px-10 py-5 h-20 border-b border-black border-opacity-10">
-        <span class="text-primary uppercase text-2xl lg:text-32">{$t('cart.title')}</span>
+    <TitleBox value={$t('cart.title')}>
         <SortIcon/>
-    </div>
+    </TitleBox>
     {#if $cart.size > 0}
         <div class="w-full px-2.5 py-6 grid gap-2.5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 3xl:grid-cols-7">
             {#each $cart.values() as shoppingCartProductState}
