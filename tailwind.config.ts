@@ -72,9 +72,13 @@ export default {
             },
             borderRadius: {
                 10: '10px',
+                '4xl': '30px'
             },
             margin: {
                 13: '50px'
+            },
+            lineHeight: {
+                12: '60px'
             }
         },
     },

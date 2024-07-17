@@ -25,6 +25,7 @@
     import ConfirmationModal from '$lib/frontend/components/ConfirmationModal.svelte'
     import OfferSearchModal from '$lib/frontend/components/OfferSearchModal.svelte'
     import {onMount} from 'svelte'
+    import CategoryListModal from "$lib/frontend/components/CategoryListModal.svelte";
 
     export let data: PageData
 
@@ -42,6 +43,7 @@
         offersModificationModal: {ref: OffersModificationModal},
         confirmationModal: {ref: ConfirmationModal},
         offerSearchModal: {ref: OfferSearchModal},
+        categoryListModal: {ref: CategoryListModal},
     }
 
     onMount(() => {
@@ -93,6 +95,7 @@
     <CustomAppBar
             isDrawerOpened={$drawerStore.open}
             isOnHomePage={isOnHomePage}
+            categories={data.categories}
             on:toggleDrawer={toggleDrawer}
     />
     <div class="{isOnHomePage ? 'top-0' : ''} absolute -z-10 w-full h-full">
