@@ -3,7 +3,7 @@
     import logo from '$lib/frontend/assets/images/logo.png'
     import {cart} from '$lib/frontend/stores/shoppingCartStore/ShoppingCartStore'
     import '@fontsource/dancing-script'
-    import {AppBar, getModalStore} from '@skeletonlabs/skeleton'
+    import {AppBar, getModalStore, type ModalComponent, type ModalSettings} from '@skeletonlabs/skeleton'
     import {createEventDispatcher, onDestroy} from 'svelte'
     import CloseIcon from '~icons/mdi/alpha-x-box-outline'
     import MenuIcon from '~icons/mdi/menu'
@@ -13,9 +13,13 @@
     import {t} from '$translations/index'
     import UserIcon from '$lib/frontend/components/icons/UserIcon.svelte'
     import ShoppingCartIcon from '$lib/frontend/components/icons/ShoppingCartIcon.svelte'
+    import GridIcon from "$lib/frontend/components/icons/GridIcon.svelte";
+    import CategoryListModal from "$lib/frontend/components/CategoryListModal.svelte";
+    import type {CategorySummaryPresentation} from "$lib/frontend/presentations/CategorySummaryPresentation";
 
     export let isDrawerOpened = false
     export let isOnHomePage: boolean
+    export let categories: CategorySummaryPresentation []
 
     const businessName = PUBLIC_BUSINESS_NAME
     const businessNameFirstPart = businessName?.split(' ')[0] ?? 'Demo'
@@ -57,6 +61,22 @@
         await openAuthenticationModal(modalStore)
     }
 
+    async function openCategoryListModal() {
+        const categoryListModalComponent: ModalComponent = {
+            ref: CategoryListModal,
+            props: {
+                categories,
+            },
+        }
+
+        const modal: ModalSettings = {
+            type: 'component',
+            component: categoryListModalComponent,
+        }
+
+        modalStore.trigger(modal)
+    }
+
     onDestroy(unsubscribe)
 </script>
 
@@ -95,6 +115,15 @@
                     </button>
                 </div>
             {/if}
+            <div class='relative'>
+                <button
+                        class='flex justify-center items-center'
+                        data-testid="category-list-button"
+                        on:click={openCategoryListModal}>
+                    <GridIcon/>
+                </button>
+            </div>
+
             <div class='text-3xl flex relative'>
                 <button class='hover:text-orange-500' on:click={navigateToShoppingCartPage}>
                     <ShoppingCartIcon  classNames="h-5 w-5"/>

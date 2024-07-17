@@ -4,7 +4,8 @@ import {afterEach, beforeAll, expect, type Mock} from 'vitest'
 import {modalStore} from '$mocks/src/lib/frontend/stores/ModalStore'
 import {render, type RenderResult, screen, waitFor} from '@testing-library/svelte'
 import CustomAppBar from '$lib/frontend/components/CustomAppBar.svelte'
-import type {ModalStore, ToastStore} from '@skeletonlabs/skeleton'
+import type {ModalSettings, ModalStore, ToastStore} from '@skeletonlabs/skeleton'
+import CategoryListModal from "$lib/frontend/components/CategoryListModal.svelte";
 
 describe('Custom App Bar Component', () => {
     let view: RenderResult<CustomAppBar, typeof import('@testing-library/dom/types/queries')>
@@ -12,6 +13,7 @@ describe('Custom App Bar Component', () => {
     beforeEach(() => {
         view = render(CustomAppBar, {
             isOnHomePage: true,
+            categories:[]
         })
     })
 
@@ -45,6 +47,22 @@ describe('Custom App Bar Component', () => {
             userProfileButton.click()
 
             await waitFor(() => expect(openAuthenticationModalMock).toHaveBeenCalledWith(modalStore))
+        })
+
+        it('should call "modalStore.trigger" when "category-list-button" is clicked', async () => {
+            const categoryListButton = screen.getByTestId('category-list-button')
+
+            categoryListButton.click()
+
+            await waitFor(() => expect(modalStore.trigger).toHaveBeenCalledWith<[ModalSettings]>({
+                type: "component",
+                component: {
+                    ref: CategoryListModal,
+                    props: {
+                        categories: [],
+                    },
+                }
+            }))
         })
 
         // TODO(): Fix those test when enhancing the app bar

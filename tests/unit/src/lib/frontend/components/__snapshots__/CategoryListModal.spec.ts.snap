@@ -1,0 +1,172 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Category list modal > should have match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-2.5 w-11/12 sm:w-11/12 lg:w-10/12 py-6 px-7 bg-white rounded-4xl"
+  >
+    <header
+      class="flex items-center justify-end"
+    >
+      <button
+        data-testid="category-list-modal-close-button"
+      >
+        <div>
+          <svg
+            fill="none"
+            height="14"
+            viewBox="0 0 20 20"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 19L19 1M1 1L19 19"
+              stroke="#0A3B2F"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </div>
+      </button>
+    </header>
+     
+    <div
+      class="px-6 gap-2.5"
+    >
+      <div
+        class="flex justify-start"
+      >
+        <span
+          class="text-primary uppercase text-2xl"
+        >
+          Categories
+        </span>
+      </div>
+       
+      <div
+        class="h-[654px] py-9 px-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 overflow-y-scroll"
+      >
+        <div
+          class="min-h-[229px]"
+        >
+          <span
+            class="text-black font-bold text-[50px] leading-12"
+          >
+            A
+          </span>
+           
+          <ul
+            class="list-disc marker:text-primary text-black font-medium text-2xl list-outside ml-4"
+            role="list"
+          >
+            <li
+              class="h-10"
+            >
+              <button
+                class="h-full text-left flex items-center"
+              >
+                <span
+                  class="line-clamp-1"
+                >
+                  Accessoire
+                </span>
+              </button>
+               
+            </li>
+          </ul>
+           
+        </div>
+        <div
+          class="min-h-[229px]"
+        >
+          <span
+            class="text-black font-bold text-[50px] leading-12"
+          >
+            B
+          </span>
+           
+          <ul
+            class="list-disc marker:text-primary text-black font-medium text-2xl list-outside ml-4"
+            role="list"
+          >
+            <li
+              class="h-10"
+            >
+              <button
+                class="h-full text-left flex items-center"
+              >
+                <span
+                  class="line-clamp-1"
+                >
+                  Biscuit
+                </span>
+              </button>
+               
+            </li>
+            <li
+              class="h-10"
+            >
+              <button
+                class="h-full text-left flex items-center"
+              >
+                <span
+                  class="line-clamp-1"
+                >
+                  Boisson Gaseuze
+                </span>
+              </button>
+               
+            </li>
+          </ul>
+           
+        </div>
+        <div
+          class="min-h-[229px]"
+        >
+          <span
+            class="text-black font-bold text-[50px] leading-12"
+          >
+            C
+          </span>
+           
+          <ul
+            class="list-disc marker:text-primary text-black font-medium text-2xl list-outside ml-4"
+            role="list"
+          >
+            <li
+              class="h-10"
+            >
+              <button
+                class="h-full text-left flex items-center"
+              >
+                <span
+                  class="line-clamp-1"
+                >
+                  Collation
+                </span>
+              </button>
+               
+            </li>
+            <li
+              class="h-10"
+            >
+              <button
+                class="h-full text-left flex items-center"
+              >
+                <span
+                  class="line-clamp-1"
+                >
+                  Condiment
+                </span>
+              </button>
+               
+            </li>
+          </ul>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
