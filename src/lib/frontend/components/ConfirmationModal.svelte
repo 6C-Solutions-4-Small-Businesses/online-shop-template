@@ -1,13 +1,7 @@
 <script lang="ts">
     import BaseModal from '$lib/frontend/components/BaseModal.svelte'
-    import Input from '$lib/frontend/components/Input.svelte'
     import {getModalStore, type ModalSettings} from '@skeletonlabs/skeleton'
-    import type {SvelteComponent} from 'svelte'
-    import {writable, type Writable} from 'svelte/store'
-    import {isEmailInvalid as isEmailInvalidFunction} from '$lib/frontend/core/Helper'
-    import {findUser} from '$lib/frontend/endpoints/Endpoints'
-    import {Email} from '$lib/frontend/requests/FindUserRequest'
-    import type {FoundUserPresentation} from '$lib/frontend/presentations/FoundUserPresentation'
+    import {type SvelteComponent} from 'svelte'
 
     const modalStore = getModalStore()
     const modalSettings = $modalStore[0] as ModalSettings

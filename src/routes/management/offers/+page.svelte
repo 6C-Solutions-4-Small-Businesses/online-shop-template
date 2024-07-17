@@ -1,20 +1,25 @@
-<script lang="ts">
+`<script lang="ts">
     import Button from '$lib/frontend/components/Button.svelte'
     import AddIcon from '~icons/mdi/add'
     import EditIcon from '~icons/mdi/edit'
+    import EditModificationIcon from '~icons/mdi/edit'
     import RemoveIcon from '~icons/mdi/delete'
     import {fly} from 'svelte/transition'
     import {getModalStore, type ModalSettings} from '@skeletonlabs/skeleton'
-    import type {OffersModificationPresentation} from '$lib/frontend/presentations/OffersModificationPresentation'
+    import {
+        type OffersModificationPresentation,
+        typeOfModificationToOffers,
+    } from '$lib/frontend/presentations/OffersModificationPresentation'
     import OffersModificationCard from '$lib/frontend/components/OffersModificationCard.svelte'
     import ClearModificationIcon from '~icons/mdi/close'
-    import EditModificationIcon from '~icons/mdi/edit'
     import type {OfferSummaryPresentation} from '$lib/frontend/presentations/OfferSummaryPresentation'
+    import {sendOffersManagementRequests} from '$lib/frontend/endpoints/ManagementEndpoints'
+    import type {OfferAdditionRequest, OfferEditionRequest} from '$lib/frontend/requests/OffersManagementRequest'
 
     const modalStore = getModalStore()
     const areModificationsPending = () => offersModifications.length > 0
 
-    let offersModifications: OffersModificationPresentation[] = []
+    export let offersModifications: OffersModificationPresentation[] = []
 
     async function startOffersModification(offer?: OffersModificationPresentation | undefined, index?: number) {
 
@@ -133,11 +138,11 @@
     }
 
     async function startOfferSearchForEdition() {
-        await startOfferSearch({ isEdition: true })
+        await startOfferSearch({isEdition: true})
     }
 
     async function startOfferSearchForDeletion() {
-        await startOfferSearch({ isEdition: false })
+        await startOfferSearch({isEdition: false})
     }
 
     function onClose() {
@@ -162,23 +167,91 @@
         modalStore.trigger(confirmationModal)
     }
 
-    async function onModificationsApplyClickHandler() {
-        function formatModificationsConfirmationMessage(newOffers: OffersModificationPresentation[]) {
-            return `Voulez-vous vraiment appliquer les modifications suivantes aux produits et services? <br/><br/> <span class="text-xl block">Création d'offre</span> <br/><ul class="list-disc pl-5 space-y-2">${newOffers.map(o => `<li>${o.name}</li>`).join('')}</ul>`
+    function getOffersModifications() {
+        return offersModifications.filter(o => typeOfModificationToOffers(o) === 'modification')
+    }
+
+    function getOffersAdditions() {
+        return offersModifications.filter(o => typeOfModificationToOffers(o) === 'addition')
+    }
+
+    function getOffersSuppressions() {
+        return offersModifications
+            .filter(o => typeOfModificationToOffers(o) === 'suppression')
+    }
+
+    function toOffersManagementRequest() {
+        return {
+            additions: getOffersAdditions()
+                .map(o => ({
+                    name: o.name,
+                    type: 'Product',
+                    description: o.description,
+                    price: o.price * 100,
+                    quantity: o.quantity,
+                    unit: o.unit,
+                    categories: o.categories,
+                    taxCategory: o.taxCategory,
+                    image: o.image,
+                    barCode: o.barCode,
+                    inventory: o.inventory,
+                    isTaxable: o.taxCategory !== 'Alimentation',
+                    isSoldByQuantities: o.unit !== 'Unité',
+                }) as OfferAdditionRequest),
+            editions: getOffersModifications()
+                .map(o => ({
+                    id: o.id,
+                    name: o.name,
+                    type: 'Product',
+                    description: o.description,
+                    price: o.price * 100,
+                    quantity: o.quantity,
+                    unit: o.unit,
+                    categories: o.categories,
+                    taxCategory: o.taxCategory,
+                    image: o.image,
+                    barCode: o.barCode,
+                    inventory: o.inventory,
+                    isTaxable: o.taxCategory !== 'Alimentation',
+                    isSoldByQuantities: o.unit !== 'Unité',
+                }) as OfferEditionRequest),
+            suppressions: getOffersSuppressions()
+                .map(o => o.id!),
         }
+    }
+
+    function formatModificationsConfirmationMessage() {
+        const offersAdditions = getOffersAdditions()
+        const offersModifications = getOffersModifications()
+        const offersSuppressions = getOffersSuppressions()
+        return `Voulez-vous vraiment appliquer les modifications suivantes aux produits et services? <br/><br/>` +
+        offersAdditions.length ? `<span class="text-xl block">Création d'offre</span> <br/>` +
+            `<ul class="list-disc pl-5 space-y-2">${offersAdditions.map(o => `<li>${o.name}</li>`).join('')}</ul>` +
+            `</span>` : '' +
+        offersModifications.length ? `<span class="text-xl block">Modification d'offre</span> <br/>` +
+            `<ul class="list-disc pl-5 space-y-2">${offersModifications.map(o => `<li>${o.name}</li>`).join('')}</ul>` +
+            `</span>` : '' +
+        offersSuppressions.length ? `<span class="text-xl block">Suppression d'offre</span> <br/>` +
+            `<ul class="list-disc pl-5 space-y-2">${offersSuppressions.map(o => `<li>${o.name}</li>`).join('')}</ul>` +
+            `</span>` : ''
+    }
+
+    async function onModificationsApplyClickHandler() {
 
         const confirmationModal: ModalSettings = {
             type: 'component',
             component: 'confirmationModal',
             title: 'Appliquer les modifications',
-            body: formatModificationsConfirmationMessage(offersModifications),
+            body: formatModificationsConfirmationMessage(),
             buttonTextConfirm: 'Oui',
             buttonTextCancel: 'Non',
             meta: {
                 isHtml: true,
             },
-            response: (confirmed: boolean) => {
+            response: async (confirmed: boolean) => {
                 if (confirmed) {
+                    const request = toOffersManagementRequest()
+                    await sendOffersManagementRequests(request)
                     offersModifications = []
                 }
             },
@@ -295,7 +368,7 @@
             <div class="w-full flex flex-row justify-between py-4">
                 <div class="p-3 sm:px-1">
                     <Button
-                            id="add-product-button"
+                            id="cancel-modifications-button"
                             classNames="w-36 shadow-sm h-12 "
                             text="text-gray-800"
                             border="border border-gray-800"
@@ -307,7 +380,7 @@
                 </div>
                 <div class="p-3 sm:px-1">
                     <Button
-                            id="add-product-button"
+                            id="apply-modifications-button"
                             classNames="w-36 shadow-sm h-12"
                             text="text-orange-500"
                             border="border border-orange-500"
@@ -321,3 +394,4 @@
         {/key}
     </div>
 </div>
+`

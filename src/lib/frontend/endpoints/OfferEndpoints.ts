@@ -14,8 +14,9 @@ export async function fetchSearchedOffersResult(
         },
     )
 
-    if (response.status === 200)
+    if (response.status === 200) {
         return await response.json()
+    }
 }
 
 export async function fetchCategoryProducts(
@@ -26,6 +27,7 @@ export async function fetchCategoryProducts(
         headers: {...BASE_HEADERS},
     })
 
-    if (response.status === 200)
+    if (response.status === 200) {
         return await response.json()
+    }
 }

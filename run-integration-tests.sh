@@ -24,7 +24,7 @@ cp -fRp ./src \
  ./.env.test ./integration-test
 
 echo "Moving into the integration-test directory"
-cd ./integration-test || exit
+cd ./integration-test && rm -rf tests/unit && rm -rf tests/__mocks__ || exit
 
 echo "Running prebuild and starting the docker containers"
 docker-compose up

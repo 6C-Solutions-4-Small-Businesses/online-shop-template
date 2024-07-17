@@ -2,7 +2,7 @@
 
     import {getModalStore} from '@skeletonlabs/skeleton'
     import BaseModal from '$lib/frontend/components/BaseModal.svelte'
-    import {onMount, type SvelteComponent} from 'svelte'
+    import {type SvelteComponent} from 'svelte'
     import SearchInput from '$lib/frontend/components/SearchInput.svelte'
     import {fetchSearchedOffersResult} from '$lib/frontend/endpoints/OfferEndpoints'
     import {searchedProductResult} from '$lib/frontend/stores/productStore/SearchProductStore'
@@ -11,7 +11,14 @@
     import {throttle} from '$lib/frontend/core/RxHelper'
 
     const modalStore = getModalStore()
-    const throttledSearch = throttle((searchTerm: string) => fetchSearchedOffersResult(searchTerm), 500)
+    const throttleSearchFunction = throttle(async (searchTerm: string) => {
+        const searchedOffersResult = await fetchSearchedOffersResult(searchTerm)
+        if (searchedOffersResult) {
+            matchedOffers = searchedOffersResult.items
+        } else {
+            matchedOffers = []
+        }
+    }, 500)
 
     export let parent: SvelteComponent
 
@@ -21,7 +28,8 @@
 
     async function handleSearchTermChange(value: string): Promise<void> {
         searchTerm = value
-        throttledSearch(searchTerm)
+        const func = await throttleSearchFunction
+        func(searchTerm)
     }
 
     async function onSearchResetHandler() {
@@ -29,13 +37,6 @@
         searchTerm = ''
     }
 
-    onMount(() => {
-        searchedProductResult.subscribe((newSearchedProductResult) => {
-            if (newSearchedProductResult) {
-                matchedOffers = newSearchedProductResult.items
-            }
-        })
-    })
 </script>
 {#if modalSettings}
     <div class="w-full md:w-6/12 lg:w-6/12 xl:w-4/12">

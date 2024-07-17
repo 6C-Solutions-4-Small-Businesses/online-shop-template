@@ -1,11 +1,11 @@
-export function throttle<T>(func: (...args: any) => T, delay: number): (...args: any) => void {
+export async function throttle<T>(func: (...args: any) => T, delay: number): Promise<(...args: any) => void> {
     let lastFunc: NodeJS.Timeout
-    let lastRan: number =  Date.now()
-    return function (...args) {
+    let lastRan =  Date.now()
+    return async function (...args) {
         clearTimeout(lastFunc)
-        lastFunc = setTimeout(function () {
+        lastFunc = setTimeout(async function () {
             if ((Date.now() - lastRan) >= delay) {
-                func(...args)
+                await func(...args)
                 lastRan = Date.now()
             }
         }, delay)

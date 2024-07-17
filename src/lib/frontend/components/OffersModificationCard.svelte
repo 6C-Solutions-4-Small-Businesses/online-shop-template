@@ -1,19 +1,13 @@
 <script lang="ts">
     import {getAbbreviatedUnit} from '$lib/frontend/core/Helper'
-    import type {OffersModificationPresentation} from '$lib/frontend/presentations/OffersModificationPresentation'
+    import {
+        type OffersModificationPresentation,
+        typeOfModificationToOffers,
+    } from '$lib/frontend/presentations/OffersModificationPresentation'
     import Image from '$lib/frontend/components/Image.svelte'
 
-    const typeOfModificationToOffers = () => {
-        if (offer.deleted) {
-            return 'suppression'
-        } else if (offer.id) {
-            return 'modification'
-        } else {
-            return 'addition'
-        }
-    }
     const modificationTypeLabel = () => {
-        switch (typeOfModificationToOffers()) {
+        switch (typeOfModificationToOffers(offer)) {
             case 'suppression':
                 return 'supprimé'
             case 'modification':
@@ -24,7 +18,7 @@
     }
 
     const modificationTypeLabelColor = () => {
-        switch (typeOfModificationToOffers()) {
+        switch (typeOfModificationToOffers(offer)) {
             case 'suppression':
                 return '#ef4444'
             case 'modification':
