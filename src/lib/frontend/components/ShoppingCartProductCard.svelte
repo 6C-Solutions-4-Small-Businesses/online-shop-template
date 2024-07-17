@@ -45,7 +45,7 @@
     </div>
     <div class="w-[161px] h-[119px] flex flex-col justify-between">
         <div class="w-full h-[12px] flex justify-end">
-            <div class={`font-bold flex items-center text-sm ${percentage ? 'text-error' : 'text-primary'}`}>
+            <div class={`font-bold flex items-center text-sm ${percentage ? 'text-sale-price' : 'text-primary'}`}>
                 CAD${((salePrice ?? price) / 100).toFixed(2)}</div>
         </div>
         <div class="w-full h-[100px] flex flex-col justify-end gap-1">

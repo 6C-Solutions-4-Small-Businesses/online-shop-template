@@ -100,7 +100,7 @@
                     <ShoppingCartIcon  classNames="h-5 w-5"/>
                 </button>
 
-                <span class='absolute left-4 bottom-4 bg-red text-10 text-white w-4 h-4 flex justify-center items-center rounded-full border border-orange-500'>
+                <span class='absolute left-4 bottom-4 bg-cart-count text-10 text-white w-4 h-4 flex justify-center items-center rounded-full border border-orange-500'>
                   {numberOfProductsInCart}
                 </span>
             </div>

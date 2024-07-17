@@ -23,7 +23,7 @@
             <RemoveShoppingCartIcon classNames="h-5 w-5"/>
         </button>
 
-        <input class="w-[78px] h-[30px] rounded-[10px] text-center bg-gray text-xs font-semibold"
+        <input class="w-[78px] h-[30px] rounded-[10px] text-center bg-neutral-200 text-xs font-semibold"
                type="text"
                bind:value={selectedQuantity}
                on:input={changeSelectedQuantityHandler}/>

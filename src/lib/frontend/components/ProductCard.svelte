@@ -88,7 +88,7 @@
                         <span class="text-primary text-[8px] line-through">
                             CAD${(regularPrice / 100).toFixed(2)}
                         </span>
-                        <div class="text-center text-error text-15 font-bold flex flex-row ml-3">
+                        <div class="text-center text-sale-price text-15 font-bold flex flex-row ml-3">
                             CAD${salePrice && (salePrice / 100).toFixed(2)}
                             {#if (isSoldByQuantities)}
                                 <span>/{getAbbreviatedUnit(unit)}</span>

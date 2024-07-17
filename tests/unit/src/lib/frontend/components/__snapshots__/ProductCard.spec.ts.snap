@@ -166,7 +166,7 @@ exports[`Product card with promotion > should have match snapshot 1`] = `
             </span>
              
             <div
-              class="text-center text-error text-15 font-bold flex flex-row ml-3"
+              class="text-center text-sale-price text-15 font-bold flex flex-row ml-3"
             >
               CAD$
               1.50

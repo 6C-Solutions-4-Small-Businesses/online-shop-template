@@ -95,7 +95,7 @@ exports[`Category products > when first page is loaded > should have match snaps
                 </span>
                  
                 <div
-                  class="text-center text-error text-15 font-bold flex flex-row ml-3"
+                  class="text-center text-sale-price text-15 font-bold flex flex-row ml-3"
                 >
                   CAD$
                   23.45
