@@ -305,6 +305,7 @@
                     return {
                         name: category.label,
                         id: category.value,
+                        type: 'Common', //TODO(see https://github.com/6C-Solutions-4-Small-Businesses/static-web-site/issues/400)
                     } satisfies CategorySummaryPresentation
                 }
                 return {name: category.label} satisfies NewCategoryPresentation

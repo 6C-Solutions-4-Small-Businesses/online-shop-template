@@ -1,0 +1,417 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`/management/offers > HTML structure > should match snapshot 1`] = `
+<div>
+  \`
+
+  <div
+    class="w-full max-w-full flex flex-col p-5 bg-gray-50"
+  >
+    <div
+      class="title text-3xl font-thin"
+    >
+      Produits et Services
+    </div>
+     
+    <div
+      class="w-full flex-1 flex flex-col items-center py-5"
+    >
+      <p
+        class="text-xl font-thin"
+      >
+        Ici vous pouvez ajouter, modifier ou supprimer les produits et
+            services que vous offrez.
+      </p>
+       
+      <div
+        class="w-full flex flex-row justify-items-stretch py-3"
+      >
+        <div
+          class="p-3 flex-1"
+        >
+          <button
+            class="flex justify-around items-center uppercase rounded-sm font-bold w-full shadow-sm p-4 bg-green-500 hover:bg-green-600 border-black text-white"
+            data-testid="add-offer-button"
+            id="add-offer-button"
+          >
+            <div
+              class="flex flex-row"
+            >
+              <svg
+                class="inline"
+                height="1.2em"
+                viewBox="0 0 24 24"
+                width="1.2em"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"
+                  fill="currentColor"
+                />
+              </svg>
+               
+              <span
+                class="flex-1 hidden md:visible"
+              >
+                Ajouter
+              </span>
+            </div>
+          </button>
+        </div>
+         
+        <div
+          class="p-3 flex-1"
+        >
+          <button
+            class="flex justify-around items-center uppercase rounded-sm font-bold w-full shadow-sm p-4  bg-blue-500 hover:bg-blue-600 border-black text-white"
+            data-testid="edit-product-button"
+            id="edit-product-button"
+          >
+            <div
+              class="flex flex-row"
+            >
+              <svg
+                class="inline"
+                height="1.2em"
+                viewBox="0 0 24 24"
+                width="1.2em"
+              >
+                <path
+                  d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"
+                  fill="currentColor"
+                />
+              </svg>
+               
+              <span
+                class="flex-1 hidden md:visible"
+              >
+                Modifier
+              </span>
+            </div>
+          </button>
+        </div>
+         
+        <div
+          class="p-3 flex-1"
+        >
+          <button
+            class="flex justify-around items-center uppercase rounded-sm font-bold w-full shadow-sm p-4  bg-red-500 hover:bg-red-600 border-black text-white"
+            data-testid="delete-product-button"
+            id="delete-product-button"
+          >
+            <div
+              class="flex flex-row"
+            >
+              <svg
+                class="inline"
+                height="1.2em"
+                viewBox="0 0 24 24"
+                width="1.2em"
+              >
+                <path
+                  d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z"
+                  fill="currentColor"
+                />
+              </svg>
+               
+              <span
+                class="flex-1 hidden md:visible"
+              >
+                Supprimer
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+       
+      <div
+        class="w-full border-opacity-50 pt-2 pb-3"
+      >
+        <div
+          class="divider h-0.5 bg-black"
+        />
+      </div>
+       
+      <div
+        class="w-full flex flex-col pt-5 gap-3"
+      >
+        <div
+          class="relative h-[28rem]"
+        >
+          <div
+            class="absolute w-full"
+          >
+            <div
+              class="w-full bg-white shadow-2xl"
+              role="none"
+            >
+              <div
+                class="relative"
+              >
+                <div
+                  class="absolute flex w-24 h-24 top-0 text-white items-center visible z-10"
+                >
+                  <svg
+                    height="100"
+                    viewBox="0 0 490 490"
+                    width="100"
+                    x="0px"
+                    xml:space="preserve"
+                    y="0px"
+                  >
+                    <polygon
+                      points="0,0 490,0 0,490"
+                      style="fill: #ef4444"
+                    />
+                  </svg>
+                   
+                  <div
+                    class="absolute -rotate-45 origin-center top-6 right-4 w-full text-[1rem] text-center font-semibold uppercase"
+                  >
+                    supprimé
+                  </div>
+                </div>
+                 
+                <img
+                  alt="function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) => a[1] = o).catch((o) => {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  }"
+                  class="w-full aspect-1"
+                  data-testid="function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) => a[1] = o).catch((o) => {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  }-offer-preview-image"
+                  id="function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) => a[1] = o).catch((o) => {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  }-offer-preview-image"
+                  src="function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) => a[1] = o).catch((o) => {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  }"
+                />
+              </div>
+               
+              <div
+                class="bottom-0 right-0 w-full flex justify-end"
+              >
+                <div
+                  class="filter backdrop-blur-sm bg-green-300/40 font-sans w-full min-h-[4.2rem] justify-between flex items-center text-lg"
+                  role="region"
+                >
+                  <div
+                    class="w-8/12 font-light text-xl px-2 text-wrap overflow-hidden text-overflow: ellipsis;"
+                  >
+                    function(...s) {
+    let r = A(t);
+    r.called = !0, r.callCount++, r.calls.push(s);
+    let m = r.next.shift();
+    if (m) {
+      r.results.push(m);
+      let [l, o] = m;
+      if (l === "ok")
+        return o;
+      throw o;
+    }
+    let p, d = "ok";
+    if (r.impl)
+      try {
+        new.target ? p = Reflect.construct(r.impl, s, new.target) : p = r.impl.apply(this, s), d = "ok";
+      } catch (l) {
+        throw p = l, d = "error", r.results.push([d, l]), l;
+      }
+    let a = [d, p];
+    if (b(p)) {
+      let l = p.then((o) =&gt; a[1] = o).catch((o) =&gt; {
+        throw a[0] = "error", a[1] = o, o;
+      });
+      Object.assign(l, p), p = l;
+    }
+    return r.results.push(a), p;
+  }
+                  </div>
+                   
+                  <div
+                    class="w-4/12 flex flex-row text-xl"
+                  >
+                    <span
+                      class="block"
+                    >
+                      $
+                      100
+                       
+                      <sup>
+                        00
+                      </sup>
+                    </span>
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+          <button
+            class=" justify-around items-center uppercase rounded-sm font-bold absolute border-none p-2 right-0 z-10 background-none border text-white"
+            data-testid="delete-modification-button"
+            id="delete-modification-button"
+          >
+            <svg
+              class="right-2 text-3xl font-bold bg-red-400 rounded-full p-1 hover:bg-red-500"
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+           
+          <button
+            class=" justify-around items-center uppercase rounded-sm font-bold absolute border-none p-2 right-12 z-10 background-none border text-white"
+            data-testid="edit-modification-button"
+            id="edit-modification-button"
+          >
+            <svg
+              class="right-2 text-3xl font-bold bg-blue-500 rounded-full p-1 hover:bg-blue-600"
+              height="1.2em"
+              viewBox="0 0 24 24"
+              width="1.2em"
+            >
+              <path
+                d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+           
+        </div>
+      </div>
+       
+      <div
+        class="w-full flex flex-row justify-between py-4"
+      >
+        <div
+          class="p-3 sm:px-1"
+        >
+          <button
+            class="flex justify-around items-center uppercase rounded-sm font-bold w-36 shadow-sm h-12  bg-white hover:bg-orange-50 border border-gray-800 text-gray-800"
+            data-testid="cancel-modifications-button"
+            id="cancel-modifications-button"
+          >
+            Annuler
+          </button>
+        </div>
+         
+        <div
+          class="p-3 sm:px-1"
+        >
+          <button
+            class="flex justify-around items-center uppercase rounded-sm font-bold w-36 shadow-sm h-12 bg-white hover:bg-orange-50 border border-orange-500 text-orange-500"
+            data-testid="apply-modifications-button"
+            id="apply-modifications-button"
+          >
+            Appliquer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+\`
+</div>
+`;

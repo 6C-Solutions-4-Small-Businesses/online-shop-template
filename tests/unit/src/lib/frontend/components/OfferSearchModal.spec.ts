@@ -9,6 +9,7 @@ import OfferSearchModal from '$lib/frontend/components/OfferSearchModal.svelte'
 import {searchedProductResult} from '$lib/frontend/stores/productStore/SearchProductStore'
 import type {OfferSummaryPresentation} from '$lib/frontend/presentations/OfferSummaryPresentation'
 import type {PaginationPresentation} from '$lib/frontend/core/PaginationPresentation'
+import { fetchSearchedOffersResult } from '$mocks/src/lib/frontend/endpoints/OfferEndpoints'
 
 describe('OfferSearchModal component', () => {
 
@@ -73,9 +74,8 @@ describe('OfferSearchModal component', () => {
                 id: 'offer-1',
             })
 
-            beforeEach(() => {
-                fireEvent.input(searchInput, {target: {value: 'search with results'}})
-                searchedProductResult.set(mock<PaginationPresentation<OfferSummaryPresentation>>({
+            beforeEach(async () => {
+                fetchSearchedOffersResult.mockResolvedValue(mock<PaginationPresentation<OfferSummaryPresentation>>({
                     items: [
                         offer1,
                         mock<OfferSummaryPresentation>({
@@ -86,6 +86,7 @@ describe('OfferSearchModal component', () => {
                         }),
                     ],
                 }))
+                await fireEvent.input(searchInput, {target: {value: 'search with results'}})
             })
 
             it('should display offers in search result when there are any', () => {
@@ -135,6 +136,7 @@ describe('OfferSearchModal component', () => {
     afterEach(() => {
         view.unmount()
         vi.clearAllMocks()
+        vi.clearAllTimers()
     })
 })
 
@@ -144,5 +146,18 @@ vi.mock('@skeletonlabs/skeleton', async () => {
     return {
         ...actual,
         getModalStore: (): ModalStore => modalStore,
+    }
+})
+
+vi.mock('$lib/frontend/endpoints/OfferEndpoints', async () => {
+    const {fetchSearchedOffersResult} = await import('$mocks/src/lib/frontend/endpoints/OfferEndpoints')
+    return {
+        fetchSearchedOffersResult,
+    }
+})
+
+vi.mock('$lib/frontend/core/RxHelper', async () => {
+    return {
+        throttle: (func: (...args: any) => any, delay: number) : Promise<(...args: any) => void> => Promise.resolve((...args) => func(args)),
     }
 })
