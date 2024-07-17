@@ -41,7 +41,7 @@
         identificationModal: {ref: IdentificationModal},
         offersModificationModal: {ref: OffersModificationModal},
         confirmationModal: {ref: ConfirmationModal},
-        offerSearchModal: { ref: OfferSearchModal},
+        offerSearchModal: {ref: OfferSearchModal},
     }
 
     onMount(() => {
@@ -78,8 +78,12 @@
         await goto('/terms-and-conditions')
     }
 
-    async function goToProductsPage(categoryId: string): Promise<void> {
-        await goto(`/category/${categoryId}`)
+    async function goToProductsPage(categoryId: string, categoryName: string): Promise<void> {
+        await goto(`/category/${categoryId}`, {
+            state: {
+                name: categoryName
+            }
+        })
     }
 
 </script>
@@ -115,7 +119,7 @@
             <div class={`w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 grid-flow-row gap-y-2 gap-x-5 border-b-[1px] border-primary p-10`}>
                 {#each data.categories as {id, name}}
                     <button class="font-semibold hover:underline text-left truncate text-sm xl:text-md text-white"
-                            on:click={() => goToProductsPage(id)}>{name}
+                            on:click={() => goToProductsPage(id, name)}>{name}
                     </button>
                 {/each}
             </div>
